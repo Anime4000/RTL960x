@@ -39,4 +39,11 @@ mksquashfs squashfs-root rootfs.new -b 131072 -comp lzma
 mv rootfs rootfs.old
 mv rootfs.new rootfs
 ```
+* Update `md5sum`
+```
+md5sum fwu.sh rootfs uImage fwu_ver > md5.txt
+```
 * tar current folder
+```
+tar -cvf ../firmware.tar *
+```
