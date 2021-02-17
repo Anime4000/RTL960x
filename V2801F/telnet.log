@@ -1,0 +1,508 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2020.10.03 05:10:59 =~=~=~=~=~=~=~=~=~=~=~=
+login: admin
+Password: 
+
+
+BusyBox v1.12.4 (2019-10-14 09:10:16 CST) built-in shell (ash)
+Enter 'help' for a list of built-in commands.
+
+# flash all
+<Config Name="ROOT">
+ <Dir Name="HW_MIB_TABLE">
+  <Value Name="SUPER_NAME" Value="admin"/>
+  <Value Name="SUPER_PASSWORD" Value="stdONU101"/>
+  <Value Name="ELAN_MAC_ADDR" Value="000000111111"/>
+  <Value Name="WLAN_MAC_ADDR" Value="000000222222"/>
+  <Value Name="WAN_PHY_PORT" Value="4"/>
+  <Value Name="HW_RF_TYPE" Value="7"/>
+  <Value Name="HW_WLAN0_TX_POWER_CCK_A" Value="00,00,00,00,00,00,00,00,00,00,00,00,00,00"/>
+  <Value Name="HW_WLAN0_TX_POWER_CCK_B" Value="00,00,00,00,00,00,00,00,00,00,00,00,00,00"/>
+  <Value Name="HW_WLAN0_TX_POWER_HT40_1S_A" Value="00,00,00,00,00,00,00,00,00,00,00,00,00,00"/>
+  <Value Name="HW_WLAN0_TX_POWER_HT40_1S_B" Value="00,00,00,00,00,00,00,00,00,00,00,00,00,00"/>
+  <Value Name="HW_WLAN0_TX_POWER_DIFF_HT40_2S" Value="00,00,00,00,00,00,00,00,00,00,00,00,00,00"/>
+  <Value Name="HW_WLAN0_TX_POWER_DIFF_HT20" Value="00,00,00,00,00,00,00,00,00,00,00,00,00,00"/>
+  <Value Name="HW_WLAN0_TX_POWER_DIFF_OFDM" Value="00,00,00,00,00,00,00,00,00,00,00,00,00,00"/>
+  <Value Name="HW_WLAN0_11N_TSSI1" Value="0"/>
+  <Value Name="HW_WLAN0_11N_TSSI2" Value="0"/>
+  <Value Name="HW_WLAN0_11N_THER" Value="0"/>
+  <Value Name="HW_WLAN0_11N_THER_2" Value="0"/>
+  <Value Name="HW_WLAN0_11N_PA_TYPE" Value="0"/>
+  <Value Name="HW_WLAN0_REG_DOMAIN" Value="1"/>
+  <Value Name="HW_WLAN0_11N_TRSWITCH" Value="0"/>
+  <Value Name="HW_WLAN0_11N_TRSWPAPE_C9" Value="0"/>
+  <Value Name="HW_WLAN0_11N_TRSWPAPE_CC" Value="0"/>
+  <Value Name="HW_ANT_DIVERSITY" Value="0"/>
+  <Value Name="HW_TX_ANT" Value="0"/>
+  <Value Name="HW_CS_THRESHOLD" Value="11"/>
+  <Value Name="HW_CCA_MODE" Value="1"/>
+  <Value Name="HW_PHY_TYPE" Value="0"/>
+  <Value Name="HW_WLAN_LED_TYPE" Value="7"/>
+  <Value Name="BYTE" Value="255"/>
+  <Value Name="WORD" Value="65535"/>
+  <Value Name="DWORD" Value="4294967295"/>
+  <Value Name="INT1" Value="2147483647"/>
+  <Value Name="INT2" Value="-2147483648"/>
+  <Value Name="WIFI_SUPPORT" Value="0"/>
+  <Value Name="HW_SERIAL_NO" Value="000000000002"/>
+  <Value Name="HW_FON_KEYWORD" Value="63,62,68,4a,75,3c,65,cd,7b,75,e5,2d,a9,80,72,8c,97,fc,bd,9b,37,51,d9,e3,82,92,68,a1,07,ae,a0,b5"/>
+  <Value Name="HW_WLAN0_11N_XCAP" Value="0"/>
+  <Value Name="HW_WLAN0_11N_XCAP_2" Value="0"/>
+  <Value Name="HW_WLAN0_11N_TARGET_PWR" Value="0"/>
+  <Value Name="HW_WLAN0_COUNTRYCODE" Value="1"/>
+  <Value Name="HW_WLAN1_COUNTRYCODE" Value="1"/>
+  <Value Name="HW_WLAN0_COUNTRYSTR" Value="US"/>
+  <Value Name="HW_WLAN1_COUNTRYSTR" Value="US"/>
+  <Value Name="VS_AUTH_KEY" Value="db,c8,aa,02,2d,c2,d5,b3,92,29,8a,b6,8f,85,d6,45,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00"/>
+  <Value Name="HW_CWMP_MANUFACTURER" Value="Realtek"/>
+  <Value Name="HW_CWMP_PRODUCTCLASS" Value="IGD"/>
+  <Value Name="HW_HWVER" Value="RTL960x"/>
+  <Value Name="GPON_ONU_MODEL" Value="HG8240H"/>
+  <Value Name="LAN_SDS_MODE" Value="5"/>
+  <Value Name="PON_MODE" Value="1"/>
+  <Value Name="PON_LED_SPEC" Value="0"/>
+  <Value Name="OUI" Value="11,11,11"/>
+  <Value Name="PORT_REMAPPING" Value="00,01,02,03"/>
+  <Value Name="PON_VENDOR_ID" Value="HWTC"/>
+  <Value Name="GPON_SN" Value="HWTC01234567"/>
+  <Value Name="EPON_ONU_MODEL" Value="0000"/>
+  <Value Name="EPON_EXTONU_MODEL" Value="RTKG"/>
+  <Value Name="EPON_SILENT_MODE" Value="1"/>
+ </Dir>
+</Config>
+<Config Name="ROOT">
+ <Dir Name="MIB_TABLE">
+  <Value Name="WAN_MODE" Value="7"/>
+  <Value Name="LAN_IP_ADDR" Value="192.168.1.1"/>
+  <Value Name="LAN_SUBNET" Value="255.255.255.0"/>
+  <Value Name="LAN_ENABLE_IP2" Value="1"/>
+  <Value Name="LAN_IP_ADDR2" Value="192.168.100.1"/>
+  <Value Name="LAN_SUBNET2" Value="255.255.255.0"/>
+  <Value Name="LAN_RIP" Value="0"/>
+  <Value Name="LAN_AUTOSEARCH" Value="0"/>
+  <Value Name="DNS_MODE" Value="0"/>
+  <Value Name="DNS1" Value="0.0.0.0"/>
+  <Value Name="DNS2" Value="0.0.0.0"/>
+  <Value Name="DNS3" Value="0.0.0.0"/>
+  <Value Name="ADSL_MODE" Value="83"/>
+  <Value Name="ADSL_OLR" Value="3"/>
+  <Value Name="USER_NAME" Value="user"/>
+  <Value Name="USER_PASSWORD" Value="user"/>
+  <Value Name="DEVICE_TYPE" Value="0"/>
+  <Value Name="INIT_LINE" Value="1"/>
+  <Value Name="INIT_SCRIPT" Value="1"/>
+  <Value Name="SNMP_SYS_NAME" Value="PON Bridge"/>
+  <Value Name="VC_AUTOSEARCH" Value="0"/>
+  <Value Name="BR_AGEING_TIME" Value="7200"/>
+  <Value Name="BR_STP_ENABLED" Value="0"/>
+  <Value Name="MP_MODE" Value="4"/>
+  <Value Name="SPC_ENABLED" Value="0"/>
+  <Value Name="SPC_IPTYPE" Value="0"/>
+  <Value Name="MULTI_LINGUAL_STATE" Value="en"/>
+  <Value Name="TFTP_SERVER_ADDR" Value="tftp://0.0.0.0"/>
+  <Value Name="POSIX_TZ_STRING" Value=""/>
+  <Value Name="BOOT_FILENAME" Value=""/>
+  <Value Name="UPNP" Value="0"/>
+  <Value Name="UPNP_EXT_ITF" Value="255"/>
+  <Value Name="SYSLOG_LOG_LEVEL" Value="0"/>
+  <Value Name="SYSLOG_DISPLAY_LEVEL" Value="0"/>
+  <Value Name="SUSER_NAME" Value="admin"/>
+  <Value Name="SUSER_PASSWORD" Value="stdONU101"/>
+  <Value Name="ADSL_TONE" Value="00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00"/>
+  <Value Name="DIRECT_BRIDGE_MODE" Value="1"/>
+  <Value Name="ADSL_HIGH_INP" Value="0"/>
+  <Value Name="SYSLOG" Value="0"/>
+  <Value Name="MAXLOGLEN" Value="16384"/>
+  <Value Name="ADSLDBG" Value="0"/>
+  <Value Name="MIB_ETH_MAC_CTRL" Value="0"/>
+  <Value Name="MIB_WLAN_MAC_CTRL" Value="0"/>
+  <Value Name="LOID" Value=""/>
+  <Value Name="LOID_PASSWD" Value=""/>
+  <Value Name="LOID_OLD" Value=""/>
+  <Value Name="LOID_PASSWD_OLD" Value=""/>
+  <Value Name="GPON_PLOAM_PASSWD" Value="0123456789"/>
+  <Value Name="OMCI_DBGLVL" Value="0"/>
+  <Value Name="OMCI_LOGFILE" Value="0"/>
+  <Value Name="OMCI_PORT_TYPE" Value="1"/>
+  <Value Name="DUAL_MGMT_MODE" Value="0"/>
+  <Value Name="OMCI_CUSTOM_BDP" Value="136"/>
+  <Value Name="OMCI_CUSTOM_RDP" Value="0"/>
+  <Value Name="OMCI_CUSTOM_MCAST" Value="0"/>
+  <Value Name="OMCI_CUSTOM_ME" Value="262144"/>
+  <Value Name="OMCI_VENDOR_PRODUCT_CODE" Value="0"/>
+  <Value Name="OMCI_FAKE_OK" Value="1"/>
+  <Value Name="OMCI_VEIP_SLOT_ID" Value="255"/>
+  <Value Name="RTK_IGMP_DBGEN" Value="0"/>
+  <Value Name="RTK_IGMP_DROPV1" Value="0"/>
+  <Value Name="RTK_IGMP_VIDTYPE" Value="0"/>
+  <Value Name="RTK_IGMP_TAGDECISION" Value="0"/>
+  <Value Name="VLAN_CFG_TYPE" Value="1"/>
+  <Value Name="VLAN_MANU_MODE" Value="0"/>
+  <Value Name="VLAN_MANU_TAG_VID" Value="65535"/>
+  <Value Name="VLAN_MANU_TAG_PRI" Value="255"/>
+  <Value Name="OMCI_OLT_MODE" Value="1"/>
+  <Value Name="OMCI_SW_VER1" Value=""/>
+  <Value Name="OMCI_SW_VER2" Value=""/>
+  <Value Name="CUSTOM_OMCI_SW_VER1" Value=""/>
+  <Value Name="CUSTOM_OMCI_SW_VER2" Value=""/>
+  <Value Name="OMCC_VER" Value="128"/>
+  <Value Name="OMCI_TM_OPT" Value="1"/>
+  <Value Name="OMCI_LOGFILE_MASK" Value="0"/>
+  <Value Name="DHCP_PORT_FILTER" Value="0"/>
+  <Value Name="NTP_EXT_ITF" Value="65535"/>
+  <Value Name="FIBER_MODE" Value="0"/>
+  <Value Name="RTK_DEVID_MANUFACTURER" Value=""/>
+  <Value Name="RTK_DEVID_OUI" Value=""/>
+  <Value Name="RTK_DEVID_PRODUCTCLASS" Value=""/>
+  <Value Name="RTK_DEVINFO_SPECVER" Value=""/>
+  <Value Name="RTK_DEVINFO_SWVER" Value=""/>
+  <Value Name="RTK_DEVINFO_HWVER" Value=""/>
+  <Value Name="DEVICE_NAME" Value="RTK_GW"/>
+ </Dir>
+ <Dir Name="ATM_VC_TBL"> <!--index=0-->
+  <Value Name="ifIndex" Value="130816"/>
+  <Value Name="VPI" Value="5"/>
+  <Value Name="QoS" Value="0"/>
+  <Value Name="VCI" Value="35"/>
+  <Value Name="PCR" Value="6000"/>
+  <Value Name="SCR" Value="0"/>
+  <Value Name="MBS" Value="0"/>
+  <Value Name="CDVT" Value="0"/>
+  <Value Name="Encap" Value="1"/>
+  <Value Name="NAPT" Value="1"/>
+  <Value Name="ChannelMode" Value="0"/>
+  <Value Name="BridgeType" Value="0"/>
+  <Value Name="pppUser" Value=""/>
+  <Value Name="pppPasswd" Value=""/>
+  <Value Name="pppAuth" Value="0"/>
+  <Value Name="pppACName" Value=""/>
+  <Value Name="pppServiceName" Value=""/>
+  <Value Name="pppConnectType" Value="0"/>
+  <Value Name="pppIdleTime" Value="0"/>
+  <Value Name="enableIGMP" Value="0"/>
+  <Value Name="ChannelAddrType" Value="0"/>
+  <Value Name="RIP" Value="0"/>
+  <Value Name="LocalIPAddr" Value="0.0.0.0"/>
+  <Value Name="RemoteIPAddr" Value="0.0.0.0"/>
+  <Value Name="DefaultGW" Value="0"/>
+  <Value Name="MTU" Value="1500"/>
+  <Value Name="ChannelStatus" Value="1"/>
+  <Value Name="SubnetMask" Value="0.0.0.0"/>
+  <Value Name="Ipunnum" Value="0"/>
+  <Value Name="DNSMode" Value="0"/>
+  <Value Name="DNSV4IPAddr1" Value="0.0.0.0"/>
+  <Value Name="DNSV4IPAddr2" Value="0.0.0.0"/>
+  <Value Name="vlan" Value="0"/>
+  <Value Name="vid" Value="0"/>
+  <Value Name="vprio" Value="0"/>
+  <Value Name="vpass" Value="0"/>
+  <Value Name="itfGroup" Value="0"/>
+  <Value Name="itfGroupNum" Value="0"/>
+  <Value Name="mVid" Value="0"/>
+  <Value Name="cpePppIfIndex" Value="0"/>
+  <Value Name="cpeIpIndex" Value="0"/>
+  <Value Name="WanName" Value=""/>
+  <Value Name="applicationtype" Value="2"/>
+  <Value Name="MacAddr" Value="006d61c4d3e5"/>
+ </Dir>
+ <Dir Name="SW_PORT_TBL"> <!--index=0-->
+  <Value Name="PVCInterface" Value="65535"/>
+  <Value Name="InterfaceGroup" Value="0"/>
+  <Value Name="PVID" Value="0"/>
+  <Value Name="LinkMode" Value="4"/>
+  <Value Name="VLAN on LAN Enabled" Value="0"/>
+  <Value Name="VLAN on LAN InterfaceGroup" Value="0"/>
+  <Value Name="VID" Value="0"/>
+ </Dir>
+ <Dir Name="SW_PORT_TBL"> <!--index=1-->
+  <Value Name="PVCInterface" Value="65535"/>
+  <Value Name="InterfaceGroup" Value="0"/>
+  <Value Name="PVID" Value="1"/>
+  <Value Name="LinkMode" Value="4"/>
+  <Value Name="VLAN on LAN Enabled" Value="0"/>
+  <Value Name="VLAN on LAN InterfaceGroup" Value="0"/>
+  <Value Name="VID" Value="0"/>
+ </Dir>
+ <Dir Name="SW_PORT_TBL"> <!--index=2-->
+  <Value Name="PVCInterface" Value="65535"/>
+  <Value Name="InterfaceGroup" Value="0"/>
+  <Value Name="PVID" Value="2"/>
+  <Value Name="LinkMode" Value="4"/>
+  <Value Name="VLAN on LAN Enabled" Value="0"/>
+  <Value Name="VLAN on LAN InterfaceGroup" Value="0"/>
+  <Value Name="VID" Value="0"/>
+ </Dir>
+ <Dir Name="MAC_BASE_DHCP_TBL">
+ </Dir>
+ <Dir Name="AUTO_PVC_SEARCH_TBL"> <!--index=0-->
+  <Value Name="VPI" Value="0"/>
+  <Value Name="VCI" Value="35"/>
+ </Dir>
+ <Dir Name="AUTO_PVC_SEARCH_TBL"> <!--index=1-->
+  <Value Name="VPI" Value="8"/>
+  <Value Name="VCI" Value="35"/>
+ </Dir>
+ <Dir Name="AUTO_PVC_SEARCH_TBL"> <!--index=2-->
+  <Value Name="VPI" Value="0"/>
+  <Value Name="VCI" Value="43"/>
+ </Dir>
+ <Dir Name="AUTO_PVC_SEARCH_TBL"> <!--index=3-->
+  <Value Name="VPI" Value="0"/>
+  <Value Name="VCI" Value="51"/>
+ </Dir>
+ <Dir Name="AUTO_PVC_SEARCH_TBL"> <!--index=4-->
+  <Value Name="VPI" Value="0"/>
+  <Value Name="VCI" Value="59"/>
+ </Dir>
+ <Dir Name="AUTO_PVC_SEARCH_TBL"> <!--index=5-->
+  <Value Name="VPI" Value="8"/>
+  <Value Name="VCI" Value="43"/>
+ </Dir>
+ <Dir Name="AUTO_PVC_SEARCH_TBL"> <!--index=6-->
+  <Value Name="VPI" Value="8"/>
+  <Value Name="VCI" Value="51"/>
+ </Dir>
+ <Dir Name="AUTO_PVC_SEARCH_TBL"> <!--index=7-->
+  <Value Name="VPI" Value="8"/>
+  <Value Name="VCI" Value="59"/>
+ </Dir>
+ <Dir Name="PPPOE_SESSION_TBL">
+ </Dir>
+ <Dir Name="RIP_TBL">
+ </Dir>
+ <Dir Name="DHCP_RESERVED_IPADDR_TBL">
+ </Dir>
+ <Dir Name="EPON_LLID_TBL">
+ </Dir>
+</Config>
+# ifconfig
+br0       Link encap:Ethernet  HWaddr 00:6D:61:00:00:00  
+          inet addr:192.168.1.1  Bcast:192.168.1.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:7433 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:6327 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:675832 (659.9 KiB)  TX bytes:4427950 (4.2 MiB)
+
+eth0      Link encap:Ethernet  HWaddr 00:6D:61:00:00:00  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:7452 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:9095 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:679876 (663.9 KiB)  TX bytes:4644491 (4.4 MiB)
+          Interrupt:26 Base address:0x2000 
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+
+nas0      Link encap:Ethernet  HWaddr 00:00:00:01:00:02  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:15 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:930 (930.0 B)
+          Interrupt:26 Base address:0x2000 
+
+nas0_0    Link encap:Ethernet  HWaddr 00:6D:61:C4:D3:E5  
+          UP BROADCAST RUNNING  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:15 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:10 
+          RX bytes:0 (0.0 B)  TX bytes:930 (930.0 B)
+
+pon0      Link encap:Ethernet  HWaddr 00:00:00:01:00:02  
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
+          Interrupt:26 Base address:0x2000 
+
+# ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 16436 qdisc noqueue state UNKNOWN 
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN qlen 1000
+    link/ether 00:6d:61:00:00:00 brd ff:ff:ff:ff:ff:ff
+3: eth0.2: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN qlen 1000
+    link/ether 00:00:00:01:00:02 brd ff:ff:ff:ff:ff:ff
+4: eth0.3: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN qlen 1000
+    link/ether 00:00:00:01:00:02 brd ff:ff:ff:ff:ff:ff
+5: nas0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN qlen 1000
+    link/ether 00:00:00:01:00:02 brd ff:ff:ff:ff:ff:ff
+6: pon0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN qlen 1000
+    link/ether 00:00:00:01:00:02 brd ff:ff:ff:ff:ff:ff
+7: br0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN 
+    link/ether 00:6d:61:00:00:00 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.1/24 brd 192.168.1.255 scope global br0
+8: nas0_0: <BROADCAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UNKNOWN qlen 10
+    link/ether 00:6d:61:11:11:11 brd ff:ff:ff:ff:ff:ff
+# cat /proc/mtd
+dev:    size   erasesize  name
+mtd0: 00040000 00001000 "boot"
+mtd1: 00002000 00001000 "env"
+mtd2: 00002000 00001000 "env2"
+mtd3: 0003c000 00001000 "config"
+mtd4: 00160000 00001000 "k0"
+mtd5: 00260000 00001000 "r0"
+mtd6: 00160000 00001000 "k1"
+mtd7: 00260000 00001000 "r1"
+mtd8: 00001000 00001000 "Partition_008"
+mtd9: 00001000 00001000 "Partition_009"
+mtd10: 00001000 00001000 "Partition_010"
+mtd11: 00001000 00001000 "Partition_011"
+mtd12: 00160000 00001000 "linux"
+mtd13: 00260000 00001000 "rootfs"
+# cat /proc/fiber_mode
+fiber_mode = Pre-defined
+pre-defined fiber_mode = Auto
+   0:Pre-defined
+   1:AN 1G
+   2:Auto
+   3:Force 1G
+   4:Force 100M
+# cat /proc/cpuinfo
+system type		: RTL8672
+processor		: 0
+cpu model		: 56322
+BogoMIPS		: 112.23
+tlb_entries		: 64
+mips16 implemented	: yes
+# cat /proc/meminfo
+MemTotal:          16940 kB
+MemFree:            5376 kB
+Buffers:             596 kB
+Cached:             2712 kB
+SwapCached:            0 kB
+Active:             2756 kB
+Inactive:           3676 kB
+Active(anon):       1580 kB
+Inactive(anon):     1932 kB
+Active(file):       1176 kB
+Inactive(file):     1744 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:                 0 kB
+Writeback:             0 kB
+AnonPages:          3516 kB
+Mapped:              932 kB
+Slab:               3584 kB
+SReclaimable:        572 kB
+SUnreclaim:         3012 kB
+PageTables:          188 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:        8468 kB
+Committed_AS:       5100 kB
+VmallocTotal:    1032144 kB
+VmallocUsed:         836 kB
+VmallocChunk:    1030988 kB
+# ls
+bin   dev   etc   home  lib   mnt   proc  sbin  sys   tmp   usr   var
+# ls /home/httpd/web/
+EndScriptContent.asp            osgi_bndins.asp
+StartScriptContent.asp          osgi_bndmgt.asp
+acl.asp                         osgi_fwork.asp
+addr_mapping.asp                others.asp
+admin                           parental-ctrl.asp
+adslpsd.asp                     password.asp
+adsltone.asp                    pdump.asp
+algonoff.asp                    ping.asp
+app_iptv.asp                    pon-stats.asp
+app_mldProxy.asp                portBaseFilterDhcp.asp
+app_mld_snooping.asp            portfw-advance.asp
+arptable.asp                    pptp.asp
+base.css                        pptpd.asp
+base64_code.js                  pptpv6.asp
+bridge_grouping.asp             printServer.asp
+bridging.asp                    qos_pred.asp
+code.asp                        radvdconf.asp
+common.js                       reboot.asp
+connlimit.asp                   reset.css
+date.asp                        rip.asp
+ddns.asp                        rmtacc.asp
+devicetbl.asp                   routetbl.asp
+dhcpd.asp                       routetbl_ipv6.asp
+dhcpd_sc.asp                    routing.asp
+dhcpdv6.asp                     routing_ipv6.asp
+dhcpmode.asp                    samba.asp
+dhcptbl.asp                     saveconf.asp
+dhcptblv6.asp                   share.js
+diag-test.asp                   snmp.asp
+diag_index.html                 snmpv3.asp
+diag_left.html                  stats.asp
+diffserv.asp                    status.asp
+dms.asp                         status_ipv6.asp
+dns.asp                         status_pon.asp
+domainblk.asp                   style
+dos.asp                         style.css
+dot1ag_action.asp               syslog.asp
+dot1ag_conf.asp                 syslog_server.asp
+dot1ag_status.asp               tcpiplan.asp
+epon.asp                        top.asp
+eth2pvc.asp                     toupgrade.asp
+eth2pvc_vlan.asp                tr069config.asp
+ethoam.asp                      tz.asp
+favicon.ico                     upgrade.asp
+fdbtbl.asp                      upnp.asp
+finishmaintenance.asp           url_blocking.asp
+fw-dmz.asp                      userconfig.asp
+fw-ipfw.asp                     vermod.asp
+fw-ipportfilter-v6.asp          vlan.asp
+fw-ipportfilter-v6_IfId.asp     vlan_on_lan.asp
+fw-ipportfilter-v6_IfId_rg.asp  wan3gconf.asp
+fw-ipportfilter-v6_rg.asp       wanadsl.asp
+fw-ipportfilter.asp             wanatm.asp
+fw-ipportfilter_rg.asp          waneth.asp
+fw-macfilter.asp                wanmode.asp
+fw-macfilter_rg.asp             wanwl.asp
+fw-portfw.asp                   web_hijackwizard_nolink.asp
+gaming.asp                      web_hijackwizard_wait1.asp
+gpon.asp                        web_hijackwizard_wait2.asp
+graphics                        web_smallwizard.asp
+igmproxy.asp                    web_troublewizard_2.asp
+image                           web_troublewizard_nolink.asp
+index.html                      web_troublewizard_nolink2.asp
+index2.asp                      web_troublewizard_wait.asp
+index_user.html                 web_wizard_1.asp
+index_user_vdsl.html            web_wizard_2.asp
+index_vdsl.html                 web_wizard_3.asp
+init_script.asp                 web_wizard_4.asp
+ipip.asp                        web_wizard_5.asp
+ipqos.asp                       web_wizard_6.asp
+ipqos_queue.asp                 web_wizard_7.asp
+ipqos_sc.asp                    web_wizard_8.asp
+ipqos_shape.asp                 web_wizard_authfail.asp
+ipsec.asp                       web_wizard_index.asp
+ipv6_enabledisable.asp          web_wizard_menu.asp
+l2tp.asp                        web_wizard_menu_index.asp
+l2tpd.asp                       web_wizard_nolink.asp
+l2tpv6.asp                      web_wizard_userpass.asp
+lan_port_status.asp             wlactrl.asp
+landing.asp                     wladvanced.asp
+left.html                       wlbandmode.asp
+linkmode.asp                    wlbasic.asp
+linkmode_eth.asp                wlfon.asp
+macIptbl.asp                    wlft.asp
+menu-images                     wlmultipleap.asp
+mtmcode.js                      wlstatbl.asp
+multi_addr_mapping.asp          wlstatbl_vap.asp
+multi_lang.asp                  wlstatus.asp
+multi_wan_generic.asp           wlsurvey.asp
+net_qos_cls.asp                 wlwapiRekey.asp
+net_qos_cls_edit.asp            wlwapiinstallcert.asp
+net_qos_imq_policy.asp          wlwds.asp
+net_qos_traffictl.asp           wlwdsenp.asp
+net_qos_traffictl_edit.asp      wlwdstbl.asp
+nprogress.js                    wlwpa.asp
+oamloopback.asp                 wlwpa_mbssid.asp
+omci_info.asp                   wlwps.asp
+# cat /etc/runsdk.sh
+# cat /etc/runomci.sh
+# cat /etc/runigmp.sh
+# exit
