@@ -11,13 +11,13 @@ You need to login into old ONU, most ONU will have information page where you ca
 
 ## Example
 ### G-240G-E
-
+![SFU](Images/G-240G-E.png)
 
 ### HG8240H
-
+![RGW](Images/HG8240H.png)
 
 ### HG8240H5
-
+![RGW](Images/HG8240H5.png)
 
 ## Update
 After you get required info, you can start run `flash set`, example:
