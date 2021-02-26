@@ -10,8 +10,9 @@ With my issue:
 
 Since we dont have source code, try mix and match binary between V2801F and TWCGPON657
 
-# Access
-V2801F and TWCGPON657 has different login credentials:
+# Usage
+* Please read [FLASH_GETSET_INFO.md](Docs/FLASH_GETSET_INFO.md) for how to configure, login, etc...
+* Advance setting like duplicate ONT Info, read [FLASH_GETSET_DEV.md](Docs/FLASH_GETSET_DEV.md)
 
 # Modify
 You need a Linux PC/VM, Ubuntu as Operating System
