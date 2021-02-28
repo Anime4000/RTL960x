@@ -30,7 +30,7 @@ Since we dont have source code, try mix and match binary between V2801F and TWCG
 ### Note
 When `echo 3 > /proc/fiber_mode` is set, you lose telnet acccess, you need to unplug fiber to get back
 
-##TWCGPON657
+## TWCGPON657
 * No such problem, `VS_AUTH_KEY` does not exist.
 
 # Usage
