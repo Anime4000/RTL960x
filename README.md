@@ -6,13 +6,14 @@ GPON market is a mess, plus explicit OMCI cause ONU Stick did not work
 
 With my issue:
 * V2801F build quality is bad, died from overheating, firmware is good, manage to have an internet connection
-* TWCGPON657 build quality is good, firmware is bad, when GPON Password is set, stick hang and CPU usage become 100%
+* TWCGPON657 build quality is good, firmware is bad, CPU usage become 100% when PLOAM Password is set
 
 Since we dont have source code, try mix and match binary between V2801F and TWCGPON657
 
 > Update:
 > 
 > V2801F firmware can be used on [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488) stick. 
+> 
 > However, stick will keep rebooting due to invalid `VS_AUTH_KEY`, *read **Auto Reboot Fix** below*
 
 # Auto Reboot Fix
@@ -29,6 +30,7 @@ Since we dont have source code, try mix and match binary between V2801F and TWCG
 > If you can't type fast enough, use this autoit script `quick_telnet-login.au3`.
 >
 > Take a look some generated [`VS_AUTH_KEY` here](Docs/VS_AUTH_KEY.md)
+
 ### Note
 When `echo 3 > /proc/fiber_mode` is set, you lose telnet acccess, you need to unplug fiber to get back
 
