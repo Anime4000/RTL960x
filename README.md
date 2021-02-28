@@ -1,4 +1,4 @@
-# Hacking_RTL9601C1
+# Hacking RTL9601C1
 Hacking V2801F & TWCGPON657 to suite your ISP Fiber
 
 # Issue
@@ -28,6 +28,8 @@ Since we dont have source code, try mix and match binary between V2801F and TWCG
 * To prevent auto reboot by entering `echo 3 > /proc/fiber_mode` (XPON Ethernet Mode)
 
 > If you can't type fast enough, use this autoit script `quick_telnet-login.au3`.
+>
+> Take a look some predefine (`VS_AUTH_KEY` here)[Docs/VS_AUTH_KEY.md]
 
 ### Note
 When `echo 3 > /proc/fiber_mode` is set, you lose telnet acccess, you need to unplug fiber to get back
