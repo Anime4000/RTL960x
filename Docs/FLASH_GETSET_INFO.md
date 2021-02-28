@@ -10,7 +10,7 @@
 Username: admin
 Password: stdONU101
 ```
-## [TWCGPON657](https://m.tb.cn/h.4SH0V53?sm=d46315)
+## [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488)
 Telnet is disabled by default, you need open Enable Link to Enable Telnet
 ```
 http://192.168.1.1/bd/telnet_open.asp
@@ -102,6 +102,8 @@ If `PON_MODE=3` is set, `FIBER_MODE` become available and update `/proc/fiber_mo
 * 2 = Auto
 * 3 = Force 1G
 * 4 = Force 100M
+
+> Enter `echo 3 > /proc/fiber_mode` can prevent V2801F from auto reboot, giving you time to fix `VS_AUTH_KEY` or firmware update, this will put XPON Stick become Ethernet Mode.
 
 ### `DEVICE_TYPE` (Min 0, Max 2, Default is 0)
 * 0 = `bridge`

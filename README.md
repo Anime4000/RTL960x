@@ -5,10 +5,23 @@ Hacking V2801F & TWCGPON657 to suite your ISP Fiber
 GPON market is a mess, plus explicit OMCI cause ONU Stick did not work
 
 With my issue:
-* V2801F build quality is bad, firmware is good, manage to have an internet connection
+* V2801F build quality is bad, died from overheating, firmware is good, manage to have an internet connection
 * TWCGPON657 build quality is good, firmware is bad, when GPON Password is set, stick hang and CPU usage become 100%
 
 Since we dont have source code, try mix and match binary between V2801F and TWCGPON657
+
+> Update:
+> V2801F firmware can be used on TWCGPON657 stick. However, XPON Stick will keep rebooting due to invalid `VS_AUTH_KEY`, you have few seconds telnet access to update `VS_AUTH_KEY` or `echo 3 > /proc/fiber_mode` to prevent auto reboot.
+
+# Auto Reboot
+## V2801F
+* XPON Stick will keep rebooting because invalid `VS_AUTH_KEY`
+* Changing MAC Address `ELAN_MAC_ADDR` can cause invalid `VS_AUTH_KEY`
+* You have few seconds to access telnet.
+* To prevent auto reboot, enter: `echo 3 > /proc/fiber_mode` (*When set. you need disconnect fiber to get access*)
+
+##TWCGPON657
+* No such problem, `VS_AUTH_KEY` does not exist.
 
 # Usage
 * Please read [FLASH_GETSET_INFO.md](Docs/FLASH_GETSET_INFO.md) for how to configure, login, etc...
