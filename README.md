@@ -11,14 +11,24 @@ With my issue:
 Since we dont have source code, try mix and match binary between V2801F and TWCGPON657
 
 > Update:
-> V2801F firmware can be used on TWCGPON657 stick. However, XPON Stick will keep rebooting due to invalid `VS_AUTH_KEY`, you have few seconds telnet access to update `VS_AUTH_KEY` or `echo 3 > /proc/fiber_mode` to prevent auto reboot.
+> 
+> V2801F firmware can be used on TWCGPON657 stick. However, Stick will keep rebooting due to invalid `VS_AUTH_KEY`, read **Auto Reboot Fix** below
 
-# Auto Reboot
+# Auto Reboot Fix
 ## V2801F
-* XPON Stick will keep rebooting because invalid `VS_AUTH_KEY`
+### Problem
+* Invalid `VS_AUTH_KEY` can cause auto reboot
 * Changing MAC Address `ELAN_MAC_ADDR` can cause invalid `VS_AUTH_KEY`
-* You have few seconds to access telnet.
-* To prevent auto reboot, enter: `echo 3 > /proc/fiber_mode` (*When set. you need disconnect fiber to get access*)
+
+### Fix
+You need to generate new `VS_AUTH_KEY` when change `ELAN_MAC_ADDR`
+
+Apperently, you have few seconds to access Telnet before rebooting, if you can type fast enough, use this autoit script `quick_telnet-login.au3`.
+
+To prevent auto reboot by entering `echo 3 > /proc/fiber_mode`
+
+### Note
+When `echo 3 > /proc/fiber_mode` is set, you lose telnet acccess, you need to unplug fiber to get back
 
 ##TWCGPON657
 * No such problem, `VS_AUTH_KEY` does not exist.
