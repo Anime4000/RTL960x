@@ -42,6 +42,7 @@ flash set ELAN_MAC_ADDR 6cefc6ffffff
 flash set FIBER_MODE 0
 flash set DEVICE_TYPE 0
 flash set OMCI_VEIP_SLOT_ID 255
+flash set VS_AUTH_KEY 1CAFC40AC99B014BB013849A92942FEB
 reboot
 ```
 
@@ -112,6 +113,9 @@ If `PON_MODE=3` is set, `FIBER_MODE` become available and update `/proc/fiber_mo
 
 ### `OMCI_VEIP_SLOT_ID` (Integer Value, Default is 255)
 Virtual Ethernet Interface Point Slot Id, you may need find VEIP Id from old ONU, try save configuration and find `veip`, for example: [Huawei HG8240H5](https://github.com/Anime4000/Hacking_Huawei_HG8240H5_ONT/blob/master/xml/hw_ctree.xml#L109)
+
+### `VS_AUTH_KEY` (32 Hexadecimal number) *V2801F Only*
+Changing `ELAN_MAC_ADDR` or/and `HW_HWVER` value, **must** generate new `VS_AUTH_KEY`. Failed to do so, V2801F stick will in auto reboot forever.
 
 ## NOTE:
 every `flash set` need `reboot` to take effect!
