@@ -22,8 +22,10 @@ Since we dont have source code, try mix and match binary between V2801F and TWCG
 
 ### Fix
 * You need to generate new `VS_AUTH_KEY` when change `ELAN_MAC_ADDR`
-* Apperently, you have few seconds to access Telnet before rebooting, if you can't type fast enough, use this `quick_telnet-login.au3`.
+* Apperently, you have few seconds to access Telnet before rebooting
 * To prevent auto reboot by entering `echo 3 > /proc/fiber_mode` (XPON Ethernet Mode)
+
+> If you can't type fast enough, use this autoit script `quick_telnet-login.au3`.
 
 ### Note
 When `echo 3 > /proc/fiber_mode` is set, you lose telnet acccess, you need to unplug fiber to get back
