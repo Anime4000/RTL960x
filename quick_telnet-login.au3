@@ -50,14 +50,14 @@ EndFunc
 
 Func EnterCommandSet()
 	Send("flash set HW_HWVER RTL960x{ENTER}")
-	Send("flash set VS_AUTH_KEY 30A78E942B5B1E6AFF76007E1F6B6D5C{ENTER}")
+	Send("flash set VS_AUTH_KEY C8F355A2986FD5AA69989A667AA90BB5{ENTER}")
 
 	Send("flash set OMCI_FAKE_OK 1{ENTER}")
 	Send("flash set OMCI_SW_VER1 C00R657V00B15{ENTER}")
 	Send("flash set OMCI_SW_VER2 C00R657V00B15{ENTER}")
-	Send("flash set GPON_SN GPONC6BED5D7{ENTER}")
-	Send("flash set GPON_PLOAM_PASSWD 0005816552{ENTER}")
-	Send("flash set ELAN_MAC_ADDR 6cefc6bed5d7{ENTER}")
+	Send("flash set GPON_SN GPONC60DDEAD{ENTER}")
+	Send("flash set GPON_PLOAM_PASSWD 1234567890{ENTER}")
+	Send("flash set ELAN_MAC_ADDR 6cefc60ddead{ENTER}")
 EndFunc
 
 Func EnterCommandGet()
