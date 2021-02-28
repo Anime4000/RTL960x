@@ -12,13 +12,15 @@ Since we dont have source code, try mix and match binary between V2801F and TWCG
 
 > Update:
 > 
-> V2801F firmware can be used on TWCGPON657 stick. However, Stick will keep rebooting due to invalid `VS_AUTH_KEY`, read **Auto Reboot Fix** below
+> V2801F firmware can be used on [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488) stick. However, stick will keep rebooting due to invalid `VS_AUTH_KEY`, *read **Auto Reboot Fix** below*
+> 
+> 
 
 # Auto Reboot Fix
 ## V2801F
-### Problem
-* Invalid `VS_AUTH_KEY` can cause auto reboot
-* Changing MAC Address `ELAN_MAC_ADDR` can cause invalid `VS_AUTH_KEY`
+### Issue
+* Invalid `VS_AUTH_KEY`
+* Changing MAC Address `ELAN_MAC_ADDR` can cause wrong `VS_AUTH_KEY` value
 
 ### Fix
 * You need to generate new `VS_AUTH_KEY` when change `ELAN_MAC_ADDR`
