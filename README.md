@@ -12,9 +12,8 @@ Since we dont have source code, try mix and match binary between V2801F and TWCG
 
 > Update:
 > 
-> V2801F firmware can be used on [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488) stick. However, stick will keep rebooting due to invalid `VS_AUTH_KEY`, *read **Auto Reboot Fix** below*
-> 
-> 
+> V2801F firmware can be used on [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488) stick. 
+> However, stick will keep rebooting due to invalid `VS_AUTH_KEY`, *read **Auto Reboot Fix** below*
 
 # Auto Reboot Fix
 ## V2801F
@@ -29,8 +28,7 @@ Since we dont have source code, try mix and match binary between V2801F and TWCG
 
 > If you can't type fast enough, use this autoit script `quick_telnet-login.au3`.
 >
-> Take a look some predefine (`VS_AUTH_KEY` here)[Docs/VS_AUTH_KEY.md]
-
+> Take a look some generated [`VS_AUTH_KEY` here](Docs/VS_AUTH_KEY.md)
 ### Note
 When `echo 3 > /proc/fiber_mode` is set, you lose telnet acccess, you need to unplug fiber to get back
 
