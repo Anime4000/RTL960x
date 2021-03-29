@@ -5,16 +5,23 @@ Hacking V2801F & TWCGPON657 to suite your ISP Fiber
 GPON market is a mess, plus explicit OMCI cause ONU Stick did not work
 
 With my issue:
-* V2801F build quality is bad, died from overheating, firmware is good, manage to have an internet connection
-* TWCGPON657 build quality is good, firmware is bad, CPU usage become 100% when PLOAM Password is set
+* [V2801F](https://www.amazon.com/Universal-Stick-Address-Supported-Attention/dp/B08C818JSQ) build quality is bad, died from overheating, firmware is good, manage to have an internet!
+* [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488) build quality is good, firmware is bad, CPU usage become 100% when PLOAM Password is set!
 
-Since we dont have source code, try mix and match binary between V2801F and TWCGPON657
+My goal is, Good Firmware (V2801F) + Good Hardware (TWCGPON657) = Ultimate XPON ONU STICK!
 
-> Update:
-> 
-> V2801F firmware can be used on [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488) stick. 
-> 
-> However, stick will keep rebooting due to invalid `VS_AUTH_KEY`, *read **Auto Reboot Fix** below*
+# Flash
+I have been using TWCGPON657 (without fan) for a month and never had an issue, so in this sections, flash V2801F firmware into TWCGPON657 stick and fix auto-reboot issue.
+
+## Steps:
+* Downgrade your TWCGPON657 to version B13 or below.
+* Flash with `V2801F_V1.9.0-201104.tar` and wait.
+* Quickly login and execute `echo 3 > /proc/fiber_mode` to avoid auto-reboot (wrong `VS_AUTH_KEY`)
+* Disconnect fiber from module
+* Update `VS_AUTH_KEY` acording to `ELAN_MAC_ADDR` and `HW_HWVER`
+* Reboot
+* Reflash again with `V2801F_V1.9.0-201104.tar`
+* Enjoy
 
 # Auto Reboot Fix
 ## V2801F
@@ -23,7 +30,7 @@ Since we dont have source code, try mix and match binary between V2801F and TWCG
 * Changing MAC Address `ELAN_MAC_ADDR` can cause wrong `VS_AUTH_KEY` value
 
 ### Fix
-* You need to generate new `VS_AUTH_KEY` when change `ELAN_MAC_ADDR`
+* You need to generate new `VS_AUTH_KEY` when change `ELAN_MAC_ADDR` and `HW_HWVER`
 * Apperently, you have few seconds to access Telnet before rebooting
 * To prevent auto reboot by entering `echo 3 > /proc/fiber_mode` (XPON Ethernet Mode)
 
