@@ -47,6 +47,8 @@ When `echo 3 > /proc/fiber_mode` is set, you lose telnet acccess, you need to un
 # Usage
 * Please read [FLASH_GETSET_INFO.md](Docs/FLASH_GETSET_INFO.md) for how to configure, login, etc...
 * Advance setting like duplicate ONT Info, read [FLASH_GETSET_DEV.md](Docs/FLASH_GETSET_DEV.md)
+* For a manual for the built-in Realtek `diag` utility, see: [RTKPONDiagShellUserGuide](Docs/RTKPONDiagShellUserGuideV001.291982779.pdf)
+  * Source: https://usermanual.wiki/Pdf/RTKPONDiagShellUserGuideV001.291982779/html
 
 # Modify
 You need a Linux PC/VM, Ubuntu as Operating System
