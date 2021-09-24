@@ -50,6 +50,9 @@ When `echo 3 > /proc/fiber_mode` is set, you lose telnet acccess, you need to un
 * For a manual for the built-in Realtek `diag` utility, see: [RTKPONDiagShellUserGuide](Docs/RTKPONDiagShellUserGuideV001.291982779.pdf)
   * Source: https://usermanual.wiki/Pdf/RTKPONDiagShellUserGuideV001.291982779/html
 
+# Downgrade
+If V2801F firmware not supported on TWCGPON657, you can downgrade via this url: `http://192.168.1.1/upgrade.asp`
+
 # Modify
 You need a Linux PC/VM, Ubuntu as Operating System
 
