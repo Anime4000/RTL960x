@@ -5,8 +5,22 @@ Hacking V2801F & TWCGPON657 to suite your ISP Fiber
 GPON market is a mess, plus explicit OMCI cause ONU Stick did not work
 
 With my issue:
-* [V2801F](https://www.amazon.com/Universal-Stick-Address-Supported-Attention/dp/B08C818JSQ) build quality is bad, died from overheating, firmware is good, manage to have an internet!
-* [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488) build quality is good, firmware is bad, CPU usage become 100% when PLOAM Password is set!
+* [V2801F](https://www.amazon.com/Universal-Stick-Address-Supported-Attention/dp/B08C818JSQ)
+  * Support OMCI explicit provision LAN port on 2/3/4...
+  * Support OMCI explicit provision **override** `OMCI_FAKE_OK 1`
+  * Good Firmware, support many ISP (Global)
+  * Build not strudy
+* [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488)
+  * Not Working OMCI explicit provision LAN port on 2/3/4...
+  * Not Working OMCI explicit provision **override**
+  * Bad Firmware, limited ISP support
+  * Silm & Tight build
+
+ISP vs Fiber Provider:
+* My fiber provider can carry multiple ISP
+* Fiber provider provision each ISP on different LAN port of ONU
+* TWCGPON657 firmware cannot provision other LAN port to bridge
+* V2801F firmware manage to override other LAN port to bridge
 
 My goal is, Good Firmware (V2801F) + Good Hardware (TWCGPON657) = Ultimate XPON ONU STICK!
 
