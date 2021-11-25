@@ -4,7 +4,7 @@ Hacking V2801F & TWCGPON657 to suite your ISP Fiber
 # Issue
 GPON market is a mess, plus explicit OMCI cause ONU Stick did not work
 
-With my issue:
+## With my issue:
 * [V2801F](https://www.amazon.com/Universal-Stick-Address-Supported-Attention/dp/B08C818JSQ)
   * Support OMCI explicit provision LAN port on 2/3/4...
   * Support OMCI explicit provision **override** `OMCI_FAKE_OK 1`
@@ -16,13 +16,25 @@ With my issue:
   * Bad Firmware, limited ISP support
   * Silm & Tight build
 
-ISP vs Fiber Provider:
-* My fiber provider can carry multiple ISP
-* Fiber provider provision each ISP on different LAN port of ONU
-* TWCGPON657 firmware cannot provision other LAN port to bridge
-* V2801F firmware manage to override other LAN port to bridge
+## Single Fiber, Multiple ISP Problem
+**Fiber Provider can carry Multiple ISP by provision different LAN Port ONU, example:**
+|ONU SFP ⬇️ / Huawei HG8240H LAN Port ➡️ | 1️⃣ | 2️⃣ | 3️⃣ | 4️⃣ |
+|------------------------|-------|-------|-------|-------|
+|DFP-34G-2C2             |:heavy_check_mark:|:x:|:x:|:x:|
+|DFP-34X-2C2             |:heavy_check_mark:|:x:|:x:|:x:|
+|TWCGPON657              |:heavy_check_mark:|:x:|:x:|:x:|
+|V2801F                  |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
 
-My goal is, Good Firmware (V2801F) + Good Hardware (TWCGPON657) = Ultimate XPON ONU STICK!
+> :heavy_check_mark: = Can Bridge
+> 
+> :x: = Cannot Bridge (No Internet)
+
+* V2801F firmware can automatically bridge everyting!
+* If your ISP on LAN 2 ONU, V2801F firmware can bridge it with **no** settings!
+* Most GPON ONU Stick like DFP-34X-2C2 cannot bridge *ONU LAN Port 2 - 4 for Other ISP*
+
+## My Goal Is,
+Good Firmware (V2801F) + Good Hardware (TWCGPON657) = Ultimate XPON ONU STICK!
 
 # Flash
 I have been using TWCGPON657 (without fan) for a month and never had an issue, so in this sections, flash V2801F firmware into TWCGPON657 stick and fix auto-reboot issue.
