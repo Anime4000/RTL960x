@@ -20,8 +20,8 @@ GPON market is a mess, plus explicit OMCI cause ONU Stick did not work
 **Fiber Provider can carry Multiple ISP by provision different LAN Port ONU, example:**
 |ONU SFP ⬇️ / Huawei HG8240H LAN Port ➡️ | 1️⃣ | 2️⃣ | 3️⃣ | 4️⃣ |
 |------------------------|-------|-------|-------|-------|
-|DFP-34G-2C2             |:heavy_check_mark:|:x:|:x:|:x:|
-|DFP-34X-2C2             |:heavy_check_mark:|:x:|:x:|:x:|
+|DFP-34G-2C2 (ZTE)       |:heavy_check_mark:|:x:|:x:|:x:|
+|DFP-34X-2C2 (ZTE)       |:heavy_check_mark:|:x:|:x:|:x:|
 |TWCGPON657              |:heavy_check_mark:|:x:|:x:|:x:|
 |V2801F                  |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
 
