@@ -16,22 +16,62 @@ GPON market is a mess, plus explicit OMCI cause ONU Stick did not work
   * Bad Firmware, limited ISP support
   * Silm & Tight build
 
-## Single Fiber, Multiple ISP Problem
-**Fiber Provider can carry Multiple ISP by provision different LAN Port ONU, example:**
-|ONU SFP ⬇️ / Huawei HG8240H LAN Port ➡️ | 1️⃣ | 2️⃣ | 3️⃣ | 4️⃣ |
-|------------------------|-------|-------|-------|-------|
-|DFP-34G-2C2 (ZTE)       |:heavy_check_mark:|:x:|:x:|:x:|
-|DFP-34X-2C2 (ZTE)       |:heavy_check_mark:|:x:|:x:|:x:|
-|TWCGPON657              |:heavy_check_mark:|:x:|:x:|:x:|
-|V2801F                  |:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|:heavy_check_mark:|
+## Triple Play Multiple ISP Problem, 4-port ONU Emulation
+* Majority fiber vendor support multiple ISP
+* ISP provide Triple Play service (Internet, VoIP & IPTV)
+* Vendor supply 4-port ONU for each service or ISP
 
-> :heavy_check_mark: = Can Bridge
-> 
-> :x: = Cannot Bridge (No Internet)
+In this table, list of xPON Stick that support 4-port ONU Emulation
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan="4">Huawei HG8240H LAN Port</th>
+        </tr>
+        <tr>
+            <th>xPON Stick</th>
+            <th>1️⃣</th>
+            <th>2️⃣</th>
+            <th>3️⃣</th>
+            <th>4️⃣</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>DFP-34G-2C2 (ZTE)</td>
+            <td>✔️</td>
+            <td>❌</td>
+            <td>❌</td>
+            <td>❌</td>
+        </tr>
+        <tr>
+            <td>DFP-34X-2C2 (ZTE)</td>
+            <td>✔️</td>
+            <td>❌</td>
+            <td>❌</td>
+            <td>❌</td>
+        </tr>
+        <tr>
+            <td>TWCGPON657</td>
+            <td>✔️</td>
+            <td>❌</td>
+            <td>❌</td>
+            <td>❌</td>
+        </tr>
+        <tr>
+            <td>V2801F</td>
+            <td>✔️</td>
+            <td>✔️</td>
+            <td>✔️</td>
+            <td>✔️</td>
+        </tr>
+    </tbody>
+</table>
 
-* V2801F firmware can automatically bridge everyting!
-* If your ISP on LAN 2 ONU, V2801F firmware can bridge it with **no** settings!
-* Most GPON ONU Stick like DFP-34X-2C2 cannot bridge *ONU LAN Port 2 - 4 for Other ISP*
+> ✔️ Port Emulation Support |
+> ❌ No Support
+
+Based on [ru-board](http://forum.ru-board.com/topic.cgi?forum=8&topic=80480&start=1360#2) **4-Port Emulation is limited**, not many xPON Stick can understand, only V2801F do support it, **because my Internet comes at Huawei HG8240H LAN Port 4**
 
 ## My Goal Is,
 Good Firmware (V2801F) + Good Hardware (TWCGPON657) = Ultimate XPON ONU STICK!
