@@ -54,5 +54,5 @@ flash set GPON_PLOAM_PASSWD 1234567890
 reboot
 ```
 
-# Requests
-If your Fibre provider/ISP accept only certian ONT, MAC Address & Version, you can contact me to generate new `VS_AUTH_KEY`
+# `VS_AUTH_KEY` Keygen
+Get here: https://drive.google.com/drive/folders/19kkrr8aHL1I5W_Poq_Y8Zd5hCpYU6H1Q
