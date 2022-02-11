@@ -71,7 +71,7 @@ In this table, list of xPON Stick that support 4-port ONU Emulation
 > ✔️ Port Emulation Support |
 > ❌ No Support
 
-Based on [ru-board](http://forum.ru-board.com/topic.cgi?forum=8&topic=80480&start=1360#2) **4-Port Emulation is limited**, not many xPON Stick can understand, only V2801F do support it, **because my Internet comes at Huawei HG8240H LAN Port 4**
+Based on [ru-board](http://forum.ru-board.com/topic.cgi?forum=8&topic=80480&start=1360#2) **4-Port Emulation is limited**, not many xPON Stick can understand, only V2801F do support it, **because my Internet comes at Huawei HG8240H LAN Port 2** (LAN 1 for Main ISP, LAN 2 for 3rd party ISP)
 
 ## My Goal Is,
 Good Firmware (V2801F) + Good Hardware (TWCGPON657) = Ultimate XPON ONU STICK!
