@@ -100,7 +100,9 @@ flash set OMCI_FAKE_OK 1
 ```
 
 ### OMCI OLT Mode
-Make **SFP XPON ONU Stick** universal, doesn't care which OLT brand, it make **SFP XPON ONU Stick** act like Huawei/ZTE, allow OLT send appropriate OMCI
+Make **SFP XPON ONU Stick** universal, some OLT have special OMCI, most common OMCI is Huawei, for example, making **SFP XPON ONU Stick** act like Huawei ONU and understand Huawei OMCI and complatile with Huawei OLT.
+
+Even Nokia OLT, Huawei is most common due to "Universal ONU" deployment.
 
 #### Default
 ```
