@@ -26,6 +26,6 @@ http://192.168.1.1/fdbtbl.asp
 ```
 # brctl show
 bridge name     bridge id               STP enabled     interfaces
-br0             8000.6cefc6bed5d7       no              eth0
+br0             8000.000000deadd7       no              eth0
                                                         nas0_0
 ```
