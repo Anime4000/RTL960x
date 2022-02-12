@@ -1,6 +1,9 @@
 # Hacking RTL9601C1
 Hacking V2801F & TWCGPON657 to suite your ISP Fiber
 
+# Setup
+Setup your [SFP XPON ONU Stick here](Docs/Setup_Stick.md)
+
 # Issue
 GPON market is a mess, plus explicit OMCI cause ONU Stick did not work
 
@@ -73,19 +76,16 @@ In this table, list of xPON Stick that support 4-port ONU Emulation
 
 Based on [ru-board](http://forum.ru-board.com/topic.cgi?forum=8&topic=80480&start=1360#2) **4-Port Emulation is limited**, not many xPON Stick can understand, only V2801F do support it, **because my Internet comes at Huawei HG8240H LAN Port 2** (LAN 1 for Main ISP, LAN 2 for 3rd party ISP)
 
+> I strongly recommend to get V2801F or CarlitoxxPro (Realtek), these xPON Stick support 4-port Emulation!
+
 ## Same Chipset, Different Vendor
 * There are many RTL9601C1 out there, not all firmware are interchangable
 * V2801F cannot use TWCGPON657 firmware
 * DFP-34X-2C2 (Realtek) cannot use V2801F firmware
 * TWCGPON657 **can use** V2801F firmware
 
-## Hidden Link
-1. Firmware Upgrade `http://192.168.1.1/upgrade.asp`
-2. WAN Mapping `http://192.168.1.1/multi_wan_generic.asp`
-
-> WAN Mapping feature is last attempt to when xPON Stick failed to bridge/no internet, currently I havent research `DFP-34X-2C2 (Realtek)` to work with my fiber, I not sure `DFP-34X-2C2 (Realtek)` is support 4-Port ONU Emulation, so I did not add into table above.
-
-> I strongly recommend to get V2801F or CarlitoxxPro (Realtek), these xPON Stick support 4-port Emulation!
+# Utility Link, Firmware Update
+[Read here (with images)](Docs/Useful_Links.md)
 
 # Flash
 I have been using TWCGPON657 (without fan) for a month and never had an issue, so in this sections, flash V2801F firmware into TWCGPON657 stick and fix auto-reboot issue.
@@ -126,6 +126,7 @@ When `echo 3 > /proc/fiber_mode` is set, you lose telnet acccess, you need to un
 * Advance setting like duplicate ONT Info, read [FLASH_GETSET_DEV.md](Docs/FLASH_GETSET_DEV.md)
 * For a manual for the built-in Realtek `diag` utility, see: [RTKPONDiagShellUserGuide](Docs/RTKPONDiagShellUserGuideV001.291982779.pdf)
   * Source: https://usermanual.wiki/Pdf/RTKPONDiagShellUserGuideV001.291982779/html
+
 
 # Modify
 You need a Linux PC/VM, Ubuntu as Operating System
