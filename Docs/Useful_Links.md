@@ -4,19 +4,19 @@ http://192.168.1.1/upgrade.asp
 ```
 
 # OMCI Info
-![SFU](Images/OMCI%20Info.PNG)
 ```
 http://192.168.1.1/omci_info.asp
 ```
+![SFU](Images/OMCI%20Info.PNG)
 
 # WAN Mapping
-![SFU](Images/WAN.PNG)
 ```
 http://192.168.1.1/multi_wan_generic.asp
 ```
+![SFU](Images/WAN.PNG)
 
 # Bridge Forwarding Database
-![SFU](Images/Bridge%20Forwarding%20Database.PNG)
 ```
 http://192.168.1.1/fdbtbl.asp
 ```
+![SFU](Images/Bridge%20Forwarding%20Database.PNG)
