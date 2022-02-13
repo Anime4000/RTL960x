@@ -17,7 +17,7 @@ You need to login into your old ONU, most ONU will have information page where y
 | Software Version | `OMCI_SW_VER1`, `OMCI_SW_VER2`, `CUSTOM_OMCI_SW_VER1`, `CUSTOM_OMCI_SW_VER2` |
 | Serial Number | `GPON_SN` |
 | Manufacture Info | `PON_VENDOR_ID` |
-| Device Type | `GPON_ONU_MODEL` |
+| Device Model | `GPON_ONU_MODEL` |
 
 # V2801F
 When changing `ELAN_MAC_ADDR` and/or `HW_HWVER`, you are required to update `VS_AUTH_KEY` by using `VsAuthKeyGen.exe` in command prompt.
@@ -60,37 +60,76 @@ Every `flash set` require `reboot` to take effect
 ## Basic
 Both are most important, try `set` these if works.
 
-### PLOAM Password
-```
-flash set GPON_PLOAM_PASSWD 0123456789
-```
-
 ### MAC Address
 ```
 flash set ELAN_MAC_ADDR 000000111111
 ```
-Note to V2801F users:
+> Note to V2801F users:<br/>
 > Require generate new `VS_AUTH_KEY`, run `VsAuthKeyGen.exe` in Command Prompt like this `VsAuthKeyGen 000000111111`
 
-## OMCI Authentication
-If **basic** still don't have access or pppoe not working, highly chance that your OLT need additional device information
+### ONU Serial Number
+Required to get authenticated, OLT may block rouge ONU in the network. Setting this require to update Vendor ID `PON_VENDOR_ID`
+```
+flash set GPON_SN HWTC00000000
+```
 
-### Device Info
+### PLOAM Password
+* Only accept **ASCII** Character.
+* If your password is `DEFAULT` or **bunch of zero** or **blank**, that mean you are using LOID Authentication
+```
+flash set GPON_PLOAM_PASSWD DEFAULT012
+```
+
+### LOID & LOID Password
+* May only need `LOID` or `LOID` & `Password`
+```
+flash set LOID 0123456789
+flash set LOID_PASSWD 0123456789
+```
+
+> Depen on fiber vendor either using **PLOAM** or **LOID** but not both
+
+## OMCI Authentication
+If **basic** setup still don't have access or pppoe not working, highly chance that your OLT need additional device information
+
+### ONU Model
+OLT might require which model are in whitelist (verified)
 ```
 flash set GPON_ONU_MODEL HG8240H5
+```
+
+### ONU Vendor
+OLT need to know which Manufacturer are in whitelist. Some known Vendor ID:
+|   ID   | Vendor Name |
+|--------|-------------|
+| `HWTC` | Huawei      |
+| `ZTEG` | ZTE         |
+| `ALCL` | Nokia/Alcatel-Lucent |
+| `UBNT` | Ubiquiti    |
+| `FHTT` | Fiber Home  |
+| `RTKG` | Realtek     |
+```
 flash set PON_VENDOR_ID HWTC
+```
+> Vendor ID must match with Serial Number
+
+### ONU Software Version
+OLT need to know which software version.
+```
 flash set OMCI_SW_VER1 V5R019C00S125
 flash set OMCI_SW_VER2 V5R019C00S125
 flash set CUSTOM_OMCI_SW_VER1 V5R019C00S125
 flash set CUSTOM_OMCI_SW_VER2 V5R019C00S125
 ```
+> In normal ONU Box:<br/>
+> Firmware get's updated when version is out of date. This has no effect with **SFP XPON ONU Stick**
 
 ### Hardware Version
 In some rare case, OLT need to know which hardware are you using
 ```
 flash set HW_HWVER 168D.A
 ```
-Note to V2801F users:
+> Note to V2801F users:<br/>
 > Require generate new `VS_AUTH_KEY`, run `VsAuthKeyGen.exe` in Command Prompt like this `VsAuthKeyGen 000000111111 168D.A`
 
 ### OMCI Fake `OK`
@@ -100,7 +139,7 @@ flash set OMCI_FAKE_OK 1
 ```
 
 ### OMCI OLT Mode
-Make **SFP XPON ONU Stick** universal, some OLT have special OMCI, most common OMCI is Huawei, for example, making **SFP XPON ONU Stick** act like Huawei ONU and understand Huawei OMCI and complatile with Huawei OLT.
+Make **SFP XPON ONU Stick** universal, some OLT have special OMCI, most common OMCI is Huawei, for example, making **SFP XPON ONU Stick** act like Huawei ONU and understand Huawei OMCI and compatible with Huawei OLT.
 
 Even Nokia OLT, Huawei is most common due to "Universal ONU" deployment.
 
@@ -118,7 +157,7 @@ flash set OMCI_OLT_MODE 2
 ```
 
 ## CWMP
-You can skip this if you have internet access, this may not required in most cases, some very strict OLT need
+TR069. You can skip this if you have internet access, this may not required in most cases, some very strict OLT need
 
 ```
 flash set HW_CWMP_MANUFACTURER 'Huawei Technologies Co., Ltd'
