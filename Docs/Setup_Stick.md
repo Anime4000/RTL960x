@@ -1,6 +1,14 @@
 # Setup
 In this guide, how to setup your **SFP XPON ONU Stick** based on your existing ONU and get Authenticated!
 
+# Default Password
+| Model | Username | Password |
+|-------|----------|----------|
+| DFP-34X-2C2 | `admin` | `admin` |
+| TWCGPON657  | `admin` | `system` |
+| UF-Instant  | `ubnt` | `ubnt` |
+| V2801F      | `admin` | `stdONU101` |
+
 # Know your fiber
 * Some fiber vendor provide **"Universal** 1-port or 4-port or All in One ONU
 * Some fiber limit **"verified"** ONU
