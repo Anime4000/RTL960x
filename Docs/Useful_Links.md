@@ -4,6 +4,10 @@ http://192.168.1.1/upgrade.asp
 ```
 
 # OMCI Info
+Some OLT have explicit device only can be use, even you have `O5` ONU Status, doesnt mean you have connection
+
+Cloning your ONU Info into Stick is best method, with `OMCI_FAKE_OK 1` will make OLT accept your stick
+
 It's recommend to update OMCI via telnet, [read here](Setup_Stick.md#omci-authentication)
 ```
 http://192.168.1.1/omci_info.asp
