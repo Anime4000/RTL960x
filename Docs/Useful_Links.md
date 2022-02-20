@@ -4,7 +4,7 @@ http://192.168.1.1/upgrade.asp
 ```
 
 # OMCI Info
-It's recommend to update OMCI via telnet, [read here](Docs/Setup_Stick.md#omci-authentication)
+It's recommend to update OMCI via telnet, [read here](Setup_Stick.md#omci-authentication)
 ```
 http://192.168.1.1/omci_info.asp
 ```
