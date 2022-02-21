@@ -4,11 +4,11 @@ Hacking V2801F & TWCGPON657 to suite your ISP Fiber
 > GPON market is a mess, plus explicit OMCI cause ONU Stick did not work
 
 # Guide, Links, Info
-* [Setup SFP XPON ONU Stick here](Docs/Setup_Stick.md)
-* [Utility Link, Firmware Update](Docs/Useful_Links.md)
-* [TWCGPON657 with V2801F firmware](Docs/TWCGPON657.md)
-* [V2801F Auto Reboot](Docs/V2801F.md)
-* [Modify Firmware](Docs/Modify_Firmware.md)
+1. [Setup SFP XPON ONU Stick](Docs/Setup_Stick.md)
+2. [Utility Link, Firmware Update](Docs/Useful_Links.md)
+3. [TWCGPON657 with V2801F firmware](Docs/TWCGPON657.md)
+4. [V2801F Auto Reboot](Docs/V2801F.md)
+5. [Modify Firmware](Docs/Modify_Firmware.md)
 
 ## With my issue:
 * [V2801F](https://www.amazon.com/Universal-Stick-Address-Supported-Attention/dp/B08C818JSQ)
