@@ -5,10 +5,11 @@ Hacking V2801F & TWCGPON657 to suite your ISP Fiber
 
 # Guide, Links, Info
 1. [Setup SFP XPON ONU Stick](Docs/Setup_Stick.md)
-2. [Utility Link, Firmware Update](Docs/Useful_Links.md)
-3. [TWCGPON657 with V2801F firmware](Docs/TWCGPON657.md)
-4. [V2801F Auto Reboot](Docs/V2801F.md)
-5. [Modify Firmware](Docs/Modify_Firmware.md)
+2. [Diagnostic Commands](Docs/DIAG.md)
+3. [Hidden Link, Firmware Update](Docs/Useful_Links.md)
+4. [TWCGPON657 with V2801F firmware](Docs/TWCGPON657.md)
+5. [V2801F Auto Reboot](Docs/V2801F.md)
+6. [Modify Firmware](Docs/Modify_Firmware.md)
 
 ## With my issue:
 * [V2801F](https://www.amazon.com/Universal-Stick-Address-Supported-Attention/dp/B08C818JSQ)
