@@ -81,6 +81,14 @@ CtagIf Auth DaBlock SaBlock Arp
 Dis    Dis  Dis     Dis     Dis
 ```
 
+### `l2-table get vid-unmatch port all`
+```
+RTK.0> l2-table get vid-unmatch port all
+
+Port 0 Action: Forward
+Port 2 Action: Forward
+```
+
 ## GPON Flow
 ### `gpon show us-flow`
 ```
