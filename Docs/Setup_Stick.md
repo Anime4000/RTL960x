@@ -11,6 +11,13 @@ Using Huawei ONU `HG8240H` device information for this setup example
 | UF-Instant  | `ubnt` | `ubnt` |
 | V2801F      | `admin` | `stdONU101` |
 
+## [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488)
+If you using **TWCGPON657** you need enable `telnet` by enter this address:
+| State     | URL |
+|-----------|------------------------------------------|
+| `Enable`  | `http://192.168.1.1/bd/telnet_open.asp`  |
+| `Disable` | `http://192.168.1.1/bd/telnet_close.asp` |
+
 # OLT & O5
 * OLT might have some **restriction** which device that can be used on their fiber network.
 * OLT need to know which device are you using before sending proper OMCI even you have `O5`
