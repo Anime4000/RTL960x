@@ -5,7 +5,7 @@ Hacking V2801F & TWCGPON657 to suite your ISP Fiber
 
 # Guide, Links, Info
 1. [Setup SFP XPON ONU Stick](Docs/Setup_Stick.md)
-2. [Flash Get, Flash Set](Docs/FLASH_GETSET_INFO.md) [2.5GbE Mode](Docs/FLASH_GETSET_INFO.md#lan_sds_mode-min-1-max-5)
+2. [Flash Get, Flash Set](Docs/FLASH_GETSET_INFO.md), [2.5GbE Mode](Docs/FLASH_GETSET_INFO.md#lan_sds_mode-min-1-max-5)
 3. [Diagnostic Commands](Docs/DIAG.md)
 4. [Hidden Link, Firmware Update](Docs/Useful_Links.md)
 5. [TWCGPON657 with V2801F firmware](Docs/TWCGPON657.md)
