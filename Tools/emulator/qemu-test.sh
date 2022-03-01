@@ -4,19 +4,27 @@
 # Purpose of this script to let you test before flash into RTL9601C1 (ONU Stick)
 # Try merge or play with V2801F and TWCGPON657
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cd "$DIR"
+
 echo "Anime4000 firmware test for RTL9601C1"
 echo "-------------------------------------"
 echo ""
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-CHDIR="squashfs-root"
-
-cd "$DIR"
-
 if [ "$EUID" -ne 0 ]
-	then echo "Please run as root"
+	then echo "Please run as root!"
 	exit 99
 fi
+
+echo "Checking Packging: $1"
+if [[ ! -f $1 && -z $1 ]]; then
+    echo "$1 is not found! example: $0 C00R657V00B15_20201222.tar"
+    exit 99
+fi
+
+CHDIR="squashfs-root"
+FILEPATH=$(realpath $1)
+FILENAME=$(basename -- $1)
 
 
 echo "Checking Install: QEMU User Static"
@@ -36,6 +44,19 @@ echo "Checking Install: chroot"
 	echo "apt install schroot"
 	exit 2
 }
+
+echo "Creating folder: ${FILENAME%.*}"
+mkdir ${FILENAME%.*}
+
+echo "Entering folder: ${FILENAME%.*}"
+cd ${FILENAME%.*}
+
+echo "Extracting firmware: $FILENAME"
+tar -xvf $FILEPATH
+
+echo "Expanding squashfs-root: rootfs"
+mv rootfs rootfs.original
+unsquashfs rootfs.original
 
 echo "Checking Folder: squashfs-root"
 if [ ! -d "$CHDIR" ]; then
@@ -58,11 +79,30 @@ if [ ! -f "$CHDIR/usr/bin/qemu-mips-static" ]; then
 	cp $(which qemu-mips-static) "$CHDIR/usr/bin/"
 fi
 
-echo "Running..."
+echo "RTL9601C1 Emulator is Running!"
 chroot "$CHDIR" qemu-mips-static "/bin/sh"
 echo "User end QEMU..."
 
 echo "Unmounting..."
 rm -rf "$CHDIR/usr/bin"
+
+echo "Repacking squashfs-root: rootfs"
+mksquashfs squashfs-root rootfs -b 131072 -comp lzma
+
+echo "Regenerate firmware: rtl9601c1_modified.tar"
+md5sum fwu.sh > md5.txt
+md5sum fwu_ver >> md5.txt
+md5sum rootfs >> md5.txt
+md5sum uImage >> md5.txt
+
+echo "Repacking firmware: rtl9601c1_modified.tar"
+tar -cvf ../rtl9601c1_modified.tar fwu.sh fwu_ver md5.txt rootfs uImage
+
+echo ""
+echo "Firmware Repacking Complete!"
+echo "Location: $(realpath ../rtl9601c1_modified.tar)"
+echo ""
+echo "Anime4000 firmware test script, https://github.com/Anime4000/RTL9601C1"
+echo ""
 
 exit 0
