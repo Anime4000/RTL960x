@@ -10,7 +10,7 @@ Hacking V2801F, TWCGPON657 & DFP-34X-2C2 to suite your ISP Fiber
 4. [Hidden Link, Firmware Update](Docs/Useful_Links.md)
 5. [TWCGPON657 with V2801F firmware](Docs/TWCGPON657.md)
 6. [V2801F Auto Reboot](Docs/V2801F.md)
-7. [Modify Firmware](Docs/Modify_Firmware.md)
+7. [Firmware Emulator](Tools/emulator)
 
 ## With my issue:
 * [V2801F](https://www.amazon.com/Universal-Stick-Address-Supported-Attention/dp/B08C818JSQ)
