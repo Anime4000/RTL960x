@@ -7,7 +7,7 @@ You need these program installed:
 * `squashfs-tools` (extract/repack rootfs)
 * `qemu-user-static` (run MIPS VM)
 
-> Most Ubuntu based distor have `tar` and `squashfs-tools` installed!
+> Most Ubuntu based distro have `tar` and `squashfs-tools` installed!
 
 # Install
 * [Download](https://github.com/Anime4000/RTL9601C1/raw/main/Tools/emulator/qemu-test.sh) `qemu-test.sh`
@@ -34,7 +34,7 @@ Enter 'help' for a list of built-in commands.
 
 ```
 
-During this screen, you can start modify the firmware,
+During this screen, you can start modify the firmware, look into `"firmware_file"` folder.
 
 ## V2801F 2.5GbE
 There is way to make V2801F run 2.5GbE since RTL9601C1 SoC are supported, by copying `/etc/runlansds.sh` from TWCGPON657 to V2801F. Probably also need to copy `/bin/sfpapp`
