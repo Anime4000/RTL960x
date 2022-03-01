@@ -62,6 +62,9 @@ You need to login into your old ONU, most ONU will have information page where y
 Every `flash set` require `reboot` to take effect
 
 ## Authentication
+* Authenticate your XPON Stick by **PLOAM Password** or **LOID**
+* Some OLT use MAC Address as authentication
+
 ### PLOAM
 ```
 flash set GPON_PLOAM_PASSWD DEFAULT012
@@ -88,6 +91,10 @@ flash set ELAN_MAC_ADDR 000000111111
 
 
 ## OMCI Device Information
+* Many OLT only allow **certain** or **valid** " Universal ONU " model can be use
+* OLT will not up-stream OMCI provision for invalid/illegal ONU model even you have `O5` Status!
+* This section make your XPON Stick become valid!
+
 ### Device Model
 ```
 flash set GPON_ONU_MODEL HG8240H5
