@@ -131,9 +131,9 @@ flash set CUSTOM_OMCI_SW_VER2 V5R019C00S125
 flash set HW_HWVER 168D.A
 ```
 
-## OMCI Extra
+## OMCI Additional
 ### OMCI Fake `OK`
-Because your stick is not same as your ONU box, this command is a must to tell `OK` to OLT
+OLT may send "model specific" OMCI provision that XPON Stick not understand, setting this value making your XPON Stick send `OK` reply on unsupport OMCI
 ```
 flash set OMCI_FAKE_OK 1
 ```
