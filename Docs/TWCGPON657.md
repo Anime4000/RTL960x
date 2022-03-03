@@ -13,6 +13,12 @@ I have been using TWCGPON657 (without fan) for a month and never had an issue, s
 # Issue
 V2801F might not support most router since it operate at PON Fiber Transceiver. EdgeRouter 12 support V2801F with EEPROM emulator support.
 
-List known router issue that need reinsert the stick (power cycle)
+## Mikrotik SFP+
+You need do set SFP+ like this
+![WinBox](Images/sfpplus1.png)
+
+Stick re-insert is need when stick failed
+
+### Known model having issue
 * RB4011
 * RB5009
