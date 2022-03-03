@@ -47,11 +47,11 @@ Configure how stick link negotiation with SFP, some router has specific issue, b
 
 | Value | `cat /proc/kmsg` | Mode  | Note |
 |-------|------|-------------------|------|
-| `1`   | `<4>change mode to 1(Fiber 1G)`    | 1GbE Fiber | TWCGPON657 Default |
-| `2`   | `<4>change mode to 2(SGMII PHY)`   | 1GbE Layer 1 | V2801F Default |
-| `3`   | `<4>change mode to 3(SGMII MAC)`   | 1GbE Layer 2 | |
-| `4`   | `<4>change mode to 4(HiSGMII PHY)` | 2.5GbE Layer 1 | TWCGPON657 B13 and above firmware only |
-| `5`   | `<4>change mode to 5(HiSGMII MAC)` | 2.5GbE Layer 2 | TWCGPON657 B13 and above firmware only |
+| `1`   | `<4>change mode to 1(Fiber 1G)`    | Act like 1Gb Fiber Transceiver  | V2801F Default |
+| `2`   | `<4>change mode to 2(SGMII PHY)`   | Act like 1Gb Ethernet Transceiver at Layer 1 |  |
+| `3`   | `<4>change mode to 3(SGMII MAC)`   | Act like 1Gb Ethernet Transceiver at Layer 2 |  |
+| `4`   | `<4>change mode to 4(HiSGMII PHY)` | Act like 2.5Gb Ethernet Transceiver Layer 1 | TWCGPON657 B13 and above firmware only |
+| `5`   | `<4>change mode to 5(HiSGMII MAC)` | Act like 2.5Gb Ethernet Transceiver Layer 2 | TWCGPON657 B13 and above firmware only |
 
 * DFP-34X-2C2: Not tested if stock firmware support `HiSGMII` 2.5GbE
 * V2801F: Not support `HiSGMII` 2.5GbE, trying to set will cause issue or stuck
