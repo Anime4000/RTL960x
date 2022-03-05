@@ -81,7 +81,10 @@ fi
 
 echo "RTL9601C1 Emulator is Running!"
 chroot "$CHDIR" qemu-mips-static "/bin/sh"
-echo "User end QEMU..."
+echo "User End QEMU..."
+
+echo "chmod +x /bin folder, prevent stick become brick!"
+chmod +x "$CHDIR/bin" -R
 
 echo "Unmounting..."
 rm -rf "$CHDIR/usr/bin"
