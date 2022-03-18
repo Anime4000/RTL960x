@@ -38,14 +38,14 @@ It's best to clone ONU information via telnet or webgui config (backup, edit, re
 
 # Get Information
 You need to login into your old ONU, most ONU will have information page where you can get:
-| Information | Flash Set Value |
-|-------------|-----------------|
-| MAC Address | `ELAN_MAC_ADDR` <sub><sup>[*V2801F](#v2801f)</sup></sub> |
-| Hardware Version | `HW_HWVER` <sub><sup>[*V2801F](#v2801f)</sup></sub> |
-| Software Version | `OMCI_SW_VER1`, `OMCI_SW_VER2`, `CUSTOM_OMCI_SW_VER1`, `CUSTOM_OMCI_SW_VER2` |
-| Serial Number | `GPON_SN` |
-| Manufacture Info | `PON_VENDOR_ID` |
-| Device Model | `GPON_ONU_MODEL` |
+| Information | Flash Set Value | Example |
+|-------------|-----------------|---------|
+| MAC Address | `ELAN_MAC_ADDR` <sub><sup>[*V2801F](#v2801f)</sup></sub> | `781735000000` |
+| Hardware Version | `HW_HWVER` <sub><sup>[*V2801F](#v2801f)</sup></sub> | `BF9.A` | 
+| Software Version | `OMCI_SW_VER1`, `OMCI_SW_VER2`, `CUSTOM_OMCI_SW_VER1`, `CUSTOM_OMCI_SW_VER2` | `V3R017C10S100` |
+| Serial Number | `GPON_SN` | `HWTC35000000` |
+| Manufacture Info | `PON_VENDOR_ID` | `HWTC` |
+| Device Model | `GPON_ONU_MODEL` | `HG8240H` |
 
 # ONU Information Page Example
 ## G-240G-E
