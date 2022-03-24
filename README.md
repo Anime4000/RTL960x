@@ -60,6 +60,13 @@ In this table, list of xPON Stick that support 4-port ONU Emulation
             <td>❌</td>
         </tr>
         <tr>
+            <td>DFP-34X-2C2 (Realtek)</td>
+            <td>✔️</td>
+            <td>❌</td>
+            <td>❌</td>
+            <td>❌</td>
+        </tr>
+        <tr>
             <td>TWCGPON657</td>
             <td>✔️</td>
             <td>❌</td>
