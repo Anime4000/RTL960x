@@ -85,6 +85,9 @@ echo "User End QEMU..."
 
 echo "chmod +x /bin folder, prevent stick become brick!"
 chmod +x "$CHDIR/bin" -R
+chmod +x "$CHDIR/etc/*.sh"
+chmod +x "$CHDIR/etc/init.d" -R
+chmod +x "$CHDIR/etc/scripts" -R
 
 echo "Unmounting..."
 rm -rf "$CHDIR/usr/bin"
