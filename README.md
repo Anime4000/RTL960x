@@ -30,10 +30,10 @@ Hacking V2801F, TWCGPON657 & DFP-34X-2C2 to suite your ISP Fiber
 * Vendor supply 4-port ONU for each service or ISP
 
 ### Multiple ISP
-![HG8240H5](Docs/Images/Ports Provisioning Multiple ISP.png)
+![HG8240H5](Docs/Images/Ports%20Provisioning%20Multiple%20ISP.png)
 
 ### Multiple Service
-![HG8240H5](Docs/Images/Ports Provisioning Multi Port Service.png)
+![HG8240H5](Docs/Images/Ports%20Provisioning%20Multi%20Port%20Service.png)
 
 In this table, list of xPON Stick that support 4-port ONU Emulation
 <table>
