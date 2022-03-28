@@ -46,6 +46,7 @@ In this table, list of xPON Stick that support 4-port ONU Emulation
         </tr>
         <tr>
             <th>xPON Stick</th>
+            <th>Root</th>
             <th>1️⃣</th>
             <th>2️⃣</th>
             <th>3️⃣</th>
@@ -56,12 +57,14 @@ In this table, list of xPON Stick that support 4-port ONU Emulation
         <tr>
             <td>DFP-34G-2C2 (ZTE)</td>
             <td>✔️</td>
+            <td>✔️</td>
             <td>❌</td>
             <td>❌</td>
             <td>❌</td>
         </tr>
         <tr>
             <td>DFP-34X-2C2 (ZTE)</td>
+            <td>✔️</td>
             <td>✔️</td>
             <td>❌</td>
             <td>❌</td>
@@ -73,9 +76,11 @@ In this table, list of xPON Stick that support 4-port ONU Emulation
             <td>❌</td>
             <td>❌</td>
             <td>❌</td>
+            <td>❌</td>
         </tr>
         <tr>
             <td>TWCGPON657</td>
+            <td>✔️</td>
             <td>✔️</td>
             <td>❌</td>
             <td>❌</td>
@@ -87,12 +92,15 @@ In this table, list of xPON Stick that support 4-port ONU Emulation
             <td>✔️</td>
             <td>✔️</td>
             <td>✔️</td>
+            <td>✔️</td>
         </tr>
     </tbody>
 </table>
 
 > ✔️ Port Emulation Support |
-> ❌ No Support
+> ❌ Not Supported
+
+> `Root` mean your ONU is All in One where PPPoE/DHCP ended inside ONU and Switch via LAN Ports & Wi-Fi (no bridge)
 
 Based on [ru-board](http://forum.ru-board.com/topic.cgi?forum=8&topic=80480&start=1360#2) **4-Port Emulation is limited**, not many xPON Stick can understand, only V2801F do support it, **because my Internet comes at Huawei HG8240H LAN Port 2** (LAN 1 for Main ISP, LAN 2 for 3rd party ISP)
 
