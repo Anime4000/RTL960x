@@ -56,6 +56,8 @@ Configure how stick link negotiation with SFP, some router has specific issue, b
 * Not all SFP/SFP+/SFP28 router support PON Fiber Transceiver
 * DFP-34X-2C2: Not tested if stock firmware support `HiSGMII` 2.5GbE
 * V2801F: Not support `HiSGMII` 2.5GbE, trying to set will cause issue or stuck
+* RB5009: `sfp-sfpplus` not support 2.5GbE
+* RB5009: You may need set to `1` to make it compatible (Fiber Transceiver Mode)
 
 ## `DIRECT_BRIDGE_MODE` (Min 0, Max 1, Default is 1)
 Not sure about this, it seem PON interface bridged to LAN under one `br0` ?
