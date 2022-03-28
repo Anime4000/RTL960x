@@ -88,6 +88,7 @@ chmod +x "$CHDIR/bin" -R
 chmod +x "$CHDIR/etc/*.sh"
 chmod +x "$CHDIR/etc/init.d" -R
 chmod +x "$CHDIR/etc/scripts" -R
+chown 0:0 "$CHDIR/" -R
 
 echo "Unmounting..."
 rm -rf "$CHDIR/usr/bin"
