@@ -81,6 +81,25 @@ CtagIf Auth DaBlock SaBlock Arp
 Dis    Dis  Dis     Dis     Dis
 ```
 
+### DFP-34X-2C2 (RTL9601D)
+ODI DFP-34X-2C2 has different `diag` command which above command are not compatible, run this script to print all:
+
+```sh
+#!/bin/sh
+# author: anime4000
+# filename: /bin/get-l2
+i=0
+max=2047
+while [ $i -lt $max ]
+do
+    if diag l2-table get entry address $i | grep -q "LUT"; then
+        diag l2-table get entry address $i
+    fi
+    true $(( i++ ))
+done
+echo "DONE! L2 Table Print Valid"
+```
+
 ### `l2-table get vid-unmatch port all`
 ```
 RTK.0> l2-table get vid-unmatch port all
