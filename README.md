@@ -5,12 +5,14 @@ Hacking V2801F, TWCGPON657 & DFP-34X-2C2 to suite your ISP Fiber
 
 # Guide, Links, Info
 1. [Setup SFP XPON ONU Stick](Docs/Setup_Stick.md)
-2. [Flash Get, Flash Set](Docs/FLASH_GETSET_INFO.md), [2.5GbE Mode](Docs/FLASH_GETSET_INFO.md#lan_sds_mode-min-1-max-5)
-3. [Diagnostic Commands](Docs/DIAG.md)
-4. [Hidden Link, Firmware Update](Docs/Useful_Links.md)
-5. [TWCGPON657 with V2801F firmware](Docs/TWCGPON657.md)
-6. [V2801F Auto Reboot](Docs/V2801F.md)
-7. [Firmware Emulator](Tools/emulator)
+2. [Flash Get, Flash Set](Docs/FLASH_GETSET_INFO.md)
+    * [xPON Model Id](Docs/FLASH_GETSET_INFO.md#pon_vendor_id-4-ascii-character-maximum)
+    * [2.5GbE Mode](Docs/FLASH_GETSET_INFO.md#lan_sds_mode-min-1-max-5)
+4. [Diagnostic Commands](Docs/DIAG.md)
+5. [Hidden Link, Firmware Update](Docs/Useful_Links.md)
+6. [TWCGPON657 with V2801F firmware](Docs/TWCGPON657.md)
+7. [V2801F Auto Reboot](Docs/V2801F.md)
+8. [Firmware Emulator](Tools/emulator)
 
 ## With my issue:
 * [V2801F](https://www.amazon.com/Universal-Stick-Address-Supported-Attention/dp/B08C818JSQ)
