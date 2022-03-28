@@ -37,6 +37,8 @@ Hacking V2801F, TWCGPON657 & DFP-34X-2C2 to suite your ISP Fiber
 ### Multiple Service
 ![HG8240H5](Docs/Images/Ports%20Provisioning%20Multi%20Port%20Service.png)
 
+Based on [ru-board](http://forum.ru-board.com/topic.cgi?forum=8&topic=80480&start=1360#2) **4-Port Emulation is limited**, not many xPON Stick can understand, only V2801F do support it, **because my Internet comes at Huawei HG8240H LAN Port 2** (LAN 1 for Main ISP, LAN 2 for 3rd party ISP)
+
 In this table, list of xPON Stick that support 4-port ONU Emulation
 <table>
     <thead>
@@ -100,16 +102,15 @@ In this table, list of xPON Stick that support 4-port ONU Emulation
 > ✔️ Port Emulation Support |
 > ❌ Not Supported
 
-> `Root` mean your ONU is All in One where PPPoE/DHCP ended inside ONU and Switch via LAN Ports & Wi-Fi (no bridge)
-
-Based on [ru-board](http://forum.ru-board.com/topic.cgi?forum=8&topic=80480&start=1360#2) **4-Port Emulation is limited**, not many xPON Stick can understand, only V2801F do support it, **because my Internet comes at Huawei HG8240H LAN Port 2** (LAN 1 for Main ISP, LAN 2 for 3rd party ISP)
+> `Root` mean your ONU is All in One where PPPoE/DHCP ended inside ONU (not bridge/route mode)
 
 > I strongly recommend to get V2801F or CarlitoxxPro (Realtek), these xPON Stick support 4-port Emulation!
 
-## Same Chipset, Different Vendor
-* There are many RTL9601C1 out there, not all firmware are interchangable
-* V2801F cannot use TWCGPON657 firmware
-* DFP-34X-2C2 (Realtek) cannot use V2801F firmware
-* TWCGPON657 **can use** V2801F firmware
+## RTL960x Family
+| System on Chip | Model |
+|----------------|-------|
+| RTL9601C1      | [V2801F](https://www.baudcom.com.cn/epon-gpon-onu-stick-sfp-module-with-mac-inside.html) |
+| RTL9601C1      | [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488) |
+| RTL9601D       | [DFP-34X-2C2](https://www.aliexpress.com/item/4000086970977.html) |
 
-[V2801F Origin](https://www.baudcom.com.cn/epon-gpon-onu-stick-sfp-module-with-mac-inside.html)
+Firmware might interchangable each other, flash it at your own RISK!
