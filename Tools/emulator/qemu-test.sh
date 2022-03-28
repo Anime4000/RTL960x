@@ -101,6 +101,9 @@ else
 	echo "$STICKVER" > fwu_ver
 fi
 
+echo "Change Default LAN_SDS_MODE"
+sed -i 's/<Value Name="LAN_SDS_MODE" Value="5"\/>/<Value Name="LAN_SDS_MODE" Value="1"\/>/g' "$CHDIR/etc/config_default_hs.xml"
+
 echo "Unmounting..."
 rm -rf "$CHDIR/usr/bin"
 
