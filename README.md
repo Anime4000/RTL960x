@@ -26,6 +26,7 @@ Firmware might interchangable each other, flash it at your own RISK!
 6. [TWCGPON657 with V2801F firmware](Docs/TWCGPON657.md)
 7. [V2801F Auto Reboot](Docs/V2801F.md)
 8. [Firmware Emulator](Tools/emulator)
+9. [UART](Docs/UART.md)
 
 # Triple Play Multiple ISP Problem, 4-port ONU Emulation
 * Majority fiber vendor support multiple ISP
