@@ -1,5 +1,5 @@
 # Telnet Login:
-[List of default login](Docs/Setup_Stick.md#default-password)
+[List of default login](Setup_Stick.md#default-password)
 
 # Explaination
 ## `ELAN_MAC_ADDR` (12 Hexadecimal number maximum)
