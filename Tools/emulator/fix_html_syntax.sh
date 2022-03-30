@@ -1,9 +1,7 @@
 #!/bin/sh
 
-find . -type f -exec sed -i 's/<! Copyright/<!-- Copyright/g' {} +
-find . -type f -exec sed -i 's/Reserved. ->/Reserved. -->/g' {} +
+
 find . -type f -exec sed -i 's/<html>/<!DOCTYPE html>\n<html>/g' {} +
-find . -type f -exec sed -i 's/<!-->/<!-- html syntax update by Anime4000 -->/g' {} +
 find . -type f -exec sed -i 's/<!DOCTYPE HTML PUBLIC "-\/\/W3C\/\/DTD HTML 4.0 Transitional\/\/EN">/<!DOCTYPE html>/g' {} +
 
 find . -type f -exec sed -i 's/HEAD>/head>/g' {} +
@@ -30,8 +28,11 @@ find . -type f -exec sed -i 's/<META/<meta/g' {} +
 find . -type f -exec sed -i 's/<STYLE/<style/g' {} +
 find . -type f -exec sed -i 's/<\/STYLE>/<\/style>/g' {} +
 
+find . -type f -exec sed -i 's/<! Copyright/<!-- Copyright/g' {} +
+find . -type f -exec sed -i 's/Reserved. ->/Reserved. -->/g' {} +
+find . -type f -exec sed -i 's/<!-->/<!-- html syntax update by Anime4000 -->/g' {} +
 find . -type f -exec sed -i '1N;$!N;s/<style type=text\/css>\n@import url(..\/style\/default.css);\n<\/style>//I;P;D' {} +
 find . -type f -exec sed -i '1N;$!N;s/<style type=text\/css>\n@import url(\/style\/default.css);\n<\/style>//I;P;D' {} +
-find . -type f -exec sed -i 's/<\/title>/<\/title>\n<link rel="stylesheet" href="\/style\/default.css">/g' {} +
+find . -type f -exec sed -i 's/<\/title>/<\/title>\n<style type=text\/css>@import url(\/style\/default.css);<\/style>/g' {} +
 
 find . -type f -exec sed -i '/^$/d' {} +
