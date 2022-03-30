@@ -1,16 +1,18 @@
-# Hacking RTL9601C1
+# Hacking [RTL9601CI](https://www.google.com/search?q=rtl9601ci+datasheet)
 Hacking V2801F, TWCGPON657 & DFP-34X-2C2 to suite your ISP Fiber
 
 > GPON market is a mess, plus explicit OMCI cause ONU Stick did not work
+
+> Correction: `CI` not `C1`
 
 
 # RTL960x Family
 | Stick | SoC | NAND |
 |-------|-----|------|
-| [V2801F](https://www.baudcom.com.cn/epon-gpon-onu-stick-sfp-module-with-mac-inside.html) | RTL9601C1 | 8MB (64Mb) |
-| [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488) | RTL9601C1 | 16MB (128Mb) | 
-| [UFiber Instant](https://store.ui.com/collections/operator-ufiber/products/uf-instant) | RTL9601C1 | 8MB (64Mb) |
-| [DFP-34X-2C2](https://www.aliexpress.com/item/4000086970977.html) | RTL9601D | 8MB (64Mb) |
+| [V2801F](https://www.baudcom.com.cn/epon-gpon-onu-stick-sfp-module-with-mac-inside.html) | `RTL9601CI` | 8MB (64Mb) |
+| [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488) | `RTL9601CI` | 16MB (128Mb) | 
+| [UFiber Instant](https://store.ui.com/collections/operator-ufiber/products/uf-instant) | `RTL9601CI` | 8MB (64Mb) |
+| [DFP-34X-2C2](https://www.aliexpress.com/item/4000086970977.html) | `RTL9601D` | 8MB (64Mb) |
 
 Firmware might interchangable each other, flash it at your own RISK!
 
@@ -24,6 +26,7 @@ Firmware might interchangable each other, flash it at your own RISK!
 6. [TWCGPON657 with V2801F firmware](Docs/TWCGPON657.md)
 7. [V2801F Auto Reboot](Docs/V2801F.md)
 8. [Firmware Emulator](Tools/emulator)
+9. [UART](Docs/UART.md)
 
 # Triple Play Multiple ISP Problem, 4-port ONU Emulation
 * Majority fiber vendor support multiple ISP

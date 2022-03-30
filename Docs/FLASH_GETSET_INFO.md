@@ -1,5 +1,5 @@
 # Telnet Login:
-[List of default login](Docs/Setup_Stick.md#default-password)
+[List of default login](Setup_Stick.md#default-password)
 
 # Explaination
 ## `ELAN_MAC_ADDR` (12 Hexadecimal number maximum)
@@ -63,27 +63,27 @@ Configure how stick link negotiation with SFP, some router has specific issue, b
 Not sure about this, it seem PON interface bridged to LAN under one `br0` ?
 
 ## `DEVICE_TYPE` (Min 0, Max 2, Default is 0)
-| Value | Note |
-|-------|------|
-| `0` | `bridge` |
-| `1` | `router` |
-| `2` | `hybrid` (both) |
+| Value | Mode | Default |
+|-------|------|---------|
+| `0` | `bridge` | V2801F, TWCGPON657 |
+| `1` | `router` | DFP-34X-2C2 |
+| `2` | `hybrid` (both) | |
 
 ## `VLAN_CFG_TYPE` (Min 0, Max 1, Default is 0)
 VLAN Configuration Type:
-| Value | Note |
+| Value | Mode |
 |-------|------|
 | `0` | Auto Detect |
 | `1` | Manual (which require `VLAN_MANU_MODE` to set) |
 
 ## `VLAN_MANU_MODE` (Min 0, Max 3, Default is 0)
 How ONU Stick handle VLAN from PON to ETH interface
-| Value | Note |
-|-------|------|
-| `0` | Transparent Mode |
-| `1` | Tagging Mode |
-| `2` | Remote Access Mode |
-| `3` | Special Case Mode |
+| Value | Mode | Note | Explaination |
+|-------|------|------|--------------|
+| `0` | Transparent Mode | VLAN will mapped as is | Map VLAN without changing original id |
+| `1` | Tagging Mode | VLAN Stacking / Q-in-Q | Untag first VLAN layer and bridge as is |
+| `2` | Remote Access Mode |  |  |
+| `3` | Special Case Mode |  |  |
 
 ## `PON_MODE` (Min 1, Max 3, Default is 1)
 Configure ONT Stick in which mode:
