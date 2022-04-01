@@ -55,12 +55,12 @@ Configure how stick link negotiation with SFP, some router has specific issue, b
 | `6`   | `<4>change mode to 6(2500BaseX)` | 2.5Gb Fiber Channel |  |
 
 ### 2.5Gb Compatibility
-| Brand | Type | Model | 2.5Gb Support |
-|-------|------|-------|---------------|
-| Mikrotik | Router | RB4011iGS+RM  | NO |
-| Mikrotik | Router | RB5009UG+S+IN | NO |
-| Marvell  | Router | MACCHIATObin  | YES `re-insert required` |
-| TP-Link  | Router | TL-XDR5480    | NO |
+| Brand | Type | Model | 2.5Gb Support | Quirks |
+|-------|------|-------|---------------|--------|
+| Mikrotik | Router | RB4011iGS+RM  | NO | |
+| Mikrotik | Router | RB5009UG+S+IN | NO | |
+| Marvell  | Router | MACCHIATObin  | YES | re-insert required |
+| TP-Link  | Router | TL-XDR5480    | NO | |
 
 ## `DIRECT_BRIDGE_MODE` (Min 0, Max 1, Default is 1)
 Not sure about this, it seem PON interface bridged to LAN under one `br0` ?
