@@ -47,17 +47,20 @@ Configure how stick link negotiation with SFP, some router has specific issue, b
 
 | Value | `cat /proc/kmsg` | Mode/Behavior  | Note |
 |-------|------|-------------------|------|
-| `1`   | `<4>change mode to 1(Fiber 1G)`    | 1Gb Fiber Transceiver  | V2801F Default |
+| `1`   | `<4>change mode to 1(Fiber 1G)`    | 1Gb Fiber Channel  | V2801F Default |
 | `2`   | `<4>change mode to 2(SGMII PHY)`   | 1Gb Ethernet Transceiver @ Layer 1 | TWCGPON657 Default |
 | `3`   | `<4>change mode to 3(SGMII MAC)`   | 1Gb Ethernet Transceiver @ Layer 2 | DFP-34X-2C2 Default |
 | `4`   | `<4>change mode to 4(HiSGMII PHY)` | 2.5Gb Ethernet Transceiver @ Layer 1 |  |
 | `5`   | `<4>change mode to 5(HiSGMII MAC)` | 2.5Gb Ethernet Transceiver @ Layer 2 |  |
+| `6`   | `<4>change mode to 6(2500BaseX)` | 2.5Gb Fiber Channel |  |
 
-* Not all SFP/SFP+/SFP28 router support PON Fiber Transceiver
-* DFP-34X-2C2: Not tested if stock firmware support `HiSGMII` 2.5GbE
-* V2801F: Not support `HiSGMII` 2.5GbE, trying to set will cause issue or stuck
-* RB5009: `sfp-sfpplus` not support 2.5GbE
-* RB5009: You may need set to `1` to make it compatible (Fiber Transceiver Mode)
+### 2.5Gb Compatibility
+| Brand | Type | Model | 2.5Gb Support |
+|-------|------|-------|---------------|
+| Mikrotik | Router | RB4011iGS+RM  | NO |
+| Mikrotik | Router | RB5009UG+S+IN | NO |
+| Marvell  | Router | MACCHIATObin  | YES `re-insert required` |
+| TP-Link  | Router | TL-XDR5480    | NO |
 
 ## `DIRECT_BRIDGE_MODE` (Min 0, Max 1, Default is 1)
 Not sure about this, it seem PON interface bridged to LAN under one `br0` ?
