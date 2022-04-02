@@ -17,6 +17,14 @@
 
 			<form action="/boaform/formRefleshFdbTbl" method="post" name="formFdbTbl">
 				<table class="table table-hover">
+					<thead class="thead-dark">
+						<tr>
+							<th scope="col"><% multilang("191" "LANG_PORT"); %></td>
+							<th scope="col"><% multilang("88" "LANG_MAC_ADDRESS"); %></td>
+							<th scope="col"><% multilang("792" "LANG_IS_LOCAL"); %></td>
+							<th scope="col"><% multilang("793" "LANG_AGEING_TIMER"); %></td>
+						</tr>
+					</thead>
 					<% bridgeFdbList(); %>
 				</table>
 				<input type="hidden" value="/fdbtbl.asp" name="submit-url">

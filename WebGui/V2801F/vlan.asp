@@ -77,7 +77,7 @@ function saveChanges() {
 			<form action="/boaform/formVlan" method="post" name="vlan">
 				<div class="form-group row">
 					<div class="col-sm-3">
-						<input class="form-check-input" type="radio" name="vlan_cfg_type" id="vlan_cfg_type" value="0" OnClick="vlan_cfg_type_change()" <% fmvlan_checkWrite("vlan_cfg_type_auto"); %>>
+						<input type="radio" class="form-check-input" name="vlan_cfg_type" id="vlan_cfg_type" value="0" onClick="vlan_cfg_type_change()" <% fmvlan_checkWrite("vlan_cfg_type_auto"); %>>
 						<label class="form-check-label" for="vlan_cfg_type">
 							<% multilang("153" "LANG_AUTO"); %>
 						</label>
@@ -91,7 +91,7 @@ function saveChanges() {
 				</div>
 				<div class="form-group">
 					<div class="col-sm-2">
-						<input class="form-check-input" type="radio" name="vlan_cfg_type" id="vlan_cfg_type" value="1" OnClick="vlan_cfg_type_change()" <% fmvlan_checkWrite("vlan_cfg_type_manual"); %>>
+						<input type="radio" class="form-check-input" name="vlan_cfg_type" id="vlan_cfg_type" value="1" onClick="vlan_cfg_type_change()" <% fmvlan_checkWrite("vlan_cfg_type_manual"); %>>
 						<label class="form-check-label" for="vlan_cfg_type">
 							<% multilang("410" "LANG_MANUAL"); %>
 						</label>
@@ -102,7 +102,7 @@ function saveChanges() {
 					<div class="col-sm-1">
 					</div>
 					<div class="col-sm-11">
-						<input class="form-check-input" type="radio" name="vlan_manu_mode" id="vlan_cfg_type" value="0" OnClick="vlan_manu_mode_change()" <% fmvlan_checkWrite("vlan_manu_mode_trans"); %>>
+						<input type="radio" class="form-check-input" name="vlan_manu_mode" id="vlan_cfg_type" value="0" onClick="vlan_manu_mode_change()" <% fmvlan_checkWrite("vlan_manu_mode_trans"); %>>
 						<label class="form-check-label" for="vlan_cfg_type">
 							<% multilang("1025" "LANG_TRANSPARENT_MODE"); %>
 						</label>
@@ -112,7 +112,7 @@ function saveChanges() {
 					<div class="col-sm-1">
 					</div>
 					<div class="col-sm-4">
-						<input class="form-check-input" type="radio" name="vlan_manu_mode" id="vlan_cfg_type" value="0" OnClick="vlan_manu_mode_change()" <% fmvlan_checkWrite("vlan_manu_mode_tag"); %>>
+						<input type="radio" class="form-check-input" name="vlan_manu_mode" id="vlan_cfg_type" value="0" onClick="vlan_manu_mode_change()" <% fmvlan_checkWrite("vlan_manu_mode_tag"); %>>
 						<label class="form-check-label" for="vlan_cfg_type">
 							<% multilang("1026" "LANG_TAGGING_MODE"); %>
 						</label>
@@ -126,7 +126,7 @@ function saveChanges() {
 					<div class="col-sm-1">
 					</div>
 					<div class="col-sm-11">
-						<input class="form-check-input" type="radio" name="vlan_manu_mode" id="vlan_cfg_type" value="0" OnClick="vlan_manu_mode_change()" <% fmvlan_checkWrite("vlan_manu_mode_srv"); %>>
+						<input type="radio" class="form-check-input" name="vlan_manu_mode" id="vlan_cfg_type" value="0" onClick="vlan_manu_mode_change()" <% fmvlan_checkWrite("vlan_manu_mode_srv"); %>>
 						<label class="form-check-label" for="vlan_cfg_type">
 							<% multilang("1027" "LANG_REMOTE_ACCESS_MODE"); %>
 						</label>
@@ -136,7 +136,7 @@ function saveChanges() {
 					<div class="col-sm-1">
 					</div>
 					<div class="col-sm-11">
-						<input class="form-check-input" type="radio" name="vlan_manu_mode" id="vlan_cfg_type" value="0" OnClick="vlan_manu_mode_change()" <% fmvlan_checkWrite("vlan_manu_mode_sp"); %>>
+						<input type="radio" class="form-check-input" name="vlan_manu_mode" id="vlan_cfg_type" value="0" onClick="vlan_manu_mode_change()" <% fmvlan_checkWrite("vlan_manu_mode_sp"); %>>
 						<label class="form-check-label" for="vlan_cfg_type">
 							<% multilang("1028" "LANG_SPECIAL_CASE_MODE"); %>
 						</label>
