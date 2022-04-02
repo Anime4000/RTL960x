@@ -84,6 +84,8 @@ function saveChanges() {
 <br />
 				<div class="form-group row">
 					<div class="col-sm-3">
+					</div>
+					<div class="col-sm-9">
 						<input type="submit" class="btn btn-primary" name="save" onClick="return saveChanges();" value="<% multilang("136" "LANG_APPLY_CHANGES"); %>">
 					</div>
 				</div>

@@ -60,7 +60,7 @@ function on_init()
 		</script>
 	</head>
 	<body style="background-color: transparent;" onLoad="on_init();">
-		<div class="container">
+		<div class="col-lg-8 mx-auto p-3 py-md-5">
 			<h2 class="mt-4"><% multilang("47" "LANG_OMCI_INFO"); %></h2>
 			<header class="d-flex align-items-center pb-3 mb-5 border-bottom">
 
