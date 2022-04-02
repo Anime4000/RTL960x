@@ -85,14 +85,12 @@ function applyclick()
 					</div>
 				</div>
 <br />
-<br />
 				<div class="form-group row">
 					<label class="col-sm-3 col-form-label"><% multilang("476" "LANG_SERIAL_NUMBER"); %></label>
 					<div class="col-sm-9">
 						<input type="text" class="form-control" id="fmgpon_sn" name="fmgpon_sn" value="<% fmgpon_checkWrite("fmgpon_sn"); %>">
 					</div>
 				</div>
-<br />
 <br />
 				<div class="col text-center">
 					<input type="submit" class="btn btn-primary col-sm-3" name="apply" onClick="return applyclick()" value="<% multilang("136" "LANG_APPLY_CHANGES"); %>">

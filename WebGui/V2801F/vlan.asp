@@ -82,11 +82,9 @@ function saveChanges() {
 					</div>
 				</div>
 <br />
-<br />
 				<div class="form-group">
 					<% omciVlanInfo(); %>
 				</div>
-<br />
 <br />
 				<div class="form-group">
 					<div class="col-sm-2">
@@ -96,7 +94,6 @@ function saveChanges() {
 						</label>
 					</div>
 				</div>
-<br />
 <br />
 				<div class="form-group row">
 					<div class="col-sm-1">
@@ -108,7 +105,6 @@ function saveChanges() {
 						</label>
 					</div>
 				</div>
-<br />
 <br />
 				<div class="form-group row">
 					<div class="col-sm-1">
@@ -125,7 +121,6 @@ function saveChanges() {
 					</div>
 				</div>
 <br />
-<br />
 				<div class="form-group row">
 					<div class="col-sm-1">
 					</div>
@@ -137,7 +132,6 @@ function saveChanges() {
 					</div>
 				</div>
 <br />
-<br />
 				<div class="form-group row">
 					<div class="col-sm-1">
 					</div>
@@ -148,7 +142,6 @@ function saveChanges() {
 						</label>
 					</div>
 				</div>
-<br />
 <br />
 				<div class="col text-center">
 					<input type="submit" class="btn btn-primary" name="save" onClick="return applyclick()" value="<% multilang("136" "LANG_APPLY_CHANGES"); %>">

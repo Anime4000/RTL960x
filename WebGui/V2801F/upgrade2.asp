@@ -47,7 +47,6 @@ function sendClicked() {
 					</div>
 				</div>
 <br />
-<br />
 				<div class="form-group row">
 					<div class="col-sm-4">
 						<input type="submit" class="btn btn-primary" name="send" onclick="return sendClicked()" value="<% multilang("495" "LANG_UPGRADE"); %>">

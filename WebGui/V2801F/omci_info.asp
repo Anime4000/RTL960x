@@ -75,7 +75,6 @@ function on_init()
 					</div>
 				</div>
 <br />
-<br />
 				<div class="form-group row">
 					<label class="col-sm-3 col-form-label"><% multilang("53" "LANG_OMCI_SW_VER1"); %></label>
 					<div class="col-sm-9">
@@ -83,14 +82,12 @@ function on_init()
 					</div>
 				</div>
 <br />
-<br />
 				<div class="form-group row">
 					<label class="col-sm-3 col-form-label"><% multilang("53" "LANG_OMCI_SW_VER2"); %></label>
 					<div class="col-sm-9">
 						<input type="text" class="form-control" id="omci_sw_ver2" name="omci_sw_ver2" value="<% getInfo("omci_sw_ver2"); %>">
 					</div>
 				</div>
-<br />
 <br />
 				<div class="form-group row">
 					<label class="col-sm-3 col-form-label"><% multilang("55" "LANG_OMCC_VER"); %>></label>
@@ -116,7 +113,6 @@ function on_init()
 					</div>
 				</div>
 <br />
-<br />
 				<div class="form-group row">
 					<label class="col-sm-3 col-form-label"><% multilang("56" "LANG_OMCI_TM_OPT"); %></label>
 					<div class="col-sm-9">
@@ -128,7 +124,6 @@ function on_init()
 					</div>
 				</div>
 <br />
-<br />
 				<div class="form-group row">
 					<label class="col-sm-3 col-form-label"><% multilang("57" "LANG_OMCI_EQID"); %></label>
 					<div class="col-sm-9">
@@ -136,14 +131,12 @@ function on_init()
 					</div>
 				</div>
 <br />
-<br />
 				<div class="form-group row">
 					<label class="col-sm-3 col-form-label"><% multilang("58" "LANG_OMCI_ONT_VER"); %></label>
 					<div class="col-sm-9">
 						<input type="text" class="form-control" id="cwmp_hw_ver" name="cwmp_hw_ver" value="<% getInfo("cwmp_hw_ver"); %>">
 					</div>
 				</div>
-<br />
 <br />
 				<div class="form-group row">
 					<label class="col-sm-3 col-form-label">Target OLT Mode:</label>
@@ -156,7 +149,6 @@ function on_init()
 						</select>
 					</div>
 				</div>
-<br />
 <br />
 				<div class="col text-center">
 					<input type="submit" class="btn btn-primary" name="apply" onClick="return applyclick()" value="<% multilang("136" "LANG_APPLY_CHANGES"); %>">

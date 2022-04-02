@@ -55,7 +55,6 @@ function saveChanges() {
 					</div>
 				</div>
 <br />
-<br />
 				<div class="form-group row">
 					<div class="col-sm-3 col-form-label">
 						<label><% multilang("490" "LANG_OLD_PASSWORD"); %></label>
@@ -64,7 +63,6 @@ function saveChanges() {
 						<input type="password" class="form-control" name="oldpass" size="20" maxlength="30">
 					</div>
 				</div>
-<br />
 <br />
 				<div class="form-group row">
 					<div class="col-sm-3 col-form-label">
@@ -75,7 +73,6 @@ function saveChanges() {
 					</div>
 				</div>
 <br />
-<br />
 				<div class="form-group row">
 					<div class="col-sm-3 col-form-label">
 						<label><% multilang("492" "LANG_CONFIRMED_PASSWORD"); %></label>
@@ -84,7 +81,6 @@ function saveChanges() {
 						<input type="password" class="form-control" name="confpass" size="20" maxlength="30">
 					</div>
 				</div>
-<br />
 <br />
 				<div class="form-group row">
 					<div class="col-sm-3">

@@ -168,7 +168,6 @@ function on_init()
 					</div>
 				</div>
 <br />
-<br />
 				<div class="form-group row">
 					<label class="col-sm-3 col-form-label"><% multilang("85" "LANG_IP_ADDRESS"); %></label>
 						<div class="col-sm-9">
@@ -176,14 +175,12 @@ function on_init()
 					</div>
 				</div>
 <br />
-<br />
 				<div class="form-group row">
 					<label class="col-sm-3 col-form-label"><% multilang("86" "LANG_SUBNET_MASK"); %></label>
 						<div class="col-sm-9">
 						<input type="text" class="form-control" id="mask" name="mask" value="<% getInfo("lan-subnet"); %>">
 					</div>
 				</div>
-<br />
 <br />
         <div class="col text-center">
 				  <input type="submit" class="btn btn-primary" onClick="return saveChanges();" value="<% multilang("136" "LANG_APPLY_CHANGES"); %>">

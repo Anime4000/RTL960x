@@ -44,7 +44,6 @@ function uploadClick() {
 				</div>
 			</form>
 <br />
-<br />
 			<form action="/boaform/formSaveConfig" enctype="multipart/form-data" method="post" name="saveConfig">
 				<div class="form-group row">
 					<div class="col-sm-4">

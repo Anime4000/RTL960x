@@ -40,7 +40,6 @@ function applyclick() {
 					</div>
 				</div>
 <br />
-<br />
 				<div class="form-group row">
 					<div class="col-sm-3">
                         <% multilang("474" "LANG_LOID_PASSWORD"); %>
@@ -50,10 +49,9 @@ function applyclick() {
 					</div>
 				</div>
 <br />
-<br />
 				<div class="form-group row">
 					<div class="col-sm-3">
-                        <input type="submit" class="btn btn-primary" name="fmepon_loid_password" size="12" maxlength="12" value="<% fmepon_checkWrite("fmepon_loid_password"); %>">
+                        <input type="submit" class="btn btn-primary" name="fmepon_loid_password" size="12" maxlength="12" value="<% multilang("136" "LANG_APPLY_CHANGES"); %>">
 					</div>
 				</div>
 
@@ -68,7 +66,6 @@ function applyclick() {
 				<table class="table table-hover" cellspacing="4" cellpadding="0">
 					<% showepon_LLID_MAC(); %>
 				</table>
-<br />
 <br />
 				<div class="form-group row">
 					<div class="col-sm-3">

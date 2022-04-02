@@ -38,7 +38,7 @@ function resetClick() {
 					<div class="col-sm-4">
 					</div>
 					<div class="col-sm-4">
-                        <button type="input" class="btn btn-primary" name="save" onclick="return saveClick()"><% multilang("477" "LANG_COMMIT_AND_REBOOT"); %></button>
+                        <button type="input" class="btn btn-warning" name="save" onclick="return saveClick()"><% multilang("477" "LANG_COMMIT_AND_REBOOT"); %></button>
 					</div>
 					<div class="col-sm-4">
 					</div>
