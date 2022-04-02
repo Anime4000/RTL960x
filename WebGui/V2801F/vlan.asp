@@ -1,6 +1,6 @@
 <!-- Created by Anime4000 @ RTL960x Community for xPON ONU SFP Stick -->
 <!doctype html>
-<html lang="en">
+<html>
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,67 +11,63 @@
 			margin-bottom: 8pt;
 		}
 		</style>
-		<script type="text/javascript" src="share.js">
+		<script type="text/javascript" src="share.js"></script>
 		<script>
-		function vlan_cfg_type_change()
-		{
-			with (document.forms[0])
-			{
-				if (vlan_cfg_type[0].checked ==	true){
-					disableRadioGroup(vlan_manu_mode);
-					disableTextField(vlan_manu_tag_vid);
-				}
-				else {
-					enableRadioGroup(vlan_manu_mode);
-					vlan_manu_mode_change();
-				}
-			}
+function vlan_cfg_type_change() {
+	with (document.forms[0])
+	{
+		if (vlan_cfg_type[0].checked ==	true) {
+			disableRadioGroup(vlan_manu_mode);
+			disableTextField(vlan_manu_tag_vid);
 		}
-		function vlan_manu_mode_change()
-		{
-			with	(document.forms[0])
-			{
-				if(vlan_manu_mode[1].checked ==	true){
-					enableTextField(vlan_manu_tag_vid);
-				}
-				else{
-					disableTextField(vlan_manu_tag_vid);
-				}
-			}
+		else {
+			enableRadioGroup(vlan_manu_mode);
+			vlan_manu_mode_change();
 		}
-		function on_init()
-		{
-			with (document.forms[0])
-			{
-				if(vlan_cfg_type[0].checked	==	true)
-					refresh.disabled = false;
-				else
-					refresh.disabled = true;
+	}
+}
+function vlan_manu_mode_change() {
+	with	(document.forms[0])
+	{
+		if(vlan_manu_mode[1].checked ==	true) {
+			enableTextField(vlan_manu_tag_vid);
+		}
+		else{
+			disableTextField(vlan_manu_tag_vid);
+		}
+	}
+}
+function on_init() {
+	with (document.forms[0])
+	{
+		if(vlan_cfg_type[0].checked	==	true)
+			refresh.disabled = false;
+		else
+			refresh.disabled = true;
 
-			}
-			vlan_cfg_type_change();
+	}
+	vlan_cfg_type_change();
 
-		}
-		function saveChanges()
-		{
-			with (document.forms[0])
-			{
-				if	(vlan_cfg_type[1].checked == true)	{
-					if(vlan_manu_mode[1].checked == true){
-						if(vlan_manu_tag_vid.value == ""){
-							alert("<%	multilang("2374" "LANG_VID_CANNOT_BE_EMPTY"); %>");
-							vlan_manu_tag_vid.focus();
-							return	false;
-						}
-					}
+}
+function saveChanges() {
+	with (document.forms[0])
+	{
+		if	(vlan_cfg_type[1].checked == true)	{
+			if(vlan_manu_mode[1].checked == true) {
+				if(vlan_manu_tag_vid.value == "") {
+					alert("<%	multilang("2374" "LANG_VID_CANNOT_BE_EMPTY"); %>");
+					vlan_manu_tag_vid.focus();
+					return	false;
 				}
 			}
-
-			return true;
 		}
+	}
+
+	return true;
+}
 		</script>
 	</head>
-	<body style="background-color: transparent;">
+	<body style="background-color: transparent;" onLoad="on_init()">
 		<div class="col-lg-8 mx-auto p-3 py-md-5">
 			<h2 class="mt-4"><% multilang("1023" "LANG_VLAN_SETTINGS"); %></h2>
 			<header class="d-flex align-items-center pb-3 mb-5 border-bottom">
@@ -87,7 +83,7 @@
 						</label>
 					</div>
 					<div class="col-sm-3">
-						<button type="submit" class="btn btn-primary" value="<% multilang("381" "LANG_REFRESH"); %>" name="refresh"><% multilang("381" "LANG_REFRESH"); %></button>
+						<input type="submit" class="btn btn-primary" name="refresh" value="<% multilang("381" "LANG_REFRESH"); %>">
 					</div>
 				</div>
 				<div class="form-group">
@@ -147,7 +143,7 @@
 					</div>
 				</div>
 				<div class="col text-center">
-					<button type="submit" class="btn btn-primary" value="<% multilang("136" "LANG_APPLY_CHANGES"); %>" name="save" onClick="return applyclick()">Save & Apply</button>
+					<input type="submit" class="btn btn-primary" name="save" onClick="return applyclick()" value="<% multilang("136" "LANG_APPLY_CHANGES"); %>">
 					<input type="hidden" value="/vlan.asp" name="submit-url">
 				</div>
 			</form>

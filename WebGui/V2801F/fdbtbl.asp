@@ -1,6 +1,6 @@
 <!-- Created by Anime4000 @ RTL960x Community for xPON ONU SFP Stick -->
 <!doctype html>
-<html lang="en">
+<html>
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv=refresh content="30; url=fdbtbl.asp">

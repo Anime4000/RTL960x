@@ -1,6 +1,6 @@
 <!-- Created by Anime4000 @ RTL960x Community for xPON ONU SFP Stick -->
 <!doctype html>
-<html lang="en">
+<html>
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -148,13 +148,10 @@ function on_init()
 					</div>
 				</div>
 				<div class="col text-center">
-					<button type="submit" class="btn btn-primary" value="<% multilang("136" "LANG_APPLY_CHANGES"); %>" name="apply" onClick="return applyclick()">Save & Apply</button>
+					<input type="submit" class="btn btn-primary" name="apply" onClick="return applyclick()" value="<% multilang("136" "LANG_APPLY_CHANGES"); %>">
 					<input type="hidden" value="/omci_info.asp" name="submit-url">
 				</div>
-
-
 			</form>
-
 		</div>
 		<script type="text/javascript" src="bootstrap.bundle.min.js"></script>
 	</body>
