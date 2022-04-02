@@ -91,7 +91,7 @@ chmod +x "$CHDIR/etc/scripts" -R
 chown 0:0 "$CHDIR/" -R
 
 echo "Change Version Date!"
-if grep -q "V" fwu_ver; then
+if grep -q "-" fwu_ver; then
 	STICKVER=`awk -F" " '{print $1}' $CHDIR/etc/version | cut -d - -f 1`
 	echo "$STICKVER-$(date +'%y%m%d') -- $(date -u +'%a %b %d %H:%I:%M %Z %Y')" > "$CHDIR/etc/version"
 	echo "$STICKVER-$(date +'%y%m%d')" > fwu_ver
