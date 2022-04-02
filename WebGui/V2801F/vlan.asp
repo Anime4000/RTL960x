@@ -7,7 +7,7 @@
 		<title><% multilang("1023" "LANG_VLAN_SETTINGS"); %></title>	
 		<link href="style/bootstrap.min.css" rel="stylesheet">
 		<script type="text/javascript" src="share.js"></script>
-		<script>
+		<script type="text/javascript">
 function vlan_cfg_type_change() {
 	with (document.forms[0])
 	{

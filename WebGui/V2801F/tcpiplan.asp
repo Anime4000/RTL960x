@@ -6,8 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><% multilang("112" "LANG_LAN_INTERFACE_SETTINGS"); %></title>	
 		<link href="style/bootstrap.min.css" rel="stylesheet">
-    <script type="text/javascript" src="share.js">
-		<script>
+		<script type="text/javascript" src="share.js"></script>
+		<script type="text/javascript">
 function resetClick() {
 	document.tcpip.reset;
 }

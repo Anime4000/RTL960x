@@ -7,7 +7,7 @@
 		<title><% multilang("479" "LANG_BACKUP_AND_RESTORE_SETTINGS"); %></title>	
 		<link href="style/bootstrap.min.css" rel="stylesheet">
 
-<script>
+<script type="text/javascript">
 function resetClick() {
     console.log("resetClick() is fired");
     return confirm("<% multilang("2470" "LANG_DO_YOU_REALLY_WANT_TO_RESET_THE_CURRENT_SETTINGS_TO_FACTORY_DEFAULT"); %>");

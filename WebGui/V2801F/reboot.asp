@@ -7,7 +7,7 @@
 		<title><% multilang("477" "LANG_COMMIT_AND_REBOOT"); %></title>	
 		<link href="style/bootstrap.min.css" rel="stylesheet">
 
-<script>
+<script type="text/javascript">
 function saveClick() {
     if ( !confirm('<% multilang("2468" "LANG_DO_YOU_REALLY_WANT_TO_COMMIT_THE_CURRENT_SETTINGS"); %>') ) {
         return false;

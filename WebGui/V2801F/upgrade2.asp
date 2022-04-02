@@ -7,7 +7,7 @@
 		<title><% multilang("64" "LANG_FIRMWARE_UPGRADE"); %></title>	
 		<link href="style/bootstrap.min.css" rel="stylesheet">
 
-<script>
+<script type="text/javascript">
 var upgrade_flag = 1;
 function sendClicked() {
 	if(1 == upgrade_flag) {

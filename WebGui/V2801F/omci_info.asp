@@ -6,14 +6,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><% multilang("47" "LANG_OMCI_INFO"); %></title>	
 		<link href="style/bootstrap.min.css" rel="stylesheet">
-		<script type="text/javascript" src="share.js">
-		<script>
+		<script type="text/javascript" src="share.js"></script>
+		<script type="text/javascript">
 var omci_tm_opt_value = <% getInfo("omci_tm_opt"); %>;
 var omcc_ver_value = <% getInfo("omcc_ver"); %>;
 var omci_olt_mode_value = <% fmOmciInfo_checkWrite("omci_olt_mode"); %>;
 
-function applyclick()
-{
+function applyclick() {
 	if (document.formOmciInfo.omci_sw_ver1.value=="") {
 		alert('<% multilang("2455" "LANG_OMCI_SW_VER1_CANNOT_BE_EMPTY"); %>');
 		document.formOmciInfo.omci_sw_ver1.focus();
@@ -38,8 +37,7 @@ function applyclick()
 	return true;
 }
 
-function on_change()
-{
+function on_change() {
 	with (document.forms[0]) {
 		if(omci_olt_mode_value == 0) {
 			omci_tm_opt.value = omci_tm_opt_value;
@@ -48,15 +46,13 @@ function on_change()
 	}
 }
 
-function on_init()
-{
+function on_init() {
 	with (document.forms[0]) {
 		omci_tm_opt.value = omci_tm_opt_value;
 		omcc_ver.value = omcc_ver_value;
 		omci_olt_mode.value = omci_olt_mode_value;
 	}
 }
-
 		</script>
 	</head>
 	<body style="background-color: transparent;" onLoad="on_init();">
@@ -157,5 +153,10 @@ function on_init()
 			</form>
 		</div>
 		<script type="text/javascript" src="bootstrap.bundle.min.js"></script>
+		<script type="text/javascript">
+			document.getElementById('omcc_ver').value = <% getInfo("omcc_ver"); %>;
+			document.getElementById('omci_tm_opt').value = <% getInfo("omci_tm_opt"); %>;
+			document.getElementById('omci_olt_mode').value = <% fmOmciInfo_checkWrite("omci_olt_mode"); %>;
+		</script>
 	</body>
 </html>

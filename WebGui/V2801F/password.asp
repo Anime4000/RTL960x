@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><% multilang("493" "LANG_PASSWORD_CONFIGURATION"); %></title>	
 		<link href="style/bootstrap.min.css" rel="stylesheet">
-<script>
+<script type="text/javascript">
 function saveChanges() {
 	if ( document.password.newpass.value != document.password.confpass.value) {
 		alert("<% multilang("1982" "LANG_PASSWORD_IS_NOT_MATCHED_PLEASE_TYPE_THE_SAME_PASSWORD_BETWEEN_NEW_AND_CONFIRMED_BOX"); %>");

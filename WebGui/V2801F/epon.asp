@@ -6,8 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><% multilang("1127" "LANG_EPON_SETTINGS"); %></title>	
 		<link href="style/bootstrap.min.css" rel="stylesheet">
-        <script type="text/javascript" src="share.js">
-<script>
+        <script type="text/javascript" src="share.js"></script>
+		<script type="text/javascript">
 function applyclick() {
     var mac_addr = document.formepon_llid_mac_mapping.elements["mac_addr[]"];
 
