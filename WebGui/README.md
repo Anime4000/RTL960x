@@ -1,5 +1,9 @@
 # Embeded WebGUI
-porting from ancient HTML to modern!
+porting from ancient HTML to modern HTML5!
+
+* Bootstrap 5
+* No jQuery! Pure JS
+* SVG
 
 # Example:
 ![GUI](../Docs/Images/webgui/status.png)
