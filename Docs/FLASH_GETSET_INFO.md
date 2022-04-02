@@ -59,7 +59,7 @@ Configure how stick link negotiation with SFP, some router has specific issue, b
 |-------|------|-------|---------------|--------|
 | Mikrotik | Router | RB4011iGS+RM  | NO | |
 | Mikrotik | Router | RB5009UG+S+IN | NO | |
-| Marvell  | Router | MACCHIATObin  | YES | re-insert required |
+| Marvell  | Router | MACCHIATObin  | YES | `flash set LAN_SDS_MODE 6` |
 | TP-Link  | Router | TL-XDR5480    | NO | |
 
 ## `DIRECT_BRIDGE_MODE` (Min 0, Max 1, Default is 1)
