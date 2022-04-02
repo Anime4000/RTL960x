@@ -54,37 +54,41 @@ function saveChanges() {
 						</select>
 					</div>
 				</div>
-
+<br />
+<br />
 				<div class="form-group row">
 					<div class="col-sm-3 col-form-label">
 						<label><% multilang("490" "LANG_OLD_PASSWORD"); %></label>
 					</div>
 					<div class="col-sm-9">
-						<input type="password"class="form-control" name="oldpass" size="20" maxlength="30">
+						<input type="password" class="form-control" name="oldpass" size="20" maxlength="30">
 					</div>
 				</div>
-
+<br />
+<br />
 				<div class="form-group row">
 					<div class="col-sm-3 col-form-label">
 						<label><% multilang("491" "LANG_NEW_PASSWORD"); %></label>
 					</div>
 					<div class="col-sm-9">
-						<input type="password"class="form-control" name="newpass" size="20" maxlength="30">
+						<input type="password" class="form-control" name="newpass" size="20" maxlength="30">
 					</div>
 				</div>
-
+<br />
+<br />
 				<div class="form-group row">
 					<div class="col-sm-3 col-form-label">
 						<label><% multilang("492" "LANG_CONFIRMED_PASSWORD"); %></label>
 					</div>
 					<div class="col-sm-9">
-						<input type="password"class="form-control" name="confpass" size="20" maxlength="30">
+						<input type="password" class="form-control" name="confpass" size="20" maxlength="30">
 					</div>
 				</div>
-
+<br />
+<br />
 				<div class="form-group row">
 					<div class="col-sm-3">
-						<input type="submit" class="btn btn-primary col-sm-3" name="save" onClick="return saveChanges();" value="<% multilang("136" "LANG_APPLY_CHANGES"); %>">
+						<input type="submit" class="btn btn-primary" name="save" onClick="return saveChanges();" value="<% multilang("136" "LANG_APPLY_CHANGES"); %>">
 					</div>
 				</div>
 

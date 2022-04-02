@@ -25,10 +25,11 @@
 						</select>
 					</div>
 				</div>
-
+<br />
+<br />
 				<div class="form-group row">
 					<div class="col-sm-3">
-						<input type="submit" class="btn btn-primary col-sm-3" onclick="parent.location.reload();" value="<% multilang("1126" "LANG_UPDATE_SELECTED_LANGUAGE"); %>">
+						<input type="submit" class="btn btn-primary" onclick="parent.location.reload();" value="<% multilang("1126" "LANG_UPDATE_SELECTED_LANGUAGE"); %>">
 					</div>
 				</div>
 			</form>

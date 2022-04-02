@@ -6,11 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><% multilang("47" "LANG_OMCI_INFO"); %></title>	
 		<link href="style/bootstrap.min.css" rel="stylesheet">
-		<style>
-		.form-group {
-			margin-bottom: 8pt;
-		}
-		</style>
 		<script type="text/javascript" src="share.js">
 		<script>
 var omci_tm_opt_value = <% getInfo("omci_tm_opt"); %>;
@@ -79,18 +74,24 @@ function on_init()
 						<small id="emailHelp" class="form-text text-muted">ONU Brand Id, example for Huawei: HWTC</small>
 					</div>
 				</div>
+<br />
+<br />
 				<div class="form-group row">
 					<label class="col-sm-3 col-form-label"><% multilang("53" "LANG_OMCI_SW_VER1"); %></label>
 					<div class="col-sm-9">
 						<input type="text" class="form-control" id="omci_sw_ver1" name="omci_sw_ver1" value="<% getInfo("omci_sw_ver1"); %>">
 					</div>
 				</div>
+<br />
+<br />
 				<div class="form-group row">
 					<label class="col-sm-3 col-form-label"><% multilang("53" "LANG_OMCI_SW_VER2"); %></label>
 					<div class="col-sm-9">
 						<input type="text" class="form-control" id="omci_sw_ver2" name="omci_sw_ver2" value="<% getInfo("omci_sw_ver2"); %>">
 					</div>
 				</div>
+<br />
+<br />
 				<div class="form-group row">
 					<label class="col-sm-3 col-form-label"><% multilang("55" "LANG_OMCC_VER"); %>></label>
 					<div class="col-sm-9">
@@ -114,6 +115,8 @@ function on_init()
 						</select>
 					</div>
 				</div>
+<br />
+<br />
 				<div class="form-group row">
 					<label class="col-sm-3 col-form-label"><% multilang("56" "LANG_OMCI_TM_OPT"); %></label>
 					<div class="col-sm-9">
@@ -124,18 +127,24 @@ function on_init()
 						</select>
 					</div>
 				</div>
+<br />
+<br />
 				<div class="form-group row">
 					<label class="col-sm-3 col-form-label"><% multilang("57" "LANG_OMCI_EQID"); %></label>
 					<div class="col-sm-9">
 						<input type="text" class="form-control" id="cwmp_productclass" name="cwmp_productclass" value="<% getInfo("cwmp_productclass"); %>">
 					</div>
 				</div>
+<br />
+<br />
 				<div class="form-group row">
 					<label class="col-sm-3 col-form-label"><% multilang("58" "LANG_OMCI_ONT_VER"); %></label>
 					<div class="col-sm-9">
 						<input type="text" class="form-control" id="cwmp_hw_ver" name="cwmp_hw_ver" value="<% getInfo("cwmp_hw_ver"); %>">
 					</div>
 				</div>
+<br />
+<br />
 				<div class="form-group row">
 					<label class="col-sm-3 col-form-label">Target OLT Mode:</label>
 					<div class="col-sm-9">
@@ -147,6 +156,8 @@ function on_init()
 						</select>
 					</div>
 				</div>
+<br />
+<br />
 				<div class="col text-center">
 					<input type="submit" class="btn btn-primary" name="apply" onClick="return applyclick()" value="<% multilang("136" "LANG_APPLY_CHANGES"); %>">
 					<input type="hidden" value="/omci_info.asp" name="submit-url">

@@ -31,7 +31,7 @@ function uploadClick() {
 				<% multilang("481" "LANG_THIS_PAGE_ALLOWS_YOU_TO_BACKUP_CURRENT_SETTINGS_TO_A_FILE_OR_RESTORE_THE_SETTINGS_FROM_THE_FILE_WHICH_WAS_SAVED_PREVIOUSLY_BESIDES_YOU_COULD_RESET_THE_CURRENT_SETTINGS_TO_FACTORY_DEFAULT"); %>
 			</header>
 
-			<form action="/boaform/formSaveConfig" enctype="multipart/form-data" method="post" name="saveConfig">
+			<form action="/boaform/formSaveConfig" enctype="multipart/form-data" method="post" name="saveCSConfig">
 				<div class="form-group row">
 					<div class="col-sm-4">
 						<label class="form-check-label" for="vlan_cfg_type">
@@ -43,10 +43,8 @@ function uploadClick() {
 					</div>
 				</div>
 			</form>
-
-            <br />
-            <br />
-
+<br />
+<br />
 			<form action="/boaform/formSaveConfig" enctype="multipart/form-data" method="post" name="saveConfig">
 				<div class="form-group row">
 					<div class="col-sm-4">
@@ -54,11 +52,17 @@ function uploadClick() {
 							<% multilang("486" "LANG_RESTORE_SETTINGS_FROM_FILE"); %>
 						</label>
 					</div>
-					<div class="col-sm-5">
-                        <input type="file" class="btn btn-primary" name="binary" value="<% multilang("480" "LANG_CHOOSE_FILE"); %>">
+					<div class="col-sm-8">
+                        <input type="file" class="form-control" id="formFile" name="binary" value="<% multilang("480" "LANG_CHOOSE_FILE"); %>">
+						<small class="form-text text-warning">Invalid config file can cause xPON ONU Stick SFP unable to boot!</small>
 					</div>
-					<div class="col-sm-3">
-                        <input type="submit" class="btn btn-primary" name="load" onClick="return uploadClick();" value="<% multilang("487" "LANG_RESTORE"); %>">
+				</div>
+<br />
+				<div class="form-group row">
+					<div class="col-sm-4">
+					</div>
+					<div class="col-sm-8">
+                        <input type="submit" class="btn btn-warning" name="load" onClick="return uploadClick();" value="<% multilang("487" "LANG_RESTORE"); %>">
 					</div>
 				</div>
                 <input type="hidden" value="/saveconf.asp" name="submit-url">
@@ -77,7 +81,7 @@ function uploadClick() {
 						</label>
 					</div>
 					<div class="col-sm-4">
-                        <input type="submit" class="btn btn-primary" name="reset" onClick="return resetClick();" value="<% multilang("200" "LANG_RESET"); %>">
+                        <input type="submit" class="btn btn-danger" name="reset" onClick="return resetClick();" value="<% multilang("200" "LANG_RESET"); %>">
 					</div>
 				</div>
                 <input type="hidden" value="/saveconf.asp" name="submit-url">

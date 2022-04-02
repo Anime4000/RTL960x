@@ -6,11 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><% multilang("1023" "LANG_VLAN_SETTINGS"); %></title>	
 		<link href="style/bootstrap.min.css" rel="stylesheet">
-		<style>
-		.form-group {
-			margin-bottom: 8pt;
-		}
-		</style>
 		<script type="text/javascript" src="share.js"></script>
 		<script>
 function vlan_cfg_type_change() {
@@ -86,9 +81,13 @@ function saveChanges() {
 						<input type="submit" class="btn btn-primary" name="refresh" value="<% multilang("381" "LANG_REFRESH"); %>">
 					</div>
 				</div>
+<br />
+<br />
 				<div class="form-group">
 					<% omciVlanInfo(); %>
 				</div>
+<br />
+<br />
 				<div class="form-group">
 					<div class="col-sm-2">
 						<input type="radio" class="form-check-input" name="vlan_cfg_type" id="vlan_cfg_type" value="1" onClick="vlan_cfg_type_change()" <% fmvlan_checkWrite("vlan_cfg_type_manual"); %>>
@@ -97,7 +96,8 @@ function saveChanges() {
 						</label>
 					</div>
 				</div>
-
+<br />
+<br />
 				<div class="form-group row">
 					<div class="col-sm-1">
 					</div>
@@ -108,6 +108,8 @@ function saveChanges() {
 						</label>
 					</div>
 				</div>
+<br />
+<br />
 				<div class="form-group row">
 					<div class="col-sm-1">
 					</div>
@@ -122,6 +124,8 @@ function saveChanges() {
 						<small class="form-text text-muted">Min: 0, Max: 4095</small>
 					</div>
 				</div>
+<br />
+<br />
 				<div class="form-group row">
 					<div class="col-sm-1">
 					</div>
@@ -132,6 +136,8 @@ function saveChanges() {
 						</label>
 					</div>
 				</div>
+<br />
+<br />
 				<div class="form-group row">
 					<div class="col-sm-1">
 					</div>
@@ -142,6 +148,8 @@ function saveChanges() {
 						</label>
 					</div>
 				</div>
+<br />
+<br />
 				<div class="col text-center">
 					<input type="submit" class="btn btn-primary" name="save" onClick="return applyclick()" value="<% multilang("136" "LANG_APPLY_CHANGES"); %>">
 					<input type="hidden" value="/vlan.asp" name="submit-url">

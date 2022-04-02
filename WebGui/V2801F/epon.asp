@@ -39,10 +39,8 @@ function applyclick() {
                         <input type="text" class="form-control" name="fmepon_loid" size="24" maxlength="24" value="<% fmepon_checkWrite("fmepon_loid"); %>">
 					</div>
 				</div>
-
-                <br />
-                <br />
-
+<br />
+<br />
 				<div class="form-group row">
 					<div class="col-sm-3">
                         <% multilang("474" "LANG_LOID_PASSWORD"); %>
@@ -51,7 +49,8 @@ function applyclick() {
                         <input type="text" class="form-control" name="fmepon_loid_password" size="12" maxlength="12" value="<% fmepon_checkWrite("fmepon_loid_password"); %>">
 					</div>
 				</div>
-
+<br />
+<br />
 				<div class="form-group row">
 					<div class="col-sm-3">
                         <input type="submit" class="btn btn-primary" name="fmepon_loid_password" size="12" maxlength="12" value="<% fmepon_checkWrite("fmepon_loid_password"); %>">
@@ -64,10 +63,13 @@ function applyclick() {
 			<h2 class="mt-4"><% multilang("1129" "LANG_LLID_MAC_MAPPING_TABLE"); %></h2>
 			<header class="d-flex align-items-center pb-3 mb-5 border-bottom">
 			</header>
+
             <form action="/boaform/admin/formepon_llid_mac_mapping" method="post" name="formepon_llid_mac_mapping">
-                <% showepon_LLID_MAC(); %>
-                <br />
-                <br />
+				<table class="table table-hover" cellspacing="4" cellpadding="0">
+					<% showepon_LLID_MAC(); %>
+				</table>
+<br />
+<br />
 				<div class="form-group row">
 					<div class="col-sm-3">
                         <input type="submit" class="btn btn-primary" name="apply" onClick="return applyclick()" value="<% multilang("136" "LANG_APPLY_CHANGES"); %>">
