@@ -43,7 +43,7 @@ function sendClicked() {
 					<div class="mb-3">
 						<label for="formFile" class="form-label">RTL960x firmware package file (*.tar)</label>
 						<input class="form-control" id="formFile" type="file" name="binary" value="<% multilang("480" "LANG_CHOOSE_FILE"); %>">
-						<small class="form-text text-warning">Invalid firmware package can cause xPON ONU Stick SFP unable to boot!</small>
+						<small class="form-text text-warning">Invalid firmware package can cause xPON ONU SFP Stick unable to boot!</small>
 					</div>
 				</div>
 <br />

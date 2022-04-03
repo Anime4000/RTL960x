@@ -53,7 +53,7 @@ function uploadClick() {
 					</div>
 					<div class="col-sm-8">
                         <input type="file" class="form-control" id="formFile" name="binary" value="<% multilang("480" "LANG_CHOOSE_FILE"); %>">
-						<small class="form-text text-warning">Invalid config file can cause xPON ONU Stick SFP unable to boot!</small>
+						<small class="form-text text-warning">Invalid config file can cause xPON ONU SFP Stick unable to boot!</small>
 					</div>
 				</div>
 <br />

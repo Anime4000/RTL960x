@@ -59,7 +59,7 @@ function on_init() {
 		<div class="col-lg-8 mx-auto p-3 py-md-5">
 			<h2 class="mt-4"><% multilang("47" "LANG_OMCI_INFO"); %></h2>
 			<header class="d-flex align-items-center pb-3 mb-5 border-bottom">
-				This page allow you to change OMCI device information to allow OLT authenticate your xPON ONU Stick SFP
+				This page allow you to change OMCI device information to allow OLT authenticate your xPON ONU SFP Stick
 			</header>
 
 			<form action="/boaform/admin/formOmciInfo" method="post" name="formOmciInfo">

@@ -36,9 +36,8 @@
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-bs-toggle="dropdown" aria-expanded="false">Advanced</a>
 							<ul class="dropdown-menu" aria-labelledby="dropdown07">
 								<li><a class="dropdown-item" target="no_js_iframe" href="tcpiplan.asp">LAN Interface</a></li>
-								<li><a class="dropdown-item" target="no_js_iframe" href="multi_wan_generic.asp">WAN-PON Mapping</a></li>
 								<li><a class="dropdown-item" target="no_js_iframe" href="vlan.asp">VLAN Mode</a></li>
-								<li><a class="dropdown-item" target="no_js_iframe" href="omci_info.asp">OMCI Information</a></li>
+								<li><a class="dropdown-item" target="no_js_iframe" href="omci_info.asp">OMCI</a></li>
 								<li><a class="dropdown-item" target="no_js_iframe" href="gpon.asp">GPON</a></li>
 								<li><a class="dropdown-item" target="no_js_iframe" href="epon.asp">EPON</a></li>
 							</ul>
@@ -70,8 +69,8 @@
 				</div>
 			</div>
 		</nav>
-		<div class="container" style="background-color: rgba(255,255,255, 0.5); backdrop-filter: blur(16px);">
-			<iframe style="width: 100%;height: calc(100vh - 118px);" src="status.asp" name="no_js_iframe" allowtransparency="true"></iframe>
+		<div id="iframe_page" class="container" style="background-color: rgba(255,255,255, 0.5); backdrop-filter: blur(16px);">
+			<iframe id="no_js_iframe" name="no_js_iframe" src="status.asp" style="width: 100%;height: calc(100vh - 118px);" allowtransparency="true"></iframe>
 		</div>
 		<footer class="bg-dark text-white p-3">
 			<div class="container"> 
@@ -89,5 +88,14 @@
 			</div>
 		</footer>
 		<script type="text/javascript" src="bootstrap.bundle.min.js"></script>
+		<script>
+			var div = document.getElementById('iframe_page');
+
+			function css(element, property) {
+				return window.getComputedStyle(element, null).getPropertyValue(property);
+			}
+
+			document.getElementById("no_js_iframe").contentDocument.body.style.fontFamily = css(div, 'font-family');
+		</script>
 	</body>
 </html>
