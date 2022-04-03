@@ -15,54 +15,54 @@
 				<p><% multilang("69" "LANG_PAGE_DESC_DEVICE_STATUS_SETTING"); %></p>
 			</header>
 
-			<table class="table table-hover">
-				<thead class="thead-dark">
+			<table class="table table-striped table-hover">
+				<thead>
 					<tr>
 						<th scope="col" colspan="2"><% multilang("70" "LANG_SYSTEM"); %></td>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td ><% multilang("95" "LANG_DEVICE_NAME"); %></td>
-						<td><% getInfo("name"); %></td>
+						<td><% multilang("95" "LANG_DEVICE_NAME"); %></td>
+						<td style="width: 50%"><% getInfo("name"); %></td>
 					</tr>
 					<tr>
 						<td><% multilang("72" "LANG_UPTIME"); %></td>
-						<td><% getInfo("uptime"); %></td>
+						<td style="width: 50%"><% getInfo("uptime"); %></td>
 					</tr>
 					<tr>
 						<td><% multilang("75" "LANG_FIRMWARE_VERSION"); %></td>
-						<td><% getInfo("fwVersion"); %></td>
+						<td style="width: 50%"><% getInfo("fwVersion"); %></td>
 					</tr>
 					<tr>
 						<td>CPU Usage</td>
-						<td><% getInfo("cpu_util"); %></td>
+						<td style="width: 50%"><% getInfo("cpu_util"); %></td>
 					</tr>
 					<tr>
 						<td>Memory Usage</th>
-						<td><% getInfo("mem_util"); %></td>
+						<td style="width: 50%"><% getInfo("mem_util"); %></td>
 					</tr>
 				</tbody>
 			</table>
 
-			<table class="table table-hover">
-				<thead class="thead-dark">
+			<table class="table table-striped table-hover">
+				<thead>
 					<tr>
 						<th scope="col" colspan="2"><% multilang("6" "LANG_LAN"); %> <% multilang("216" "LANG_CONFIGURATION"); %></th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td ><% multilang("85" "LANG_IP_ADDRESS"); %></td>
-						<td><% getInfo("lan-ip"); %></td>
+						<td><% multilang("85" "LANG_IP_ADDRESS"); %></td>
+						<td style="width: 50%"><% getInfo("lan-ip"); %></td>
 					</tr>
 					<tr>
 						<td><% multilang("86" "LANG_SUBNET_MASK"); %></td>
-						<td><% getInfo("lan-subnet"); %></td>
+						<td style="width: 50%"><% getInfo("lan-subnet"); %></td>
 					</tr>
 					<tr>
 						<td><% multilang("88" "LANG_MAC_ADDRESS"); %></td>
-						<td><% getInfo("elan-Mac"); %></td>
+						<td style="width: 50%"><% getInfo("elan-Mac"); %></td>
 					</tr>
 				</tbody>
 			</table>
