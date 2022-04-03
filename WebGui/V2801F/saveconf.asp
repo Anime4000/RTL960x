@@ -69,7 +69,7 @@ function uploadClick() {
 
 			<h2 class="mt-4">Factory Reset</h2>
 			<header class="d-flex align-items-center pb-3 mb-5 border-bottom">
-				Restore xPON ONU Stick SFP back to default factory settings.
+				Restore xPON ONU SFP Stick back to default factory settings.
 			</header>
 
 			<form action="/boaform/formSaveConfig" method="post" name="resetConfig">
