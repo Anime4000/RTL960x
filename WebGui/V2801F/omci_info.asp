@@ -141,7 +141,7 @@ function on_init() {
 				</div>
 <br />
 				<div class="form-group row">
-					<label class="col-sm-4 col-form-label">Compatibility Mode:</label>
+					<label class="col-sm-4 col-form-label">Compatibility Mode</label>
 					<div class="col-sm-8">
 						<select class="form-select" id="omci_olt_mode" name="omci_olt_mode" >
 							<option value="0">Default Mode</option>
