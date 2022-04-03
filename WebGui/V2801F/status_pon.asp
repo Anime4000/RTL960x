@@ -18,7 +18,7 @@
 			<table class="table table-hover">
 				<thead class="thead-dark">
 					<tr>
-						<th scope="col" colspan="2"><% multilang("1180" "LANG_PON"); %><% multilang("104" "LANG_STATUS_1"); %></td>
+						<th scope="col" colspan="2"><% multilang("1180" "LANG_PON"); %><% multilang("104" "LANG_STATUS_1"); %></th>
 					</tr>
 				</thead>
 				<tbody>

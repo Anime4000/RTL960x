@@ -66,7 +66,7 @@ function saveChanges() {
 		<div class="col-lg-8 mx-auto p-3 py-md-5">
 			<h2 class="mt-4"><% multilang("1023" "LANG_VLAN_SETTINGS"); %></h2>
 			<header class="d-flex align-items-center pb-3 mb-5 border-bottom">
-				
+				This page used to configure and handle xPON VLAN
 			</header>
 
 			<form action="/boaform/formVlan" method="post" name="vlan">

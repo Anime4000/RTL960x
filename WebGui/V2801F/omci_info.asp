@@ -59,35 +59,53 @@ function on_init() {
 		<div class="col-lg-8 mx-auto p-3 py-md-5">
 			<h2 class="mt-4"><% multilang("47" "LANG_OMCI_INFO"); %></h2>
 			<header class="d-flex align-items-center pb-3 mb-5 border-bottom">
-
+				This page allow you to change OMCI device information to allow OLT authenticate your xPON ONU Stick SFP
 			</header>
 
 			<form action="/boaform/admin/formOmciInfo" method="post" name="formOmciInfo">
 				<div class="form-group row">
-					<label class="col-sm-3 col-form-label"><% multilang("59" "LANG_OMCI_VENDOR_ID"); %></label>
-					<div class="col-sm-9">
-						<input type="text" class="form-control" id="omci_vendor_id" name="omci_vendor_id" value="<% getInfo("omci_vendor_id"); %>">
-						<small id="emailHelp" class="form-text text-muted">ONU Brand Id, example for Huawei: HWTC</small>
+					<label class="col-sm-4 col-form-label"><% multilang("59" "LANG_OMCI_VENDOR_ID"); %></label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control font-monospace" id="omci_vendor_id" name="omci_vendor_id" value="<% getInfo("omci_vendor_id"); %>">
+						<small class="form-text text-dark">Brand Id, example for Huawei: <code class="text-primary">HWTC</code></small>
 					</div>
 				</div>
 <br />
 				<div class="form-group row">
-					<label class="col-sm-3 col-form-label"><% multilang("53" "LANG_OMCI_SW_VER1"); %></label>
-					<div class="col-sm-9">
-						<input type="text" class="form-control" id="omci_sw_ver1" name="omci_sw_ver1" value="<% getInfo("omci_sw_ver1"); %>">
+					<label class="col-sm-4 col-form-label"><% multilang("53" "LANG_OMCI_SW_VER1"); %></label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control font-monospace" id="omci_sw_ver1" name="omci_sw_ver1" value="<% getInfo("omci_sw_ver1"); %>">
+						<small class="form-text text-dark">Software Version 1, example for Huawei HG8240H5: <code class="text-primary">V5R019C00S125</code></small>
 					</div>
 				</div>
 <br />
 				<div class="form-group row">
-					<label class="col-sm-3 col-form-label"><% multilang("53" "LANG_OMCI_SW_VER2"); %></label>
-					<div class="col-sm-9">
-						<input type="text" class="form-control" id="omci_sw_ver2" name="omci_sw_ver2" value="<% getInfo("omci_sw_ver2"); %>">
+					<label class="col-sm-4 col-form-label"><% multilang("54" "LANG_OMCI_SW_VER2"); %></label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control font-monospace" id="omci_sw_ver2" name="omci_sw_ver2" value="<% getInfo("omci_sw_ver2"); %>">
+						<small class="form-text text-dark">Software Version 2, example for Huawei HG8240H5: <code class="text-primary">V5R019C00S125</code></small>
 					</div>
 				</div>
 <br />
 				<div class="form-group row">
-					<label class="col-sm-3 col-form-label"><% multilang("55" "LANG_OMCC_VER"); %>></label>
-					<div class="col-sm-9">
+					<label class="col-sm-4 col-form-label"><% multilang("58" "LANG_OMCI_ONT_VER"); %></label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control font-monospace" id="cwmp_hw_ver" name="cwmp_hw_ver" value="<% getInfo("cwmp_hw_ver"); %>">
+						<small class="form-text text-dark">Hardware Version, example for Huawei HG8240H5: <code class="text-primary">168D.A</code></small>
+					</div>
+				</div>
+<br />
+				<div class="form-group row">
+					<label class="col-sm-4 col-form-label"><% multilang("57" "LANG_OMCI_EQID"); %></label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control font-monospace" id="cwmp_productclass" name="cwmp_productclass" value="<% getInfo("cwmp_productclass"); %>">
+						<small class="form-text text-dark">TR-069 Product Class, <code class="text-primary">IGD</code> or <code class="text-primary">SFU</code> is the most common value for Universal ONU</small>
+					</div>
+				</div>
+<br />
+				<div class="form-group row">
+					<label class="col-sm-4 col-form-label"><% multilang("55" "LANG_OMCC_VER"); %></label>
+					<div class="col-sm-8">
 						<select class="form-select" id="omcc_ver" name="omcc_ver" onChange="on_change()">
 							<option value="128" >0x80</option>
 							<option value="129" >0x81</option>
@@ -106,43 +124,32 @@ function on_init() {
 							<option value="178" >0xB2</option>
 							<option value="179" >0xB3</option>
 						</select>
+						<small class="form-text text-dark">OMCI Version, <code class="text-primary">0x80</code> is the most common value for Universal ONU</small>
 					</div>
 				</div>
 <br />
 				<div class="form-group row">
-					<label class="col-sm-3 col-form-label"><% multilang("56" "LANG_OMCI_TM_OPT"); %></label>
-					<div class="col-sm-9">
+					<label class="col-sm-4 col-form-label"><% multilang("56" "LANG_OMCI_TM_OPT"); %></label>
+					<div class="col-sm-8">
 						<select class="form-select" id="omci_tm_opt" name="omci_tm_opt" onChange="on_change()">
 							<option value="0" >0</option>
 							<option value="1" >1</option>
 							<option value="2" >2</option>
 						</select>
+						<small class="form-text text-dark">Traffic Management, <code class="text-primary">2</code> is the most common value for Universal ONU</small>
 					</div>
 				</div>
 <br />
 				<div class="form-group row">
-					<label class="col-sm-3 col-form-label"><% multilang("57" "LANG_OMCI_EQID"); %></label>
-					<div class="col-sm-9">
-						<input type="text" class="form-control" id="cwmp_productclass" name="cwmp_productclass" value="<% getInfo("cwmp_productclass"); %>">
-					</div>
-				</div>
-<br />
-				<div class="form-group row">
-					<label class="col-sm-3 col-form-label"><% multilang("58" "LANG_OMCI_ONT_VER"); %></label>
-					<div class="col-sm-9">
-						<input type="text" class="form-control" id="cwmp_hw_ver" name="cwmp_hw_ver" value="<% getInfo("cwmp_hw_ver"); %>">
-					</div>
-				</div>
-<br />
-				<div class="form-group row">
-					<label class="col-sm-3 col-form-label">Target OLT Mode:</label>
-					<div class="col-sm-9">
+					<label class="col-sm-4 col-form-label">Compatibility Mode:</label>
+					<div class="col-sm-8">
 						<select class="form-select" id="omci_olt_mode" name="omci_olt_mode" >
 							<option value="0">Default Mode</option>
 							<option value="1">Huawei OLT Mode</option>
 							<option value="2">ZTE OLT Mode</option>
 							<option value="3">Customized Mode</option>
 						</select>
+						<small class="form-text text-dark">ONU Compatibility, <code class="text-primary">Huawei</code> is the most common value for Universal ONU</small>
 					</div>
 				</div>
 <br />
