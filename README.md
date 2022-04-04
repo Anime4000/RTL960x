@@ -45,18 +45,16 @@ In this table, list of xPON Stick that support 4-port ONU Emulation
 <table>
     <thead>
         <tr>
-            <th></th>
+            <th rowspan="2">xPON Stick</th>
             <th colspan="5">Huawei HG8240H LAN Port</th>
-            <th></th>
+            <th rowspan="2">Firmware</th>
         </tr>
         <tr>
-            <th>xPON Stick</th>
             <th>Root</th>
             <th>1️⃣</th>
             <th>2️⃣</th>
             <th>3️⃣</th>
             <th>4️⃣</th>
-            <th>Firmware</th>
         </tr>
     </thead>
     <tbody>
