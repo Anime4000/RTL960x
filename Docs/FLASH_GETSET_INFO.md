@@ -53,6 +53,7 @@ Configure how stick link negotiation with SFP, some router has specific issue, b
 | `4`   | `<4>change mode to 4(HiSGMII PHY)` | 2.5Gb Ethernet Transceiver @ Layer 1 |  |
 | `5`   | `<4>change mode to 5(HiSGMII MAC)` | 2.5Gb Ethernet Transceiver @ Layer 2 |  |
 | `6`   | `<4>change mode to 6(2500BaseX)` | 2.5Gb Fiber Channel |  |
+| `7`   | `<4>change mode to 7(SGMII Force)` | 1Gb | Only on ODI DFP-34X-2C2  |
 
 ### 2.5Gb Compatibility
 | Brand | Type | Model | 2.5Gb Support | Quirks |
@@ -60,7 +61,7 @@ Configure how stick link negotiation with SFP, some router has specific issue, b
 | Mikrotik | Router | RB4011iGS+RM  | NO | |
 | Mikrotik | Router | RB5009UG+S+IN | NO | |
 | Marvell  | Router | MACCHIATObin  | YES | `flash set LAN_SDS_MODE 6` |
-| TP-Link  | Router | TL-XDR5480    | NO | |
+| TP-Link  | Router | TL-XDR5480    | YES | ODI DFP-34X-2C2 as `220304` firmware |
 
 ## `DIRECT_BRIDGE_MODE` (Min 0, Max 1, Default is 1)
 Not sure about this, it seem PON interface bridged to LAN under one `br0` ?
