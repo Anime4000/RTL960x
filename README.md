@@ -47,6 +47,7 @@ In this table, list of xPON Stick that support 4-port ONU Emulation
         <tr>
             <th></th>
             <th colspan="5">Huawei HG8240H LAN Port</th>
+            <th></th>
         </tr>
         <tr>
             <th>xPON Stick</th>
@@ -55,6 +56,7 @@ In this table, list of xPON Stick that support 4-port ONU Emulation
             <th>2️⃣</th>
             <th>3️⃣</th>
             <th>4️⃣</th>
+            <th>Firmware</th>
         </tr>
     </thead>
     <tbody>
@@ -65,6 +67,7 @@ In this table, list of xPON Stick that support 4-port ONU Emulation
             <td>❌</td>
             <td>❌</td>
             <td>❌</td>
+            <td> </td>
         </tr>
         <tr>
             <td>DFP-34X-2C2 (ZTE)</td>
@@ -73,22 +76,25 @@ In this table, list of xPON Stick that support 4-port ONU Emulation
             <td>❌</td>
             <td>❌</td>
             <td>❌</td>
+            <td> </td>
         </tr>
         <tr>
             <td>DFP-34X-2C2 (Realtek)</td>
             <td>✔️</td>
-            <td>❌</td>
-            <td>❌</td>
-            <td>❌</td>
-            <td>❌</td>
+            <td>✔️</td>
+            <td>✔️</td>
+            <td>✔️</td>
+            <td>✔️</td>
+            <td><code>M114_sfp_ODI_220304.tar</code></td>
         </tr>
         <tr>
             <td>TWCGPON657</td>
             <td>✔️</td>
             <td>✔️</td>
-            <td>❌</td>
-            <td>❌</td>
-            <td>❌</td>
+            <td>✔️</td>
+            <td>✔️</td>
+            <td>✔️</td>
+            <td><code>C00R657V2801F_V1.9.0-220404.tar</code></td>
         </tr>
         <tr>
             <td>V2801F</td>
@@ -97,6 +103,7 @@ In this table, list of xPON Stick that support 4-port ONU Emulation
             <td>✔️</td>
             <td>✔️</td>
             <td>✔️</td>
+            <td> Stock Firmware </td>
         </tr>
     </tbody>
 </table>
