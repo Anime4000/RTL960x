@@ -1,5 +1,5 @@
 # Diag
-Realtek RTL9601C1 has xPON Utility called `diag`, problably can modify OMCI bandwidth control
+Realtek RTL960x has xPON Utility called `diag`, problably can modify OMCI bandwidth control
 
 # Known Command
 Here list know useful command to troubleshoot, after entering telnet, type `diag` to enter
