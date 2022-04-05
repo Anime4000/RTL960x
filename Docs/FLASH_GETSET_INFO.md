@@ -5,7 +5,7 @@
 ## `ELAN_MAC_ADDR` (12 Hexadecimal number maximum)
 Some OLT have explicit MAC Address can register, you need clone your original ONT MAC Address
 
-## `GPON_PLOAM_PASSWD` (9 Alphanumeric character maximum?)
+## `GPON_PLOAM_PASSWD` (10 Alphanumeric character maximum?)
 Need to set for OLT Authenticate your ONT stick, you can get from original ONT WebGUI.
 
 ## `GPON_SN` (12 ASCII character maximum)
