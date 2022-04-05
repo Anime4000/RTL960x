@@ -25,7 +25,7 @@ Firmware might interchangable each other, flash it at your own RISK!
     * [OMCI VLAN / OLT VLAN Provisioning](Docs/OMCI_VLAN.md)
     * [Hidden Link, Firmware Update](Docs/Useful_Links.md)
     * [UART](Docs/UART.md)
-4. [TWCGPON657 with V2801F firmware](Docs/TWCGPON657.md)
+4. [TWCGPON657 × V2801F Firmware](Firmware/TWCGPON657/README.md)
 5. [V2801F Auto Reboot](Docs/V2801F.md)
 6. [Firmware Emulator](Tools/emulator)
 
