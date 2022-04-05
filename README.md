@@ -21,12 +21,14 @@ Firmware might interchangable each other, flash it at your own RISK!
 2. [Flash Get, Flash Set](Docs/FLASH_GETSET_INFO.md)
     * [xPON Model Id](Docs/FLASH_GETSET_INFO.md#pon_vendor_id-4-ascii-character-maximum)
     * [2.5GbE Mode](Docs/FLASH_GETSET_INFO.md#lan_sds_mode-min-1-max-5)
-4. [Diagnostic Commands](Docs/DIAG.md)
-5. [Hidden Link, Firmware Update](Docs/Useful_Links.md)
-6. [TWCGPON657 with V2801F firmware](Docs/TWCGPON657.md)
-7. [V2801F Auto Reboot](Docs/V2801F.md)
-8. [Firmware Emulator](Tools/emulator)
-9. [UART](Docs/UART.md)
+3. [Diagnostic](Docs/DIAG.md)
+    * [OMCI VLAN / OLT VLAN Provisioning](Docs/OMCI_VLAN.md)
+    * [Hidden Link, Firmware Update](Docs/Useful_Links.md)
+    * [UART](Docs/UART.md)
+4. [TWCGPON657 with V2801F firmware](Docs/TWCGPON657.md)
+5. [V2801F Auto Reboot](Docs/V2801F.md)
+6. [Firmware Emulator](Tools/emulator)
+
 
 # Triple Play Multiple ISP Problem, 4-port ONU Emulation
 * Majority fiber vendor support multiple ISP
