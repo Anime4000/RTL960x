@@ -20,7 +20,7 @@ Firmware might interchangable each other, flash it at your own RISK!
 1. [Setup SFP XPON ONU Stick](Docs/Setup_Stick.md)
 2. [Flash Get, Flash Set](Docs/FLASH_GETSET_INFO.md)
     * [xPON Model Id](Docs/FLASH_GETSET_INFO.md#pon_vendor_id-4-ascii-character-maximum)
-    * [2.5GbE Mode](Docs/FLASH_GETSET_INFO.md#lan_sds_mode-min-1-max-5)
+    * [2.5GbE Mode](Docs/FLASH_GETSET_INFO.md#lan_sds_mode-min-1-max-6)
 3. [Diagnostic](Docs/DIAG.md)
     * [OMCI VLAN / OLT VLAN Provisioning](Docs/OMCI_VLAN.md)
     * [Hidden Link, Firmware Update](Docs/Useful_Links.md)
