@@ -12,7 +12,7 @@ Hacking V2801F, TWCGPON657 & DFP-34X-2C2 to suite your ISP Fiber
 | [V2801F](https://www.baudcom.com.cn/epon-gpon-onu-stick-sfp-module-with-mac-inside.html) | `RTL9601CI` | 8MB (64Mb) |
 | [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488) | `RTL9601CI` | 16MB (128Mb) | 
 | [UFiber Instant](https://store.ui.com/collections/operator-ufiber/products/uf-instant) | `RTL9601CI` | 8MB (64Mb) |
-| [DFP-34X-2C2](https://www.aliexpress.com/item/4000086970977.html) | `RTL9601D` | 8MB (64Mb) |
+| [DFP-34X-2C2](https://www.aliexpress.com/item/1005003515662920.html) | `RTL9601D` | 8MB (64Mb) |
 
 Firmware might interchangable each other, flash it at your own RISK!
 
