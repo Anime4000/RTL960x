@@ -47,6 +47,7 @@ Configure how stick link negotiation with SFP, some router has specific issue, b
 
 | Value | `cat /proc/kmsg` | Mode/Behavior  | Note |
 |-------|------|-------------------|------|
+| `0`   | `<4>change mode to 0(GE/FE PHY)`   | GE/FE PHY          | ODI DFP-34X-2C2 auto detect |
 | `1`   | `<4>change mode to 1(Fiber 1G)`    | 1Gb Fiber Channel  | V2801F Default |
 | `2`   | `<4>change mode to 2(SGMII PHY)`   | 1Gb Ethernet Transceiver @ Layer 1 | TWCGPON657 Default |
 | `3`   | `<4>change mode to 3(SGMII MAC)`   | 1Gb Ethernet Transceiver @ Layer 2 | DFP-34X-2C2 Default |
