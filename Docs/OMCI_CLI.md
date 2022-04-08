@@ -1,4 +1,5 @@
 # OMCI MIB (Management Information Base)
+> MIB info provided by [@tdmadam](https://github.com/tdmadam)
 
 ## Verify Circuit Pack
 `omcicli mib get 6`
@@ -28,5 +29,3 @@
 
 ## Check Priority Queues
 `omcicli mib get 277`
-
-> MIB info provided by [@tdmadam](https://github.com/tdmadam)
