@@ -1,4 +1,5 @@
 # OMCI MIB (Management Information Base)
+Enter these command in telnet, `omcicli` is a binary file (`/bin/omcicli`) to check or set MIB
 > MIB info provided by [@tdmadam](https://github.com/tdmadam)
 
 ## Verify Circuit Pack
