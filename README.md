@@ -16,9 +16,9 @@ I recommend [ODI DFP-34X-2C2](https://www.aliexpress.com/item/1005003515662920.h
 * Much cheaper than **VSOL V2801F** & **CarlitoxxPro CPGOS03-0490 v2.0**!
 * Using latest SoC **RTL9601D**!
 * Support 2.5GbE via **HiSGMII** or **2500Base-X**! *<sup>See [Compatibility](Docs/FLASH_GETSET_INFO.md#25gb-compatibility)</sup>*
-* Using newer SFP Body with intergrated heatsink *<sup>[Picture](https://github.com/Anime4000/RTL9601C1/issues/17#issuecomment-1077681925)</sup>*
+* Using newer SFP Body with intergrated heatsink *<sup>See [Picture](https://github.com/Anime4000/RTL9601C1/issues/17#issuecomment-1077681925)</sup>*
 * Very efficient, just **45°C** without fan!
-* Automatic bridge like VSOL V2801F! *<sup>Using [`220304 Firmware`](https://github.com/Anime4000/RTL9601C1/blob/main/Firmware/DFP-34X-2C2/M114_sfp_ODI_220304.tar)</sup>*
+* Automatic/Transparent bridge like VSOL V2801F! *<sup>Using [`220304 Firmware`](https://github.com/Anime4000/RTL9601C1/blob/main/Firmware/DFP-34X-2C2/M114_sfp_ODI_220304.tar)</sup>*
 
 # Guide, Links, Info
 1. [Setup SFP XPON ONU Stick](Docs/Setup_Stick.md)
