@@ -1,10 +1,7 @@
 # Hacking [RTL9601CI](https://www.google.com/search?q=rtl9601ci+datasheet)
-Hacking V2801F, TWCGPON657 & DFP-34X-2C2 to suite your ISP Fiber
-
-> GPON market is a mess, plus explicit OMCI cause ONU Stick did not work
-
-> Correction: `CI` not `C1`
-
+* Hacking V2801F, TWCGPON657 & DFP-34X-2C2 to suite your ISP Fiber
+* GPON market is a mess, plus explicit OMCI cause ONU Stick did not work
+* Correction: `CI` not `C1`
 
 # RTL960x Family
 | Stick | SoC | NAND |
@@ -14,7 +11,14 @@ Hacking V2801F, TWCGPON657 & DFP-34X-2C2 to suite your ISP Fiber
 | [UFiber Instant](https://store.ui.com/collections/operator-ufiber/products/uf-instant) | `RTL9601CI` | 8MiB (64Mb) |
 | [DFP-34X-2C2](https://www.aliexpress.com/item/1005003515662920.html) | `RTL9601D` | 8MiB (64Mb) |
 
-Firmware might interchangable each other, flash it at your own RISK!
+# Where to buy?
+I recommend [ODI DFP-34X-2C2](https://www.aliexpress.com/item/1005003515662920.html) because
+* Much cheaper than **VSOL V2801F** & **CarlitoxxPro CPGOS03-0490 v2.0**!
+* Using latest SoC **RTL9601D**!
+* Support 2.5GbE via **HiSGMII** or **2500Base-X**!
+* Using newer SFP Body with intergrated heatsink *<sup>[Picture](https://github.com/Anime4000/RTL9601C1/issues/17#issuecomment-1077681925)</sup>*
+* Very efficient, just **45°C** without fan!
+* Automatic bridge like VSOL V2801F! *<sup>Using [`220304 Firmware`](https://github.com/Anime4000/RTL9601C1/blob/main/Firmware/DFP-34X-2C2/M114_sfp_ODI_220304.tar)</sup>*
 
 # Guide, Links, Info
 1. [Setup SFP XPON ONU Stick](Docs/Setup_Stick.md)
