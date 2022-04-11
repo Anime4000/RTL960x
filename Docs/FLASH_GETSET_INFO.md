@@ -16,12 +16,12 @@ Need to set for OLT Authenticate your ONT stick, enter your original ONT Model, 
 
 ## `OMCI_OLT_MODE` (Min 0, Max 3, Default is 0)
 Configure how ONT Stick handle OMCI from OLT:
-| Value | Note |
-|-------|------|
-| `0` | Default Mode |
-| `1` | Huawei OLT Mode |
-| `2` | ZTE OLT Mode |
-| `3` | Customized Mode | 
+| Value | Note | OMCI Information |
+|-------|------|------------------|
+| `0` | Default Mode | Stock, some value are cannot be change |
+| `1` | Huawei OLT Mode | Huawei MA5671a |
+| `2` | ZTE OLT Mode | ZTE |
+| `3` | Customized Mode | Custom Software/Hardware Version, OMCC, etc... | 
 
 ## `OMCI_FAKE_OK` (0 = Disable, 1 = Enable, Default is 0)
 Some Fiber Vendor/Wholesale/ISP have explicit LAN Port Number provisioning or proprietary OMCI that ONT Stick cant not understand, this will make ONT Stick reply `OK` whatever OMCI OLT throw at!
