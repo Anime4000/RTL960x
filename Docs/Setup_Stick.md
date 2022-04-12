@@ -29,10 +29,10 @@ Here ranking from most important to least
   * MAC Address <sub><sup>[*V2801F](#v2801f)</sup></sub>
   * Serial Number
 * OMCI Device Info
-  * Device Model
-  * Software Version
   * Hardware Version <sub><sup>[*V2801F](#v2801f)</sup></sub>
   * Manufacture Info
+  * Device Model
+  * Software Version
 
 It's best to clone ONU information via telnet or webgui config (backup, edit, restore)
 
@@ -61,49 +61,47 @@ You need to login into your old ONU, most ONU will have information page where y
 # Update Stick
 Every `flash set` require `reboot` to take effect
 
-## Authentication
+# Authentication
 * Authenticate your XPON Stick by **PLOAM Password** or **LOID**
 * Some OLT use MAC Address as authentication
 
-### PLOAM
+## PLOAM
 ```
 flash set GPON_PLOAM_PASSWD DEFAULT012
 ```
 *If you using LOID, skip this or use `DEFAULT` value*
 
-### LOID
+## LOID
 ```
 flash set LOID 0123456789
 flash set LOID_PASSWD 0123456789
 ```
 *If you using PLOAM, skip this or use `0` value for both*
 
-### ONU Serial Number
+## ONU Serial Number
 ```
 flash set GPON_SN HWTC00000000
 ```
 *Setting this require to update Vendor ID `PON_VENDOR_ID`*
 
-### MAC Address <sup>[*V2801F](#v2801f)</sup>
+## MAC Address <sup>[*V2801F](#v2801f)</sup>
 ```
 flash set ELAN_MAC_ADDR 000000111111
 ```
 
 
-## OMCI Device Information
+# OMCI Device Information
 * Many OLT only allow **certain** or **valid** " Universal ONU " model can be use
 * OLT will not up-stream OMCI provision for invalid/illegal ONU model even you have `O5` Status!
 * This section make your XPON Stick become valid!
 
-### Device Model
+## Hardware Version <sup>[*V2801F](#v2801f)</sup>
 ```
-flash set GPON_ONU_MODEL HG8240H5
+flash set HW_HWVER 168D.A
 ```
 
-### Manufacture Info
+## Manufacture Id
 OLT need to know which Manufacturer are in whitelist.
-
-> Vendor ID must match with Serial Number
 
 Some known Vendor ID:
 |   ID   | Vendor Name |
@@ -117,28 +115,32 @@ Some known Vendor ID:
 ```
 flash set PON_VENDOR_ID HWTC
 ```
+> Vendor ID must match with Serial Number
+> 
+> Some OLT have proprietary ecosystem, you must set this and enter `flash set OMCI_FAKE_OK 1`
 
-### Software Version
+## Device Model
+```
+flash set GPON_ONU_MODEL HG8240H5
+```
+
+## Software Version
 ```
 flash set OMCI_SW_VER1 V5R019C00S125
 flash set OMCI_SW_VER2 V5R019C00S125
 flash set CUSTOM_OMCI_SW_VER1 V5R019C00S125
 flash set CUSTOM_OMCI_SW_VER2 V5R019C00S125
 ```
+> Some Stick disallow changing, if you need correct Software Version to get auth, please enter `flash set OMCI_OLT_MODE 3`
 
-### Hardware Version <sup>[*V2801F](#v2801f)</sup>
-```
-flash set HW_HWVER 168D.A
-```
-
-## OMCI Additional
-### OMCI Fake `OK`
+# OMCI Additional
+## OMCI Fake `OK`
 OLT may send "model specific" OMCI provision that XPON Stick not understand, setting this value making your XPON Stick send `OK` reply on unsupport OMCI
 ```
 flash set OMCI_FAKE_OK 1
 ```
 
-### OMCI OLT Mode
+## OMCI OLT Mode
 Make **SFP XPON ONU Stick** universal, some OLT have special OMCI, most common OMCI is Huawei, for example, making **SFP XPON ONU Stick** act like Huawei ONU and understand Huawei OMCI and compatible with Huawei OLT.
 
 Even Nokia OLT, Huawei is most common due to "Universal ONU" deployment.
@@ -148,6 +150,7 @@ Even Nokia OLT, Huawei is most common due to "Universal ONU" deployment.
 | Defaut | `0` |
 | Huawei | `1` |
 | ZTE    | `2` |
+| Custom | `3` |
 
 ```
 flash set OMCI_OLT_MODE 0
