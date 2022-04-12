@@ -1,4 +1,4 @@
-# Hacking [RTL9601CI](https://www.google.com/search?q=rtl9601ci+datasheet)
+# Hacking [RTL960x](https://www.google.com/search?q=rtl9601ci+datasheet)
 * Hacking V2801F, TWCGPON657 & DFP-34X-2C2 to suite your ISP Fiber
 * GPON market is a mess, plus explicit OMCI cause ONU Stick did not work
 * Correction: `CI` not `C1`
