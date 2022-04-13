@@ -5,6 +5,14 @@ porting from ancient HTML to modern HTML5!
 * No jQuery! Pure JS
 * SVG
 
+# `boa.conf`
+You need edit `/home/httpd/boa.conf` and add these after `AddType application/x-httpd-cgi asp` line:
+```
+AddType application/json map
+AddType text/css css
+AddType text/javascript js
+```
+
 # Example:
 ![GUI](../Docs/Images/webgui/1-login.png)
 ![GUI](../Docs/Images/webgui/2-status.png)
