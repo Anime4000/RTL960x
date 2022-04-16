@@ -63,7 +63,7 @@ Configure how stick link negotiation with SFP, some router has specific issue, b
 | Mikrotik | Router | RB5009UG+S+IN | NO | |
 | Marvell  | Router | MACCHIATObin  | YES | `flash set LAN_SDS_MODE 6` |
 | TP-Link  | Router | TL-XDR5480    | YES | ODI DFP-34X-2C2 as `220304` firmware |
-| Dell     | PCIe   | BCM57810S 0Y40PH Y40PH | YES | Patched NVRAM |
+| Dell     | PCIe   | BCM57810S 0Y40PH Y40PH | YES | Patched NVRAM, `4(HiSGMII PHY)` |
 
 ## `DIRECT_BRIDGE_MODE` (Min 0, Max 1, Default is 1)
 Not sure about this, it seem PON interface bridged to LAN under one `br0` ?
