@@ -15,6 +15,7 @@
 I recommend [ODI DFP-34X-2C2](https://www.aliexpress.com/item/1005003515662920.html) because
 * Much cheaper than **VSOL V2801F** & **CarlitoxxPro CPGOS03-0490 v2.0**!
 * Using latest SoC **RTL9601D**!
+* Support **HEX** PLOAM Password!
 * Support [2.5GbE](https://github.com/Anime4000/RTL960x/issues/17#issuecomment-1100272965) via **HiSGMII** or **2500Base-X**! *<sup>See [Compatibility](Docs/FLASH_GETSET_INFO.md#25gb-compatibility), [SpeedTest](https://github.com/Anime4000/RTL960x/issues/17#issuecomment-1100272965)</sup>*
 * Using newer SFP Body with intergrated heatsink *<sup>See [Picture](https://github.com/Anime4000/RTL9601C1/issues/17#issuecomment-1077681925)</sup>*
 * Very efficient, just **45°C** without fan!
