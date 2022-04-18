@@ -61,6 +61,7 @@ Configure how stick link negotiation with SFP, some router has specific issue, b
 |-------|------|-------|---------------|--------|
 | Mikrotik | Router | RB4011iGS+RM  | NO | |
 | Mikrotik | Router | RB5009UG+S+IN | NO | |
+| Mikrotik | Switch | CRS305-1G-4S+IN | YES | [follow @stich86 tweaks](https://github.com/Anime4000/RTL960x/issues/17#issuecomment-1101435506) |
 | Marvell  | Router | MACCHIATObin  | YES | `flash set LAN_SDS_MODE 6` |
 | TP-Link  | Router | TL-XDR5480    | YES | ODI DFP-34X-2C2 as `220304` firmware |
 | Dell     | PCIe   | BCM57810S 0Y40PH Y40PH | YES | Patched NVRAM, `4(HiSGMII PHY)` |
