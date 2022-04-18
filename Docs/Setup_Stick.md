@@ -26,10 +26,10 @@ If you using **TWCGPON657** you need enable `telnet` by enter this address:
 Here ranking from most important to least
 * Authentication
   * PLOAM / LOID
-  * MAC Address <sub><sup>[*V2801F](#v2801f)</sup></sub>
   * Serial Number
+  * MAC Address <sub><sup>*[V2801F](#v2801f), [DFP-34X-2C2](#dfp-34x-2c2)</sup></sub>
 * OMCI Device Info
-  * Hardware Version <sub><sup>[*V2801F](#v2801f)</sup></sub>
+  * Hardware Version <sub><sup>*[V2801F](#v2801f)</sup></sub>
   * Manufacture Info
   * Device Model
   * Software Version
@@ -40,8 +40,8 @@ It's best to clone ONU information via telnet or webgui config (backup, edit, re
 You need to login into your old ONU, most ONU will have information page where you can get:
 | Information | Flash Set Value | Example |
 |-------------|-----------------|---------|
-| MAC Address | `ELAN_MAC_ADDR` <sub><sup>[*V2801F](#v2801f)</sup></sub> | `781735000000` |
-| Hardware Version | `HW_HWVER` <sub><sup>[*V2801F](#v2801f)</sup></sub> | `BF9.A` | 
+| MAC Address | `ELAN_MAC_ADDR` <sub><sup>*[V2801F](#v2801f), [DFP-34X-2C2](#dfp-34x-2c2)</sup></sub> | `781735000000` |
+| Hardware Version | `HW_HWVER` <sub><sup>*[V2801F](#v2801f)</sup></sub> | `BF9.A` | 
 | Software Version | `OMCI_SW_VER1`, `OMCI_SW_VER2`, `CUSTOM_OMCI_SW_VER1`, `CUSTOM_OMCI_SW_VER2` | `V3R017C10S100` |
 | Serial Number | `GPON_SN` | `HWTC35000000` |
 | Manufacture Info | `PON_VENDOR_ID` | `HWTC` |
@@ -69,14 +69,19 @@ Every `flash set` require `reboot` to take effect
 ```
 flash set GPON_PLOAM_PASSWD DEFAULT012
 ```
-*If you using LOID, skip this or use `DEFAULT` value*
+
+### PLOAM HEX
+```
+GPON_PLOAM_FORMAT 0
+GPON_PLOAM_PASSWD 44454641554C54303132
+```
+> ODI DFP-34X-2C2 Firmware `22x` or newer
 
 ## LOID
 ```
 flash set LOID 0123456789
 flash set LOID_PASSWD 0123456789
 ```
-*If you using PLOAM, skip this or use `0` value for both*
 
 ## ONU Serial Number
 ```
@@ -84,7 +89,7 @@ flash set GPON_SN HWTC00000000
 ```
 *Setting this require to update Vendor ID `PON_VENDOR_ID`*
 
-## MAC Address <sup>[*V2801F](#v2801f)</sup>
+## MAC Address <sup>[*V2801F](#v2801f), [DFP-34X-2C2](#dfp-34x-2c2)</sup>
 ```
 flash set ELAN_MAC_ADDR 000000111111
 ```
@@ -128,8 +133,6 @@ flash set GPON_ONU_MODEL HG8240H5
 ```
 flash set OMCI_SW_VER1 V5R019C00S125
 flash set OMCI_SW_VER2 V5R019C00S125
-flash set CUSTOM_OMCI_SW_VER1 V5R019C00S125
-flash set CUSTOM_OMCI_SW_VER2 V5R019C00S125
 ```
 > Some Stick disallow changing, if you need correct Software Version to get auth, please enter `flash set OMCI_OLT_MODE 3`
 
@@ -145,12 +148,12 @@ Make **SFP XPON ONU Stick** universal, some OLT have special OMCI, most common O
 
 Even Nokia OLT, Huawei is most common due to "Universal ONU" deployment.
 
-| OLT    | `OMCI_OLT_MODE` Value |
-|--------|-----|
-| Defaut | `0` |
-| Huawei | `1` |
-| ZTE    | `2` |
-| Custom | `3` |
+| OLT    | `OMCI_OLT_MODE` Value | OMCI Information |
+|--------|-----------------------|------------------|
+| Defaut | `0` | Stick default info |
+| Huawei | `1` | M5671a info |
+| ZTE    | `2` | ZTE info |
+| Custom | `3` | Your own info |
 
 ```
 flash set OMCI_OLT_MODE 0
@@ -190,6 +193,9 @@ Your stick get `O5` status mean it was registed on the fiber network, most user 
 If your original ONU doesnt give any **"Device Information"** page, try buy different cheap ONU box like Huawei HG8240H, if that ONU can give internet, copy that ONU info!
 
 My fiber vendor ([TM](https://unifi.com.my/)) and my ISP ([Maxis](https://www.maxis.com.my/)) doesn't care MAC Address, only PLOAM Password and Full OMCI Information, it may different, for the best option update everything.
+
+# DFP-34X-2C2
+If you using `V1.0-220304` or newer firmware, changing `ELAN_MAC_ADDR` require to update `MAC_KEY`.
 
 # V2801F
 When changing `ELAN_MAC_ADDR` and/or `HW_HWVER`, you are required to update `VS_AUTH_KEY` by using `VsAuthKeyGen.exe` in command prompt.
