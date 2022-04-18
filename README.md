@@ -114,10 +114,7 @@ In this table, list of xPON Stick that support 4-port ONU Emulation
 </table>
 
 > ✔️ Port Emulation Support |
+> 
 > ❌ Not Supported
 
 > `Root` mean your ONU is All in One where PPPoE/DHCP ended inside ONU (not bridge/route mode)
-
-> I strongly recommend to get V2801F or CarlitoxxPro (Realtek), these xPON Stick support 4-port Emulation!
-
----
