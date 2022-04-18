@@ -57,7 +57,7 @@ Configure how stick link negotiation with SFP, some router has specific issue, b
 | `7`   | `<4>change mode to 7(SGMII Force)` | 1Gb | Only on ODI DFP-34X-2C2  |
 
 ### 2.5Gb Compatibility
-| Brand | Type | Model | 2.5Gb Support | Quirks |
+| Brand | Type | Model | 2.5Gb SFP Support | Quirks |
 |-------|------|-------|---------------|--------|
 | Mikrotik | Router | RB4011iGS+RM  | NO | |
 | Mikrotik | Router | RB5009UG+S+IN | NO | |
