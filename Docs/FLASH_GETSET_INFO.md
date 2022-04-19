@@ -57,7 +57,7 @@ Configure how stick link negotiation with SFP, some router has specific issue, b
 | `7`   | `<4>change mode to 7(SGMII Force)` | 1Gb | Only on ODI DFP-34X-2C2, RB5009 |
 
 ### 2.5Gb Compatibility
-See [Device List](HiSGMII.md)
+See [Device List](2.5Gb.md)
 
 ## `DIRECT_BRIDGE_MODE` (Min 0, Max 1, Default is 1)
 Not sure about this, it seem PON interface bridged to LAN under one `br0` ?
