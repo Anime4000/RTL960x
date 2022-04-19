@@ -20,6 +20,14 @@ I recommend [ODI DFP-34X-2C2](https://www.aliexpress.com/item/1005003515662920.h
 * Using newer SFP Body with intergrated heatsink *<sup>See [Picture](https://github.com/Anime4000/RTL9601C1/issues/17#issuecomment-1077681925)</sup>*
 * Very efficient, just **45°C** without fan!
 * Automatic/Transparent bridge like VSOL V2801F! *<sup>Using [`220304`](https://github.com/Anime4000/RTL9601C1/blob/main/Firmware/DFP-34X-2C2/M114_sfp_ODI_220304.tar) Firmware</sup>*
+* Support 4-port ONU Emulation
+
+# VSOL V2801F Alternative
+I recommend [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488) with [V2801F Firmware](Firmware/TWCGPON657/README.md) as V2801F substitute
+* Limited 2.5GbE Support *<sup>wrong `LAN_SDS_MODE` can lock you out, no auto switch</sup>*
+* **HEX** PLOAM Password require modification from [@zry98](https://github.com/zry98/SFP-GPON-ONU#modules-using-rtl8672--rtl9601c-chipset)
+* Automatic/Full Transparent
+* Support 4-port ONU Emulation
 
 # Guide, Links, Info
 1. [Setup SFP XPON ONU Stick](Docs/Setup_Stick.md)
