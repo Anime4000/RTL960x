@@ -9,10 +9,13 @@
 | [V2801F](https://www.baudcom.com.cn/epon-gpon-onu-stick-sfp-module-with-mac-inside.html) | `RTL9601CI` | 8MiB (64Mb) |
 | [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488) | `RTL9601CI` | 16MiB (128Mb) | 
 | [UFiber Instant](https://store.ui.com/collections/operator-ufiber/products/uf-instant) | `RTL9601CI` | 8MiB (64Mb) |
-| [DFP-34X-2C2](https://www.aliexpress.com/item/1005003515662920.html) | `RTL9601D` | 8MiB (64Mb) |
+| [DFP-34X-2C2](https://m.tb.cn/h.fJc2RFv?tk=xZ4r2RPCGvj) | `RTL9601D` | 8MiB (64Mb) |
 
 # Where to buy?
-I recommend [ODI DFP-34X-2C2](https://www.aliexpress.com/item/1005003515662920.html) because
+## ODI DFP-34X-2C2 <sup>Recommended!</sup>
+1. [HSGQ @ Taobao Mall](https://m.tb.cn/h.fJc2RFv?tk=xZ4r2RPCGvj) <sup>Official</sup>
+2. [Fibershow @ AliExpress](https://www.aliexpress.com/item/1005003515662920.html)
+### Feature
 * Much cheaper than **VSOL V2801F** & **CarlitoxxPro CPGOS03-0490 v2.0**!
 * Using latest SoC **RTL9601D**!
 * Support **HEX** PLOAM Password! *<sup>Using [`220304`](https://github.com/Anime4000/RTL9601C1/blob/main/Firmware/DFP-34X-2C2/M114_sfp_ODI_220304.tar) Firmware</sup>*
@@ -22,8 +25,9 @@ I recommend [ODI DFP-34X-2C2](https://www.aliexpress.com/item/1005003515662920.h
 * Automatic/Transparent bridge like VSOL V2801F! *<sup>Using [`220304`](https://github.com/Anime4000/RTL9601C1/blob/main/Firmware/DFP-34X-2C2/M114_sfp_ODI_220304.tar) Firmware</sup>*
 * Support 4-port ONU Emulation
 
-# V2801F Alternative
+## V2801F Alternative
 I recommend [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488) with [V2801F Firmware](Firmware/TWCGPON657/README.md) as V2801F substitute
+### Feature
 * Limited 2.5GbE Support *<sup>wrong `LAN_SDS_MODE` can lock you out, no auto switch</sup>*
 * **HEX** PLOAM Password require modification from [@zry98](https://github.com/zry98/SFP-GPON-ONU#modules-using-rtl8672--rtl9601c-chipset)
 * Automatic/Full Transparent
