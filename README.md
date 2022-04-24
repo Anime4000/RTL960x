@@ -19,7 +19,7 @@
 * Much cheaper than **VSOL V2801F** & **CarlitoxxPro CPGOS03-0490 v2.0**!
 * Using latest SoC **RTL9601D**!
 * Support **HEX** PLOAM Password! *<sup>Using [`220304`](https://github.com/Anime4000/RTL9601C1/blob/main/Firmware/DFP-34X-2C2/M114_sfp_ODI_220304.tar) Firmware</sup>*
-* Support [2.5GbE](https://github.com/Anime4000/RTL960x/issues/17#issuecomment-1100272965) via **HiSGMII** or **2500Base-X**! *<sup>See [Compatibility](Docs/2.5Gb.md#device-list), [SpeedTest](https://github.com/Anime4000/RTL960x/issues/17#issuecomment-1100272965)</sup>*
+* Support 2.5GbE via [**HiSGMII** or **2500Base-X**](Docs/FLASH_GETSET_INFO.md#lan_sds_mode-min-1-max-6)! *<sup>See [Compatibility](Docs/2.5Gb.md#device-list), [SpeedTest](https://github.com/Anime4000/RTL960x/issues/17#issuecomment-1100272965)</sup>*
 * Using newer SFP Body with intergrated heatsink *<sup>See [Picture](https://github.com/Anime4000/RTL9601C1/issues/17#issuecomment-1077681925)</sup>*
 * Very efficient, just **45°C** without fan!
 * Automatic/Transparent bridge like VSOL V2801F! *<sup>Using [`220304`](https://github.com/Anime4000/RTL9601C1/blob/main/Firmware/DFP-34X-2C2/M114_sfp_ODI_220304.tar) Firmware</sup>*
