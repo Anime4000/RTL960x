@@ -51,10 +51,10 @@ Configure how stick link negotiation with SFP, some router has specific issue, b
 |-------|------------------------------------|-------------------|------|
 | `0`   | `<4>change mode to 0(GE/FE PHY)`   | 1GBase-T/100Base-T         | DFP-34X-2C2 Only! Auto Detect |
 | `1`   | `<4>change mode to 1(Fiber 1G)`    | 1Gb Fiber Channel  | V2801F Default |
-| `2`   | `<4>change mode to 2(SGMII PHY)`   | 1Gb Ethernet Transceiver @ Layer 1 | TWCGPON657 Default |
-| `3`   | `<4>change mode to 3(SGMII MAC)`   | 1Gb Ethernet Transceiver @ Layer 2 | DFP-34X-2C2 Default |
-| `4`   | `<4>change mode to 4(HiSGMII PHY)` | 2.5Gb Ethernet Transceiver @ Layer 1 |  |
-| `5`   | `<4>change mode to 5(HiSGMII MAC)` | 2.5Gb Ethernet Transceiver @ Layer 2 |  |
+| `2`   | `<4>change mode to 2(SGMII PHY)`   | 1Gb PHY Transceiver | TWCGPON657 Default |
+| `3`   | `<4>change mode to 3(SGMII MAC)`   | 1Gb MAC Transceiver | DFP-34X-2C2 Default |
+| `4`   | `<4>change mode to 4(HiSGMII PHY)` | 2.5Gb PHY Transceiver |  |
+| `5`   | `<4>change mode to 5(HiSGMII MAC)` | 2.5Gb MAC Transceiver |  |
 | `6`   | `<4>change mode to 6(2500BaseX)`   | 2.5Gb Fiber Channel |  |
 | `7`   | `<4>change mode to 7(SGMII Force)` | 1Gb | DFP-34X-2C2 Only! RB5009 Compatible |
 
