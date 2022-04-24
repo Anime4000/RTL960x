@@ -121,6 +121,9 @@ Some known Vendor ID:
 | `UBNT` | Ubiquiti    |
 | `FHTT` | Fiber Home  |
 | `RTKG` | Realtek     |
+| `TPLG` | TP-Link     |
+| `SCOM` | Sercomm     |
+
 ```
 flash set PON_VENDOR_ID HWTC
 ```
