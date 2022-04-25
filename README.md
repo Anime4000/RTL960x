@@ -1,7 +1,7 @@
 # Hacking [RTL960x](https://www.google.com/search?q=rtl9601ci+datasheet)
 * Hacking V2801F, TWCGPON657 & DFP-34X-2C2 to suite your ISP Fiber
 * GPON market is a mess, plus explicit OMCI cause ONU Stick did not work
-* Correction: `CI` not `C1`
+* [4-port ONU Emulation](#4-port-onu-emulation) Table
 
 # RTL960x Family
 | Stick | SoC | NAND |
@@ -55,15 +55,12 @@ I recommend [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e
 * ISP provide Triple Play service (Internet, VoIP & IPTV)
 * Vendor supply 4-port ONU for each service or ISP
 
-## Multiple ISP
-![HG8240H5](Docs/Images/Ports%20Provisioning%20Multiple%20ISP.png)
-
-## Multiple Service
-![HG8240H5](Docs/Images/Ports%20Provisioning%20Multi%20Port%20Service.png)
-
+## 4-port ONU Emulation
 Based on [ru-board](http://forum.ru-board.com/topic.cgi?forum=8&topic=80480&start=1360#2) **4-Port Emulation is limited**, not many xPON Stick can understand, only V2801F do support it, **because my Internet comes at Huawei HG8240H LAN Port 2** (LAN 1 for Main ISP, LAN 2 for 3rd party ISP)
 
-In this table, list of xPON Stick that support 4-port ONU Emulation
+If you using 4-port ONU like [Huawei HG8240H5](https://www.google.com/search?q=HG8240H5) and [Nokia G-240G-E](https://www.google.com/search?q=G-240G-E) and Router connected to ONU LAN 2/3/4, you have limited option, I recommend [ODI DFP-34X-2C2](https://www.aliexpress.com/item/1005003515662920.html) with `220304` or newer firmware.
+
+Here list of xPON Stick on the market that support 4-port ONU Emulation:
 <table>
     <thead>
         <tr>
@@ -80,6 +77,24 @@ In this table, list of xPON Stick that support 4-port ONU Emulation
         </tr>
     </thead>
     <tbody>
+       <tr>
+            <td>Huawei MA5671a</td>
+            <td>✔️</td>
+            <td>✔️</td>
+            <td>❌</td>
+            <td>❌</td>
+            <td>❌</td>
+            <td>OpenWRT</td>
+        </tr>
+        <tr>
+            <td>Nokia G-010S-A</td>
+            <td>✔️</td>
+            <td>✔️</td>
+            <td>❌</td>
+            <td>❌</td>
+            <td>❌</td>
+            <td> </td>
+        </tr>
         <tr>
             <td>DFP-34G-2C2 (ZTE)</td>
             <td>✔️</td>
@@ -105,7 +120,7 @@ In this table, list of xPON Stick that support 4-port ONU Emulation
             <td>✔️</td>
             <td>✔️</td>
             <td>✔️</td>
-            <td><code>M114_sfp_ODI_220304.tar</code></td>
+            <td><code>M114_sfp_ODI_220304.tar</code> or newer</td>
         </tr>
         <tr>
             <td>TWCGPON657</td>
@@ -128,8 +143,15 @@ In this table, list of xPON Stick that support 4-port ONU Emulation
     </tbody>
 </table>
 
-> ✔️ Port Emulation Support |
+> ✔️ Port Emulation Support
 > 
 > ❌ Not Supported
-
+>
 > `Root` mean your ONU is All in One where PPPoE/DHCP ended inside ONU (not bridge/route mode)
+
+## Multiple ISP
+![HG8240H5](Docs/Images/Ports%20Provisioning%20Multiple%20ISP.png)
+
+## Multiple Service
+![HG8240H5](Docs/Images/Ports%20Provisioning%20Multi%20Port%20Service.png)
+
