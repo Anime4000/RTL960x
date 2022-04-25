@@ -56,10 +56,12 @@ I recommend [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e
 * Vendor supply 4-port ONU for each service or ISP
 
 ## 4-port ONU Emulation
-Based on [ru-board](http://forum.ru-board.com/topic.cgi?forum=8&topic=80480&start=1360#2) **4-Port Emulation is limited**
+Based on [ru-board](http://forum.ru-board.com/topic.cgi?forum=8&topic=80480&start=1360#2), xPON Stick with **4-Port Emulation** support is limited!
 
-If you using 4-port ONU like [Huawei HG8240H5](https://www.google.com/search?q=HG8240H5) and [Nokia G-240G-E](https://www.google.com/search?q=G-240G-E) and Router connected to ONU LAN 2/3/4, you have limited option, I recommend [ODI DFP-34X-2C2](https://www.aliexpress.com/item/1005003515662920.html) with `220304` or newer firmware.
+### ONU LAN Port Binding example
+If you using 4-port ONU like [Huawei HG8240H5](https://www.google.com/search?q=HG8240H5), [Nokia G-240G-E](https://www.google.com/search?q=G-240G-E) and Router connected to ONU LAN 2/3/4, you have limited option, I recommend [ODI DFP-34X-2C2](https://www.aliexpress.com/item/1005003515662920.html) with `220304` or newer firmware.
 
+### Table 4-port ONU Emulation
 Here list of xPON Stick on the market that support 4-port ONU Emulation:
 <table>
     <thead>
@@ -96,7 +98,7 @@ Here list of xPON Stick on the market that support 4-port ONU Emulation:
             <td> </td>
         </tr>
         <tr>
-            <td>DFP-34G-2C2 (ZTE)</td>
+            <td>ODI DFP-34G-2C2 (ZTE)</td>
             <td>✔️</td>
             <td>✔️</td>
             <td>❌</td>
@@ -105,7 +107,7 @@ Here list of xPON Stick on the market that support 4-port ONU Emulation:
             <td> </td>
         </tr>
         <tr>
-            <td>DFP-34X-2C2 (ZTE)</td>
+            <td>ODI DFP-34X-2C2 (ZTE)</td>
             <td>✔️</td>
             <td>✔️</td>
             <td>❌</td>
@@ -114,7 +116,7 @@ Here list of xPON Stick on the market that support 4-port ONU Emulation:
             <td> </td>
         </tr>
         <tr>
-            <td>DFP-34X-2C2 (Realtek)</td>
+            <td>ODI DFP-34X-2C2 (Realtek)</td>
             <td>✔️</td>
             <td>✔️</td>
             <td>✔️</td>
@@ -132,7 +134,7 @@ Here list of xPON Stick on the market that support 4-port ONU Emulation:
             <td><code>C00R657V2801F_V1.9.0-220404.tar</code></td>
         </tr>
         <tr>
-            <td>V2801F</td>
+            <td>V-SOL V2801F</td>
             <td>✔️</td>
             <td>✔️</td>
             <td>✔️</td>
