@@ -64,6 +64,19 @@ function on_init() {
 
 			<form action="/boaform/admin/formOmciInfo" method="post" name="formOmciInfo">
 				<div class="form-group row">
+					<label class="col-sm-4 col-form-label">Compatibility Mode</label>
+					<div class="col-sm-8">
+						<select class="form-select" id="omci_olt_mode" name="omci_olt_mode" >
+							<option value="0">Default Mode</option>
+							<option value="1">Huawei OLT Mode</option>
+							<option value="2">ZTE OLT Mode</option>
+							<option value="3">Customized Mode</option>
+						</select>
+						<small class="form-text text-dark">ONU Compatibility, <code class="text-primary">Huawei</code> is the most common value for Universal ONU</small>
+					</div>
+				</div>
+<br />
+				<div class="form-group row">
 					<label class="col-sm-4 col-form-label"><% multilang("59" "LANG_OMCI_VENDOR_ID"); %></label>
 					<div class="col-sm-8">
 						<input type="text" class="form-control font-monospace" id="omci_vendor_id" name="omci_vendor_id" value="<% getInfo("omci_vendor_id"); %>">
@@ -137,19 +150,6 @@ function on_init() {
 							<option value="2" >2</option>
 						</select>
 						<small class="form-text text-dark">Traffic Management, <code class="text-primary">2</code> is the most common value for Universal ONU</small>
-					</div>
-				</div>
-<br />
-				<div class="form-group row">
-					<label class="col-sm-4 col-form-label">Compatibility Mode</label>
-					<div class="col-sm-8">
-						<select class="form-select" id="omci_olt_mode" name="omci_olt_mode" >
-							<option value="0">Default Mode</option>
-							<option value="1">Huawei OLT Mode</option>
-							<option value="2">ZTE OLT Mode</option>
-							<option value="3">Customized Mode</option>
-						</select>
-						<small class="form-text text-dark">ONU Compatibility, <code class="text-primary">Huawei</code> is the most common value for Universal ONU</small>
 					</div>
 				</div>
 <br />
