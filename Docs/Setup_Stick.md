@@ -165,6 +165,15 @@ Even Nokia OLT, Huawei is most common due to "Universal ONU" deployment.
 ```
 flash set OMCI_OLT_MODE 0
 ```
+### `OMCI_OLT_MODE 3`
+When set, you need provide full custom OMCI Info:
+1. `PON_VENDOR_ID`
+2. `GPON_ONU_MODEL`
+3. `HW_HWVER`
+4. `OMCI_SW_VER1`
+5. `OMCI_SW_VER2`
+
+---
 
 # CWMP
 TR069. You can skip this if you have internet access, this may not required in most cases, some very strict OLT need
