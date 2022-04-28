@@ -129,7 +129,7 @@ Here list of xPON Stick on the market that support 4-port ONU Emulation:
             <td>✔️</td>
             <td>✔️</td>
             <td>❓</td>
-            <td><code>220304</code> or newer, PVID support in progress</td>
+            <td><code>220304</code> or newer, PVID in progress</td>
         </tr>
         <tr>
             <td>TWCGPON657</td>
