@@ -68,7 +68,7 @@ Here list of xPON Stick on the market that support 4-port ONU Emulation:
     <thead>
         <tr>
             <th rowspan="2">xPON Stick</th>
-            <th colspan="5">Huawei HG8240H LAN Port</th>
+            <th colspan="6">Huawei HG8240H LAN Port</th>
             <th rowspan="2">Firmware</th>
         </tr>
         <tr>
@@ -77,6 +77,7 @@ Here list of xPON Stick on the market that support 4-port ONU Emulation:
             <th>2️⃣</th>
             <th>3️⃣</th>
             <th>4️⃣</th>
+            <th>PVID</th>
         </tr>
     </thead>
     <tbody>
@@ -87,11 +88,13 @@ Here list of xPON Stick on the market that support 4-port ONU Emulation:
             <td>❌</td>
             <td>❌</td>
             <td>❌</td>
+            <td>✔️</td>
             <td>OpenWRT</td>
         </tr>
         <tr>
             <td>Nokia G-010S-A</td>
             <td>✔️</td>
+            <td>❌</td>
             <td>❌</td>
             <td>❌</td>
             <td>❌</td>
@@ -105,12 +108,14 @@ Here list of xPON Stick on the market that support 4-port ONU Emulation:
             <td>❌</td>
             <td>❌</td>
             <td>❌</td>
+            <td>❌</td>
             <td> </td>
         </tr>
         <tr>
             <td>ODI DFP-34X-2C2 (ZTE)</td>
             <td>✔️</td>
             <td>✔️</td>
+            <td>❌</td>
             <td>❌</td>
             <td>❌</td>
             <td>❌</td>
@@ -123,6 +128,7 @@ Here list of xPON Stick on the market that support 4-port ONU Emulation:
             <td>✔️</td>
             <td>✔️</td>
             <td>✔️</td>
+            <td>❌</td>
             <td><code>M114_sfp_ODI_220304.tar</code> or newer</td>
         </tr>
         <tr>
@@ -132,6 +138,7 @@ Here list of xPON Stick on the market that support 4-port ONU Emulation:
             <td>✔️</td>
             <td>✔️</td>
             <td>✔️</td>
+            <td>❌</td>
             <td><code>C00R657V2801F_V1.9.0-220404.tar</code></td>
         </tr>
         <tr>
@@ -141,6 +148,7 @@ Here list of xPON Stick on the market that support 4-port ONU Emulation:
             <td>✔️</td>
             <td>✔️</td>
             <td>✔️</td>
+            <td>❌</td>
             <td> Stock Firmware </td>
         </tr>
     </tbody>
@@ -151,6 +159,8 @@ Here list of xPON Stick on the market that support 4-port ONU Emulation:
 > ❌ Not Supported
 >
 > `Root` mean your ONU is All in One where PPPoE/DHCP ended inside ONU (not bridge/route mode)
+>
+> **PVID** is VLAN untagging, at router side, WAN connected without VLAN, useful consumer router such as TL-XDR5480 without VLAN support
 
 ## Multiple ISP
 ![HG8240H5](Docs/Images/Ports%20Provisioning%20Multiple%20ISP.png)
