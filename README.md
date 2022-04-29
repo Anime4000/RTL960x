@@ -11,6 +11,22 @@
 | [UFiber Instant](https://store.ui.com/collections/operator-ufiber/products/uf-instant) | `RTL9601CI` | 8MiB (64Mb) |
 | [DFP-34X-2C2](https://m.tb.cn/h.fJc2RFv?tk=xZ4r2RPCGvj) | `RTL9601D` | 8MiB (64Mb) |
 
+# Guide, Links, Info
+1. [Setup SFP XPON ONU Stick](Docs/Setup_Stick.md)
+2. [Flash Get, Flash Set](Docs/FLASH_GETSET_INFO.md)
+    * [xPON Model Id](Docs/FLASH_GETSET_INFO.md#pon_vendor_id-4-ascii-character-maximum)
+    * [LAN SDS Mode](Docs/FLASH_GETSET_INFO.md#lan_sds_mode-min-1-max-6)
+    * [2.5GbE Compatibility](Docs/2.5Gb.md)
+3. [Diagnostic](Docs/DIAG.md)
+    * [Hidden Link, Firmware Update](Docs/Useful_Links.md)
+    * [OMCI MIB INFO](Docs/OMCI_CLI.md)
+    * [OMCI VLAN](Docs/OMCI_VLAN.md)
+    * [Wireshark](https://github.com/tdmadam/OMCI-for-SFP-Stick) <sup>OMCI decoding for Wireshark by [@tdmadam](https://github.com/tdmadam)</sup>
+    * [UART](Docs/UART.md)
+4. [TWCGPON657 × V2801F Firmware](Firmware/TWCGPON657/README.md)
+5. [V2801F Auto Reboot](Docs/V2801F.md)
+6. [Firmware Emulator](Tools/emulator)
+
 # Where to buy?
 ## ODI DFP-34X-2C2 <sup>Recommended!</sup>
 1. [HSGQ @ Taobao Mall](https://m.tb.cn/h.fJc2RFv?tk=xZ4r2RPCGvj)
@@ -33,23 +49,6 @@ I recommend [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e
 * Automatic/Full Transparent
 * Support 4-port ONU Emulation
 * [Modern WebGUI](WebGui#example)
-
-# Guide, Links, Info
-1. [Setup SFP XPON ONU Stick](Docs/Setup_Stick.md)
-2. [Flash Get, Flash Set](Docs/FLASH_GETSET_INFO.md)
-    * [xPON Model Id](Docs/FLASH_GETSET_INFO.md#pon_vendor_id-4-ascii-character-maximum)
-    * [LAN SDS Mode](Docs/FLASH_GETSET_INFO.md#lan_sds_mode-min-1-max-6)
-    * [2.5GbE Compatibility](Docs/2.5Gb.md)
-3. [Diagnostic](Docs/DIAG.md)
-    * [Hidden Link, Firmware Update](Docs/Useful_Links.md)
-    * [OMCI MIB INFO](Docs/OMCI_CLI.md)
-    * [OMCI VLAN](Docs/OMCI_VLAN.md)
-    * [Wireshark](https://github.com/tdmadam/OMCI-for-SFP-Stick) <sup>OMCI decoding for Wireshark by [@tdmadam](https://github.com/tdmadam)</sup>
-    * [UART](Docs/UART.md)
-4. [TWCGPON657 × V2801F Firmware](Firmware/TWCGPON657/README.md)
-5. [V2801F Auto Reboot](Docs/V2801F.md)
-6. [Firmware Emulator](Tools/emulator)
-
 
 # Triple Play Multiple ISP Problem, 4-port ONU Emulation
 * Majority fiber vendor support multiple ISP
