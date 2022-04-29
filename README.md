@@ -12,8 +12,9 @@
 | [DFP-34X-2C2](https://m.tb.cn/h.fJc2RFv?tk=xZ4r2RPCGvj) | `RTL9601D` | 8MiB (64Mb) |
 
 # Guide, Links, Info
+1. [Backup `env`, `env2` & `config` partition](https://github.com/Anime4000/RTL960x/discussions/28) <sup>Guide by [@tdmadam](https://github.com/tdmadam)</sup>
 1. [Setup SFP XPON ONU Stick](Docs/Setup_Stick.md)
-2. [Flash Get, Flash Set](Docs/FLASH_GETSET_INFO.md)
+2. [`flash get`, `flash set`](Docs/FLASH_GETSET_INFO.md)
     * [xPON Model Id](Docs/FLASH_GETSET_INFO.md#pon_vendor_id-4-ascii-character-maximum)
     * [LAN SDS Mode](Docs/FLASH_GETSET_INFO.md#lan_sds_mode-min-1-max-6)
     * [2.5GbE Compatibility](Docs/2.5Gb.md)
