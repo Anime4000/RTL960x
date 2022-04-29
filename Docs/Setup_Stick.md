@@ -57,6 +57,25 @@ You need to login into your old ONU, most ONU will have information page where y
 ## HG8240H5
 ![RGW](Images/HG8240H5.png)
 
+# Backup Original
+You may need to write down your original value
+```
+flash get PON_VENDOR_ID
+flash get HW_CWMP_MANUFACTURER
+flash get HW_CWMP_PRODUCTCLASS
+flash get HW_HWVER
+flash get OMCI_VEIP_SLOT_ID
+flash get OMCI_OLT_MODE
+flash get OMCI_FAKE_OK
+flash get OMCI_SW_VER1
+flash get OMCI_SW_VER2
+flash get GPON_ONU_MODEL
+flash get GPON_SN
+flash get GPON_PLOAM_PASSWD
+flash get ELAN_MAC_ADDR
+flash get VS_AUTH_KEY
+flash get MAC_KEY
+```
 
 # Update Stick
 Every `flash set` require `reboot` to take effect
@@ -66,16 +85,16 @@ Every `flash set` require `reboot` to take effect
 * Some OLT use MAC Address as authentication
 
 ## PLOAM
+### PLOAM ASCII <sup><i>V2801F, TWCGPON657, DFP-34X-2C2</i></sup>
 ```
 flash set GPON_PLOAM_PASSWD DEFAULT012
 ```
 
-### PLOAM HEX
+### PLOAM HEX <sup><i>DFP-34X-2C2 Firmware `22xxxx` or newer</i></sup>
 ```
-GPON_PLOAM_FORMAT 0
-GPON_PLOAM_PASSWD 44454641554C54303132
+flash set GPON_PLOAM_FORMAT 0
+flash set GPON_PLOAM_PASSWD 44454641554C54303132
 ```
-> ODI DFP-34X-2C2 Firmware `22x` or newer
 
 ## LOID
 ```
@@ -85,7 +104,7 @@ flash set LOID_PASSWD 0123456789
 
 ## ONU Serial Number
 ```
-flash set GPON_SN HWTC00000000
+flash set GPON_SN HWTC12345678
 ```
 *Setting this require to update Vendor ID `PON_VENDOR_ID`*
 
@@ -97,6 +116,7 @@ flash set ELAN_MAC_ADDR 000000111111
 1. GPON encapsulated into a GEM frame which doesn't contain any **MAC information** of PON port.
 2. GPON is Layer 3 transport and connection is transparent between your Router and ISP Gateway.
 3. If your internet is Bind MAC Address, then you need change Router WAN MAC Address.
+4. EPON might need change MAC Address, use V2801F stick for EPON connection
 
 
 # OMCI Device Information
@@ -235,22 +255,4 @@ Return value look like this:
 Copy and update `VS_AUTH_KEY` in telnet:
 ```
 flash set VS_AUTH_KEY 9E7E54597511D721D3A2932B048C0494
-```
-
-# Original
-You may need to write down your original value:
-```
-flash get PON_VENDOR_ID
-flash get HW_CWMP_MANUFACTURER
-flash get HW_CWMP_PRODUCTCLASS
-flash get HW_HWVER
-flash get OMCI_VEIP_SLOT_ID
-flash get OMCI_OLT_MODE
-flash get OMCI_FAKE_OK
-flash get OMCI_SW_VER1
-flash get OMCI_SW_VER2
-flash get GPON_ONU_MODEL
-flash get GPON_SN
-flash get GPON_PLOAM_PASSWD
-flash get ELAN_MAC_ADDR
 ```
