@@ -40,7 +40,7 @@ It's best to clone ONU information via telnet or webgui config (backup, edit, re
 You need to login into your old ONU, most ONU will have information page where you can get:
 | Information | Flash Set Value | Example |
 |-------------|-----------------|---------|
-| MAC Address | `ELAN_MAC_ADDR` <sub><sup>*[V2801F](#v2801f), [DFP-34X-2C2](#dfp-34x-2c2)</sup></sub> | `781735000000` |
+| MAC Address | `ELAN_MAC_ADDR` <sub><sup>*EPON user only, [V2801F](#v2801f), [DFP-34X-2C2](#dfp-34x-2c2)</sup></sub> | `781735000000` |
 | Hardware Version | `HW_HWVER` <sub><sup>*[V2801F](#v2801f)</sup></sub> | `BF9.A` | 
 | Software Version | `OMCI_SW_VER1`, `OMCI_SW_VER2`, `CUSTOM_OMCI_SW_VER1`, `CUSTOM_OMCI_SW_VER2` | `V3R017C10S100` |
 | Serial Number | `GPON_SN` | `HWTC35000000` |
