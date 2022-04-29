@@ -3,7 +3,7 @@
 
 # Explaination
 ## `ELAN_MAC_ADDR` (12 Hexadecimal number maximum)
-Some OLT have explicit MAC Address can register, you need clone your original ONT MAC Address
+GPON user can skip this because GPON encap inside GEM frame which is don't have MAC Address attached!
 
 ## `GPON_PLOAM_PASSWD` (10 Alphanumeric character maximum?)
 Need to set for OLT Authenticate your ONT stick, you can get from original ONT WebGUI.
