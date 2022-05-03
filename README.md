@@ -13,7 +13,7 @@
 
 # Guide, Links, Info
 1. [Backup `env`, `env2` & `config` partition](https://github.com/Anime4000/RTL960x/discussions/28) <sup>Guide by [@tdmadam](https://github.com/tdmadam)</sup>
-1. [Setup SFP XPON ONU Stick](Docs/Setup_Stick.md)
+1. [Setup XPON ONU SFP Stick](Docs/Setup_Stick.md)
 2. [`flash get`, `flash set`](Docs/FLASH_GETSET_INFO.md)
     * [xPON Model Id](Docs/FLASH_GETSET_INFO.md#pon_vendor_id-4-ascii-character-maximum)
     * [LAN SDS Mode](Docs/FLASH_GETSET_INFO.md#lan_sds_mode-min-1-max-6)
