@@ -116,8 +116,8 @@ md5sum fwu_ver >> md5.txt
 md5sum rootfs >> md5.txt
 md5sum uImage >> md5.txt
 
-echo "Repacking firmware: rtl9601c1_modified.tar"
-tar -cvf ../rtl9601c1_modified.tar fwu.sh fwu_ver md5.txt rootfs uImage
+echo "Repacking firmware: rtl960x_modified.tar"
+tar -cvf ../rtl960x_modified.tar fwu.sh fwu_ver md5.txt rootfs uImage
 
 echo ""
 echo "Firmware Repacking Complete!"
