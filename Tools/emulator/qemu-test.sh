@@ -11,15 +11,25 @@ echo "Anime4000 firmware test for RTL9601C1"
 echo "-------------------------------------"
 echo ""
 
-if [ "$EUID" -ne 0 ]
-	then echo "Please run as root!"
+if [ "$EUID" -ne 0 ]; then
+	echo "Please run as root!"
+	exit 99
+fi
+
+if [ $# -eq 0 ]; then
+	echo "Usage"
+	echo "       $0 <firmware> <sw_ver>"
+	echo ""
+	echo "Options:"
+	echo "  firmware           firmware file in .tar format"
+	echo "  sw_ver             optional, custom software version, space will truncated"
 	exit 99
 fi
 
 echo "Checking Packging: $1"
 if [[ ! -f $1 && -z $1 ]]; then
-    echo "$1 is not found! example: $0 C00R657V00B15_20201222.tar"
-    exit 99
+	    echo "$1 is not found! example: $0 C00R657V00B15_20201222.tar"
+	    exit 99
 fi
 
 CHDIR="squashfs-root"
@@ -90,7 +100,7 @@ chmod +x "$CHDIR/etc/init.d" -R
 chmod +x "$CHDIR/etc/scripts" -R
 chown 0:0 "$CHDIR/" -R
 
-echo "Change Version Date!"
+echo "Change Version, Hardcoded!"
 if grep -q "-" fwu_ver; then
 	STICKVER=`awk -F" " '{print $1}' $CHDIR/etc/version | cut -d - -f 1`
 	echo "$STICKVER-$(date +'%y%m%d') -- $(date -u +'%a %b %d %H:%I:%M %Z %Y')" > "$CHDIR/etc/version"
@@ -99,6 +109,15 @@ else
 	STICKVER=`awk -F" " '{print $1}' $CHDIR/etc/version`
 	echo "$STICKVER -- $(date -u +'%a %b %d %H:%I:%M %Z %Y')" > "$CHDIR/etc/version"
 	echo "$STICKVER" > fwu_ver
+fi
+
+
+if [ -z "$2" ]; then
+	echo "No custom version string is set..."
+else
+	echo "Using custom version string..."
+	echo "$2" > "$CHDIR/etc/version"
+	echo "$2" > fwu_ver
 fi
 
 echo "Change Default LAN_SDS_MODE"
