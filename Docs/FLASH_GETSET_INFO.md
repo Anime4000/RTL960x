@@ -23,6 +23,8 @@ Configure how ONT Stick handle OMCI from OLT:
 | `2` | ZTE OLT Mode | ZTE |
 | `3` | Customized Mode | Custom Software/Hardware Version, OMCC, etc... | 
 
+> `0` and `3` behave differenly from V2801F, TWCGPON675 and DFP-34X-2C2, more testing is needed!
+
 ## `OMCI_FAKE_OK` (0 = Disable, 1 = Enable, Default is 0)
 Some Fiber Vendor/Wholesale/ISP have explicit LAN Port Number provisioning or proprietary OMCI that ONT Stick cant not understand, this will make ONT Stick reply `OK` whatever OMCI OLT throw at!
 
