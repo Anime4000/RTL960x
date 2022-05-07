@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # Anime4000 firmware test
-# Purpose of this script to let you test before flash into RTL9601C1 (ONU Stick)
+# Purpose of this script to let you test before flash into RTL960x (ONU Stick)
 # Try merge or play with V2801F and TWCGPON657
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 cd "$DIR"
 
-echo "Anime4000 firmware test for RTL9601C1"
-echo "-------------------------------------"
+echo "Anime4000 firmware test for RTL960x"
+echo "-----------------------------------"
 echo ""
 
 if [ "$EUID" -ne 0 ]; then
@@ -21,7 +21,7 @@ if [ $# -eq 0 ]; then
 	echo "       $0 <firmware> <sw_ver>"
 	echo ""
 	echo "Options:"
-	echo "  firmware           firmware file in .tar format"
+	echo "  firmware           rtl960x firmware file in .tar format"
 	echo "  sw_ver             optional, custom software version, space will truncated"
 	exit 99
 fi
