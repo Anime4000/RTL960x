@@ -121,7 +121,7 @@ tar -cvf ../rtl9601c1_modified.tar fwu.sh fwu_ver md5.txt rootfs uImage
 
 echo ""
 echo "Firmware Repacking Complete!"
-echo "Location: $(realpath ../rtl9601c1_modified.tar)"
+echo "Location: $(realpath ../rtl960x_modified.tar)"
 echo ""
 echo "Anime4000 firmware test script, https://github.com/Anime4000/RTL9601C1"
 echo ""
