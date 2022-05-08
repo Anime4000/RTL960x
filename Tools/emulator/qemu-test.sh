@@ -116,7 +116,7 @@ if [ -z "$2" ]; then
 	echo "No custom version string is set..."
 else
 	echo "Using custom version string..."
-	echo "$2" > "$CHDIR/etc/version"
+	echo "$2 -- $(date -u +'%a %b %d %H:%I:%M %Z %Y')" > "$CHDIR/etc/version"
 	echo "$2" > fwu_ver
 fi
 
