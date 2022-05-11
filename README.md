@@ -14,7 +14,7 @@
 # Guide, Links, Info
 1. [Backup `env`, `env2` & `config` partition](https://github.com/Anime4000/RTL960x/discussions/28) <sup>Guide by [@tdmadam](https://github.com/tdmadam)</sup>
 1. [Setup XPON ONU SFP Stick](Docs/Setup_Stick.md)
-    * [Stock ONU OMCI Clone](https://github.com/Anime4000/RTL960x/blob/main/Docs/Stock_ONU.md)
+    * [Clone Stock ONU OMCI Info](https://github.com/Anime4000/RTL960x/blob/main/Docs/Stock_ONU.md)
 3. [`flash get`, `flash set`](Docs/FLASH_GETSET_INFO.md)
     * [xPON Model Id](Docs/FLASH_GETSET_INFO.md#pon_vendor_id-4-ascii-character-maximum)
     * [LAN SDS Mode](Docs/FLASH_GETSET_INFO.md#lan_sds_mode-min-1-max-6)
@@ -44,8 +44,8 @@
 * Support 4-port ONU Emulation
 
 # V2801F Alternative
-* [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488) with [V2801F Firmware](Firmware/TWCGPON657/README.md) as V2801F substitute
-* Opton GP801R <sup>Found by [@AreYouLoco](https://github.com/AreYouLoco)</sup>
+1. [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488) with [V2801F Firmware](Firmware/TWCGPON657/README.md) as V2801F substitute
+2. Opton GP801R <sup>Found by [@AreYouLoco](https://github.com/AreYouLoco)</sup>
 ## Feature
 * Limited 2.5GbE Support *<sup>wrong `LAN_SDS_MODE` can lock you out, no auto switch</sup>*
 * **HEX** PLOAM Password require modification from [@zry98](https://github.com/zry98/SFP-GPON-ONU#modules-using-rtl8672--rtl9601c-chipset)
