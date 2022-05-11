@@ -44,8 +44,9 @@
 * Support 4-port ONU Emulation
 
 # V2801F Alternative
-I recommend [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488) with [V2801F Firmware](Firmware/TWCGPON657/README.md) as V2801F substitute
-
+* [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488) with [V2801F Firmware](Firmware/TWCGPON657/README.md) as V2801F substitute
+* Opton GP801R <sup>Found by [@AreYouLoco](https://github.com/AreYouLoco)</sup>
+## Feature
 * Limited 2.5GbE Support *<sup>wrong `LAN_SDS_MODE` can lock you out, no auto switch</sup>*
 * **HEX** PLOAM Password require modification from [@zry98](https://github.com/zry98/SFP-GPON-ONU#modules-using-rtl8672--rtl9601c-chipset)
 * Automatic/Full Transparent
