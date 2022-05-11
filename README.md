@@ -14,19 +14,20 @@
 # Guide, Links, Info
 1. [Backup `env`, `env2` & `config` partition](https://github.com/Anime4000/RTL960x/discussions/28) <sup>Guide by [@tdmadam](https://github.com/tdmadam)</sup>
 1. [Setup XPON ONU SFP Stick](Docs/Setup_Stick.md)
-2. [`flash get`, `flash set`](Docs/FLASH_GETSET_INFO.md)
+    * [Stock ONU OMCI Clone](https://github.com/Anime4000/RTL960x/blob/main/Docs/Stock_ONU.md)
+3. [`flash get`, `flash set`](Docs/FLASH_GETSET_INFO.md)
     * [xPON Model Id](Docs/FLASH_GETSET_INFO.md#pon_vendor_id-4-ascii-character-maximum)
     * [LAN SDS Mode](Docs/FLASH_GETSET_INFO.md#lan_sds_mode-min-1-max-6)
     * [2.5GbE Compatibility](Docs/2.5Gb.md)
-3. [Diagnostic](Docs/DIAG.md)
+4. [Diagnostic](Docs/DIAG.md)
     * [Hidden Link, Firmware Update](Docs/Useful_Links.md)
     * [OMCI MIB INFO](Docs/OMCI_CLI.md)
     * [OMCI VLAN](Docs/OMCI_VLAN.md)
     * [Wireshark](https://github.com/tdmadam/OMCI-for-SFP-Stick) <sup>OMCI decoding for Wireshark by [@tdmadam](https://github.com/tdmadam)</sup>
     * [UART](Docs/UART.md)
-4. [TWCGPON657 × V2801F Firmware](Firmware/TWCGPON657/README.md)
-5. [V2801F Auto Reboot](Docs/V2801F.md)
-6. [Firmware Emulator](Tools/emulator)
+5. [TWCGPON657 × V2801F Firmware](Firmware/TWCGPON657/README.md)
+6. [V2801F Auto Reboot](Docs/V2801F.md)
+7. [Firmware Emulator](Tools/emulator)
 
 # Where to buy?
 ## ODI DFP-34X-2C2 <sup>Recommended!</sup>
