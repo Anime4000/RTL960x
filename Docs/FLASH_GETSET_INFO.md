@@ -49,16 +49,16 @@ Here some popular list if want to fool the OLT:
 ## `LAN_SDS_MODE` (Min 1, Max 6)
 Configure how stick link negotiation with SFP, some router has specific issue, between PHY or MAC, (Layer 1 and Layer 2 perhaps?)
 
-| Value | `cat /proc/kmsg`                   | Mode/Behavior         | `ethtool`       | Note |
-|-------|------------------------------------|-----------------------|-----------------|------|
-| `0`   | `<4>change mode to 0(GE/FE PHY)`   | 1000baseT/100baseT    | `0x020`         | DFP-34X-2C2 Only! Auto Detect |
-| `1`   | `<4>change mode to 1(Fiber 1G)`    | 1000baseX             | `0x20000000000` | V2801F Default |
-| `2`   | `<4>change mode to 2(SGMII PHY)`   | 1Gb PHY Transceiver   |                 | TWCGPON657 Default |
-| `3`   | `<4>change mode to 3(SGMII MAC)`   | 1Gb MAC Transceiver   |                 | DFP-34X-2C2 Default |
-| `4`   | `<4>change mode to 4(HiSGMII PHY)` | 2.5Gb PHY Transceiver |                 |  |
-| `5`   | `<4>change mode to 5(HiSGMII MAC)` | 2.5Gb MAC Transceiver |                 |  |
-| `6`   | `<4>change mode to 6(2500BaseX)`   | 2500baseX             | `0x8000`        |  |
-| `7`   | `<4>change mode to 7(SGMII Force)` | 1Gb                   |                 | DFP-34X-2C2 Only! RB5009 Compatible |
+| Value | `cat /proc/kmsg`                   | Mode     | Behavior         | `ethtool`       | Note |
+|-------|------------------------------------|----------|------------------|-----------------|------|
+| `0`   | `<4>change mode to 0(GE/FE PHY)`   | `TP`     | 1GbaseT/100baseT | `0x020`         | DFP-34X-2C2 Auto Detect |
+| `1`   | `<4>change mode to 1(Fiber 1G)`    | `FIBER`  | 1GbaseX          | `0x20000000000` | V2801F Default |
+| `2`   | `<4>change mode to 2(SGMII PHY)`   | `TP MII` | 1Gb PHY          |                 | TWCGPON657 Default |
+| `3`   | `<4>change mode to 3(SGMII MAC)`   | `MII`    | 1Gb MAC          |                 | DFP-34X-2C2 Default |
+| `4`   | `<4>change mode to 4(HiSGMII PHY)` | `TP MII` | 2.5Gb PHY        |                 |  |
+| `5`   | `<4>change mode to 5(HiSGMII MAC)` | `MII`    | 2.5Gb MAC        |                 |  |
+| `6`   | `<4>change mode to 6(2500BaseX)`   | `FIBER`  | 2500baseX        | `0x8000`        |  |
+| `7`   | `<4>change mode to 7(SGMII Force)` | `TP`?    | 1GbaseT          |                 | DFP-34X-2C2 |
 
 ### 2.5Gb Compatibility
 See [Device List](2.5Gb.md)
