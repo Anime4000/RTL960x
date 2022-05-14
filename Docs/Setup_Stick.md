@@ -198,10 +198,22 @@ When set, you need provide full custom OMCI Info:
 # CWMP
 TR069. You can skip this if you have internet access, this may not required in most cases, some very strict OLT need
 
+## `HW_CWMP_MANUFACTURER`
 ```
 flash set HW_CWMP_MANUFACTURER 'Huawei Technologies Co., Ltd'
-flash set HW_CWMP_PRODUCTCLASS HG8240H5
 ```
+
+## `HW_CWMP_PRODUCTCLASS`
+```
+flash set HW_CWMP_PRODUCTCLASS HGU
+```
+Value can be:
+| Code | Full Name               | Purpose     | Device Example  |
+|------|-------------------------|-------------|-----------------|
+| IGD  | Internet Gateway Device | Router      |  |
+| HGU  | Home Gateway Unit       | Gateway ONT | Huawei HG8240H5, Huawei HG8145V5 |
+| SFU  | Switch Fabric Unit      | Bridge ONT  | Huawei EG8010Hv6, Nokia G-240G-E |
+
 
 # Summary
 ```
