@@ -2,6 +2,7 @@
 here list known ONU device for OMCI Info Cloning, making your xPON ONU SFP Stick act like your original ONU to fool Fiber Vendor OLT
 
 ## Telnet `flash set`
+![example](Images/HG8240H5_example.png)
 ```
 flash set GPON_ONU_MODEL 
 flash set GPON_SN 
