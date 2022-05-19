@@ -1,4 +1,4 @@
-# RTL9601C1 Emulator
+# RTL960x Emulator
 This script allow you to modify and reverse engineering RTL9601C1 based firmware.
 
 # Prerequisite
@@ -24,7 +24,7 @@ Pretty simple to do, script do everything, you simply play with it
 After you run, Terminal Emulator will land busybox just like telnet:
 ```
 Installing: chroot QEMU MIPS
-RTL9601C1 Emulator is Running!
+RTL960x Emulator is Running!
 
 
 BusyBox v1.12.4 (2020-10-26 08:35:57 CST) built-in shell (ash)
