@@ -45,6 +45,7 @@ Here some popular list if want to fool the OLT:
 | `RTKG` | Realtek     |
 | `TPLG` | TP-Link     |
 | `SCOM` | Sercomm     |
+| `TMBB` | Technicolor |
 
 ## `LAN_SDS_MODE` (Min 1, Max 6)
 Configure how stick link negotiation with SFP, some router has specific issue, between PHY or MAC, (Layer 1 and Layer 2 perhaps?)
