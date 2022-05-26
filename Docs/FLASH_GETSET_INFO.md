@@ -29,7 +29,12 @@ Configure how ONT Stick handle OMCI from OLT:
 Some Fiber Vendor/Wholesale/ISP have explicit LAN Port Number provisioning or proprietary OMCI that ONT Stick cant not understand, this will make ONT Stick reply `OK` whatever OMCI OLT throw at!
 
 ## `OMCI_TM_OPT` (Min 0, Max 2, Default is 2)
-Configure OMCI Traffic Management, not info about these value.
+This handle how OLT manage bandwidth, try change these value if you have slow down. <sup>found by [#ccy](https://github.com/ccy)</sup>
+| Value | Info |
+|-------|------|
+| `0` | Priority controlled |
+| `1` | Rate controlled |
+| `2` | Priority and Rate controlled |
 
 ## `PON_VENDOR_ID` (4 ASCII character maximum)
 Need to set for OLT Authenticate your ONT stick, please read your original ONT Serial Number, either in HEX digit or ASCII, if in HEX digit, you need convert first eight HEX digit to ASCII, for example `48575443` = `HWTC`.
