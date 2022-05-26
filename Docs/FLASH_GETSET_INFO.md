@@ -29,7 +29,7 @@ Configure how ONT Stick handle OMCI from OLT:
 Some Fiber Vendor/Wholesale/ISP have explicit LAN Port Number provisioning or proprietary OMCI that ONT Stick cant not understand, this will make ONT Stick reply `OK` whatever OMCI OLT throw at!
 
 ## `OMCI_TM_OPT` (Min 0, Max 2, Default is 2)
-This handle how OLT manage bandwidth, try change these value if you have slow down. <sup>found by [#ccy](https://github.com/ccy)</sup>
+This handle how OLT manage bandwidth, try change these value if you have slow down. <sup>found by [@ccy](https://github.com/ccy)</sup>
 | Value | Info |
 |-------|------|
 | `0` | Priority controlled |
@@ -75,8 +75,8 @@ Not sure about this, it seem PON interface bridged to LAN under one `br0` ?
 ## `DEVICE_TYPE` (Min 0, Max 2, Default is 0)
 | Value | Mode | Default |
 |-------|------|---------|
-| `0` | `bridge` | V2801F, TWCGPON657 |
-| `1` | `router` | DFP-34X-2C2 |
+| `0` | `bridge` | V2801F, TWCGPON657, DFP-34X-2C2 (220304 & above) |
+| `1` | `router` | DFP-34X-2C2 (210702) |
 | `2` | `hybrid` (both) | |
 
 ## `VLAN_CFG_TYPE` (Min 0, Max 1, Default is 0)
