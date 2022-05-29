@@ -101,7 +101,7 @@ Here list of xPON Stick on the market that support 4-port ONU Emulation:
             <td>❌</td>
             <td>❌</td>
             <td>❌</td>
-            <td>❌</td>
+            <td>✔️</td>
             <td>OpenWRT</td>
         </tr>
         <tr>
