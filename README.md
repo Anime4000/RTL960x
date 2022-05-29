@@ -95,17 +95,17 @@ Here list of xPON Stick on the market that support 4-port ONU Emulation:
             <td>OpenWRT</td>
         </tr>
         <tr>
-            <td>Nokia G-010S-A</td>
+            <td>Nokia G-010S-P</td>
             <td>✔️</td>
             <td>❌</td>
             <td>❌</td>
             <td>❌</td>
             <td>❌</td>
             <td>❌</td>
-            <td> </td>
+            <td>OpenWRT</td>
         </tr>
         <tr>
-            <td>ODI DFP-34X-2C2 (RTL9601D)</td>
+            <td>ODI DFP-34X-2C2</td>
             <td>✔️</td>
             <td>✔️</td>
             <td>❌</td>
@@ -115,7 +115,7 @@ Here list of xPON Stick on the market that support 4-port ONU Emulation:
             <td><code>210702</code>, <code>220527</code></td>
         </tr>
         <tr>
-            <td>ODI DFP-34X-2C2 (RTL9601D)</td>
+            <td>ODI DFP-34X-2C2</td>
             <td>✔️</td>
             <td>✔️</td>
             <td>✔️</td>
