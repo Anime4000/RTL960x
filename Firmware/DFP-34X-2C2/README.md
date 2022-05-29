@@ -3,11 +3,17 @@
 2. If your stick using ZTE chipset, this firmware are not compatible!
 
 # 4-port Emulation
-| Firmware                         | Port Emulation |
-|----------------------------------|----------------|
-| `M114_sfp_ODI_210702.tar`        | NO, IGD Mode  |
-| `M114_sfp_ODI_220304.tar`        | YES, SFU |
-| `M114_sfp_ODI_Vlan_220414.tar`   | YES, SFU Mode |
-| `M114_sfp_ODI_hybrid_220527.tar` | NO, IGD Mode  |
+| Firmware                         | Mode | 4-port Emulation |
+|----------------------------------|------|------------------|
+| `M114_sfp_ODI_210702.tar`        | IGD  | ❌ |
+| `M114_sfp_ODI_220304.tar`        | SFU  | ✔️ |
+| `M114_sfp_ODI_Vlan_220414.tar`   | SFU  | ✔️ |
+| `M114_sfp_ODI_hybrid_220527.tar` | IGD  | ❌ |
+
+Note:
+1. IGD
+   * Internet Gateway Device, ONU in Router Mode, DHCP, PPPoE Client
+2. SFU
+   * Switch Fabric Unit, ONU in Bridge Mode
 
 # This firmware cannot be used on `V2801F` and `TWCGPON657`!
