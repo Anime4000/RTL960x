@@ -20,9 +20,9 @@
     * [LAN SDS Mode](Docs/FLASH_GETSET_INFO.md#lan_sds_mode-min-1-max-6)
     * [2.5GbE Compatibility](Docs/2.5Gb.md)
 4. [Diagnostic](Docs/DIAG.md)
+    * [`O5` no Internet (Fake ONU Status)](Docs/fakeO5.md)
     * [Hidden Link, Firmware Update](Docs/Useful_Links.md)
     * [`OMCI_TM_OPT`](https://github.com/Anime4000/RTL960x/issues/35#issuecomment-1138255401) <sup>stick cause internet speed slow? this look at this, found by [@ccy](https://github.com/ccy)</sup>
-    * [Fake `O5` ONU Status](Docs/fakeO5.md)
     * [OMCI MIB INFO](Docs/OMCI_CLI.md)
     * [OMCI VLAN](Docs/OMCI_VLAN.md)
     * [Wireshark](https://github.com/tdmadam/OMCI-for-SFP-Stick) <sup>OMCI decoding for Wireshark by [@tdmadam](https://github.com/tdmadam)</sup>
