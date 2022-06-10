@@ -13,8 +13,9 @@ This guide mainly for `RTL9601CI` and `RTL9601D` where `config` partition locate
     * VSOL V2801F `VS_AUTH_KEY`
 
 # Reset
+Login into `telnet` then do:
 ```
 flash_eraseall /dev/mtd3
+reboot
 ```
-
 After reset, Stick will use default (hardcoded software) MAC Address, wrong `key` will not Authenticated to OLT!
