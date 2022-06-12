@@ -4,12 +4,12 @@
 * [4-port ONU Emulation](#4-port-onu-emulation) Table
 
 # RTL960x Family
-| Stick | SoC | NAND | Mode |
-|-------|-----|------|------|
-| [V2801F](https://www.baudcom.com.cn/epon-gpon-onu-stick-sfp-module-with-mac-inside.html) | `RTL9601CI` | 8MiB (64Mb) | SFU |
-| [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488) | `RTL9601CI` | 16MiB (128Mb) | SFU | 
-| [UFiber Instant](https://store.ui.com/collections/operator-ufiber/products/uf-instant) | `RTL9601CI` | 8MiB (64Mb) | SFU |
-| [DFP-34X-2C2](https://m.tb.cn/h.fJc2RFv?tk=xZ4r2RPCGvj) | `RTL9601D` | 8MiB (64Mb) | IGD & SFU |
+| Stick | SoC | NAND | Mode | 4-port `EthUni` |
+|-------|-----|------|------|-----------------|
+| [V2801F](https://www.baudcom.com.cn/epon-gpon-onu-stick-sfp-module-with-mac-inside.html) | `RTL9601CI` | 8MiB (64Mb) | SFU | YES |
+| [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488) | `RTL9601CI` | 16MiB (128Mb) | SFU | NO |
+| [UFiber Instant](https://store.ui.com/collections/operator-ufiber/products/uf-instant) | `RTL9601CI` | 8MiB (64Mb) | SFU | NO |
+| [DFP-34X-2C2](https://m.tb.cn/h.fJc2RFv?tk=xZ4r2RPCGvj) | `RTL9601D` | 8MiB (64Mb) | IGD & SFU | YES with SFU |
 
 # Guide, Links, Info
 1. [Backup `env`, `env2` & `config` partition](https://github.com/Anime4000/RTL960x/discussions/28) <sup>Guide by [@tdmadam](https://github.com/tdmadam)</sup>
