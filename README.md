@@ -11,6 +11,12 @@
 | [UFiber Instant](https://store.ui.com/collections/operator-ufiber/products/uf-instant) | `RTL9601CI` | 8MiB (64Mb) | SFU | NO |
 | [DFP-34X-2C2](https://m.tb.cn/h.fJc2RFv?tk=xZ4r2RPCGvj) | `RTL9601D` | 8MiB (64Mb) | IGD & SFU | YES with SFU |
 
+## SFU vs IGD
+| Code | Full name | Meaning |
+|------|-----------|---------|
+| SFU | Switch Fabric Unit | Simple device that just bridge from PON to LAN's, it may have VoIP |
+| IGD | Internet Gateway Device | ONU with routing capability, has wifi, tldr; Router |
+
 # Guide, Links, Info
 1. [Backup `env`, `env2` & `config` partition](https://github.com/Anime4000/RTL960x/discussions/28) <sup>Guide by [@tdmadam](https://github.com/tdmadam)</sup>
 1. [Setup XPON ONU SFP Stick](Docs/Setup_Stick.md)
