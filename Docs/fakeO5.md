@@ -29,3 +29,6 @@ flash set OMCI_OLT_MODE 1
 ```
 
 If still no luck, try `flash all` to print all then see any `OMCI_*`
+
+## For Users using CHT FTTH In Taiwan
+You can call to support center `0800-080-412` or using online chat from Hinet website to tell them "重整線路" to reset the OLT port and remove OMCI infomation lock.
