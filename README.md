@@ -41,6 +41,7 @@
 List of users has successfully ditch stock ONU!
 1. [@stich86 2.5GbE Internet](https://github.com/Anime4000/RTL960x/issues/17#issuecomment-1101435506)
 2. [My journey connecting fiber internet to my router](https://www.reddit.com/r/HomeNetworking/comments/vd0qm2/my_journey_connecting_fiber_internet_to_my_router/)
+3. [Hinet users in TW](https://github.com/Anime4000/RTL960x/pull/44#issue-1281699738)
 
 # Where to buy?
 ## ODI DFP-34X-2C2 <sup>Recommended!</sup>
