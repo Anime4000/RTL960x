@@ -22,4 +22,8 @@ Use value from table below
 | HG8145V5         | HWTC12345678 | HWTC           | 15AD.A          | V5R020C00S060    | hezaika   | [TIME](https://www.time.com.my/personal/broadband/fibre-broadband) |
 | G-240G-E         | ALCL12345678 | ALCL           | 3FE48153CBAA    | 3FE46606BGCB45   | anime4000 | [TM](https://www.unifi.com.my/) |
 | HG6240A          | FHTT12345678 | FHTT           | WKE2.094.325A01 | RP2775           | lwk523    | [TM](https://www.unifi.com.my/) |
-| RTF8207W         | ASKY12345678 | ASKY           | REV1            | R8207WR210601    | pccr10001 | [Hinet](https://broadband.hinet.net/Broadband/internetManagement/internet/internet/internet_02.do) |
+| RTF8207W         | ASKY12345678 | ASKY           | RTF8207W        | R8207WR210601    | pccr10001 | [Hinet](https://broadband.hinet.net/Broadband/internetManagement/internet/internet/internet_02.do) |
+| RTF8217          | DSNW12345678 | ASKY           | RTF8217         | R8217R211219     | akw28888 | [Hinet](https://broadband.hinet.net/Broadband/internetManagement/internet/internet/internet_02.do) |
+| I-040GW          | GTHG12345678 | GTHG           | 3FE99997HGW001  | I040GWR200110    | akw28888 | [Hinet](https://broadband.hinet.net/Broadband/internetManagement/internet/internet/internet_02.do) |
+| I040GB           | GMTK12345678 | GMTK           | 3FE99995AAAA01  | I040GBN131231    | akw28888 | [Hinet](https://broadband.hinet.net/Broadband/internetManagement/internet/internet/internet_02.do) |
+| H660WM           | DSNW12345678 | DSNW           | H660WM          | H660WMR210825    | akw28888 | [Hinet](https://broadband.hinet.net/Broadband/internetManagement/internet/internet/internet_02.do) |
