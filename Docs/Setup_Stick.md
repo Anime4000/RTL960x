@@ -253,14 +253,14 @@ More information to negate this problem, [read here](fakeO5.md)
 # MAC/HW Lock
 These stick mainly for commercial deployment where prevent user chaning device Id by having License Key. However, user can use on exting fiber to omit stock ONU or unlock GPON speed to 2.5Gb, for custom deployment, you may change MAC Address but not required on GPON due to Layer 3 transport omit MAC Address...
 
-# DFP-34X-2C2
+## DFP-34X-2C2
 If you using `V1.0-220304` or newer firmware, changing `ELAN_MAC_ADDR` require to update `MAC_KEY`.
 ## Syntax
 ```
 echo -n "hsgq1.9aMAC_ADDR_UPPERCASE" | md5sum
 ```
 
-## Example
+### Example
 Open a Linux Terminal or Stick Telnet and do:
 ```
 echo -n "hsgq1.9aFFFFFF000000" | md5sum
@@ -276,15 +276,15 @@ Copy and update `MAC_KEY` in telnet:
 flash set MAC_KEY 46f4ea2e3f18ba3bc1f2671b5f7e1f62
 ```
 
-# V2801F
+## V2801F
 When changing `ELAN_MAC_ADDR` and/or `HW_HWVER`, you are required to update `VS_AUTH_KEY` by using `VsAuthKeyGen.exe` in command prompt.
 
-## Syntax:
+### Syntax:
 ```
 VsAuthKeyGen.exe <mac_address> [HW_HWVER]
 ```
 
-## Example
+### Example
 Open a Command Prompt where `VsAuthKeyGen.exe` is reside, example:
 ```
 VsAuthKeyGen.exe 000000111111 168D.A
