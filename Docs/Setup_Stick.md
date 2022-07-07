@@ -85,18 +85,27 @@ Every `flash set` require `reboot` to take effect
 * Some OLT use MAC Address as authentication
 
 ## PLOAM
-### PLOAM ASCII <sup><i>V2801F, TWCGPON657, DFP-34X-2C2</i></sup>
-```
-flash set GPON_PLOAM_PASSWD DEFAULT012
-```
-
-### PLOAM HEX <sup><i>DFP-34X-2C2 Firmware `22xxxx` or newer</i></sup>
+### HEX
+DFP-34X-2C2 at Firmware `220304` or newer
 ```
 flash set GPON_PLOAM_FORMAT 0
 flash set GPON_PLOAM_PASSWD 44454641554C54303132
 ```
 
+### ASCII
+Commonly use by GPON network
+#### DFP-34X-2C2
+```
+flash set GPON_PLOAM_FORMAT 1
+flash set GPON_PLOAM_PASSWD DEFAULT012
+```
+#### V2801F, TWCGPON657, UF-Instant, 
+```
+flash set GPON_PLOAM_PASSWD DEFAULT012
+```
+
 ## LOID
+Commonly use by EPON network
 ```
 flash set LOID 0123456789
 flash set LOID_PASSWD 0123456789
@@ -162,6 +171,7 @@ flash set OMCI_SW_VER1 V5R019C00S125
 flash set OMCI_SW_VER2 V5R019C00S125
 ```
 > Some Stick disallow changing, if you need correct Software Version to get auth, please enter `flash set OMCI_OLT_MODE 3`
+> 
 
 # OMCI Additional
 ## OMCI Fake `OK`
@@ -177,16 +187,17 @@ Even Nokia OLT, Huawei is most common due to "Universal ONU" deployment.
 
 | OLT    | `OMCI_OLT_MODE` Value | OMCI Information |
 |--------|-----------------------|------------------|
-| Defaut | `0` | Stick default info |
-| Huawei | `1` | M5671a info |
-| ZTE    | `2` | ZTE info |
-| Custom | `3` | Your own info |
+| Defaut | `0`  | Default info |
+| Huawei | `1`  | Huawei info |
+| ZTE    | `2`  | ZTE info |
+| Custom | `3`  | Own info |
+| Custom | `21` | Force own info by trigger `segmention fault` on **DFP-34X-2C2** default value |
 
 ```
 flash set OMCI_OLT_MODE 0
 ```
-### `OMCI_OLT_MODE 3`
-When set, you need provide full custom OMCI Info:
+
+When set own info, you need provide full custom OMCI Info:
 1. `PON_VENDOR_ID`
 2. `GPON_ONU_MODEL`
 3. `HW_HWVER`
@@ -236,14 +247,34 @@ flash set OMCI_OLT_MODE 1
 ```
 
 # `O5` No Internet
-Your stick get `O5` status mean it was registed on the fiber network, most user have internet access, however some OLT doesn't permit your traffic due to wrong OMCI.
+Multiple user report that Nokia/Alcatel OLT giving fake `O5` with `02020202` OLT Vendor Id, this making hard to troubleshoot for end-user and vendor...
+More information to negate this problem, [read here](fakeO5.md)
 
-If your original ONU doesnt give any **"Device Information"** page, try buy different cheap ONU box like Huawei HG8240H, if that ONU can give internet, copy that ONU info!
-
-My fiber vendor ([TM](https://unifi.com.my/)) and my ISP ([Maxis](https://www.maxis.com.my/)) doesn't care MAC Address, only PLOAM Password and Full OMCI Information, it may different, for the best option update everything.
+# MAC/HW Lock
+These stick mainly for commercial deployment where prevent user chaning device Id by having License Key. However, user can use on exting fiber to omit stock ONU or unlock GPON speed to 2.5Gb, for custom deployment, you may change MAC Address but not required on GPON due to Layer 3 transport omit MAC Address...
 
 # DFP-34X-2C2
 If you using `V1.0-220304` or newer firmware, changing `ELAN_MAC_ADDR` require to update `MAC_KEY`.
+## Syntax
+```
+echo -n "hsgq1.9aMAC_ADDR_UPPERCASE" | md5sum
+```
+
+## Example
+Open a Linux Terminal or Stick Telnet and do:
+```
+echo -n "hsgq1.9aFFFFFF000000" | md5sum
+```
+
+Return value look like this:
+```
+46f4ea2e3f18ba3bc1f2671b5f7e1f62  -
+```
+
+Copy and update `MAC_KEY` in telnet:
+```
+flash set MAC_KEY 46f4ea2e3f18ba3bc1f2671b5f7e1f62
+```
 
 # V2801F
 When changing `ELAN_MAC_ADDR` and/or `HW_HWVER`, you are required to update `VS_AUTH_KEY` by using `VsAuthKeyGen.exe` in command prompt.
@@ -253,7 +284,7 @@ When changing `ELAN_MAC_ADDR` and/or `HW_HWVER`, you are required to update `VS_
 VsAuthKeyGen.exe <mac_address> [HW_HWVER]
 ```
 
-### Example
+## Example
 Open a Command Prompt where `VsAuthKeyGen.exe` is reside, example:
 ```
 VsAuthKeyGen.exe 000000111111 168D.A
