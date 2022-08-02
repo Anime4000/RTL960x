@@ -31,3 +31,4 @@ Use value from table below
 | RV6699           | SCOM12345678 | SCOM           | V4              | SC3.0.16         | skon77 | [MGTS](https://mgts.ru/) |
 | PMG4506-T20B     | ZYXE12345678 | ZYXE           | PMG4506-T20B    | P4506R220425     | akw28888 | [Hinet](https://broadband.hinet.net/Broadband/internetManagement/internet/internet/internet_02.do) |
 | G040WQ           | NOKW12345678 | GMTK           | 3FE47772AAAA    | G040WQR201207    | pccr10001 | [Hinet](https://broadband.hinet.net/Broadband/internetManagement/internet/internet/internet_02.do) |
+| EDGG11000        | EDCR12345678 | EDCR           | GG-GAPL100v02   | GG-11000-C003    | Remooh    | [Vivo (Vivo 1/São Paulo region)](https://www.vivo.com.br/para-voce/produtos-e-servicos/para-casa/internet) |
