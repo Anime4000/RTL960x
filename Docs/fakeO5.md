@@ -32,3 +32,15 @@ If still no luck, try `flash all` to print all then see any `OMCI_*`
 
 ## For Users using CHT FTTH In Taiwan
 You can call to support center `0800-080-412` or using online chat from Hinet website to tell them "重整線路" to reset the OLT port and remove OMCI infomation lock.
+
+## For Users using Vivo Fibra in the Vivo 1/São Paulo region
+You might try setting the following values, they were copied from a stock EdgeCore GG-11000 ONU:
+```
+flash set OMCC_VER 160
+flash set OMCI_TM_OPT 1
+```
+If using `DFP-34X-2C2`, one option to avoid the `OMCI_SW_VER*` override after reboot is to set the following value, as discussed [here](https://github.com/Anime4000/RTL960x/issues/30#issuecomment-1146604684):
+```
+flash set OMCI_OLT_MODE 21
+```
+The VLAN tag for the internet is not being mapped to `10` like the stock ONU, so check the output of `omcicli mib get 84` to get the tag. In my case the VLAN tag for the internet is `885`.
