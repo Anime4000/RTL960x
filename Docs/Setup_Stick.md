@@ -85,20 +85,16 @@ Every `flash set` require `reboot` to take effect
 * Some OLT use MAC Address as authentication
 
 ## PLOAM
+Commonly use by GPON network
 ### HEX
-DFP-34X-2C2 at Firmware `220304` or newer
+#### DFP-34X-2C2
 ```
 flash set GPON_PLOAM_FORMAT 0
 flash set GPON_PLOAM_PASSWD 44454641554C54303132
 ```
+> Firmware version `220304`& above only accept HEX PLOAM Password in the telnet, if you want to set ASCII, do it in WebGUI
 
 ### ASCII
-Commonly use by GPON network
-#### DFP-34X-2C2
-```
-flash set GPON_PLOAM_FORMAT 1
-flash set GPON_PLOAM_PASSWD DEFAULT012
-```
 #### V2801F, TWCGPON657, UF-Instant, 
 ```
 flash set GPON_PLOAM_PASSWD DEFAULT012
