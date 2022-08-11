@@ -119,9 +119,8 @@ flash set ELAN_MAC_ADDR 000000111111
 ```
 ### Note:
 1. GPON encapsulated into a GEM frame which doesn't contain any **MAC information** of PON port.
-2. GPON is Layer 3 transport and connection is transparent between your Router and ISP Gateway.
-3. If your internet is Bind MAC Address, then you need change Router WAN MAC Address.
-4. EPON might need change MAC Address, use V2801F stick for EPON connection
+2. If your internet is Bind MAC Address, then you need change Router WAN MAC Address.
+3. EPON might need change MAC Address, use V2801F stick for EPON connection
 
 
 # OMCI Device Information
