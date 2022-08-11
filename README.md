@@ -3,7 +3,8 @@
 * GPON market is a mess, plus explicit OMCI cause ONU Stick did not work
 * [4-port ONU Emulation](#4-port-onu-emulation) Table
 
-# RTL960x Family
+# xPON SFP ONU
+## RTL960x Family
 | Stick | SoC | NAND | Mode | 4-port `EthUni` |
 |-------|-----|------|------|-----------------|
 | [VSOL V2801F](https://www.baudcom.com.cn/epon-gpon-onu-stick-sfp-module-with-mac-inside.html) | `RTL9601CI` | 8MiB (64Mb) | VEIP, PPTP | YES |
@@ -12,7 +13,7 @@
 | [ODI DFP-34X-2C2](https://m.tb.cn/h.fJc2RFv?tk=xZ4r2RPCGvj) | `RTL9601D` | 8MiB (64Mb) | VEIP, PPTP | YES, fw: [`220304`](https://github.com/Anime4000/RTL960x/blob/main/Firmware/DFP-34X-2C2/M114_sfp_ODI_220304.tar) & [`220414`](https://github.com/Anime4000/RTL960x/blob/main/Firmware/DFP-34X-2C2/M114_sfp_ODI_Vlan_220414.tar) |
 | [Nokia G-010S-Q](https://github.com/Anime4000/RTL960x/issues/52#issuecomment-1208424756) | `RTL9601CI` | ? | ? | ? |
 
-## Other xPON SFP
+## Other
 | Stick | SoC | NAND | Mode | 4-port `EthUni` |
 |-------|-----|------|------|-----------------|
 | ODI DFP-34X-2C2 | ZTE | ? | PPTP | NO |
@@ -20,7 +21,7 @@
 | Nokia G-010S-P    | Intel | ? | PPTP | NO |
 | Nokia G-010S-A    | Intel | ? | PPTP | NO |
 
-## VEIP vs PPTP
+# VEIP vs PPTP
 | Code | Full name | Meaning |
 |------|-----------|---------|
 | PPTP | Physical Path Termination Point | OLT directly sends VLAN data to each physical interface of ONU |
