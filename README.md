@@ -6,16 +6,16 @@
 # RTL960x Family
 | Stick | SoC | NAND | Mode | 4-port `EthUni` |
 |-------|-----|------|------|-----------------|
-| [V2801F](https://www.baudcom.com.cn/epon-gpon-onu-stick-sfp-module-with-mac-inside.html) | `RTL9601CI` | 8MiB (64Mb) | SFU | YES |
-| [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488) | `RTL9601CI` | 16MiB (128Mb) | SFU | NO |
-| [UFiber Instant](https://store.ui.com/collections/operator-ufiber/products/uf-instant) | `RTL9601CI` | 8MiB (64Mb) | SFU | NO |
-| [DFP-34X-2C2](https://m.tb.cn/h.fJc2RFv?tk=xZ4r2RPCGvj) | `RTL9601D` | 8MiB (64Mb) | Both | YES* |
+| [V2801F](https://www.baudcom.com.cn/epon-gpon-onu-stick-sfp-module-with-mac-inside.html) | `RTL9601CI` | 8MiB (64Mb) | VEIP, PPTP | YES |
+| [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488) | `RTL9601CI` | 16MiB (128Mb) | VEIP, PPTP | YES, fw: [`C00R657V2801F`](Firmware/TWCGPON657/C00R657V2801F_V1.9.0-220404.tar) |
+| [UFiber Instant](https://store.ui.com/collections/operator-ufiber/products/uf-instant) | `RTL9601CI` | 8MiB (64Mb) | VEIP, PPTP | NO |
+| [DFP-34X-2C2](https://m.tb.cn/h.fJc2RFv?tk=xZ4r2RPCGvj) | `RTL9601D` | 8MiB (64Mb) | VEIP, PPTP | YES, fw: [`220304`](https://github.com/Anime4000/RTL960x/blob/main/Firmware/DFP-34X-2C2/M114_sfp_ODI_220304.tar) & [`220414`](https://github.com/Anime4000/RTL960x/blob/main/Firmware/DFP-34X-2C2/M114_sfp_ODI_Vlan_220414.tar) |
 
-## SFU vs IGD
+## VEIP vs PPTP
 | Code | Full name | Meaning |
 |------|-----------|---------|
-| SFU | Switch Fabric Unit | Simple device that just bridge from PON to LAN's, it may have VoIP |
-| IGD | Internet Gateway Device | ONU with routing capability, has wifi, tldr; Router |
+| PPTP | Physical Path Termination Point | OLT directly sends VLAN data to each physical interface of ONU |
+| VEIP | Virtual Ethernet Interface Point | Virtualizes the total interface of an ONU, ONU LAN port provisioning |
 
 # Guide, Links, Info
 1. [Backup `env`, `env2` & `config` partition](https://github.com/Anime4000/RTL960x/discussions/28) <sup>Guide by [@tdmadam](https://github.com/tdmadam)</sup>
