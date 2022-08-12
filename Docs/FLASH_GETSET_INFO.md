@@ -22,6 +22,7 @@ Configure how ONT Stick handle OMCI from OLT:
 | `1` | Huawei OLT Mode | Huawei MA5671a |
 | `2` | ZTE OLT Mode | ZTE |
 | `3` | Customized Mode | Custom Software/Hardware Version, OMCC, etc... | 
+| `21` | Force own info by trigger `segmention fault` on DFP-34X-2C2 default value |
 
 > `0` and `3` behave differenly from V2801F, TWCGPON675 and DFP-34X-2C2, more testing is needed!
 
