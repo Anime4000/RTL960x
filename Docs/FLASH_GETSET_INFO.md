@@ -2,19 +2,29 @@
 [List of default login](Setup_Stick.md#default-password)
 
 # Explaination
-## `ELAN_MAC_ADDR` (12 Hexadecimal number maximum)
+## `ELAN_MAC_ADDR`
+> 12 Hexadecimal number maximum
+
 GPON user can skip this because GPON encap inside GEM frame which is don't have MAC Address attached!
 
-## `GPON_PLOAM_PASSWD` (10 Alphanumeric character maximum?)
+## `GPON_PLOAM_PASSWD`
+> 10 ASCII character or 20 HEX number for ODI DFP-34X-2C2
+
 Need to set for OLT Authenticate your ONT stick, you can get from original ONT WebGUI.
 
-## `GPON_SN` (12 ASCII character maximum)
+## `GPON_SN`
+> 12 ASCII character maximum
+
 Need to set for OLT Authenticate your ONT stick, enter your original ONT Serial Number, must be ASCII form `HWTC12345678`, you may need to convert first eight HEX digit serial number to ASCII, just like `PON_VENDOR_ID`
 
-## `GPON_ONU_MODEL` (8 ASCII character maximum)
+## `GPON_ONU_MODEL`
+> 8 ASCII character maximum
+
 Need to set for OLT Authenticate your ONT stick, enter your original ONT Model, Example: `HG8240H5`
 
-## `OMCI_OLT_MODE` (Min 0, Max 3, Default is 0)
+## `OMCI_OLT_MODE`
+> Min 0, Max 3, Default is 0
+
 Configure how ONT Stick handle OMCI from OLT:
 | Value | Note | OMCI Information |
 |-------|------|------------------|
@@ -22,14 +32,18 @@ Configure how ONT Stick handle OMCI from OLT:
 | `1` | Huawei OLT Mode | Huawei MA5671a |
 | `2` | ZTE OLT Mode | ZTE |
 | `3` | Customized Mode | Custom Software/Hardware Version, OMCC, etc... | 
-| `21` | Force own info by trigger `segmention fault` on DFP-34X-2C2 default value |
+| `21` | Force own info by trigger `segmention fault` on DFP-34X-2C2 default value | |
 
 > `0` and `3` behave differenly from V2801F, TWCGPON675 and DFP-34X-2C2, more testing is needed!
 
-## `OMCI_FAKE_OK` (0 = Disable, 1 = Enable, Default is 0)
+## `OMCI_FAKE_OK`
+> 0 = Disable, 1 = Enable, Default is 0
+
 Some Fiber Vendor/Wholesale/ISP have explicit LAN Port Number provisioning or proprietary OMCI that ONT Stick cant not understand, this will make ONT Stick reply `OK` whatever OMCI OLT throw at!
 
-## `OMCI_TM_OPT` (Min 0, Max 2, Default is 2)
+## `OMCI_TM_OPT`
+> Min 0, Max 2, Default is 2
+
 This handle how OLT manage bandwidth, try change these value if you have slow down. <sup>found by [@ccy](https://github.com/ccy)</sup>
 | Value | Info |
 |-------|------|
@@ -37,7 +51,9 @@ This handle how OLT manage bandwidth, try change these value if you have slow do
 | `1` | Rate controlled |
 | `2` | Priority and Rate controlled |
 
-## `PON_VENDOR_ID` (4 ASCII character maximum)
+## `PON_VENDOR_ID`
+> 4 ASCII character maximum
+
 Need to set for OLT Authenticate your ONT stick, please read your original ONT Serial Number, either in HEX digit or ASCII, if in HEX digit, you need convert first eight HEX digit to ASCII, for example `48575443` = `HWTC`.
 
 Here some popular list if want to fool the OLT:
@@ -53,7 +69,9 @@ Here some popular list if want to fool the OLT:
 | `SCOM` | Sercomm     |
 | `TMBB` | Technicolor |
 
-## `LAN_SDS_MODE` (Min 1, Max 6)
+## `LAN_SDS_MODE`
+> Min 1, Max 6
+
 Configure how stick link negotiation with SFP, some router has specific issue, between PHY or MAC, (Layer 1 and Layer 2 perhaps?)
 
 | Value | `cat /proc/kmsg`                   | Mode     | Behavior         | `ethtool`       | Note |
@@ -70,24 +88,32 @@ Configure how stick link negotiation with SFP, some router has specific issue, b
 ### 2.5Gb Compatibility
 See [Device List](2.5Gb.md)
 
-## `DIRECT_BRIDGE_MODE` (Min 0, Max 1, Default is 1)
+## `DIRECT_BRIDGE_MODE`
+> Min 0, Max 1, Default is 1
+
 Not sure about this, it seem PON interface bridged to LAN under one `br0` ?
 
-## `DEVICE_TYPE` (Min 0, Max 2, Default is 0)
+## `DEVICE_TYPE`
+> Min 0, Max 2, Default is 0
+
 | Value | Mode | Default |
 |-------|------|---------|
 | `0` | `bridge` | V2801F, TWCGPON657, DFP-34X-2C2 (220304 & above) |
 | `1` | `router` | DFP-34X-2C2 (210702) |
 | `2` | `hybrid` (both) | |
 
-## `VLAN_CFG_TYPE` (Min 0, Max 1, Default is 0)
+## `VLAN_CFG_TYPE`
+> Min 0, Max 1, Default is 0
+
 VLAN Configuration Type:
 | Value | Mode |
 |-------|------|
 | `0` | Auto Detect |
 | `1` | Manual (which require `VLAN_MANU_MODE` to set) |
 
-## `VLAN_MANU_MODE` (Min 0, Max 3, Default is 0)
+## `VLAN_MANU_MODE`
+> Min 0, Max 3, Default is 0
+
 How ONU Stick handle VLAN from PON to ETH interface
 | Value | Mode | Note | Explaination |
 |-------|------|------|--------------|
@@ -96,7 +122,9 @@ How ONU Stick handle VLAN from PON to ETH interface
 | `2` | Remote Access Mode |  |  |
 | `3` | Special Case Mode |  |  |
 
-## `PON_MODE` (Min 1, Max 3, Default is 1)
+## `PON_MODE`
+> Min 1, Max 3, Default is 1
+
 Configure ONT Stick in which mode:
 | Value | Note |
 |-------|------|
@@ -104,7 +132,9 @@ Configure ONT Stick in which mode:
 | `2` | EPON |
 | `3` | Ethernet |
 
-## `FIBER_MODE` (Min 1, Max 3, Default is 0)
+## `FIBER_MODE`
+> Min 1, Max 3, Default is 0
+
 If `PON_MODE=3` is set, `FIBER_MODE` become available and update `/proc/fiber_mode`.
 | Value | Note |
 |-------|------|
@@ -116,11 +146,20 @@ If `PON_MODE=3` is set, `FIBER_MODE` become available and update `/proc/fiber_mo
 
 > Enter `echo 3 > /proc/fiber_mode` can prevent V2801F from auto reboot, giving you time to fix `VS_AUTH_KEY` or firmware update, this will put XPON Stick become Ethernet Mode.
 
-## `OMCI_VEIP_SLOT_ID` (Integer Value, Default is 255)
+## `OMCI_VEIP_SLOT_ID`
+> Integer Value, Default is 255
+
 Virtual Ethernet Interface Point Slot Id, you may need find VEIP Id from old ONU, try save configuration and find `veip`, for example: [Huawei HG8240H5](https://github.com/Anime4000/Hacking_Huawei_HG8240H5_ONT/blob/master/xml/hw_ctree.xml#L109)
 
-## `VS_AUTH_KEY` (32 Hexadecimal number) *V2801F Only!*
+## `VS_AUTH_KEY`
+> 32 Hexadecimal number *V2801F Only!*
+
 Changing `ELAN_MAC_ADDR` or/and `HW_HWVER` value, **must** generate new `VS_AUTH_KEY`. Failed to do so, V2801F stick will in auto reboot forever.
+
+## `MAC_KEY`
+> ODI DFP-DFP-34X-2C2 License Key, MD5 hashed MAC ADDRESS, introduced in `220304` firmware
+
+Changing `ELAN_MAC_ADDR` value require to generate new MD5 hash `MAC_KEY`
 
 # NOTE:
 every `flash set` need `reboot` to take effect!
