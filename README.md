@@ -33,7 +33,7 @@
     * [Clone Stock ONU OMCI Info](https://github.com/Anime4000/RTL960x/blob/main/Docs/Stock_ONU.md)
 3. [`flash get`, `flash set`](Docs/FLASH_GETSET_INFO.md)
     * [xPON Model Id](Docs/FLASH_GETSET_INFO.md#pon_vendor_id-4-ascii-character-maximum)
-    * [LAN SDS Mode](Docs/FLASH_GETSET_INFO.md#lan_sds_mode-min-1-max-6)
+    * [LAN SDS Mode](Docs/FLASH_GETSET_INFO.md#lan_sds_mode)
     * [2.5GbE Compatibility](Docs/2.5Gb.md)
 4. [Diagnostic](Docs/DIAG.md)
     * [Factory Reset via Telnet](Docs/factory_reset.md)
