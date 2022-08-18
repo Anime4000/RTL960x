@@ -6,6 +6,8 @@
 ## Note to Malaysia Visitor
 You can purchase from [CureComp Technology](https://www.facebook.com/CureComp) with pre-programmed compatible ONT for Malaysia Fibre Network (TM-Unifi, TM-Maxis, TM-DiGi, TIME, Allo)
 
+Hire us for Network Consultant, Upgrade, [2.5Gbps Unifi Internet](https://github.com/Anime4000/RTL960x/blob/main/Docs/Images/2.5G%20Internet%20Speed%20Test%20Unifi.jpg) and more...
+
 # xPON SFP ONU
 ## RTL960x Family
 | Stick | SoC | NAND | Mode | 4-port `EthUni` |
