@@ -3,6 +3,9 @@
 * GPON market is a mess, plus explicit OMCI cause ONU Stick did not work
 * [4-port ONU Emulation](#4-port-onu-emulation) Table
 
+## Note to Malaysia Visitor
+You can purchase from [CureComp Technology](https://www.facebook.com/CureComp) with pre-programmed compatible ONT for Malaysia Fibre Network (TM-Unifi, TM-Maxis, TM-DiGi, TIME, Allo)
+
 # xPON SFP ONU
 ## RTL960x Family
 | Stick | SoC | NAND | Mode | 4-port `EthUni` |
