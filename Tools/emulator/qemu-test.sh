@@ -59,7 +59,7 @@ echo "Creating folder: ${FILENAME%.*}"
 mkdir ${FILENAME%.*}
 
 echo "Entering folder: ${FILENAME%.*}"
-cd ${FILENAME%.*}
+cd "$DIR/${FILENAME%.*}"
 
 echo "Extracting firmware: $FILENAME"
 tar -xvf $FILEPATH
@@ -93,6 +93,36 @@ echo "RTL9601C1 Emulator is Running!"
 chroot "$CHDIR" qemu-mips-static "/bin/sh"
 echo "User End QEMU..."
 
+echo "Clean-up"
+rm -f "$CHDIR/home/httpd/web/graphics/sagemlogo1.gif"
+rm -f "$CHDIR/home/httpd/web/graphics/sagemlogo2.gif"
+rm -f "$CHDIR/home/httpd/web/graphics/technxt logo.jpg"
+rm -f "$CHDIR/home/httpd/web/admin/graphics/sagemlogo1.gif"
+rm -f "$CHDIR/home/httpd/web/admin/graphics/sagemlogo2.gif"
+rm -f "$CHDIR/home/httpd/web/admin/graphics/technxt logo.jpg"
+
+if [ -f "$DIR/custom/topbar.png" ]; then
+	echo "Custom Logo is found, patching..."
+	rm "$CHDIR/home/httpd/web/graphics/topbar.gif"
+	cp "$DIR/custom/topbar.png" "$CHDIR/home/httpd/web/graphics/topbar.gif"
+	chmod 644 "$CHDIR/home/httpd/web/graphics/topbar.gif"
+fi
+
+if [ -f "$DIR/custom/router.png" ]; then
+	echo "Custom Banner is found, patching..."
+	rm "$CHDIR/home/httpd/web/graphics/router.gif"
+	cp "$DIR/custom/router.png" "$CHDIR/home/httpd/web/graphics/router.gif"
+	chmod 644 "$CHDIR/home/httpd/web/graphics/router.gif"
+fi
+
+echo "Symlinks same file, save space"
+rm "$CHDIR/home/httpd/web/admin/graphics/router.gif"
+rm "$CHDIR/home/httpd/web/admin/graphics/topbar.gif"
+cd "$CHDIR/home/httpd/web/admin/graphics"
+ln -s "../../graphics/topbar.gif" "topbar.gif"
+ln -s "../../graphics/router.gif" "router.gif"
+cd "$DIR/${FILENAME%.*}"
+
 echo "chmod +x /bin folder, prevent stick become brick!"
 chmod +x "$CHDIR/bin" -R
 chmod +x "$CHDIR/etc/*.sh"
@@ -122,6 +152,12 @@ fi
 
 echo "Change Default LAN_SDS_MODE"
 sed -i 's/<Value Name="LAN_SDS_MODE" Value="5"\/>/<Value Name="LAN_SDS_MODE" Value="1"\/>/g' "$CHDIR/etc/config_default_hs.xml"
+sed -i 's/<title>BroadBand Device Webserver<\/title>/<title>xPON ONU BRIDGE<\/title>/g' "$CHDIR/home/httpd/web/index.html"
+
+echo "Fix HTML Syntax"
+find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/<! Copyright/<!-- Copyright/g' {} +
+find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/Reserved. ->/Reserved. -->/g' {} +
+find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/<body /<body style="font-family: Arial, Helvetica, sans-serif;" /g' {} +
 
 echo "Unmounting..."
 rm -rf "$CHDIR/usr/bin"
