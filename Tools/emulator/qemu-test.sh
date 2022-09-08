@@ -125,7 +125,8 @@ cd "$DIR/${FILENAME%.*}"
 
 if [ -d "$DIR/custom/etc" ]; then
 	echo "Injecting custom or fix scripts"
-	cp -rf "$DIR/custom/etc" "$CHDIR/etc"
+	cp -rf "$DIR/custom/etc" "$CHDIR/"
+	chmod 755 "$CHDIR/etc"
 fi
 
 if [ -f "$CHDIR/etc/scripts/fix_sw_ver.sh" ]; then
