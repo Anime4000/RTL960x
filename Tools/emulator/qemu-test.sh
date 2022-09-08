@@ -121,7 +121,17 @@ rm "$CHDIR/home/httpd/web/admin/graphics/topbar.gif"
 cd "$CHDIR/home/httpd/web/admin/graphics"
 ln -s "../../graphics/topbar.gif" "topbar.gif"
 ln -s "../../graphics/router.gif" "router.gif"
-cd "$DIR/${FILENAME%.*}"
+cd "$DIR/${FILENAME%.*}" 
+
+if [ -d "$DIR/custom/etc" ]; then
+	echo "Injecting custom or fix scripts"
+	cp -rf "$DIR/custom/etc" "$CHDIR/etc"
+fi
+
+if [ -f "$CHDIR/etc/scripts/fix_sw_ver.sh" ]; then
+	echo "Injecting software version fix scripts"
+	find "$CHDIR/etc/init.d" -type f -exec sed -i 's/\/etc\/insdrv.sh/\/etc\/insdrv.sh\n\/etc\/scripts\/fix_sw_ver.sh/g' {} +
+fi
 
 echo "chmod +x /bin folder, prevent stick become brick!"
 chmod +x "$CHDIR/bin" -R
