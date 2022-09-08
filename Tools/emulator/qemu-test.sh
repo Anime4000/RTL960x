@@ -22,7 +22,7 @@ if [ $# -eq 0 ]; then
 	echo ""
 	echo "Options:"
 	echo "  firmware           rtl960x firmware file in .tar format"
-	echo "  sw_ver             optional, custom software version, space will truncated"
+	echo "  sw_ver             optional, use custom software version, to use current date time as version put 0, space will truncated"
 	exit 99
 fi
 
@@ -141,20 +141,20 @@ chmod +x "$CHDIR/etc/init.d" -R
 chmod +x "$CHDIR/etc/scripts" -R
 chown 0:0 "$CHDIR/" -R
 
-echo "Change Version, Hardcoded!"
-if grep -q "-" fwu_ver; then
-	STICKVER=`awk -F" " '{print $1}' $CHDIR/etc/version | cut -d - -f 1`
-	echo "$STICKVER-$(date +'%y%m%d') -- $(date -u +'%a %b %d %H:%I:%M %Z %Y')" > "$CHDIR/etc/version"
-	echo "$STICKVER-$(date +'%y%m%d')" > fwu_ver
-else
-	STICKVER=`awk -F" " '{print $1}' $CHDIR/etc/version`
-	echo "$STICKVER -- $(date -u +'%a %b %d %H:%I:%M %Z %Y')" > "$CHDIR/etc/version"
-	echo "$STICKVER" > fwu_ver
-fi
-
-
+echo "Change Version..."
 if [ -z "$2" ]; then
 	echo "No custom version string is set..."
+elif [ "$2" == "0" ]; then
+	echo "Using current date time as version..."
+	if grep -q "-" fwu_ver; then
+		STICKVER=`awk -F" " '{print $1}' $CHDIR/etc/version | cut -d - -f 1`
+		echo "$STICKVER-$(date +'%y%m%d') -- $(date -u +'%a %b %d %H:%I:%M %Z %Y')" > "$CHDIR/etc/version"
+		echo "$STICKVER-$(date +'%y%m%d')" > fwu_ver
+	else
+		STICKVER=`awk -F" " '{print $1}' $CHDIR/etc/version`
+		echo "$STICKVER -- $(date -u +'%a %b %d %H:%I:%M %Z %Y')" > "$CHDIR/etc/version"
+		echo "$STICKVER" > fwu_ver
+	fi
 else
 	echo "Using custom version string..."
 	echo "$2 -- $(date -u +'%a %b %d %H:%I:%M %Z %Y')" > "$CHDIR/etc/version"
