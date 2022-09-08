@@ -47,7 +47,7 @@ You can customise the firmware by creating `custom` folder along side `qemu-test
  │    ├ topbar.png
  │    └ [etc]
  │         ├ [init.d]
- │              └ rc*
+ │         │    └ rc*
  │         └ [scripts]
  │              └ *.sh
  └ qemu-test.sh
