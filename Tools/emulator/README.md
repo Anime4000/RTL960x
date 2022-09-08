@@ -36,15 +36,31 @@ Enter 'help' for a list of built-in commands.
 
 During this screen, you can start modify the firmware, look into `"firmware_file"` folder.
 
-## V2801F 2.5GbE
-There is way to make V2801F run 2.5GbE since RTL9601C1 SoC are supported, by copying `/etc/runlansds.sh` from TWCGPON657 to V2801F. Probably also need to copy `/bin/sfpapp`
+# Customise
+You can customise the firmware by creating `custom` folder along side `qemu-test.sh`
 
-### TWCGPON657 B15 `/etc/runlansds.sh`
-```sh
-#!/bin/sh
-
-lan_sds_mode=`flash get LAN_SDS_MODE | sed 's/LAN_SDS_MODE=//g'`
-echo $lan_sds_mode > proc/lan_sds/lan_sds_cfg
-echo 1 > proc/lan_sds/sfp_app
-sfpapp &
+## Folder Structure
 ```
+─┐
+ ├ [custom]
+ │    ├ router.png
+ │    ├ topbar.png
+ │    └ [etc]
+ │         ├ [init.d]
+ │         │    └ rc*
+ │         └ [scripts]
+ │              └ *.sh
+ └ qemu-test.sh
+```
+
+File `/etc/scripts/fix_sw_ver.sh` is special, it will injected automatically after **LINE** `/etc/insdrv.sh`
+
+To add custom run script, please use `init.d/rc35` file
+
+## Picture
+You can change to your own image, sample project file located at `WebGui/Project Files`
+
+### topbar.png
+![topbar.png](https://github.com/Anime4000/RTL960x/raw/main/WebGui/Project%20Files/topbar.png)
+### router.png
+![router.png](https://github.com/Anime4000/RTL960x/raw/main/WebGui/Project%20Files/router.png)
