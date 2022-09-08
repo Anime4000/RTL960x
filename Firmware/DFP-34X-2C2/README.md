@@ -15,7 +15,7 @@
 This firmware has custom fix and script, options are:
 
 ## Files
-1. `fix_speed.sh` fix slow upload speed when using `LAN_SDS_MODE` 4/5/6
+1. `fix_speed.sh` fix slow upload speed when using HiSGMII or 2500base-X
 2. `fix_sw_ver.sh` allow custom software version when using `OMCI_OLT_MODE 3`
 3. `fix_vlan_tag.sh` VLAN Tag Fix by @inyourgroove
 
