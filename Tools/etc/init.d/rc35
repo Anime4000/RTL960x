@@ -1,2 +1,2 @@
 [ -f /etc/config/fix_speed ] && /etc/scripts/fix_speed.sh &
-[ -f /etc/config/fix_vlan ] && /etc/scripts/vlan_tag_fix.sh &
+[ -f /etc/config/fix_vlan ] && /etc/scripts/fix_vlan_tag.sh &
