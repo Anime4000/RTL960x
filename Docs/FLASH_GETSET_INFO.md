@@ -7,6 +7,11 @@
 
 GPON user can skip this because GPON encap inside GEM frame which is don't have MAC Address attached!
 
+## `OUI`
+> The first three sets of two hexadecimal numbers in a MAC Address identifies the card manufacturer
+
+Organizationally Unique Identifier (OUI), it might require for GPON and EPON, example: [`flash set OUI DC2C6E`](https://aruljohn.com/mac/DC2C6E)
+
 ## `GPON_PLOAM_PASSWD`
 > 10 ASCII character or 20 HEX number for ODI DFP-34X-2C2
 
@@ -159,7 +164,7 @@ Changing `ELAN_MAC_ADDR` or/and `HW_HWVER` value, **must** generate new `VS_AUTH
 ## `MAC_KEY`
 > ODI DFP-DFP-34X-2C2 License Key, MD5 hashed MAC ADDRESS, introduced in `220304` firmware
 
-Changing `ELAN_MAC_ADDR` value require to generate new MD5 hash `MAC_KEY`
+Changing `ELAN_MAC_ADDR` value require to generate new MD5 hash of `MAC_KEY`
 
 # NOTE:
 every `flash set` need `reboot` to take effect!
