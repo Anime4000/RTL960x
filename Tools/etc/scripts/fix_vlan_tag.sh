@@ -5,22 +5,16 @@
 set -e
 
 while true; do
-	omcicli mib get 84 > /tmp/84.tmp
 
-	size=$(ls -la /tmp/ | grep 84.tmp | awk '{ print $5 }')
+  for _EntityID in $(omcicli mib get 84 | grep '^EntityID:' | awk '{print $2}'); do
 
-	if [[ "$size" -lt "88" ]]; then
-		# Looks like the table is not populated yet
-		sleep 30
-		continue
-	fi
+    _FwdOp=$(omcicli mib get 84 ${_EntityID} | grep '^FwdOp:' | awk '{print $2}')
 
-	one_mode=$(awk '/0x1102/{nr[NR]; nr[NR+2]}; NR in nr' /tmp/84.tmp | grep FwdOp | awk '{ print $2 }')
-	two_mode=$(awk '/0x110b/{nr[NR]; nr[NR+2]}; NR in nr' /tmp/84.tmp | grep FwdOp | awk '{ print $2 }')
+    if [[ ! -z ${_FwdOp} && ${_FwdOp} != '0x02' ]]; then
+      omcicli mib set 84 ${_EntityID} FwdOp 0x02
+    fi
 
-	rm /tmp/84.tmp
+  done
 
-	[[ $one_mode != "0x02" ]] && omcicli mib set 84 4354 FwdOp 0x02
-	[[ $two_mode != "0x02" ]] && omcicli mib set 84 4363 FwdOp 0x02
-	sleep 30
-done;
+  sleep 30
+done
