@@ -53,6 +53,9 @@ Hire us for Network Consultant, Upgrade, [2.5Gbps Unifi Internet](https://github
 5. [TWCGPON657 × V2801F Firmware](Firmware/TWCGPON657/README.md)
 6. [V2801F Auto Reboot](Docs/V2801F.md)
 7. [Firmware Emulator](Tools/emulator)
+8. Keygen
+    * [V2801F](https://github.com/Anime4000/RTL960x/blob/main/Docs/VS_AUTH_KEY.md)
+    * [DFP-34X-2C2](https://gist.github.com/rajkosto/29c513b96ea6262d2fb1f965a52ce16f)
 
 # Sucess Story
 List of users has successfully ditch stock ONU!
