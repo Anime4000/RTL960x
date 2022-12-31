@@ -46,6 +46,8 @@ You need to login into your old ONU, most ONU will have information page where y
 | Serial Number | `GPON_SN` | `HWTC35000000` |
 | Manufacture Info | `PON_VENDOR_ID` | `HWTC` |
 | Device Model | `GPON_ONU_MODEL` | `HG8240H` |
+| OUI | `OUI` | `875773` |
+| Device SN | `HW_SERIAL_NO` | `UONHUWH12341234123` |
 
 # ONU Information Page Example
 ## G-240G-E
@@ -75,6 +77,8 @@ flash get GPON_PLOAM_PASSWD
 flash get ELAN_MAC_ADDR
 flash get VS_AUTH_KEY
 flash get MAC_KEY
+flash get OUI
+flash get HW_SERIAL_NO
 ```
 
 # Update Stick
@@ -198,6 +202,18 @@ When set own info, you need provide full custom OMCI Info:
 3. `HW_HWVER`
 4. `OMCI_SW_VER1`
 5. `OMCI_SW_VER2`
+
+## OUI
+```
+flash set OUI
+```
+Organizationally Unique Identifier. Identifies the manufacturer of the device, usually first six digit HEX of MAC Address
+
+## Device Serial Number
+```
+flash set HW_SERIAL_NO
+```
+This different from `GPON_SN`, in Universal ONU deployment where mix and match brand. Hardware Serial Number identify which brand and which company make that ONU, so different OLT can use appropriate OMCI setting for that ONU and your fiber subscription
 
 ---
 
