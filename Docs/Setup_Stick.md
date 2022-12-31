@@ -172,6 +172,18 @@ flash set OMCI_SW_VER2 V5R019C00S125
 > Some Stick disallow changing, if you need correct Software Version to get auth, please enter `flash set OMCI_OLT_MODE 3`
 > 
 
+## OUI
+```
+flash set OUI
+```
+Organizationally Unique Identifier. Identifies the manufacturer of the device, usually first six digit HEX of MAC Address
+
+## Device Serial Number
+```
+flash set HW_SERIAL_NO
+```
+This different from `GPON_SN`, in Universal ONU deployment where mix and match brand. Hardware Serial Number identify which brand and which company make that ONU, so different OLT can use appropriate OMCI setting for that ONU and your fiber subscription
+
 # OMCI Additional
 ## OMCI Fake `OK`
 OLT may send "model specific" OMCI provision that XPON Stick not understand, setting this value making your XPON Stick send `OK` reply on unsupport OMCI
@@ -202,18 +214,6 @@ When set own info, you need provide full custom OMCI Info:
 3. `HW_HWVER`
 4. `OMCI_SW_VER1`
 5. `OMCI_SW_VER2`
-
-## OUI
-```
-flash set OUI
-```
-Organizationally Unique Identifier. Identifies the manufacturer of the device, usually first six digit HEX of MAC Address
-
-## Device Serial Number
-```
-flash set HW_SERIAL_NO
-```
-This different from `GPON_SN`, in Universal ONU deployment where mix and match brand. Hardware Serial Number identify which brand and which company make that ONU, so different OLT can use appropriate OMCI setting for that ONU and your fiber subscription
 
 ---
 
