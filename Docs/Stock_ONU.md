@@ -11,6 +11,11 @@ flash set HW_HWVER
 flash set OMCI_SW_VER1 
 flash set OMCI_SW_VER2 
 ```
+![example](Images/IMG20230101020029EE.jpg)
+```
+flash get OUI
+flash get HW_SERIAL_NO
+```
 Use value from table below
 
 # OMCI Info
