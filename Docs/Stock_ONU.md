@@ -40,3 +40,4 @@ Use value from table below
 | G-0425G-P        | NOKG12345678 | 4899           | 3FE49342AAAA    | G0425GR220315    | akw28888 | [Hinet](https://broadband.hinet.net/Broadband/internetManagement/internet/internet/internet_02.do) |
 | XS-0525X-P       | NOKW12345678 | 4899           | 3FE49411AAAA    | XS0525R210706    | akw28888 | [Hinet](https://broadband.hinet.net/Broadband/internetManagement/internet/internet/internet_02.do) |
 | F670L | ZTEGC457BB2F | ZTEG | V9.0 | V9.0.11P1N13 |ombuncit|[Indihome](https://indihome.co.id/)|
+| HG8245Q2         | HWTC12345678 | HWTC           | B99.A           | V3R019C10S375    | killme56k | [Claro Brazil](https://www.claro.com.br/internet/banda-larga) |
