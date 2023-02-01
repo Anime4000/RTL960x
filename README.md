@@ -63,7 +63,9 @@ List of users has successfully ditch stock ONU!
 # Where to buy?
 ## ODI DFP-34X-2C2 <sup>Recommended!</sup>
 1. [HSGQ @ Taobao Mall](https://m.tb.cn/h.fJc2RFv?tk=xZ4r2RPCGvj)
-2. [Fibershow @ AliExpress](https://www.aliexpress.com/item/1005003515662920.html) (Choose XPON)
+2. [Fibershow @ AliExpress](https://www.aliexpress.com/item/1005003515662920.html) <sup>Choose XPON</sup>
+3. [CureComp Technology](https://www.facebook.com/CureComp) Malaysia
+
 ### Feature
 * Much cheaper than **VSOL V2801F** & **CarlitoxxPro CPGOS03-0490 v2.0**!
 * Using latest SoC **RTL9601D**!
