@@ -41,3 +41,4 @@ Use value from table below
 | XS-0525X-P       | NOKW12345678 | 4899           | 3FE49411AAAA    | XS0525R210706    | akw28888 | [Hinet](https://broadband.hinet.net/Broadband/internetManagement/internet/internet/internet_02.do) |
 | F670L | ZTEGC457BB2F | ZTEG | V9.0 | V9.0.11P1N13 |ombuncit|[Indihome](https://indihome.co.id/)|
 | HG8245Q2         | HWTC12345678 | HWTC           | B99.A           | V3R019C10S375    | killme56k | [Claro Brazil](https://www.claro.com.br/internet/banda-larga) |
+| RTF3505VW-N1     | BRCM12345678 | ASKY           | RTF3505VW-N1    | R3505VWN1001     | Remooh    | [Vivo (Vivo 1/São Paulo region)](https://www.vivo.com.br/para-voce/produtos-e-servicos/para-casa/internet) |
