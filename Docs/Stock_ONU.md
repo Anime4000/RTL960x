@@ -42,3 +42,5 @@ Use value from table below
 | F670L | ZTEGC457BB2F | ZTEG | V9.0 | V9.0.11P1N13 |ombuncit|[Indihome](https://indihome.co.id/)|
 | HG8245Q2         | HWTC12345678 | HWTC           | B99.A           | V3R019C10S375    | killme56k | [Claro Brazil](https://www.claro.com.br/internet/banda-larga) |
 | RTF3505VW-N1     | BRCM12345678 | ASKY           | RTF3505VW-N1    | R3505VWN1001     | Remooh    | [Vivo (Vivo 1/São Paulo region)](https://www.vivo.com.br/para-voce/produtos-e-servicos/para-casa/internet) |
+| H640GO           | DSNW12345678 | DSNW           | H640GO          | 4.01p1-3090      | akw28888 | [TAIFO](https://www.taipeifiber.com.tw/) |
+
