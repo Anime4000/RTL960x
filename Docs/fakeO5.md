@@ -30,8 +30,15 @@ flash set OMCI_OLT_MODE 1
 
 If still no luck, try `flash all` to print all then see any `OMCI_*`
 
-## For Users using CHT FTTH In Taiwan
-You can call to support center `0800-080-412` or using online chat from Hinet website to tell them "重整線路" to reset the OLT port and remove OMCI infomation lock.
+## For Users using CHT FTTH in Taiwan
+You can call to support center `0800-080-412` then tell them "重整線路" or reset the port from the [web portal](https://my.cht.com.tw/Trouble) to clear some config cache on the OLT.
+
+## For Users using TAIFO in Taiwan
+Their GEM and VLAN configs are so strange, for example they don't use ME 84 to filter VLAN.
+They are using QinQ, and they are trunk all VLANs to ONU and filtering nothing.
+If you tag the wrong VLAN, you still can see PPPoE BRAS, but you will get a 691 error.
+
+You can get correct VLAN through ```omcicli mib get 171```, the  Filter Outer/Inner values are the QinQ Outer/Inner VLAN IDs.
 
 ## For Users using Vivo Fibra in the Vivo 1/São Paulo region
 You might try setting the following values, they were copied from a stock EdgeCore GG-11000 ONU:
