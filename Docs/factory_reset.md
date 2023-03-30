@@ -28,14 +28,14 @@ or WebUI connection. Sometimes it could be harder when the stick is in the endle
 few seconds until the stick gets rebooted, but as usual it's enough to send the necessary commands into the stick to do 
 the job.
 
-[reset-config-partition.sh][reset-config-partition.sh] had been tested with **ODI DFP-34X-2C2** with **220923** firmware. The process looks like 
+[reset-config-partition.sh] had been tested with **ODI DFP-34X-2C2** with **220923** firmware. The process looks like 
 this (Linux/MacOS):
 1. It's obvious that you have the correct routing at your switch/router. Routing is not the subject of this article.
 2. In one terminal I run `ping 192.168.100.100` just to see when the stick comes online. 
    Sometimes I can see 1 ping back, sometimes 4. In this example `192.168.100.100` is the custom IP of the stick. 
    The default IP as usual `192.168.1.1`.
 3. At the second terminal invoke `./reset-config-partition.sh ssh 192.168.100.100 admin password`. Take a look into the 
-   script [reset-config-partition.sh][reset-config-partition.sh] and check for the parameters. In this example:
+   script [reset-config-partition.sh] and check for the parameters. In this example:
    - `./reset-config-partition.sh` - path to the script
    - `ssh` - which connection type to use. Possible values are `ssh` and `curl`. For `ssh` type you need to have 
      `sshpass` binary installed. In Ubuntu you can install with `apt install sshpass`. At MacOS use Homebrew and:
@@ -64,5 +64,4 @@ this (Linux/MacOS):
    MAC address is lost as well. You can `flash set ...` them later. 
 
 ---
-[reset-config-partition.sh](..%2FTools%2Freset%2Freset-config-partition.sh)
-
+[reset-config-partition.sh]: ../Tools/reset/reset-config-partition.sh
