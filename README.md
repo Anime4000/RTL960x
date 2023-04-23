@@ -60,7 +60,8 @@ List of users has successfully ditch stock ONU!
 3. [Hinet users in TW](https://github.com/Anime4000/RTL960x/pull/44#issue-1281699738)
 4. [@izhamsatria: ~2.5Gbps on TM Unifi](https://forum.lowyat.net/index.php?showtopic=4925452&st=500&p=105123186&#entry105123186) <sup>before <a href="https://www.lowyat.net/2022/286244/time-internet-2gbps-price/">TIME announce 2Gbps</a> plan in Malaysia</sup>
 5. [Orange Fiber at 2Gbps (MikroTik 10Gbps CCR2004 router & ONT SFP+)](https://lafibre.info/remplacer-livebox/guide-de-connexion-fibre-directement-sur-un-routeur-voire-meme-en-2gbps/) <sup>In <a href="https://translate.google.com/">French</sup>
-6. [T-Mobile Netherlands replacing Huawei ONT](https://providerforum.nl/topics/vervangen-t-mobile-huawei-gpon.95394/page-3#post-1348257) <sup>[English version](https://providerforum-nl.translate.goog/topics/vervangen-t-mobile-huawei-gpon.95394/page-3?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp#post-1348257)</sup>
+6. [MagtiCom Fiber in Georgia](https://telegra.ph/Georgia-DFP-34X-2C2-and-MagtiCom-04-23)
+7. [T-Mobile Netherlands replacing Huawei ONT](https://providerforum.nl/topics/vervangen-t-mobile-huawei-gpon.95394/page-3#post-1348257) <sup>[English version](https://providerforum-nl.translate.goog/topics/vervangen-t-mobile-huawei-gpon.95394/page-3?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp#post-1348257)</sup>
 
 # Where to buy?
 ## ODI DFP-34X-2C2 <sup>Recommended!</sup>
@@ -182,7 +183,7 @@ Here list of xPON Stick on the market that support 4-port ONU Emulation:
 </table>
 
 > ✔️ Port Emulation Support
-> 
+>
 > ❌ Not Supported
 >
 > `Root` mean your ONU is All in One where PPPoE/DHCP ended inside ONU (not bridge/route mode)
