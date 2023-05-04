@@ -20,8 +20,14 @@
 | Huawei MA5671a      | E/GPON   | Intel     | ?    | PPTP | NO |
 | Nokia G-010S-P      | E/GPON   | Intel     | ?    | PPTP | NO |
 | Nokia G-010S-A      | E/GPON   | Intel     | ?    | PPTP | NO |
+
+# 10G xPON ONU
+| Stick               | Mode     | SoC       | NAND | Mode | 4-port `EthUni` |
+|---------------------|----------|-----------|------|------|-----------------|
 | [Hisense LTF7263-BH+](https://item.taobao.com/item.htm?spm=a230r.1.14.1.5d1b2e4eUxyGfI&id=658650417501) | [10G](https://twitter.com/YuukiJapanTech/status/1581277608729116672) [EPON](https://twitter.com/YuukiJapanTech/status/1581127940468678658)/[Multi Mode](https://twitter.com/YuukiJapanTech/status/1632025860999090178) | Realtek   | ?    | ?    | ? |
-| [Hisense LTF7267-BH+](https://item.taobao.com/item.htm?spm=a230r.1.14.1.5d1b2e4eUxyGfI&id=658650417501) | XGSPON   | Realtek   | ?    | ?    | ? |
+| [Hisense LTF7267-BH+](https://item.taobao.com/item.htm?spm=a230r.1.14.1.5d1b2e4eUxyGfI&id=658650417501) | XGSPON/[Multi Mode](https://twitter.com/YuukiJapanTech/status/1632025860999090178)   | Realtek   | ?    | ?    | ? |
+
+Hisense 10G xPON was checked by [@YuukiJapanTech](https://twitter.com/YuukiJapanTech), it appear that support multiple PON mode
 
 # VEIP vs PPTP
 | Code | Full name | Meaning |
