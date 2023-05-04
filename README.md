@@ -14,14 +14,14 @@
 | [Nokia G-010S-Q](https://github.com/Anime4000/RTL960x/issues/52#issuecomment-1208424756) | `RTL9601CI` | 16MiB (128Mb) | ? | ? |
 
 ## Other
-| Stick               | Type     | SoC       | NAND | Mode | 4-port `EthUni` |
+| Stick               | Mode     | SoC       | NAND | Mode | 4-port `EthUni` |
 |---------------------|----------|-----------|------|------|-----------------|
 | ODI DFP-34X-2C2     | E/GPON   | ZTE       | ?    | PPTP | NO |
 | Huawei MA5671a      | E/GPON   | Intel     | ?    | PPTP | NO |
 | Nokia G-010S-P      | E/GPON   | Intel     | ?    | PPTP | NO |
 | Nokia G-010S-A      | E/GPON   | Intel     | ?    | PPTP | NO |
-| [Hisense LTF7263-BH+](https://www.alibaba.com/product-detail/Hisense-FTTH-LTF7263-BH-modem-10G_1600355569202.html) | [10G](https://twitter.com/YuukiJapanTech/status/1581277608729116672) [EPON](https://twitter.com/YuukiJapanTech/status/1581127940468678658) | Realtek ? | ?    | ?    | ? |
-| [Hisense LTF7267-BH+](https://www.alibaba.com/product-detail/Hisense-FTTH-LTF7263-BH-modem-10G_1600355569202.html) | XGSPON   | Realtek ? | ?    | ?    | ? |
+| [Hisense LTF7263-BH+](https://item.taobao.com/item.htm?spm=a230r.1.14.1.5d1b2e4eUxyGfI&id=658650417501) | [10G](https://twitter.com/YuukiJapanTech/status/1581277608729116672) [EPON](https://twitter.com/YuukiJapanTech/status/1581127940468678658)/[Multi Mode](https://twitter.com/YuukiJapanTech/status/1632025860999090178) | Realtek   | ?    | ?    | ? |
+| [Hisense LTF7267-BH+](https://item.taobao.com/item.htm?spm=a230r.1.14.1.5d1b2e4eUxyGfI&id=658650417501) | XGSPON   | Realtek   | ?    | ?    | ? |
 
 # VEIP vs PPTP
 | Code | Full name | Meaning |
