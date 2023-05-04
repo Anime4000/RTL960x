@@ -20,7 +20,7 @@
 | Huawei MA5671a      | E/GPON   | Intel     | ?    | PPTP | NO |
 | Nokia G-010S-P      | E/GPON   | Intel     | ?    | PPTP | NO |
 | Nokia G-010S-A      | E/GPON   | Intel     | ?    | PPTP | NO |
-| [Hisense LTF7263-BH+](https://www.alibaba.com/product-detail/Hisense-FTTH-LTF7263-BH-modem-10G_1600355569202.html) | [10G EPON](https://twitter.com/YuukiJapanTech/status/1581127940468678658) | Realtek ? | ?    | ?    | ? |
+| [Hisense LTF7263-BH+](https://www.alibaba.com/product-detail/Hisense-FTTH-LTF7263-BH-modem-10G_1600355569202.html) | [10G](https://twitter.com/YuukiJapanTech/status/1581277608729116672) [EPON](https://twitter.com/YuukiJapanTech/status/1581127940468678658) | Realtek ? | ?    | ?    | ? |
 | [Hisense LTF7267-BH+](https://www.alibaba.com/product-detail/Hisense-FTTH-LTF7263-BH-modem-10G_1600355569202.html) | XGSPON   | Realtek ? | ?    | ?    | ? |
 
 # VEIP vs PPTP
