@@ -14,12 +14,12 @@
 | [Nokia G-010S-Q](https://github.com/Anime4000/RTL960x/issues/52#issuecomment-1208424756) | `RTL9601CI` | 16MiB (128Mb) | ? | ? |
 
 ## Other
-| Stick               | Mode     | SoC       | NAND | Mode | 4-port `EthUni` |
-|---------------------|----------|-----------|------|------|-----------------|
-| ODI DFP-34X-2C2     | E/GPON   | ZTE       | ?    | PPTP | NO |
-| Huawei MA5671a      | E/GPON   | Intel     | ?    | PPTP | NO |
-| Nokia G-010S-P      | E/GPON   | Intel     | ?    | PPTP | NO |
-| Nokia G-010S-A      | E/GPON   | Intel     | ?    | PPTP | NO |
+| Stick               | Mode     | SoC       | NAND | Mode       | 4-port `EthUni` |
+|---------------------|----------|-----------|------|------------|-----------------|
+| ODI DFP-34X-2C2     | E/GPON   | ZTE       | ?    | PPTP, VEIP | NO |
+| Huawei MA5671a      | E/GPON   | Intel     | ?    | PPTP, VEIP | NO |
+| Nokia G-010S-P      | E/GPON   | Intel     | ?    | PPTP, VEIP | NO |
+| Nokia G-010S-A      | E/GPON   | Intel     | ?    | PPTP, VEIP | NO |
 
 # 10G xPON ONU
 | Stick               | Mode     | SoC       | NAND | Mode | 4-port `EthUni` |
@@ -32,8 +32,8 @@ Hisense 10G xPON was checked by [@YuukiJapanTech](https://twitter.com/YuukiJapan
 # VEIP vs PPTP
 | Code | Full name | Meaning |
 |------|-----------|---------|
-| PPTP | Physical Path Termination Point | OLT directly sends VLAN data to each physical interface of ONU |
-| VEIP | Virtual Ethernet Interface Point | Virtualizes the total interface of an ONU, ONU LAN port provisioning |
+| PPTP | Physical Path Termination Point | OLT is responsible to provision of VLAN and LAN Port |
+| VEIP | Virtual Ethernet Interface Point | Allows multiple Ethernet services to be carried over a single PON link |
 
 # Guide, Links, Info
 1. [Backup `env`, `env2` & `config` partition](https://github.com/Anime4000/RTL960x/discussions/28) <sup>Guide by [@tdmadam](https://github.com/tdmadam)</sup>
