@@ -41,7 +41,7 @@ If you tag the wrong VLAN, you still can see PPPoE BRAS, but you will get a 691 
 You can get correct VLAN through ```omcicli mib get 171```, the  Filter Outer/Inner values are the QinQ Outer/Inner VLAN IDs.
 
 ## For Users using Vivo Fibra in the Vivo 1/São Paulo region and Movistar Chile
-Vivo and Movistar use similar equipment because they are companies under the same parent company (Telefónica).
+Vivo and Movistar use similar equipment because they are under the same parent company (Telefónica).
 
 You might try setting the following values, they were copied from a stock EdgeCore GG-11000 ONU:
 ```
