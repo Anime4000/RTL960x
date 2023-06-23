@@ -40,7 +40,9 @@ If you tag the wrong VLAN, you still can see PPPoE BRAS, but you will get a 691 
 
 You can get correct VLAN through ```omcicli mib get 171```, the  Filter Outer/Inner values are the QinQ Outer/Inner VLAN IDs.
 
-## For Users using Vivo Fibra in the Vivo 1/São Paulo region
+## For Users using Vivo Fibra in the Vivo 1/São Paulo region and Movistar Chile
+Vivo and Movistar use similar equipment because they are under the same parent company (Telefónica).
+
 You might try setting the following values, they were copied from a stock EdgeCore GG-11000 ONU:
 ```
 flash set OMCC_VER 160
@@ -50,4 +52,8 @@ If using `DFP-34X-2C2`, one option to avoid the `OMCI_SW_VER*` override after re
 ```
 flash set OMCI_OLT_MODE 21
 ```
-The VLAN tag for the internet is not being mapped to `10` like the stock ONU, so check the output of `omcicli mib get 84` to get the tag. In my case the VLAN tag for the internet is `885`.
+Please note that the `HW_HWVER` and `OMCI_SW_VER` are different between Vivo and Movistar, as noted [here](https://github.com/Anime4000/RTL960x/blob/main/Docs/Stock_ONU.md).
+
+The VLAN tag for the Internet is not being assigned as it is done by the original ONU, therefore, check the output of `omcicli mib get 84` to obtain the tag. In the case of Vivo Brasil, the VLAN tag for the Internet is `885`, for Movistar Chile, it is `928`.
+
+Be careful when making changes in Movistar, after 3 bad attempts the SLID and PON port will be blacklisted. If this happens, you should call `600 600 3000` and request a technical visit since they do not have a remote reset option (only for technicians).
