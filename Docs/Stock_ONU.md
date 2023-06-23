@@ -44,4 +44,5 @@ Use value from table below
 | RTF3505VW-N1     | BRCM12345678 | ASKY           | RTF3505VW-N1    | R3505VWN1001     | Remooh    | [Vivo (Vivo 1/São Paulo region)](https://www.vivo.com.br/para-voce/produtos-e-servicos/para-casa/internet) |
 | H640GO           | DSNW12345678 | DSNW           | H640GO          | 4.01p1-3090      | akw28888 | [TAIFO](https://www.taipeifiber.com.tw/) |
 | G-140W-H         | ALCLFBE950F3 | ALCL           | 3FE48054BDAA    | 3FE48077HJIJ86   | azambuja | [Oi Fibra](https://www.oi.com.br/internet) |
+| EDGG11000        | EDCR12345678 | ALCL           | R1              | 1.2.8            | koge97   | [Movistar Chile](https://ww2.movistar.cl/hogar/internet-hogar/) |
 
