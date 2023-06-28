@@ -44,8 +44,7 @@ Hisense 10G xPON was checked by [@YuukiJapanTech](https://twitter.com/YuukiJapan
     * [LAN SDS Mode](Docs/FLASH_GETSET_INFO.md#lan_sds_mode)
     * [2.5GbE Compatibility](Docs/2.5Gb.md)
 4. [Diagnostic](Docs/DIAG.md)
-    * [GPON ONU SFP health status reports](https://github.com/Anime4000/RTL960x/issues/99#issuecomment-1611726668) <sup>Mikrotik script by [@smnrock](https://github.com/smnrock), sending health report via Telegram Bot</sup>
-    * [Factory Reset via Telnet](Docs/factory_reset.md)
+    * [Factory Reset](Docs/factory_reset.md)
     * [Switch/Roll back Firmware](Docs/fw_part.md)
     * [`O5` no Internet](Docs/fakeO5.md) <sup>fake ONU Status cause by some OLT</sup>
     * [`OMCI_TM_OPT`](https://github.com/Anime4000/RTL960x/issues/35#issuecomment-1138255401) <sup>stick cause internet speed slow? this look at this, found by [@ccy](https://github.com/ccy)</sup>
@@ -55,6 +54,8 @@ Hisense 10G xPON was checked by [@YuukiJapanTech](https://twitter.com/YuukiJapan
     * [Forward Operation `FwdOp`](https://github.com/Anime4000/RTL960x/pull/94#issuecomment-1319016018)
     * [Wireshark](https://github.com/tdmadam/OMCI-for-SFP-Stick) <sup>OMCI decoding for Wireshark by [@tdmadam](https://github.com/tdmadam)</sup>
     * [UART](Docs/UART.md)
+    * [Health Status Reports](https://github.com/Anime4000/RTL960x/issues/99#issuecomment-1611726668) <sup>Mikrotik script by [@smnrock](https://github.com/smnrock), sending health report via Telegram Bot</sup>
+    * [Slow Upload Speed](Docs/SlowUploadSpeed.md)
 6. [TWCGPON657 × V2801F Firmware](Firmware/TWCGPON657/README.md)
 7. [V2801F Auto Reboot](Docs/V2801F.md)
 8. [Firmware Emulator](Tools/emulator)
