@@ -16,7 +16,7 @@
 ## Other
 | Stick               | Mode     | SoC       | NAND | Mode       | 4-port `EthUni` |
 |---------------------|----------|-----------|------|------------|-----------------|
-| ODI DFP-34X-2C2     | E/GPON   | ZTE       | ?    | PPTP, VEIP | NO |
+| ODI DFP-34X-2C2     | E/GPON   | ZTE       | ?    | PPTP, VEIP | NO, NO OMCI EDIT |
 | Huawei MA5671a      | E/GPON   | Intel     | ?    | PPTP, VEIP | NO |
 | Nokia G-010S-P      | E/GPON   | Intel     | ?    | PPTP, VEIP | NO |
 | Nokia G-010S-A      | E/GPON   | Intel     | ?    | PPTP, VEIP | NO |
@@ -44,6 +44,7 @@ Hisense 10G xPON was checked by [@YuukiJapanTech](https://twitter.com/YuukiJapan
     * [LAN SDS Mode](Docs/FLASH_GETSET_INFO.md#lan_sds_mode)
     * [2.5GbE Compatibility](Docs/2.5Gb.md)
 4. [Diagnostic](Docs/DIAG.md)
+    * [GPON ONU SFP health status reports](https://github.com/Anime4000/RTL960x/issues/99#issuecomment-1611726668) <sup>Mikrotik script by [@smnrock](https://github.com/smnrock), sending health report via Telegram Bot</sup>
     * [Factory Reset via Telnet](Docs/factory_reset.md)
     * [Switch/Roll back Firmware](Docs/fw_part.md)
     * [`O5` no Internet](Docs/fakeO5.md) <sup>fake ONU Status cause by some OLT</sup>
@@ -54,10 +55,10 @@ Hisense 10G xPON was checked by [@YuukiJapanTech](https://twitter.com/YuukiJapan
     * [Forward Operation `FwdOp`](https://github.com/Anime4000/RTL960x/pull/94#issuecomment-1319016018)
     * [Wireshark](https://github.com/tdmadam/OMCI-for-SFP-Stick) <sup>OMCI decoding for Wireshark by [@tdmadam](https://github.com/tdmadam)</sup>
     * [UART](Docs/UART.md)
-5. [TWCGPON657 × V2801F Firmware](Firmware/TWCGPON657/README.md)
-6. [V2801F Auto Reboot](Docs/V2801F.md)
-7. [Firmware Emulator](Tools/emulator)
-8. Keygen
+6. [TWCGPON657 × V2801F Firmware](Firmware/TWCGPON657/README.md)
+7. [V2801F Auto Reboot](Docs/V2801F.md)
+8. [Firmware Emulator](Tools/emulator)
+9. Keygen
     * [V2801F](https://github.com/Anime4000/RTL960x/blob/main/Docs/VS_AUTH_KEY.md)
     * [DFP-34X-2C2](https://gist.github.com/rajkosto/29c513b96ea6262d2fb1f965a52ce16f)
 
