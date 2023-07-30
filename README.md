@@ -15,6 +15,7 @@
 
 ### Non SFP
 | Stick | SoC | NAND | Mode | 4-port `EthUni` |
+|-------|-----|------|------|-----------------|
 | [VSOL V2802RH](https://github.com/Anime4000/RTL960x/discussions/179) | `RTL9601CI` | 4MiB (32Mb) | ? | NO |
 
 ## Other
