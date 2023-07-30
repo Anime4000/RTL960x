@@ -13,6 +13,10 @@
 | [ODI DFP-34X-2C2](https://m.tb.cn/h.fJc2RFv?tk=xZ4r2RPCGvj) | `RTL9601D` | 8MiB (64Mb) | VEIP, PPTP | YES, fw: [`220304`](https://github.com/Anime4000/RTL960x/blob/main/Firmware/DFP-34X-2C2/M114_sfp_ODI_220304.tar) & [`220414`](https://github.com/Anime4000/RTL960x/blob/main/Firmware/DFP-34X-2C2/M114_sfp_ODI_Vlan_220414.tar) |
 | [Nokia G-010S-Q](https://github.com/Anime4000/RTL960x/issues/52#issuecomment-1208424756) | `RTL9601CI` | 16MiB (128Mb) | ? | ? |
 
+### Non SFP
+| Stick | SoC | NAND | Mode | 4-port `EthUni` |
+| [VSOL V2802RH](https://github.com/Anime4000/RTL960x/discussions/179) | `RTL9601CI` | 4MiB (32Mb) | ? | NO |
+
 ## Other
 | Stick               | Mode     | SoC       | NAND | Mode       | 4-port `EthUni` |
 |---------------------|----------|-----------|------|------------|-----------------|
