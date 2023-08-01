@@ -10,6 +10,7 @@ Using Huawei ONU `HG8240H` device information for this setup example
 | TWCGPON657  | `admin` | `system` |
 | UF-Instant  | `ubnt` | `ubnt` |
 | V2801F      | `admin` | `stdONU101` |
+| LXT-010S-H  | `leox` | `leolabs_7` |
 
 ## [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488)
 If you using **TWCGPON657** you need enable `telnet` by enter this address:
@@ -151,6 +152,7 @@ Some known Vendor ID:
 | `RTKG` | Realtek     |
 | `TPLG` | TP-Link     |
 | `SCOM` | Sercomm     |
+| `LEOX` | Leox by LeoLabs|
 
 ```
 flash set PON_VENDOR_ID HWTC
@@ -234,7 +236,7 @@ Value can be:
 |------|-------------------------|-------------|-----------------|
 | IGD  | Internet Gateway Device | Router      |  |
 | HGU  | Home Gateway Unit       | Gateway ONT | Huawei HG8240H5, Huawei HG8145V5 |
-| SFU  | Switch Fabric Unit      | Bridge ONT  | Huawei EG8010Hv6, Nokia G-240G-E |
+| SFU  | Single Family Unit      | Bridge ONT  | Huawei EG8010Hv6, Nokia G-240G-E |
 
 
 # Summary
