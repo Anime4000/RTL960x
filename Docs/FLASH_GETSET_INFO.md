@@ -22,8 +22,8 @@ Need to set for OLT Authenticate your ONT stick, you can get from original ONT W
 
 Need to set for OLT Authenticate your ONT stick, enter your original ONT Serial Number, must be ASCII form `HWTC12345678`, you may need to convert first eight HEX digit serial number to ASCII, just like `PON_VENDOR_ID`
 
-## `GPON_ONU_MODEL`
-> 8 ASCII character maximum
+## `GPON_ONU_MODEL` (ME 257)
+> 20 ASCII character maximum
 
 Need to set for OLT Authenticate your ONT stick, enter your original ONT Model, Example: `HG8240H5`
 
