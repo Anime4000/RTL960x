@@ -10,6 +10,7 @@ Using Huawei ONU `HG8240H` device information for this setup example
 | TWCGPON657  | `admin` | `system` |
 | UF-Instant  | `ubnt` | `ubnt` |
 | V2801F      | `admin` | `stdONU101` |
+| V2802RH     | `admim` | `stdONUi0i` |
 | LXT-010S-H  | `leox` | `leolabs_7` |
 
 ## [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488)
