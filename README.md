@@ -70,6 +70,7 @@ For **XG/XGS/10G-E PON Hacking**, checkout [@YuukiJapanTech](https://github.com/
 9. Keygen
     * [V2801F](https://github.com/Anime4000/RTL960x/blob/main/Docs/VS_AUTH_KEY.md)
     * [DFP-34X-2C2](https://gist.github.com/rajkosto/29c513b96ea6262d2fb1f965a52ce16f)
+10. [Contributors](#rtl960x-hacking-contributors)
 
 # Success Story
 List of users has successfully ditch stock ONU!
