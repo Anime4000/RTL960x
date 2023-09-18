@@ -141,7 +141,7 @@ Here list of xPON Stick on the market that support 4-port ONU Emulation:
        <tr>
             <td>Huawei MA5671a</td>
             <td>✔️</td>
-            <td>❌</td>
+            <td>✔️</td>
             <td>❌</td>
             <td>❌</td>
             <td>❌</td>
@@ -151,7 +151,7 @@ Here list of xPON Stick on the market that support 4-port ONU Emulation:
         <tr>
             <td>Nokia G-010S-P</td>
             <td>✔️</td>
-            <td>❌</td>
+            <td>✔️</td>
             <td>❌</td>
             <td>❌</td>
             <td>❌</td>
@@ -221,3 +221,5 @@ Here list of xPON Stick on the market that support 4-port ONU Emulation:
 </a>
 
 Join us in enhancing this RTL960x documentation repository to support the xPON community. Every piece of information, no matter how small, can make a significant impact on others. Got spare knowledge about ONU Box functionalities? Share it by dumping the [information here](Docs/Stock_ONU.md)! Together, let's make xPON more accessible and straightforward!
+
+## Good Luck!
