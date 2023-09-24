@@ -62,7 +62,7 @@ echo "Entering folder: ${FILENAME%.*}"
 cd "$DIR/${FILENAME%.*}"
 
 echo "Extracting firmware: $FILENAME"
-tar -xvf $FILEPATH
+tar -xvf "$FILEPATH"
 
 echo "Expanding squashfs-root: rootfs"
 mv rootfs rootfs.original
