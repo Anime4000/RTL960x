@@ -6,7 +6,10 @@
 # VLAN Tag Fix: Fix VLAN wrong mapping
 # By inyourgroove
 # Additional configuration options added by rajkosto
-# Further modification by Anime4000, moving to unified
+# Further modification by Anime4000, moving to unified modded scripts
+
+# perhaps use unused flash get (example: RTK_DEVINFO_SPECVER) to allow
+# edit via WebGUI
 
 set -e
 
