@@ -51,7 +51,7 @@ process_pair() {
 # Get the FwdOp fix from unused flash property: RTK_DEVINFO_SPECVER
 fix_vlan_fwdop=$(flash get RTK_DEVINFO_SPECVER | cut -d'=' -f2)
 
-# If fix_vlan_id is not set, exit
+# If fix_vlan_fwdop is not set, exit
 if [ -z "$fix_vlan_fwdop" ]; then
 	exit 1
 fi
@@ -62,3 +62,4 @@ for pair in "${pairs[@]}"; do
 	process_pair "$pair"
 done
 
+exit 0
