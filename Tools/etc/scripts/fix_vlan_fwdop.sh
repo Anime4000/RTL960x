@@ -48,8 +48,8 @@ process_pair() {
 	process_fwdop "${parts[0]}" "${parts[1]}"
 }
 
-# Get the fix_vlan_id from nv
-fix_vlan_fwdop=$(nv getenv fix_vlan_fwdop | cut -d'=' -f2)
+# Get the FwdOp fix from unused flash property: RTK_DEVINFO_SPECVER
+fix_vlan_fwdop=$(flash get RTK_DEVINFO_SPECVER | cut -d'=' -f2)
 
 # If fix_vlan_id is not set, exit
 if [ -z "$fix_vlan_fwdop" ]; then
