@@ -13,54 +13,47 @@
 
 set -e
 
-# Time to apply new FwdOp
-process_fwdop() {
-	entid="$1"
-	fwdop="$2"
-	active_id=$(omcicli mib get 84 | grep '$entid' | awk '{print $2}')
-	active_op=$(omcicli mib get 84 "$entid" | grep '^FwdOp:' | awk '{print $2}')
-
-    # Check if user given value is exist or not
-    if [ -z "$active_id" ]; then
-        return 1
-    fi
-    
-    # Check FwdOp is same
-    if [ "$fwdop" -eq "$active_op" ]; then
-        return 0
-    fi
-
-    # Run when user value is matched with the system
-    if [ "$entid" -eq "$active_id" ]; then
-        omcicli mib set 84 "$entid" FwdOp "$fwdop"
-    fi
-}
-
-# Function to process a pair
-process_pair() {
-    pair="$1"
-    # If the pair doesn't contain ':', add ':0x02'
-    if ! echo "$pair" | grep -q ":"; then
-        pair="$pair:0x02"
-    fi
-    
-    entid=$(echo "$pair" | awk -F':' '{print $1}')
-    fwdop=$(echo "$pair" | awk -F':' '{print $2}')
-    
-    process_fwdop "$entid" "$fwdop"
-}
-
 # Get the FwdOp fix from unused flash property: RTK_DEVINFO_SPECVER
 fix_vlan_fwdop=$(flash get RTK_DEVINFO_SPECVER | cut -d'=' -f2)
 
 # If fix_vlan_fwdop is not set, exit
 if [ -z "$fix_vlan_fwdop" ]; then
-	exit 1
+    exit 1
 fi
 
 # Split the pairs by comma and process each pair
 echo "$fix_vlan_fwdop" | awk -F',' '{for(i=1;i<=NF;i++) print $i}' | while read -r pair; do
-    process_pair "$pair"
+
+    # If the pair doesn't contain ':', add ':0x02'
+    if ! echo "$pair" | grep -q ":"; then
+        pair="$pair:0x02"
+    fi
+
+    # Split the pair
+    entid=$(echo "$pair" | awk -F':' '{print $1}')
+    fwdop=$(echo "$pair" | awk -F':' '{print $2}')
+
+    # Get current
+	active_id=$(omcicli mib get 84 | grep $entid | awk '{print $2}')
+	active_op=$(omcicli mib get 84 $entid | grep '^FwdOp:' | awk '{print $2}')
+
+    echo "[Inputs] EntityID: $entid, FwdOp: $fwdop"
+    echo "[Active] EntityID: $active_id, FwdOp: $active_op"
+
+    # Check if user given value is exist or not
+    if [ -z "$active_id" ]; then
+        echo "[Status] Given user EntityID ($active_id) is not found!"
+        continue
+    fi
+
+    # Check FwdOp is same
+    if [[ $((fwdop)) == $((active_op)) ]]; then
+        echo "[Status] Given user input and active is equal!"
+        continue
+    fi
+
+    echo "[Status] Overriding $entid with FwdOp $fwdop"
+    omcicli mib set 84 $entid FwdOp $fwdop
 done
 
 exit 0
