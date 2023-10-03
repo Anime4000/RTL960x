@@ -1,6 +1,10 @@
 # Slow Upload Speed
 The `slow upload speed` when ODI DFP-34X-2C2 in 2.5Gb mode, this is known issue in some ISP where ISP using another Realtek ONU beside RTL960x
 
+## Mikrotik
+Many Mikrotik device such as RB5009 flooding the GPON with 2.5Gb links meanwhile GPON upload is 1.25Gb, many packet are flooded and late discarded, to solve this try follow this tweak [
+Luckygecko1 @ Reddit](https://www.reddit.com/r/mikrotik/comments/14ky6s1/rb5009_poor_25g_ethernet_performance/jq0gjer/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
+
 ## Realtek ONU
 ISP bought cheap ONU or ONR (Optical Network Router) and it using Realtek SoC where share similar to RTL960x, for example `D-Link DPN-FX3060V`
 
