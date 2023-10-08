@@ -64,6 +64,7 @@ For **XG/XGS/10G-E PON Hacking**, checkout [@YuukiJapanTech](https://github.com/
     * [UART](Docs/UART.md)
     * [Health Status Reports](https://github.com/Anime4000/RTL960x/issues/99#issuecomment-1611726668) <sup>Mikrotik script by [@smnrock](https://github.com/smnrock), sending health report via Telegram Bot</sup>
     * [Slow Upload Speed](Docs/SlowUploadSpeed.md)
+        * [Mikrotik GPON Flooding Mitigation](Docs/SlowUploadSpeed.md#mikrotik-gpon-flooding-mitigation) 
 6. [TWCGPON657 × V2801F Firmware](Firmware/TWCGPON657/README.md)
 7. [V2801F Auto Reboot](Docs/V2801F.md)
 8. [Firmware Emulator](Tools/emulator)
