@@ -31,19 +31,10 @@ nc 192.168.1.1 12345 < file
 > Note: nc on GPON ONU SFP will not exit once the transfer is complete. You need to use CTRL+C on GPON ONU SFP Telnet to complete the transfer.
 
 # WebGUI
-## V2801F
-### Login Screen
-![GUI](../Docs/Images/webgui/1-login.png)
-
-### Main
-![GUI](../Docs/Images/webgui/2-status.png)
-
-## GPON ONU SFP
-### Login Screen
-![GUI](../Docs/Images/webgui-dfp/1-login.png)
-
-### Main
-![GUI](../Docs/Images/webgui-dfp/2-status.png)
+| Model       | Login Screen | Status |
+|-------------|-----------------------------------------------|------------------------------------------------|
+| V2801F      | ![GUI](../Docs/Images/webgui/1-login.png)     | ![GUI](../Docs/Images/webgui/2-status.png)     |
+| DFP-34X-2C2 | ![GUI](../Docs/Images/webgui-dfp/1-login.png) | ![GUI](../Docs/Images/webgui-dfp/2-status.png) |
 
 # Contribution
 We welcome contributions from everyone to enhance the firmware, making it more accessible and adhering to open standards (Universal).
