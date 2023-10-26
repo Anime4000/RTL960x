@@ -17,6 +17,9 @@
 | Stick | SoC | NAND | Mode | 4-port `EthUni` |
 |-------|-----|------|------|-----------------|
 | [VSOL V2802RH](https://github.com/Anime4000/RTL960x/discussions/179) | `RTL9601D` | 4MiB (32Mb) | ? | NO |
+| [SkyWorth GN630E](https://cdn.discordapp.com/attachments/962438081397522452/1164384220123242527/2.5G_UONU_WORK_INSTRUCTIONS_2hsba.pdf) | `RTL960x` ? | ? | VEIP, PPTP | YES |
+
+*The WebGUI of SkyWorth GN630E look alot like V2801F and HGU ODI Firmware*
 
 ## Other
 | Stick               | Mode     | SoC       | NAND | Mode       | 4-port `EthUni` |
