@@ -39,7 +39,8 @@ Use value from table below
 | EDGG11000        | EDCR12345678 | EDCR           | GG-GAPL100v02   | GG-11000-C003    | Remooh    | [Vivo (Vivo 1/São Paulo region)](https://www.vivo.com.br/para-voce/produtos-e-servicos/para-casa/internet) |
 | G-0425G-P        | NOKG12345678 | 4899           | 3FE49342AAAA    | G0425GR220315    | akw28888 | [Hinet](https://broadband.hinet.net/Broadband/internetManagement/internet/internet/internet_02.do) |
 | XS-0525X-P       | NOKW12345678 | 4899           | 3FE49411AAAA    | XS0525R210706    | akw28888 | [Hinet](https://broadband.hinet.net/Broadband/internetManagement/internet/internet/internet_02.do) |
-| F670L | ZTEGC457BB2F | ZTEG | V9.0 | V9.0.11P1N13 |ombuncit|[Indihome](https://indihome.co.id/)|
+| F670L            | ZTEGC457BB2F | ZTEG           | V9.0            | V9.0.11P1N13     | ombuncit | [Indihome](https://indihome.co.id/) |
+| F620             | ZTEGC44EF6FF | ZTEG           | V7.0            | V9.0.10P4N3      | erwin c   | [TM](https://www.unifi.com.my/) |
 | HG8245Q2         | HWTC12345678 | HWTC           | B99.A           | V3R019C10S375    | killme56k | [Claro Brazil](https://www.claro.com.br/internet/banda-larga) |
 | RTF3505VW-N1     | BRCM12345678 | ASKY           | RTF3505VW-N1    | R3505VWN1001     | Remooh    | [Vivo (Vivo 1/São Paulo region)](https://www.vivo.com.br/para-voce/produtos-e-servicos/para-casa/internet) |
 | H640GO           | DSNW12345678 | DSNW           | H640GO          | 4.01p1-3090      | akw28888 | [TAIFO](https://www.taipeifiber.com.tw/) |
