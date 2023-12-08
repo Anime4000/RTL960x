@@ -83,7 +83,7 @@ List of users has successfully ditch stock ONU!
 5. [Orange Fiber at 2Gbps (MikroTik 10Gbps CCR2004 router & ONT SFP+)](https://lafibre.info/remplacer-livebox/guide-de-connexion-fibre-directement-sur-un-routeur-voire-meme-en-2gbps/) <sup>In <a href="https://translate.google.com/">French</sup>
 6. [MagtiCom Fiber in Georgia](https://telegra.ph/Georgia-DFP-34X-2C2-and-MagtiCom-04-23)
 7. [T-Mobile Netherlands replacing Huawei ONT](https://providerforum.nl/topics/vervangen-t-mobile-huawei-gpon.95394/page-3#post-1348257) <sup>[English version](https://providerforum-nl.translate.goog/topics/vervangen-t-mobile-huawei-gpon.95394/page-3?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp#post-1348257)</sup>
-8. [Worldwide wiki on how to access, change and edit ONTs](https://hack-gpon.org/)
+8. [Hack-Gpon.org - Worldwide wiki on how to access, change and edit ONTs](https://hack-gpon.org/)
 9. [SilkNet Fiber in Georgia](https://telegra.ph/Georgia-DFP-34X-2C2-and-SilkNet-11-07)
 
 # Where to buy?
