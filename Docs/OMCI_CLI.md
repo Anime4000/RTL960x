@@ -47,5 +47,9 @@ $ME"\n\n";omcicli mib get $ME; done;
 ## Check Priority Queues
 `omcicli mib get 277`
 
+## McastOperProf
+`omcicli mib get 309`
+> You can find VLANs used for IPTV multicast traffic here
+
 ## VEIP
 `omcicli mib get 329`
