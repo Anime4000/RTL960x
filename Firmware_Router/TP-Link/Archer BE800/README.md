@@ -28,6 +28,10 @@ To enable 2.5G (HiSGMII PHY) on your TP-Link Archer BE800, follow these steps:
       ```plaintext
       combo_debug ipg_set combo10g 1
       ```
+6. **Wait and it will auto-negotiate**
+![image](https://github.com/Anime4000/RTL960x/assets/1908715/0482c09d-56ae-4185-b094-b4f53896c610)
+
+
 ## Note:
 
    - The 2.5G mode activation is not persistent across power loss or router reboots. You will need to re-enter the commands after each occurrence.
