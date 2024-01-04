@@ -1,6 +1,11 @@
 # TP-Link Archer BE900 - Enabling 2.5G Mode
-> This firmware is provided by [@d5aqoep](https://github.com/d5aqoep) via TP-Link Support. 
-> Link to original post issue #235
+This firmware is provided by [@d5aqoep](https://github.com/d5aqoep) via TP-Link Support. 
+
+Link to original post issue [#235](https://github.com/Anime4000/RTL960x/issues/235)
+
+**Download provided by [@d5aqoep](https://github.com/d5aqoep):**
+
+https://www.mediafire.com/file/8x1gbe6tped9mjs/BE900v1_1.1.3_240104_SFP_beta.zip/file
 
 ![Screenshot 2024-01-04 155704](https://github.com/Anime4000/RTL960x/assets/28061422/f62f5083-d5df-420b-9377-5e6082434ff5)
 
