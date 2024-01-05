@@ -1,0 +1,897 @@
+After 2 years of research and 1½ years of using, finally, I can make proper guide and information about GPON in Malaysia.
+
+[b][size=9]Note to Foreigner:[/size][/b]
+Maybe this work, but depend on your country ISP, GPON standard sometime can have proprietary (non-standard)
+
+[b][size=9]Note Malaysian:[/size][/b]
+1. This solve the [b]Unifi Ultra Plan[/b] especially 2Gbps plan, instead of 1+1 you get pure 2Gbps!
+2. This method allow you to using own high-end router such as Asus ROG AXE16000 (via HiSGMII to 2.5G Ethernet)
+3. By using this method, you cannot open a support ticket (incase of issue, plug the original ONU back for ISP troubleshoot)
+4. Incorrect configurations will trigger alarms on the OLT, which can be detected and identified by ISP.
+5. Avoid bad GPON ONU SFP/Firmware can lead to unstable ISP fiber, it may cause your neighborhood disconnected!
+[b]6. Replacing stock ONU is not exactly legal. (Legal when configure properly that respect OLT. [color=red]Illegal when bad config and not respecting OLT[/color])[/b]
+
+7. [url=https://pictr.com/image/EvFCE9][img]https://pictr.com/images/2023/11/19/EvFCE9.md.png[/img][/url]
+
+Incorrect configurations and setups may trigger an [b][color=red]ALARM state[/color][/b] in your Telekom Malaysia (Unifi/Maxis/CelcomDigi/Viewqwest) account. Repeated occurrences could lead to account suspension.
+If you're uncertain about handling configurations yourself, [b]consider getting a pre-configured solution[/b]. Just [url=https://wa.me/60176776614]click the link[/url] below, and all you need to do is plug and play.
+
+[b][size=9]Where to buy[/size][/b]
+1. [url=https://wa.me/60176776614]WhatsApp [@Anime4000][/url]. I will flash and update the firmware that follow TM OLT requirement, the device will ship fully configured, Just Plug-and-Play with ONT-Router/SFP+Router layout
+
+
+[b][size=9]2.5Gb Enjoyer[/size][/b]
+[i]1Gbps subscriber can break Gigabit barrier![/i]
+1. [@lwk523] [url=https://forum.lowyat.net/index.php?showtopic=4982695&view=findpost&p=104286872]Breaking 1Gbps barrier![/url]
+2. [@izhamsatria] (Recorded Maximum [url=https://forum.lowyat.net/index.php?showtopic=4925452&view=findpost&p=105123186]Unifi Biz Speed @ 2.1Gbps (12/Aug/2022)[/url])
+
+[b]Successful Buyer[/b]
+3. [@ididhaiqal] [url=https://www.speedtest.net/result/14734201953]Unifi Ultra (2Gbps) Speedtest Result[/url]
+4. [@khjh1976] [url=https://forum.lowyat.net/index.php?showtopic=4925452&view=findpost&p=107448512]Unifi Ultra (2Gbps) Speedtest Result[/url]
+5. [@darkearth] [url=https://forum.lowyat.net/index.php?showtopic=4925452&view=findpost&p=107398985]Unifi Ultra (2Gbps) Speedtest Result[/url]
+6. [i]Off Lowyat User #6240[/i] [url=https://forum.lowyat.net/index.php?showtopic=4925452&view=findpost&p=107455119]Breaking 1Gbps barrier: 1043Mbps DL, 522Mbps UP[/url]
+7. [i]Off Lowyat User #5740[/i] [url=https://forum.lowyat.net/index.php?showtopic=4925452&view=findpost&p=107708317]#1 in Malaysia, 2118Mbps DL, 1043Mbps UP[/url]
+8. [@powertech] #7181 (Unifi, Unifi, Allo)
+9. [@kinghz]
+10. [@jeebsion]
+11. [@dingo7]
+12. [@5hinn]
+13. [@bigmojo]
+14. [@asellus]
+15. [@aztech]
+16. [@akifrabbani] [i]multiple 2Gbps deployment[/i]
+17. [@sya102003]
+18. [@Silvermage93]
+
+[b][size=9]Recommended 2.5G SFP+/SFP28 Device[/size][/b]
+1. Mikrotik RB5009 (ROS 7.7beta4 and above)
+2. Mikrotik CCR2004-1G-12S+2XS (SFP28 & SFP+)
+3. Mikrotik CCR2116-12G-4S+
+4. TP-Link TL-XDR5480 [color=red][i][default china firmware dont support VLAN Internet, only ISP Allo can use or PVID][/i][/color]
+5. TP-Link ER2260T
+6. Broadcom BCM57810S (PCIe 10G SFP+)
+7. Mikrotik CRS354-48G-4S+2Q+RM (Switch)
+8. Mikrotik CRS305-1G-4S+IN (Switch)
+
+[b][size=9]Recommended 1G SFP Device[/size][/b]
+1. Mikrotik RB4011
+2. Mikrotik RB3011
+3. Mikrotik RB2011
+4. Mikrotik hEX S
+5. Ubiquiti EdgeRouter 12
+6. Ubiquiti UDM (Only NBase-T. [color=red]Never[/color] plan to support HiSGMII PHY, HiSGMII MAC & 2500Base-X)
+
+[b][size=7]NOTE ON 2.5G SFP ROUTERS[/size][/b]
+Please note that all 2.5 Gbps GPON ONU SFP modules are designed to function specifically with [color=purple]HiSGMII PHY, HiSGMII MAC, and 2500Base-X[/color] interfaces. Before purchasing or using such an SFP module, it's important to check if your existing router supports any of these modes. It's worth mentioning that most routers only support NBase-T modes such as [color=red]2.5GBase-T and 5GBase-T[/color], and may not be compatible with [color=purple][b]HiSGMII or 2500Base-X[/b][/color] interfaces.
+
+[b]tldr;[/b] Never buy Ubiquiti, Fortinet or even HP/Aruba Equipment, they will never support it and NEVER WILL!
+
+[b][size=9]GPON ONU SFP (miniONT SFP)[/size][/b]
+1. VSOL V2801F (VEIP, PPTP) [RTL9601CI] [i][color=green]Support 4-port ONU Emulation[/color][/i]
+2. T&W TWCGPON657 (VEIP, PPTP) [RTL9601CI] [i][color=green]Support 4-port ONU Emulation via [url=https://github.com/Anime4000/RTL960x/tree/main/WebGui#example]my custom modded firmware[/url][/color][/i]
+3. ODI DFP-34X-2C2 (VEIP, PPTP) [RTL9601D] [i][color=green]Support 4-port ONU Emulation.[/color][/i]
+4. ODI DFP-34X-2C2 (PPTP) [ZTE] [i][color=red]Single Port ONU[/color][/i]
+5. Nokia G-010S-Q (VEIP, PPTP) [using RTL9601CI] [i][color=purple]Unknown[/color][/i]
+
+[b][color=red]Please note that[/color][/b] [b]this is not your typical SFP/Transceiver[/b] that you would find on online shops. This specific SFP is actually a [u]miniaturized ONU[/u] (Optical Network Unit) with its own SoC (System on Chip). It comes equipped with a WebGUI, Telnet, and SSH functionalities, and it requires a boot-up time similar to that of a regular ONU box.
+
+[b][size=9]Information about GPON in Malaysia[/size][/b]
+GPON has many standard that suite ISP need, most important you need to know current ISP you using...
+
+There is 2 option PON-LAN mapping, [b]PPTP (Physical Path Termination Point)[/b] and [b]VEIP (Virtual Ethernet Interface Point)[/b], most ONT support both [url=https://www.broadband-forum.org/wp-content/uploads/2020/12/BBF.247-GPON-ONU-Products-2020-12-21.pdf](BBF.247 certified device)[/url]
+
+[url=https://github.com/Anime4000/RTL960x/blob/main/Docs/Images/PPTP%20vs%20VEIP.png][img]https://raw.githubusercontent.com/Anime4000/RTL960x/main/Docs/Images/PPTP%20vs%20VEIP%20Thumb.png[/img][/url]
+
+[b]NOTE:[/b] TM mostly using [b]PPTP[/b], according to OMCI Diagnostic, the VEIP entry all zero value.
+
+
+[b]GPON MTU[/b]
+GPON has fixed MTU size which is [url=https://forum.huawei.com/enterprise/en/what-is-the-maximum-value-of-mtu-for-an-ont-q-a/thread/457443-100181]2000 bytes[/url], this mean [url=https://forum.lowyat.net/index.php?showtopic=5130124&view=findpost&p=100570486]PPPoE MTU 1500 bytes[/url] can be set!
+
+PPPoE MTU 1500 bytes support on many Mikrotik and Ubiquiti router, need test if ISP configure [url=https://www.rfc-editor.org/rfc/rfc4638]RFC 4638[/url]
+
+[b][size=9]Router Setup[/size][/b]
+[b]Mikrotik[/b]
+1. You need remove [u]sfp1[/u] from [u]bridge[/u] member (or replace [u]sfp1[/u] with [u]ether1[/u])
+2. Add [u]sfp1[/u] into WAN Interface Group (default WAN defconf: masquerade)
+3. Add [u]sfp1[/u] IP Address as (192.168.1.11/24)
+4. For [b]SFP+ 2.5G capable router/switch[/b] (latest firmware):
+[url=https://pictr.com/image/EcuPa5][img]https://pictr.com/images/2023/10/27/EcuPa5.png[/img][/url]
+
+[b]Ubiquiti[/b]
+1. Set LAN IP Address (avoid using 192.168.1.0/24 subnet)
+2. Set [u]sfp[/u] an IP Address as (192.168.1.11/24)
+3. Set NAT/masquerade firewall for [u]sfp[/u]
+4. For [b]SFP+/SFP28[/b], you must use 1000/full
+
+[b]Consumer (TP-Link, Asus, D-Link, etc...[/b]
+Try make sfp as masquerade, so you can access sfp telnet or webgui from your LAN
+Insert your GPON ONU SFP, wait for few minutes to boot, try ping 192.168.1.1 to check stick is fully booted.
+Got respond? Then can proceed to setup~
+
+[b]My PON Stick will auto nego SFP Serial Data Signal:[/b]
+| [b]Mode[/b] | [b]Type[/b] | [b]Auto Nego[/b] | [b]Note[/b] |
+| 0 | 1G/100Base-T | Yes | 100/1000 Ethernet |
+| 1 | 1GBase-FX | Yes | 1G Fiber Transceiver |
+| 2 | SGMII PHY | Yes | 1G Copper/Fiber Layer 1 |
+| 3 | SGMII MAC | Yes | 1G Copper/Fiber Layer 2 |
+| 4 | HiSGMII PHY | Yes | 2.5G Copper/Fiber Layer 1 |
+| 5 | HiSGMII MAC | Yes | 2.5G Copper/Fiber Layer 2 |
+| 6 | 2500Base-FX | Yes | 2.5 Fiber Transceiver |
+| 7 | SGMII Forced | No | 1G Copper/Fiber Layer 1 |
+| 8 | 2500Base-T | No | 2.5G NBase-T (Ethernet) |
+
+[b][size=9]xPON Setup[/size][/b]
+This guide was based on Realtek xPON Technology (RTL960x) which is on older Luna SDK with many quick hack that might break, it may not match with TM OMCI requirement, follow this guide at your own risk!
+
+[b][size=7][color=red]WARNING![/size][/color][/b]
+1. Avoid plugging fiber before configure. (Prevent OLT detect rouge ONU)
+2. Set everything then reboot. (Every properties change, reboot is required to take effect)
+3. Avoid entering bad command or set, improper parameter can cause bootloop/bricked!
+4. [b]Do at your own risk, even if your account get suspended.[/b]
+5. [b][color=red]I, We and LYN member here cannot accept responsibility for any consequences that may arise.[/color][/b]
+6. If getting complicated, avoid taking unnecessary risk, buy pre-configured device.
+
+[b][color=red]MOST IMPORTANTLY[/color][/b]
+7. Repeated ALARM State can cause your S/N and PLOAM banned from the network
+
+[b][size=7]Information Setup[/size][/b]
+Default login is 192.168.1.1 with admin:admin
+I'll be using [b]Huawei ONT HG8240H[/b] for this example, this ONT widely used, highly compatible with any ISP
+
+[b]It has two method to get it setup:[/b]
+1. GUI
+2. Command Line (Telnet/SSH)
+
+[b][size=7]GUI[/size][/b]
+Via WebGUI is self explain, menu item is similar to Command-Line
+[url=https://pictr.com/image/ECu4rf][img]https://pictr.com/images/2023/09/30/ECu4rf.md.png[/img][/url]
+[url=https://pictr.com/image/ECuMK9][img]https://pictr.com/images/2023/09/30/ECuMK9.md.png[/img][/url]
+
+[b][size=7]Command-Line[/size][/b]
+[b]PLOAM Password[/b]
+Your ONT Password in HEX (20 hex number) or ASCII (10 characters), you can use [url=https://www.rapidtables.com/convert/number/ascii-to-hex.html]ASCII to HEX[/url] converter online, replace value [u]31323334353637383930[/u] with yours
+[code]
+flash set GPON_PLOAM_FORMAT 0
+flash set GPON_PLOAM_PASSWD 31323334353637383930
+[/code]
+
+[b]OLT Compatibility[/b]
+This make your RTL960x very compatible, it dumbly reply OMCI [b]OK[/b] back to OLT even proprietary OMCI request. (this way ISP can detect ONU is not standard setup)
+[code]
+flash set OMCI_OLT_MODE 1
+flash set OMCI_FAKE_OK 1
+[/code]
+
+[b]ZTP/SLIMS Information[/b]
+Maybe required, RTL960x are incapable to support ZTP/SLIMS, [i]ISP has right to reject your ONU[/i].
+[url=https://pictr.com/image/Euwa3g][img]https://pictr.com/images/2023/06/24/Euwa3g.md.jpg[/img][/url]
+[code]
+flash get OUI 785773
+flash get HW_SERIAL_NO UONHUWH52100000000
+[/code]
+
+[b]OMCI Information[/b]
+You need copy from old ONT value like this:
+[url=https://pictr.com/image/BD7Dvf][img]https://pictr.com/images/2022/08/10/BD7Dvf.md.png[/img][/url]
+[code]
+flash set OMCI_SW_VER1 V3R017C10S100
+flash set OMCI_SW_VER2 V3R017C10S100
+flash set GPON_ONU_MODEL HG8240H
+flash set GPON_SN HWTC14211ED8
+flash set PON_VENDOR_ID HWTC
+flash set HW_HWVER BF9.A
+flash set HW_CWMP_MANUFACTURER 'Huawei Technologies Co., Ltd'
+flash set HW_CWMP_PRODUCTCLASS HGU
+[/code]
+
+[b]OMCI Version[/b]
+1. TM (0x80/128)
+2. TIME (0x80/128)
+3. Allo (0xA0/160)
+
+0x80/128 is the default value, you can skip this, if no O5 status, you can test from 128 until 179
+
+[code]
+flash set OMCC_VER 128
+[/code]
+
+[b]Traffic Management[/b]
+If your speed below subscribed bandwidth, try adjust this, it may unlock speed depend on OLT
+[code]
+flash set OMCI_TM_OPT 0
+[/code]
+| [b]Value[/b] | [b]Meaning[/b] |
+| 0 | Priority controlled |
+| 1 | Rate controlled |
+| 2 | Priority and Rate controlled |
+
+[b]VLAN Forward Operation[/b]
+If you encounter a situation where the OLT has assigned the VLAN Forwarding Operation (FwdOp) incorrectly or to a non-existent interface, you have the option to override the OLT's configuration. By doing so, you can ensure that the FwdOp is correctly directed to the SFP interface, resolving any misconfigurations. This allows for more reliable and accurate VLAN forwarding within your network.
+
+GUI:
+[url=https://pictr.com/image/EcTZyA][img]https://pictr.com/images/2023/10/29/EcTZyA.md.png[/img][/url]
+* [i]Navigate: [b]Advanced[/b] ➡️ [b]OMCI FwdOp[/b][/i]
+
+CLI:
+[code]
+flash set RTK_DEVINFO_SPECVER
+[/code]
+* [i]the [b]RTK_DEVINFO_SPECVER[/b] is place holder for VLAN FwdOp[/i]
+
+Syntax is [b]EntitiyId[/b] or [b]EntitiyId:FwdOp[/b]. Multiple value can be separated by comma, example:
+[code]
+0x00,0x01:0x00,0x02:0x10
+[/code]
+* the [b]:FwdOp[/b] can be omitted, it will use [b]0x02[/b] as default FwdOp
+
+Quick [b]FwdOp[/b] to use:
+| [b]Forward operation[/b] | [b]Received frame: Tagged[/b] | [b]Received frame: Untagged[/b] |
+| 0x00 | Bridging (a) (no investigation) | Bridging (a) |
+| 0x01 | Discarding © | Bridging (a) |
+| 0x02 | Bridging (a) (no investigation) | Discarding © |
+| 0x03 | Action (h) (VID investigation) | Bridging (a) |
+| 0x10 | Action (h) (VID investigation) | Discarding © |
+[url=https://forum.lowyat.net/index.php?showtopic=4925452&view=findpost&p=108438490]Continue FwdOp Table[/url]
+
+Learn More [b]OMCI specification Table 9.3.11-1[/b]:
+[attachmentid=11483620]
+
+[b][size=7]VLAN[/size][/b]
+Here some list known Malaysia ISP VLAN
+| [b]VLAN[/b] | [b]Internet[/b] | [b]VoIP[/b] | [b]IPTV[/b] |
+| Unifi | 500 | 400 | 600 |
+| TM-Maxis | 621 | 822 | 823 |
+| TM-Celcom | 623 | ? | ? |
+| TM-Viewqwest | 624 | - | - |
+| TM-DiGi | 629 | ? | ? |
+| TIME | 499 | 140 | - |
+| Allo | - | - | - |
+
+[b][size=7]VoIP[/size][/b]
+VoIP can be redirected by using VLAN, get account information and use ATA or Desktop IP Phone that support modifying User-Agent: [url=https://forum.lowyat.net/index.php?showtopic=5243640&view=findpost&p=103630714]Maxis VoIP[/url], [url=https://forum.lowyat.net/topic/5415629]Unifi VoIP[/url] or [url=https://forum.lowyat.net/index.php?showtopic=4925452&view=findpost&p=108487465]Unifi VoIP via Android Phone by kwss[/url]
+
+
+[b][size=9]Troubleshoot[/size][/b]
+[b]Get OLT brand[/b]
+[code]omcicli mib get 131[/code]
+Expected Output (Normal)
+[code]
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+OltG
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+=================================
+EntityId: 0x00
+OltVendorId: 0x414c434c
+EquipId:                     
+Version: 
+ToDInfo:
+Sequence number of GEM superframe: 0x0
+Timestamp: secs 0, nanosecs 0
+=================================
+[/code]
+TM NGN/NGBB (Next Gen Network/Broadband)
+[code]
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+OltG
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+=================================
+EntityId: 0x00
+OltVendorId: 0x00
+EquipId:
+Version: 0
+ToDInfo:
+        Sequence number of GEM superframe: 0x0
+        Timestamp: secs 0, nanosecs 0
+=================================
+[/code]
+
+Known OLT Model:
+| [b]Hex[/b] | [b]ASCII[/b] | [b]Brand[/b] |
+| 00 | NULL | Generic/Universal |
+| 20202020 | NULL | Generic/Universal |
+| 47504f4e | GPON | Generic/Universal |
+| 414c434c | ALCL | Nokia/Alcatel-Lucent |
+| 48575443 | HWTC | Huawei |
+| 5a544547 | ZTEG | ZTE |
+| 46485454 | FHTT | Homefiber |
+| 43414c58 | CALX | Calix |
+| 5a59574e | ZYWN | Zyxel |
+
+[b]VLAN[/b]
+[i]TIME users: You need a VLAN to have the internet, use this command to check which VLAN, by default TIME VLAN is 499 (it may varies from place to place):[/i]
+[code]omcicli mib get 84[/code]
+Output Example
+[spoiler][code]
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+VlanTagFilterData
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+=================================
+EntityID: 0x1202
+FilterTbl[0]: PRI 0,CFI 0, VID 621
+FwdOp:  0x10
+NumOfEntries: 1
+=================================
+=================================
+EntityID: 0x1203
+FilterTbl[0]: PRI 0,CFI 0, VID 821
+FwdOp:  0x10
+NumOfEntries: 1
+=================================
+=================================
+EntityID: 0x1204
+FilterTbl[0]: PRI 0,CFI 0, VID 822
+FwdOp:  0x10
+NumOfEntries: 1
+=================================
+=================================
+EntityID: 0x120b
+FilterTbl[0]: PRI 0,CFI 0, VID 621
+FilterTbl[2]: PRI 0,CFI 0, VID 821
+FilterTbl[4]: PRI 0,CFI 0, VID 822
+FwdOp:  0x10
+NumOfEntries: 3
+=================================
+=================================
+EntityID: 0xe102
+FilterTbl[0]: PRI 0,CFI 0, VID 209
+FwdOp:  0x10
+NumOfEntries: 1
+=================================
+=================================
+EntityID: 0xe10b
+FilterTbl[0]: PRI 0,CFI 0, VID 209
+FwdOp:  0x10
+NumOfEntries: 1
+=================================
+[/code][/spoiler]
+
+[b]VLAN Mapping[/b]
+[i]Show VLAN Mapping from PON to LAN that available to use[/i]
+[code]omcicli mib get 171[/code]
+Output Example
+[spoiler][code]
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+ExtVlanTagOperCfgData
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+=================================
+EntityId: 0x101
+AssociationType: 2
+ReceivedFrameVlanTagOperTableMaxSize: 0
+InputTPID: 0x8100
+OutputTPID: 0x8100
+DsMode: 0
+ReceivedFrameVlanTaggingOperTable
+AssociatedMePoint: 0x101
+DscpToPbitMapping:
+0x000000
+0x249249
+0x492492
+0x6db6db
+0x924924
+0xb6db6d
+0xdb6db6
+0xffffff
+
+
+Parsed DscpToPbitMapping:
+dscp: 0 => pbit: 0
+dscp: 1 => pbit: 0
+dscp: 2 => pbit: 0
+dscp: 3 => pbit: 0
+dscp: 4 => pbit: 0
+dscp: 5 => pbit: 0
+dscp: 6 => pbit: 0
+dscp: 7 => pbit: 0
+dscp: 8 => pbit: 1
+dscp: 9 => pbit: 1
+dscp: 10 => pbit: 1
+dscp: 11 => pbit: 1
+dscp: 12 => pbit: 1
+dscp: 13 => pbit: 1
+dscp: 14 => pbit: 1
+dscp: 15 => pbit: 1
+dscp: 16 => pbit: 2
+dscp: 17 => pbit: 2
+dscp: 18 => pbit: 2
+dscp: 19 => pbit: 2
+dscp: 20 => pbit: 2
+dscp: 21 => pbit: 2
+dscp: 22 => pbit: 2
+dscp: 23 => pbit: 2
+dscp: 24 => pbit: 3
+dscp: 25 => pbit: 3
+dscp: 26 => pbit: 3
+dscp: 27 => pbit: 3
+dscp: 28 => pbit: 3
+dscp: 29 => pbit: 3
+dscp: 30 => pbit: 3
+dscp: 31 => pbit: 3
+dscp: 32 => pbit: 4
+dscp: 33 => pbit: 4
+dscp: 34 => pbit: 4
+dscp: 35 => pbit: 4
+dscp: 36 => pbit: 4
+dscp: 37 => pbit: 4
+dscp: 38 => pbit: 4
+dscp: 39 => pbit: 4
+dscp: 40 => pbit: 5
+dscp: 41 => pbit: 5
+dscp: 42 => pbit: 5
+dscp: 43 => pbit: 5
+dscp: 44 => pbit: 5
+dscp: 45 => pbit: 5
+dscp: 46 => pbit: 5
+dscp: 47 => pbit: 5
+dscp: 48 => pbit: 6
+dscp: 49 => pbit: 6
+dscp: 50 => pbit: 6
+dscp: 51 => pbit: 6
+dscp: 52 => pbit: 6
+dscp: 53 => pbit: 6
+dscp: 54 => pbit: 6
+dscp: 55 => pbit: 6
+dscp: 56 => pbit: 7
+dscp: 57 => pbit: 7
+dscp: 58 => pbit: 7
+dscp: 59 => pbit: 7
+dscp: 60 => pbit: 7
+dscp: 61 => pbit: 7
+dscp: 62 => pbit: 7
+dscp: 63 => pbit: 7
+=================================
+=================================
+EntityId: 0x102
+AssociationType: 2
+ReceivedFrameVlanTagOperTableMaxSize: 0
+InputTPID: 0x8100
+OutputTPID: 0x8100
+DsMode: 0
+ReceivedFrameVlanTaggingOperTable
+INDEX 0
+Filter Outer   : PRI 15,VID 4096, TPID 0
+Filter Inner   : PRI 8,VID 822, TPID 5, EthType 0x00
+Treatment Outer   : PRI 15,VID 0, TPID 0, RemoveTags 1
+Treatment Inner   : PRI 8,VID 822, TPID 2
+INDEX 1
+Filter Outer   : PRI 15,VID 4096, TPID 0
+Filter Inner   : PRI 8,VID 821, TPID 5, EthType 0x00
+Treatment Outer   : PRI 15,VID 0, TPID 0, RemoveTags 1
+Treatment Inner   : PRI 8,VID 821, TPID 2
+INDEX 2
+Filter Outer   : PRI 15,VID 4096, TPID 0
+Filter Inner   : PRI 8,VID 621, TPID 5, EthType 0x00
+Treatment Outer   : PRI 15,VID 0, TPID 0, RemoveTags 1
+Treatment Inner   : PRI 8,VID 621, TPID 2
+INDEX 3
+Filter Outer   : PRI 15,VID 4096, TPID 0
+Filter Inner   : PRI 15,VID 0, TPID 5, EthType 0x00
+Treatment Outer   : PRI 15,VID 0, TPID 0, RemoveTags 3
+Treatment Inner   : PRI 15,VID 0, TPID 2
+INDEX 4
+Filter Outer   : PRI 14,VID 4096, TPID 5
+Filter Inner   : PRI 14,VID 4096, TPID 0, EthType 0x00
+Treatment Outer   : PRI 15,VID 0, TPID 0, RemoveTags 3
+Treatment Inner   : PRI 15,VID 4096, TPID 3
+INDEX 5
+Filter Outer   : PRI 15,VID 4096, TPID 0
+Filter Inner   : PRI 14,VID 4096, TPID 5, EthType 0x00
+Treatment Outer   : PRI 15,VID 0, TPID 0, RemoveTags 3
+Treatment Inner   : PRI 15,VID 4096, TPID 2
+AssociatedMePoint: 0x102
+DscpToPbitMapping:
+0x000000
+0x249249
+0x492492
+0x6db6db
+0x924924
+0xb6db6d
+0xdb6db6
+0xffffff
+
+
+Parsed DscpToPbitMapping:
+dscp: 0 => pbit: 0
+dscp: 1 => pbit: 0
+dscp: 2 => pbit: 0
+dscp: 3 => pbit: 0
+dscp: 4 => pbit: 0
+dscp: 5 => pbit: 0
+dscp: 6 => pbit: 0
+dscp: 7 => pbit: 0
+dscp: 8 => pbit: 1
+dscp: 9 => pbit: 1
+dscp: 10 => pbit: 1
+dscp: 11 => pbit: 1
+dscp: 12 => pbit: 1
+dscp: 13 => pbit: 1
+dscp: 14 => pbit: 1
+dscp: 15 => pbit: 1
+dscp: 16 => pbit: 2
+dscp: 17 => pbit: 2
+dscp: 18 => pbit: 2
+dscp: 19 => pbit: 2
+dscp: 20 => pbit: 2
+dscp: 21 => pbit: 2
+dscp: 22 => pbit: 2
+dscp: 23 => pbit: 2
+dscp: 24 => pbit: 3
+dscp: 25 => pbit: 3
+dscp: 26 => pbit: 3
+dscp: 27 => pbit: 3
+dscp: 28 => pbit: 3
+dscp: 29 => pbit: 3
+dscp: 30 => pbit: 3
+dscp: 31 => pbit: 3
+dscp: 32 => pbit: 4
+dscp: 33 => pbit: 4
+dscp: 34 => pbit: 4
+dscp: 35 => pbit: 4
+dscp: 36 => pbit: 4
+dscp: 37 => pbit: 4
+dscp: 38 => pbit: 4
+dscp: 39 => pbit: 4
+dscp: 40 => pbit: 5
+dscp: 41 => pbit: 5
+dscp: 42 => pbit: 5
+dscp: 43 => pbit: 5
+dscp: 44 => pbit: 5
+dscp: 45 => pbit: 5
+dscp: 46 => pbit: 5
+dscp: 47 => pbit: 5
+dscp: 48 => pbit: 6
+dscp: 49 => pbit: 6
+dscp: 50 => pbit: 6
+dscp: 51 => pbit: 6
+dscp: 52 => pbit: 6
+dscp: 53 => pbit: 6
+dscp: 54 => pbit: 6
+dscp: 55 => pbit: 6
+dscp: 56 => pbit: 7
+dscp: 57 => pbit: 7
+dscp: 58 => pbit: 7
+dscp: 59 => pbit: 7
+dscp: 60 => pbit: 7
+dscp: 61 => pbit: 7
+dscp: 62 => pbit: 7
+dscp: 63 => pbit: 7
+=================================
+=================================
+EntityId: 0x103
+AssociationType: 2
+ReceivedFrameVlanTagOperTableMaxSize: 0
+InputTPID: 0x8100
+OutputTPID: 0x8100
+DsMode: 0
+ReceivedFrameVlanTaggingOperTable
+AssociatedMePoint: 0x103
+DscpToPbitMapping:
+0x000000
+0x249249
+0x492492
+0x6db6db
+0x924924
+0xb6db6d
+0xdb6db6
+0xffffff
+
+
+Parsed DscpToPbitMapping:
+dscp: 0 => pbit: 0
+dscp: 1 => pbit: 0
+dscp: 2 => pbit: 0
+dscp: 3 => pbit: 0
+dscp: 4 => pbit: 0
+dscp: 5 => pbit: 0
+dscp: 6 => pbit: 0
+dscp: 7 => pbit: 0
+dscp: 8 => pbit: 1
+dscp: 9 => pbit: 1
+dscp: 10 => pbit: 1
+dscp: 11 => pbit: 1
+dscp: 12 => pbit: 1
+dscp: 13 => pbit: 1
+dscp: 14 => pbit: 1
+dscp: 15 => pbit: 1
+dscp: 16 => pbit: 2
+dscp: 17 => pbit: 2
+dscp: 18 => pbit: 2
+dscp: 19 => pbit: 2
+dscp: 20 => pbit: 2
+dscp: 21 => pbit: 2
+dscp: 22 => pbit: 2
+dscp: 23 => pbit: 2
+dscp: 24 => pbit: 3
+dscp: 25 => pbit: 3
+dscp: 26 => pbit: 3
+dscp: 27 => pbit: 3
+dscp: 28 => pbit: 3
+dscp: 29 => pbit: 3
+dscp: 30 => pbit: 3
+dscp: 31 => pbit: 3
+dscp: 32 => pbit: 4
+dscp: 33 => pbit: 4
+dscp: 34 => pbit: 4
+dscp: 35 => pbit: 4
+dscp: 36 => pbit: 4
+dscp: 37 => pbit: 4
+dscp: 38 => pbit: 4
+dscp: 39 => pbit: 4
+dscp: 40 => pbit: 5
+dscp: 41 => pbit: 5
+dscp: 42 => pbit: 5
+dscp: 43 => pbit: 5
+dscp: 44 => pbit: 5
+dscp: 45 => pbit: 5
+dscp: 46 => pbit: 5
+dscp: 47 => pbit: 5
+dscp: 48 => pbit: 6
+dscp: 49 => pbit: 6
+dscp: 50 => pbit: 6
+dscp: 51 => pbit: 6
+dscp: 52 => pbit: 6
+dscp: 53 => pbit: 6
+dscp: 54 => pbit: 6
+dscp: 55 => pbit: 6
+dscp: 56 => pbit: 7
+dscp: 57 => pbit: 7
+dscp: 58 => pbit: 7
+dscp: 59 => pbit: 7
+dscp: 60 => pbit: 7
+dscp: 61 => pbit: 7
+dscp: 62 => pbit: 7
+dscp: 63 => pbit: 7
+=================================
+=================================
+EntityId: 0x104
+AssociationType: 2
+ReceivedFrameVlanTagOperTableMaxSize: 0
+InputTPID: 0x8100
+OutputTPID: 0x8100
+DsMode: 0
+ReceivedFrameVlanTaggingOperTable
+AssociatedMePoint: 0x104
+DscpToPbitMapping:
+0x000000
+0x249249
+0x492492
+0x6db6db
+0x924924
+0xb6db6d
+0xdb6db6
+0xffffff
+
+
+Parsed DscpToPbitMapping:
+dscp: 0 => pbit: 0
+dscp: 1 => pbit: 0
+dscp: 2 => pbit: 0
+dscp: 3 => pbit: 0
+dscp: 4 => pbit: 0
+dscp: 5 => pbit: 0
+dscp: 6 => pbit: 0
+dscp: 7 => pbit: 0
+dscp: 8 => pbit: 1
+dscp: 9 => pbit: 1
+dscp: 10 => pbit: 1
+dscp: 11 => pbit: 1
+dscp: 12 => pbit: 1
+dscp: 13 => pbit: 1
+dscp: 14 => pbit: 1
+dscp: 15 => pbit: 1
+dscp: 16 => pbit: 2
+dscp: 17 => pbit: 2
+dscp: 18 => pbit: 2
+dscp: 19 => pbit: 2
+dscp: 20 => pbit: 2
+dscp: 21 => pbit: 2
+dscp: 22 => pbit: 2
+dscp: 23 => pbit: 2
+dscp: 24 => pbit: 3
+dscp: 25 => pbit: 3
+dscp: 26 => pbit: 3
+dscp: 27 => pbit: 3
+dscp: 28 => pbit: 3
+dscp: 29 => pbit: 3
+dscp: 30 => pbit: 3
+dscp: 31 => pbit: 3
+dscp: 32 => pbit: 4
+dscp: 33 => pbit: 4
+dscp: 34 => pbit: 4
+dscp: 35 => pbit: 4
+dscp: 36 => pbit: 4
+dscp: 37 => pbit: 4
+dscp: 38 => pbit: 4
+dscp: 39 => pbit: 4
+dscp: 40 => pbit: 5
+dscp: 41 => pbit: 5
+dscp: 42 => pbit: 5
+dscp: 43 => pbit: 5
+dscp: 44 => pbit: 5
+dscp: 45 => pbit: 5
+dscp: 46 => pbit: 5
+dscp: 47 => pbit: 5
+dscp: 48 => pbit: 6
+dscp: 49 => pbit: 6
+dscp: 50 => pbit: 6
+dscp: 51 => pbit: 6
+dscp: 52 => pbit: 6
+dscp: 53 => pbit: 6
+dscp: 54 => pbit: 6
+dscp: 55 => pbit: 6
+dscp: 56 => pbit: 7
+dscp: 57 => pbit: 7
+dscp: 58 => pbit: 7
+dscp: 59 => pbit: 7
+dscp: 60 => pbit: 7
+dscp: 61 => pbit: 7
+dscp: 62 => pbit: 7
+dscp: 63 => pbit: 7
+=================================
+=================================
+EntityId: 0xe01
+AssociationType: 10
+ReceivedFrameVlanTagOperTableMaxSize: 0
+InputTPID: 0x8100
+OutputTPID: 0x8100
+DsMode: 0
+ReceivedFrameVlanTaggingOperTable
+INDEX 0
+Filter Outer   : PRI 15,VID 4096, TPID 0
+Filter Inner   : PRI 8,VID 209, TPID 5, EthType 0x00
+Treatment Outer   : PRI 15,VID 0, TPID 0, RemoveTags 1
+Treatment Inner   : PRI 8,VID 209, TPID 2
+INDEX 1
+Filter Outer   : PRI 15,VID 4096, TPID 0
+Filter Inner   : PRI 15,VID 0, TPID 5, EthType 0x00
+Treatment Outer   : PRI 15,VID 0, TPID 0, RemoveTags 3
+Treatment Inner   : PRI 15,VID 0, TPID 2
+INDEX 2
+Filter Outer   : PRI 14,VID 4096, TPID 5
+Filter Inner   : PRI 14,VID 4096, TPID 0, EthType 0x00
+Treatment Outer   : PRI 15,VID 0, TPID 0, RemoveTags 3
+Treatment Inner   : PRI 15,VID 4096, TPID 3
+INDEX 3
+Filter Outer   : PRI 15,VID 4096, TPID 0
+Filter Inner   : PRI 14,VID 4096, TPID 5, EthType 0x00
+Treatment Outer   : PRI 15,VID 0, TPID 0, RemoveTags 3
+Treatment Inner   : PRI 15,VID 4096, TPID 2
+AssociatedMePoint: 0x601
+DscpToPbitMapping:
+0x000000
+0x249249
+0x492492
+0x6db6db
+0x924924
+0xb6db6d
+0xdb6db6
+0xffffff
+
+
+Parsed DscpToPbitMapping:
+dscp: 0 => pbit: 0
+dscp: 1 => pbit: 0
+dscp: 2 => pbit: 0
+dscp: 3 => pbit: 0
+dscp: 4 => pbit: 0
+dscp: 5 => pbit: 0
+dscp: 6 => pbit: 0
+dscp: 7 => pbit: 0
+dscp: 8 => pbit: 1
+dscp: 9 => pbit: 1
+dscp: 10 => pbit: 1
+dscp: 11 => pbit: 1
+dscp: 12 => pbit: 1
+dscp: 13 => pbit: 1
+dscp: 14 => pbit: 1
+dscp: 15 => pbit: 1
+dscp: 16 => pbit: 2
+dscp: 17 => pbit: 2
+dscp: 18 => pbit: 2
+dscp: 19 => pbit: 2
+dscp: 20 => pbit: 2
+dscp: 21 => pbit: 2
+dscp: 22 => pbit: 2
+dscp: 23 => pbit: 2
+dscp: 24 => pbit: 3
+dscp: 25 => pbit: 3
+dscp: 26 => pbit: 3
+dscp: 27 => pbit: 3
+dscp: 28 => pbit: 3
+dscp: 29 => pbit: 3
+dscp: 30 => pbit: 3
+dscp: 31 => pbit: 3
+dscp: 32 => pbit: 4
+dscp: 33 => pbit: 4
+dscp: 34 => pbit: 4
+dscp: 35 => pbit: 4
+dscp: 36 => pbit: 4
+dscp: 37 => pbit: 4
+dscp: 38 => pbit: 4
+dscp: 39 => pbit: 4
+dscp: 40 => pbit: 5
+dscp: 41 => pbit: 5
+dscp: 42 => pbit: 5
+dscp: 43 => pbit: 5
+dscp: 44 => pbit: 5
+dscp: 45 => pbit: 5
+dscp: 46 => pbit: 5
+dscp: 47 => pbit: 5
+dscp: 48 => pbit: 6
+dscp: 49 => pbit: 6
+dscp: 50 => pbit: 6
+dscp: 51 => pbit: 6
+dscp: 52 => pbit: 6
+dscp: 53 => pbit: 6
+dscp: 54 => pbit: 6
+dscp: 55 => pbit: 6
+dscp: 56 => pbit: 7
+dscp: 57 => pbit: 7
+dscp: 58 => pbit: 7
+dscp: 59 => pbit: 7
+dscp: 60 => pbit: 7
+dscp: 61 => pbit: 7
+dscp: 62 => pbit: 7
+dscp: 63 => pbit: 7
+=================================
+[/code][/spoiler]
+
+[b]VEIP[/b]
+[code]omcicli mib get 329[/code]
+Output Example
+[spoiler][code]
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+VEIP
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+=================================
+EntityId: 0x0601
+AdminState: 0
+OperState: 0
+InterDomainName: 0x00000000000000000000000000000000000000000000000000
+TcpUdpPtr: 0x0000
+IansAssignPort: 0
+CustomizedSlotId: 0xff
+=================================
+[/code]
+[/spoiler]
+
+[b]Ethernet Provisioning[/b]
+TM love using ME 11 to lock specific LAN port
+[code]omcicli mib get 11[/code]
+Output Example
+[spoiler][code]
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+EthUni
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+=================================
+EntityID: 0x0101
+ExpectedType: 47
+SensedType: 47
+AutoDectectCfg: 0
+EthLoopbackCfg: 0
+AdminState: 1
+OpState: 0
+DuplexInd: 3
+MaxFrameSize: 2000
+DTEorDCEInd: 0
+PauseTime: 65535
+BridgedorIPInd: 2
+ARC: 0
+ARCInterval: 0
+PppoeFilter: 0
+PowerControl: 0
+PhysicalPortId: 0
+=================================
+[/code][/spoiler]
+
+
+[b][size=7]Additional Information[/size][/b]
+Refer to this for [url=https://github.com/Anime4000/RTL960x/blob/main/Docs/Stock_ONU.md]List of ONT OMCI Info[/url]
+
+Further discovery can be found at my [url=https://github.com/Anime4000/RTL960x]GitHub repo[/url]
+
+[b][size=7]Original Post:[/size][/b]
+[quote=Anime4000,Mar 18 2020, 12:26 PM]It's possible to ditch ONU and connect via GPON SFP under Mikrotik/Ubiquiti/pfSense router?
+How to set S/N and ONU Auth via SFP ?
+[right][snapback]95891059[/snapback][/right]
+[/quote]
