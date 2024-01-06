@@ -18,8 +18,9 @@ $ME"\n\n";omcicli mib get $ME; done;
 ## Verify software version
 `omcicli mib get 7`
 
-## Ethernet Provisioning (VEIP)
+## Ethernet Provisioning
 `omcicli mib get 11`
+> also define as `4-port Emulation` set Administrative State (`AdminState`) to 0 to prevent OLT disable LAN ports
 
 ## Verify VLAN Tag Filter
 `omcicli mib get 84`
