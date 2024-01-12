@@ -260,10 +260,6 @@ flash set OMCI_FAKE_OK 1
 flash set OMCI_OLT_MODE 1
 ```
 
-# `O5` No Internet
-Multiple user report that Nokia/Alcatel OLT giving fake `O5` with `02020202` OLT Vendor Id, this making hard to troubleshoot for end-user and vendor...
-More information to negate this problem, [read here](fakeO5.md)
-
 # MAC/HW Lock
 These stick mainly for commercial deployment where prevent user chaning device Id by having License Key. However, user can use on exting fiber to omit stock ONU or unlock GPON speed to 2.5Gb, for custom deployment, you may change MAC Address but not required on GPON due to Layer 3 transport omit MAC Address...
 
