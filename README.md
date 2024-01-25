@@ -50,6 +50,7 @@ For **XG/XGS/10G-E PON Hacking**, checkout [@YuukiJapanTech](https://github.com/
 1. [Backup `env`, `env2` & `config` partition](https://github.com/Anime4000/RTL960x/discussions/28) <sup>Guide by [@tdmadam](https://github.com/tdmadam)</sup>
 1. [Setup XPON ONU SFP Stick](Docs/Setup_Stick.md)
     * [Clone Stock ONU OMCI Info](Docs/Stock_ONU.md)
+        * [Fiberhome](https://github.com/Anime4000/RTL960x/issues/131#issuecomment-1885032543) <sup>for who using Fiberhome ONT, high chance under Fiberhome OLT Standard, not Fiberhome OLT Universal</sup>
     * [Troubleshoot](Docs/TroubleshootSetup.md)
 3. [`flash get`, `flash set`](Docs/FLASH_GETSET_INFO.md)
     * [xPON Model Id](Docs/FLASH_GETSET_INFO.md#pon_vendor_id-4-ascii-character-maximum)
