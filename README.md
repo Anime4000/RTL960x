@@ -56,7 +56,10 @@ For **XG/XGS/10G-E PON Hacking**, checkout [@YuukiJapanTech](https://github.com/
     * [xPON Model Id](Docs/FLASH_GETSET_INFO.md#pon_vendor_id-4-ascii-character-maximum)
     * [LAN SDS Mode](Docs/FLASH_GETSET_INFO.md#lan_sds_mode)
     * [2.5GbE Compatibility](Docs/2.5Gb.md)
-4. [Diagnostic](Docs/DIAG.md)
+4. Health Reporting
+    * [Telegram](https://github.com/Anime4000/RTL960x/issues/99#issuecomment-1611726668) <sup>Mikrotik script by [@smnrock](https://github.com/smnrock), sending health report via Telegram Bot</sup>
+    * [Grafana](https://github.com/Anime4000/RTL960x/issues/99#issuecomment-1911530327) <sup>Grafana script by [@Strykar](https://github.com/Strykar), display PON Stats neatly!</sup>
+6. [Diagnostic](Docs/DIAG.md)
     * [Factory Reset](Docs/factory_reset.md)
     * [Switch/Roll back Firmware](Docs/fw_part.md)
     * [`O5` no Internet](Docs/fakeO5.md) <sup>fake ONU Status cause by some OLT</sup>
@@ -68,14 +71,13 @@ For **XG/XGS/10G-E PON Hacking**, checkout [@YuukiJapanTech](https://github.com/
     * [SFU/HGU feature bits](https://gist.github.com/rajkosto/79034a1f7b3de3f40edf50ffbd8396b0) <sup>RE done by [@rajkosto](https://github.com/rajkosto) also define 4-port emulation `ignore_conn_uniNode_check` UniG on SFU firmware</sup>
     * [Wireshark](https://github.com/tdmadam/OMCI-for-SFP-Stick) <sup>OMCI decoding for Wireshark by [@tdmadam](https://github.com/tdmadam)</sup>
     * [UART](Docs/UART.md)
-    * [Health Status Reports](https://github.com/Anime4000/RTL960x/issues/99#issuecomment-1611726668) <sup>Mikrotik script by [@smnrock](https://github.com/smnrock), sending health report via Telegram Bot</sup>
-6. [TWCGPON657 × V2801F Firmware](Firmware/TWCGPON657/README.md)
-7. [V2801F Auto Reboot](Docs/V2801F.md)
-8. [Firmware Emulator](Tools/emulator)
-9. Keygen
+7. [TWCGPON657 × V2801F Firmware](Firmware/TWCGPON657/README.md)
+8. [V2801F Auto Reboot](Docs/V2801F.md)
+9. [Firmware Emulator](Tools/emulator)
+10. Keygen
     * [V2801F](https://github.com/Anime4000/RTL960x/blob/main/Docs/VS_AUTH_KEY.md)
     * [DFP-34X-2C2](https://gist.github.com/rajkosto/29c513b96ea6262d2fb1f965a52ce16f)
-10. [Contributors](#rtl960x-hacking-contributors)
+11. [Contributors](#rtl960x-hacking-contributors)
 
 # Success Story
 List of users has successfully ditch stock ONU!
