@@ -152,9 +152,11 @@ If `PON_MODE=3` is set, `FIBER_MODE` become available and update `/proc/fiber_mo
 > Enter `echo 3 > /proc/fiber_mode` can prevent V2801F from auto reboot, giving you time to fix `VS_AUTH_KEY` or firmware update, this will put XPON Stick become Ethernet Mode.
 
 ## `OMCI_VEIP_SLOT_ID`
-> Integer Value, Default is 255
+> Integer Value, Default is 255. Correct value is 14
 
-Virtual Ethernet Interface Point Slot Id, you may need find VEIP Id from old ONU, try save configuration and find `veip`, for example: [Huawei HG8240H5](https://github.com/Anime4000/Hacking_Huawei_HG8240H5_ONT/blob/master/xml/hw_ctree.xml#L109)
+This command controls the Virtual Ethernet Interface Point (VEIP) Slot ID within the Optical Network Unit (ONU) configuration. GitHub user [@rajkosto](https://github.com/Anime4000/RTL960x/issues/107#issuecomment-1352368166) has contributed additional insights to enhance the understanding and usage of this command. [ChatGPT Full Explaination](VEIP.md)
+
+You may need find VEIP Id from old ONU, try save configuration and find `veip`, for example: [Huawei HG8240H5](https://github.com/Anime4000/Hacking_Huawei_HG8240H5_ONT/blob/master/xml/hw_ctree.xml#L109)
 
 ## `VS_AUTH_KEY`
 > 32 Hexadecimal number *V2801F Only!*
