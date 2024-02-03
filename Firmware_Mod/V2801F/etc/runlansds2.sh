@@ -13,14 +13,16 @@ sleep 45
 
 lan_sds_mode=`flash get LAN_SDS_MODE | sed 's/LAN_SDS_MODE=//g'`
 
-case "$lan_sds_mode" in
-	5)
-		echo 5 > /proc/lan_sds/lan_sds_cfg
-		;;
-	*)
-		echo 4 > /proc/lan_sds/lan_sds_cfg
-		;;
-esac
+if [ "$lan_sds_mode" -ge 4 ]; then
+	case "$lan_sds_mode" in
+		5)
+			echo 5 > /proc/lan_sds/lan_sds_cfg
+			;;
+		*)
+			echo 4 > /proc/lan_sds/lan_sds_cfg
+			;;
+	esac
+fi
 
 echo "=========================="
 echo "Anime4000 2.5G HiSGMII Fix"
