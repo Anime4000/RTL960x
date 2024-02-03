@@ -8,7 +8,7 @@ echo "Anime4000 2.5G HiSGMII Fix"
 echo "=========================="
 echo "Pause for few seconds to allow boot sequence to complete!"
 
-sleep 45
+sleep 37
 
 lan_sds_mode=`flash get LAN_SDS_MODE | sed 's/LAN_SDS_MODE=//g'`
 
