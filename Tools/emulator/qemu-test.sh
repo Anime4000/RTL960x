@@ -175,7 +175,7 @@ echo "Unmounting..."
 rm -rf "$CHDIR/usr/bin"
 
 echo "Repacking squashfs-root: rootfs"
-mksquashfs squashfs-root rootfs -b 1048576 -comp lzma
+mksquashfs squashfs-root rootfs -b 131072 -comp lzma
 
 echo "Regenerate firmware: rtl9601c1_modified.tar"
 md5sum fwu.sh > md5.txt
