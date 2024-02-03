@@ -105,7 +105,7 @@
 						<label for="password">Password</label>
 						<input type="password" id="password" name="password" placeholder="Enter your password" class="td1">
 					</div>
-					<input class="btn" type="submit" value="<% multilang("737" "LANG_LOGIN"); %>" name="save" onClick="setpass(this)">
+					<input class="btn" type="submit" value="<% multilang("737" "LANG_LOGIN"); %>" name="save" onClick="setpass()">
 					<input class="btn" type="hidden" value="/admin/login.asp" name="submit-url">
 				</div>
 			</form>
