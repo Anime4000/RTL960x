@@ -8,7 +8,7 @@
 | Stick | SoC | NAND | Mode | 4-port `EthUni` | 2.5Gb |
 |-------|-----|------|------|-----------------|-------|
 | [VSOL V2801F](https://www.amazon.com/Universal-Stick-Address-Supported-Attention/dp/B08C818JSQ) | `RTL9601CI` | 8MiB (64Mb) | VEIP, PPTP | YES | MOD |
-| T&W TWCGPON657 | `RTL9601CI` | 16MiB (128Mb) | VEIP, PPTP | [`C00R657V2801F`](Firmware/TWCGPON657/C00R657V2801F_V1.9.0-220404.tar) | MOD |
+| T&W TWCGPON657 | `RTL9601CI` | 16MiB (128Mb) | VEIP, PPTP | [`V1.9.0-240204`](Firmware/TWCGPON657/TWCGPON657_V1.9.0-240204.tar) | MOD |
 | [Ubiquiti UFiber Instant](https://store.ui.com/collections/operator-ufiber/products/uf-instant) | `RTL9601CI` | 8MiB (64Mb) | VEIP, PPTP | NO | NO |
 | ODI DFP-34X-2C2 | `RTL9601D` | 8MiB (64Mb) | VEIP, PPTP | [`220304`](https://github.com/Anime4000/RTL960x/blob/main/Firmware/DFP-34X-2C2/M110_sfp_ODI_220304.tar) | YES |
 | [Nokia G-010S-Q](https://github.com/Anime4000/RTL960x/issues/52#issuecomment-1208424756) | `RTL9601CI` | 16MiB (128Mb) | ? | ? | ? ||
