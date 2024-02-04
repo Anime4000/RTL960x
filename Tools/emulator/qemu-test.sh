@@ -166,16 +166,15 @@ sed -i 's/<Value Name="LAN_SDS_MODE" Value="5"\/>/<Value Name="LAN_SDS_MODE" Val
 sed -i 's/<title>BroadBand Device Webserver<\/title>/<title>xPON ONU BRIDGE<\/title>/g' "$CHDIR/home/httpd/web/index.html"
 
 echo "Fix HTML Syntax"
-find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/<BODY/<body/g' {} +
+find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/<BODY/<body style="font-family: Verdana, sans-serif;" /g' {} +
 find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/<! Copyright/<!-- Copyright/g' {} +
 find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/Reserved. ->/Reserved. -->/g' {} +
-find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/<body/<body style="font-family: Verdana, sans-serif;" /g' {} +
 
 echo "Unmounting..."
 rm -rf "$CHDIR/usr/bin"
 
 echo "Repacking squashfs-root: rootfs"
-mksquashfs squashfs-root rootfs -b 1048576 -comp lzma
+mksquashfs squashfs-root rootfs -b 131072 -comp lzma
 
 echo "Regenerate firmware: rtl9601c1_modified.tar"
 md5sum fwu.sh > md5.txt
