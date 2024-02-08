@@ -91,6 +91,7 @@ fi
 
 echo "RTL9601C1 Emulator is Running!"
 chroot "$CHDIR" qemu-mips-static "/bin/sh"
+# chroot "$CHDIR" qemu-aarch64-static "/bin/sh"
 echo "User End QEMU..."
 
 echo "Clean-up"
@@ -173,8 +174,12 @@ find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/Reserved. ->/Reserved. -->/
 echo "Unmounting..."
 rm -rf "$CHDIR/usr/bin"
 
+# Extract compression and blocksize values using grep with regex
+compression=$(binwalk rootfs.original | grep -oP "compression:\K[^,]+")
+blocksize=$(binwalk rootfs.original | grep -oP "blocksize:\K[^,]+" | awk '{print $1}')
+
 echo "Repacking squashfs-root: rootfs"
-mksquashfs squashfs-root rootfs -b 131072 -comp lzma
+mksquashfs squashfs-root rootfs -comp $compression -b $blocksize
 
 echo "Regenerate firmware: rtl9601c1_modified.tar"
 md5sum fwu.sh > md5.txt
