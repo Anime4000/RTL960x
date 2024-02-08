@@ -181,14 +181,20 @@ blocksize=$(binwalk rootfs.original | grep -oP "blocksize:\K[^,]+" | awk '{print
 echo "Repacking squashfs-root: rootfs"
 mksquashfs squashfs-root rootfs -comp $compression -b $blocksize
 
-echo "Regenerate firmware: rtl9601c1_modified.tar"
-md5sum fwu.sh > md5.txt
-md5sum fwu_ver >> md5.txt
-md5sum rootfs >> md5.txt
-md5sum uImage >> md5.txt
+echo "Regenerate firmware: rtl960x_modified.tar"
+> md5.txt
+
+for file in *; do
+    if [[ "$file" == *.original || "$file" == md5.txt || -d "$file" && "$file" == squashfs-root ]]; then
+        echo "Skip $file as not wanted in firmware package!"
+        continue
+    fi
+
+    md5sum "$file" >> md5.txt
+done
 
 echo "Repacking firmware: rtl960x_modified.tar"
-tar -cvf ../rtl960x_modified.tar fwu.sh fwu_ver md5.txt rootfs uImage
+tar -cvf ../rtl960x_modified.tar --exclude='*.original' --exclude='squashfs-root' *
 
 echo ""
 echo "Firmware Repacking Complete!"
