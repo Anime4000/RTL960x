@@ -36,3 +36,12 @@ To enable 2.5G (HiSGMII PHY) on your TP-Link Archer BE800, follow these steps:
 
    - The 2.5G mode activation is not persistent across power loss or router reboots. You will need to re-enter the commands after each occurrence.
    - Exercise caution when using debug features and refer to the router's documentation for additional guidance on the commands and their implications.
+
+# Troubleshoot
+![image](https://github.com/Anime4000/RTL960x/assets/1908715/b4ebef84-c1a5-4622-be4b-776f30f607d5)
+
+Before using GPON Stick, make sure use old ONT in bridge mode then setup BE800 the usual way
+
+once you have internet, unplug the ONT Ethernet cable and plug GPON Stick
+
+once have internet via GPON Stick, proceed to debug command and enter the command above
