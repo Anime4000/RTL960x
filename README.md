@@ -19,8 +19,8 @@
 | [VSOL V2802RH](https://github.com/Anime4000/RTL960x/discussions/179) | `RTL9601D` | 4MiB (32Mb) | ? | NO | YES, 1 port |
 | [D-Link DPN-FX3060V](https://forum.lowyat.net/index.php?showtopic=4925452&view=findpost&p=107551516) | `RTL9607DQ` | 256MiB (2048Mb) | VEIP, PPTP | YES | NO |
 | [SkyWorth GN630E](https://cdn.discordapp.com/attachments/962438081397522452/1164384220123242527/2.5G_UONU_WORK_INSTRUCTIONS_2hsba.pdf) | `RTL960x` ? | ? | VEIP, PPTP | YES | YES, 1 port |
-
-*The WebGUI of SkyWorth GN630E look alot like V2801F and HGU ODI Firmware*
+> [!NOTE]
+> The WebGUI of SkyWorth GN630E look alot like V2801F and HGU ODI Firmware
 
 ## Other
 | Stick               | Mode     | SoC       | NAND | Mode       | 4-port `EthUni` |
@@ -35,10 +35,10 @@
 |---------------------|----------|-----------|------|------|-----------------|
 | [Hisense LTF7263-BH+](https://item.taobao.com/item.htm?spm=a230r.1.14.1.5d1b2e4eUxyGfI&id=658650417501) | [10G](https://twitter.com/YuukiJapanTech/status/1581277608729116672)[-EPON](https://twitter.com/YuukiJapanTech/status/1581127940468678658)/[Multi Mode](https://twitter.com/YuukiJapanTech/status/1632025860999090178) | Realtek   | ?    | ?    | ? |
 | [Hisense LTF7267-BH+](https://item.taobao.com/item.htm?spm=a230r.1.14.1.5d1b2e4eUxyGfI&id=658650417501) | [XGSPON Multi Mode](https://twitter.com/YuukiJapanTech/status/1632025860999090178)   | Realtek   | ?    | ?    | ? |
-
-Hisense 10G xPON was checked by [@YuukiJapanTech](https://twitter.com/YuukiJapanTech), frimware 'might' that support multiple PON mode...
-
-For **XG/XGS/10G-E PON Hacking**, checkout [@YuukiJapanTech](https://github.com/YuukiJapanTech) on [Hacking CA8271x XGS-PON Stick](https://github.com/YuukiJapanTech/CA8271x)
+> [!TIP]
+> Hisense 10G xPON was checked by [@YuukiJapanTech](https://twitter.com/YuukiJapanTech), frimware 'might' that support multiple PON mode...
+> 
+> For **XG/XGS/10G-E PON Hacking**, checkout [@YuukiJapanTech](https://github.com/YuukiJapanTech) on [Hacking CA8271x XGS-PON Stick](https://github.com/YuukiJapanTech/CA8271x)
 
 # VEIP vs PPTP
 | Code | Full name | Meaning |
@@ -210,6 +210,7 @@ Here list of xPON Stick on the market that support 4-port ONU Emulation:
     </tbody>
 </table>
 
+> [!TIP]
 > ✔️ Port Emulation Support
 >
 > ❌ Not Supported
