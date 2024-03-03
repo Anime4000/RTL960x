@@ -25,7 +25,7 @@
 | `50ccd3e6c77ca318ac9c0b2ee1cc1055c297acff480349ee68bab1ee829b0ced` | M110_sfp_ODI_240202.tar |
 
 # HGD SFU Interchangable
-If you upgrade IGD to SFU firmware or vice-versa, it's require to run factory reset via [erase `mtd3` partition](../../Docs/factory_reset.md#reset), then generate new MAC KEY based on MAC Address that you want to set `echo -n "hsgq1.9aMACADDRESS" | md5sum` (replace “MACADDRESS” with the desired MAC Address in uppercase) and reboot.
+If you upgrade IGD to SFU firmware or vice-versa, it's require to run factory reset via [erase `mtd3` partition](../../Docs/factory_reset.md#reset), then [generate new MAC KEY](../../Docs/Setup_Stick.md#dfp-34x-2c2-1) based on MAC Address that you want to set and reboot.
 
 # `M110_sfp_ODI_220817.tar`
 This firmware has custom fix and script, options are:
