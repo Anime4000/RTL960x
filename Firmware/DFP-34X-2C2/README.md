@@ -13,6 +13,7 @@
 | `M110_sfp_ODI_220923.tar`        | SFU  | ✔️ | provided by [@lanseyujie](https://github.com/Anime4000/RTL960x/issues/24#issuecomment-1297975439) |
 | `M114_sfp_ODI_hybrid_220916.tar` | HGU  | ❌ | provided by [@lanseyujie](https://github.com/Anime4000/RTL960x/issues/24#issuecomment-1297975439) |
 | `M114_sfp_ODI_hybrid_221209.tar` (HSGQ) | HGU  | ❌ | provided by [@physx2494 ](https://github.com/Anime4000/RTL960x/discussions/148#discussioncomment-5802985) |
+| `M110_sfp_ODI_240202.tar`        | SFU  | ✔️ |  |
 
 # Checksum
 | SHA256 | File name |
@@ -21,9 +22,10 @@
 | `e35f72dca3bb7f39be44167e0bb753f15f357ec4eb5345e8ce1e0d90179a38ab` | M110_sfp_ODI_220923.tar |
 | `dd3741cbb8cb7926fdaa6386750453738dba773053a7090cc10c8018c7bb265d` | M114_sfp_ODI_hybrid_220916.tar |
 | `94348FF82019562AB0D10814D307F5594BC8C4108676E196AA34FE1C413A3C15` | M114_sfp_ODI_hybrid_221209.tar |
+| `50ccd3e6c77ca318ac9c0b2ee1cc1055c297acff480349ee68bab1ee829b0ced` | M110_sfp_ODI_240202.tar |
 
 # HGD SFU Interchangable
-If you upgrade IGD to SFU firmware or vice-versa, it's require to run factory reset via [erase `mtd3` partition](../../Docs/factory_reset.md#reset), then generate new MAC KEY based on MAC Address that you want to set
+If you upgrade IGD to SFU firmware or vice-versa, it's require to run factory reset via [erase `mtd3` partition](../../Docs/factory_reset.md#reset), then generate new MAC KEY based on MAC Address that you want to set `echo -n "hsgq1.9aMACADDRESS" | md5sum` (replace “MACADDRESS” with the desired MAC Address in uppercase) and reboot.
 
 # `M110_sfp_ODI_220817.tar`
 This firmware has custom fix and script, options are:
