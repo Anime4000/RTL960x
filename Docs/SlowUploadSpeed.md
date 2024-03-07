@@ -74,6 +74,7 @@ reboot
 
 ## `diag`
 ```
+/bin/diag port set auto-nego port all ability asy-flow-control
 /bin/diag bandwidth set egress port all rate 4194296
 /bin/diag bandwidth set ingress port all rate 4194296
 ```
