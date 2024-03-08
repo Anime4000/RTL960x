@@ -34,7 +34,8 @@ nc 192.168.1.1 12345 < file
 | Model       | Login Screen | Status |
 |-------------|-----------------------------------------------|------------------------------------------------|
 | V2801F      | ![GUI](../Docs/Images/webgui/1-login.png)     | ![GUI](../Docs/Images/webgui/2-status.png)     |
-| DFP-34X-2C2 | ![GUI](../Docs/Images/webgui-dfp/1-login.png) | ![GUI](../Docs/Images/webgui-dfp/2-status.png) |
+| DFP-34X-2C2 gui V2801F fork | ![GUI](../Docs/Images/webgui-dfp/1-login.png) | ![GUI](../Docs/Images/webgui-dfp/2-status.png) |
+| DFP-34X-2C2 dark by [imoize](https://github.com/imoize) | ![GUI](../Docs/Images/webgui-dfp/4-login.png) | ![GUI](../Docs/Images/webgui-dfp/5-status.png) |
 
 # Contribution
 We welcome contributions from everyone to enhance the firmware, making it more accessible and adhering to open standards (Universal).
