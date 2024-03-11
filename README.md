@@ -59,7 +59,7 @@
     * [2.5GbE Compatibility](Docs/2.5Gb.md)
 4. Health Reporting
     * [Telegram](https://github.com/Anime4000/RTL960x/issues/99#issuecomment-1611726668) <sup>Mikrotik script by [@smnrock](https://github.com/smnrock), sending health report via Telegram Bot</sup>
-    * [Grafana](https://github.com/Anime4000/RTL960x/issues/99#issuecomment-1911530327) <sup>Grafana script by [@Strykar](https://github.com/Strykar), display PON Stats neatly!</sup>
+    * [Grafana](https://github.com/Anime4000/RTL960x/issues/99#issuecomment-1911530327) <sup>Grafana script by [@Strykar](https://github.com/Strykar), display PON Stats neatly! [Project Repo](https://github.com/Strykar/GPON)</sup>
 6. [Diagnostic](Docs/DIAG.md)
     * [Factory Reset](Docs/factory_reset.md)
     * [Switch/Roll back Firmware](Docs/fw_part.md)
