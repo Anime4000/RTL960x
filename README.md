@@ -3,6 +3,9 @@
 * GPON market is a mess, plus explicit OMCI cause ONU Stick did not work
 * [4-port ONU Emulation](#4-port-onu-emulation) Table
 
+> [!WARNING]
+> This guide is intended for advanced users who are willing to accept associated risks. If you are unsure, it is strongly advised not to proceed. Incorrect settings may result in your OLT (Optical Line Terminal) banning you from accessing their network and the internet.
+
 # xPON SFP ONU
 ## RTL960x Family
 | Stick | SoC | NAND | Mode | 4-port `EthUni` | 2.5Gb |
@@ -79,6 +82,7 @@
     * [V2801F](https://github.com/Anime4000/RTL960x/blob/main/Docs/VS_AUTH_KEY.md)
     * [DFP-34X-2C2](https://gist.github.com/rajkosto/29c513b96ea6262d2fb1f965a52ce16f)
 11. [Contributors](#rtl960x-hacking-contributors)
+12. [Hack-Gpon.org - Worldwide wiki on how to access, change and edit ONTs](https://hack-gpon.org/) <sup>⚠️ Advanced user only, study how xPON work</sup>
 
 # Success Story
 List of users has successfully ditch stock ONU!
@@ -89,8 +93,7 @@ List of users has successfully ditch stock ONU!
 5. [Orange Fiber at 2Gbps (MikroTik 10Gbps CCR2004 router & ONT SFP+)](https://lafibre.info/remplacer-livebox/guide-de-connexion-fibre-directement-sur-un-routeur-voire-meme-en-2gbps/) <sup>In <a href="https://translate.google.com/">French</sup>
 6. [MagtiCom Fiber in Georgia](https://telegra.ph/Georgia-DFP-34X-2C2-and-MagtiCom-04-23)
 7. [T-Mobile Netherlands replacing Huawei ONT](https://providerforum.nl/topics/vervangen-t-mobile-huawei-gpon.95394/page-3#post-1348257) <sup>[English version](https://providerforum-nl.translate.goog/topics/vervangen-t-mobile-huawei-gpon.95394/page-3?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp#post-1348257)</sup>
-8. [Hack-Gpon.org - Worldwide wiki on how to access, change and edit ONTs](https://hack-gpon.org/)
-9. [SilkNet Fiber in Georgia](https://telegra.ph/Georgia-DFP-34X-2C2-and-SilkNet-11-07)
+8. [SilkNet Fiber in Georgia](https://telegra.ph/Georgia-DFP-34X-2C2-and-SilkNet-11-07)
 
 # Where to buy?
 ## ODI DFP-34X-2C2 <sup>Recommended!</sup>
