@@ -95,6 +95,8 @@ chroot "$CHDIR" qemu-mips-static "/bin/sh"
 echo "User End QEMU..."
 
 echo "Clean-up"
+rm -f "$CHDIR/custom.sh"
+rm -f "$CHDIR/home/httpd/web/.htaccess"
 rm -f "$CHDIR/home/httpd/web/graphics/sagemlogo1.gif"
 rm -f "$CHDIR/home/httpd/web/graphics/sagemlogo2.gif"
 rm -f "$CHDIR/home/httpd/web/graphics/technxt logo.jpg"
