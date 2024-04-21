@@ -11,6 +11,29 @@ for ME in 00002 00005 00006 00007 00011 00024 00045 00047 00049 00050 00052 0007
 $ME"\n\n";omcicli mib get $ME; done;
 ```
 
+## Overview
+### Card Holder
+The Card Holder section of the MIB defines the types of cards or modules installed in the ONT.
+
+| MIB | EntityId | ActualType | ExpectedType | Description |
+|---|--------|-----|-----|-----------------|
+| 5 | 0x0601 | 32  | 32  | POTS Cardholder (Plain Old Telephone Service) |
+| 5 | 0x0101 | 47  | 47  | UNI Cardholder (User Network Interface) |
+| 5 | 0x0e01 | 48  | 48  | VEIP Cardholder (Virtual Ethernet Interface Point) |
+| 5 | 0x0180 | 248 | 248 | ANI Cardholder (Access Network Interface) |
+
+### Circuit Pack
+The Circuit Pack section of the MIB describes the various types of circuit packs or line cards installed in the ONT.
+
+| MIB | EntityId | ActualType | NumOfPorts | Description |
+| --- | --- | --- | --- | --- |
+| 6 | 0x0601 | 32 | 2 | POTS Circuit Pack (Plain Old Telephone Service) |
+| 6 | 0x0101 | 47 | 4 | UNI Circuit Pack (User Network Interface) |
+| 6 | 0x0e01 | 48 | 1 | VEIP Circuit Pack (Virtual Ethernet Interface Point) |
+| 6 | 0x0180 | 248 | 1 | ANI Circuit Pack (Access Network Interface) |
+
+Note: EntityId may vary, but the ones listed are commonly used.
+
 # Important
 ## Verify Circuit Pack
 `omcicli mib get 6`
