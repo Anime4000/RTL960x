@@ -19,6 +19,8 @@ flash get HW_SERIAL_NO
 Use value from table below
 
 # OMCI Info
+Below are essential OMCI ONU details required by Universal OLT. For a comprehensive understanding, explore various [MIB datasets](OMCI_CLI.md).
+
 | `GPON_ONU_MODEL` | `GPON_SN`    |`PON_VENDOR_ID` | `HW_HWVER`      | `OMCI_SW_VER#`   | Owner     | ISP |
 |------------------|--------------|----------------|-----------------|------------------|-----------|-----|
 | EG8010Hv6        | HWTC12345678 | HWTC           | 260F.A          | V5R020C10S035    | lwk523    | [Allo](https://www.allo.my/city-broadband/) |
