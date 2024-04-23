@@ -6,7 +6,21 @@
 > [!WARNING]
 > This guide is intended for advanced users who are willing to accept associated risks. If you are unsure, it is strongly advised not to proceed. Incorrect settings may result in your OLT (Optical Line Terminal) banning you from accessing their network and the internet.
 
+> [!NOTE]
+> Save yourself the hassle of tinkering with technical details by purchasing pre-configured xPON ONU SFP modules tailored to your country and ISP.
+
+| Country | Reseller | ISP Support |
+|---------|----------|-------------|
+| Malaysia | [CureComp Technology](https://www.facebook.com/CureComp) | TM-Unifi, TM-Maxis, TIME, Allo (Huawei) |
+
+*If your country isn't listed and you're a reseller confident in compatibility with your country and ISP, feel free to edit this information.*
+
 # xPON SFP ONU
+<a href="https://github.com/Anime4000/RTL960x/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Anime4000/RTL960x" />
+</a>
+
+Join us in enhancing this RTL960x documentation repository to support the xPON community. Every piece of information, no matter how small, can make a significant impact on others. Got spare knowledge about ONU Box functionalities? Share it by dumping the [information here](Docs/Stock_ONU.md)! Together, let's make xPON more accessible and straightforward!
 ## RTL960x Family
 | Stick | SoC | NAND | Mode | 4-port `EthUni` | 2.5Gb |
 |-------|-----|------|------|-----------------|-------|
@@ -97,12 +111,8 @@ List of users has successfully ditch stock ONU!
 7. [T-Mobile Netherlands replacing Huawei ONT](https://providerforum.nl/topics/vervangen-t-mobile-huawei-gpon.95394/page-3#post-1348257) <sup>[English version](https://providerforum-nl.translate.goog/topics/vervangen-t-mobile-huawei-gpon.95394/page-3?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp#post-1348257)</sup>
 8. [SilkNet Fiber in Georgia](https://telegra.ph/Georgia-DFP-34X-2C2-and-SilkNet-11-07)
 
-# Where to buy?
-## ODI DFP-34X-2C2 <sup>Recommended!</sup>
-1. [HSGQ @ Taobao Mall](https://m.tb.cn/h.fJc2RFv?tk=xZ4r2RPCGvj)
-2. [Fibershow @ AliExpress](https://www.aliexpress.com/item/1005003515662920.html) <sup>Choose XPON</sup>
-3. [CureComp Technology](https://www.facebook.com/CureComp) Malaysia
-
+# xPON ONU SFP
+## DFP-34X-2C2 <sup>Recommended!</sup>
 ### Feature
 * Much cheaper than **VSOL V2801F** & **CarlitoxxPro CPGOS03-0490 v2.0**!
 * Using latest SoC **RTL9601D**!
@@ -113,9 +123,7 @@ List of users has successfully ditch stock ONU!
 * Automatic/Transparent bridge like VSOL V2801F! *<sup>Using [`220304`](https://github.com/Anime4000/RTL9601C1/blob/main/Firmware/DFP-34X-2C2/M114_sfp_ODI_220304.tar) Firmware</sup>*
 * Support 4-port ONU Emulation
 
-## V2801F Alternative
-1. [TWCGPON657](https://item.taobao.com/item.htm?spm=a1z09.2.0.0.c0552e8d7UBYLF&id=597031866488) with [V2801F Firmware](Firmware/TWCGPON657/README.md) as V2801F substitute
-2. Opton GP801R <sup>Found by [@AreYouLoco](https://github.com/AreYouLoco)</sup>
+## V2801F
 ### Feature
 * Limited 2.5GbE Support *<sup>wrong `LAN_SDS_MODE` can lock you out, no auto switch</sup>*
 * **HEX** PLOAM Password require modification from [@zry98](https://github.com/zry98/SFP-GPON-ONU#modules-using-rtl8672--rtl9601c-chipset)
@@ -230,12 +238,5 @@ Here list of xPON Stick on the market that support 4-port ONU Emulation:
 
 ## Multiple Service
 ![HG8240H5](Docs/Images/Ports%20Provisioning%20Multi%20Port%20Service.png)
-
-# RTL960x Hacking Contributors
-<a href="https://github.com/Anime4000/RTL960x/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Anime4000/RTL960x" />
-</a>
-
-Join us in enhancing this RTL960x documentation repository to support the xPON community. Every piece of information, no matter how small, can make a significant impact on others. Got spare knowledge about ONU Box functionalities? Share it by dumping the [information here](Docs/Stock_ONU.md)! Together, let's make xPON more accessible and straightforward!
 
 ## Good Luck!
