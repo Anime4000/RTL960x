@@ -43,7 +43,11 @@ Note: EntityId may vary, but the ones listed are commonly used.
 
 ## PPTP
 `omcicli mib get 11`
-> also define as `4-port Emulation` set Administrative State (`AdminState`) to 0 to prevent OLT disable LAN ports
+> also define as `4-port Emulation` set Administrative State (`AdminState`) to 0 to prevent OLT disable LAN ports>
+
+## POTS UNI
+`omcicli mib get 53`
+> Define how Plain Old Telephone Service usage on the ONU
 
 ## Verify VLAN Tag Filter
 `omcicli mib get 84`
@@ -51,6 +55,9 @@ Note: EntityId may vary, but the ones listed are commonly used.
 
 ## Verify OLT vendor ID
 `omcicli mib get 131`
+
+## VoIP Config Data
+`omcicli mib get 138`
 
 ## Extended VLAN config
 `omcicli mib get 171`
@@ -65,8 +72,13 @@ Note: EntityId may vary, but the ones listed are commonly used.
 ## Check T-CONT
 `omcicli mib get 262`
 
-## UNIG
+## ANI-G
+`omcicli mib get 263`
+> PON Side
+
+## UNI-G
 `omcicli mib get 264`
+> LAN Side
 
 ## Check Priority Queues
 `omcicli mib get 277`
