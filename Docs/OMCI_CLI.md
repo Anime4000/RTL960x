@@ -41,7 +41,7 @@ Note: EntityId may vary, but the ones listed are commonly used.
 ## Verify software version
 `omcicli mib get 7`
 
-## Ethernet Provisioning
+## PPTP
 `omcicli mib get 11`
 > also define as `4-port Emulation` set Administrative State (`AdminState`) to 0 to prevent OLT disable LAN ports
 
@@ -54,7 +54,7 @@ Note: EntityId may vary, but the ones listed are commonly used.
 
 ## Extended VLAN config
 `omcicli mib get 171`
-> This allow to see VLAN mapping either 1:1 or 1:any
+> This allow to see VLAN mapping either 1:1 or 1:any, also define which VLAN going to target ONT LAN Port, this are responsible issue of 4-port
 
 ## Verify ONT attributes part 1
 `omcicli mib get 256`
@@ -65,7 +65,7 @@ Note: EntityId may vary, but the ones listed are commonly used.
 ## Check T-CONT
 `omcicli mib get 262`
 
-## Unig ? (VEIP)
+## UNIG
 `omcicli mib get 264`
 
 ## Check Priority Queues
@@ -77,3 +77,4 @@ Note: EntityId may vary, but the ones listed are commonly used.
 
 ## VEIP
 `omcicli mib get 329`
+> Another way to access VLAN by using Virtual Ethernet, commonly use for VoIP and TR-069
