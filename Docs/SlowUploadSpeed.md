@@ -7,6 +7,11 @@ Luckygecko1 @ Reddit](https://www.reddit.com/r/mikrotik/comments/14ky6s1/rb5009_
 
 ![image](https://github.com/Anime4000/RTL960x/assets/1908715/c5cedc9f-a80b-4fa4-a22a-44f79fd01554)
 
+### Terminal
+```
+/interface/ethernet/switch/port/ set sfp-sfpplus1 egress-rate=1222M
+```
+
 
 ## Realtek ONU
 ISP bought cheap ONU or ONR (Optical Network Router) and it using Realtek SoC where share similar to RTL960x, for example `D-Link DPN-FX3060V`
