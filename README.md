@@ -11,7 +11,7 @@
 
 | Country | Reseller | ISP Support |
 |---------|----------|-------------|
-| Malaysia | [CureComp Technology](https://www.facebook.com/CureComp) | TM-Unifi, TM-Maxis, TIME, Allo (Huawei) |
+| Malaysia | [Forum Post](https://forum.lowyat.net/topic/4925452) | TM-Unifi, TM-Maxis, TIME, Allo (Huawei) |
 
 *If your country isn't listed and you're a reseller confident in compatibility with your country and ISP, feel free to edit this information.*
 
