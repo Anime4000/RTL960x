@@ -96,9 +96,11 @@ Join us in enhancing this RTL960x documentation repository to support the xPON c
 10. Keygen
     * [V2801F](https://github.com/Anime4000/RTL960x/blob/main/Docs/VS_AUTH_KEY.md)
     * [DFP-34X-2C2](https://gist.github.com/rajkosto/29c513b96ea6262d2fb1f965a52ce16f)
-11. [SFP EEPROM Programming](https://github.com/Anime4000/RTL960x/discussions/250) <sup>Disable 1000base-LX in EEPROM making Banana pi BPI-R3 + Openwrt 23.05.2 use 2500base-X by default</sup>
-12. [Contributors](#rtl960x-hacking-contributors)
-13. [Hack-Gpon.org - Worldwide wiki on how to access, change and edit ONTs](https://hack-gpon.org/) <sup>⚠️ Advanced user only, study how xPON work</sup>
+11. SPI/EEPROM Programming 
+    * [SPI Flash & EEPROM](https://github.com/Anime4000/RTL960x/discussions/286)
+    * [Modify EEPROM for 2.5G Autodetect](https://github.com/Anime4000/RTL960x/discussions/250) <sup>Disable 1000base-LX in EEPROM making Banana pi BPI-R3 + Openwrt 23.05.2 use 2500base-X by default</sup>
+13. [Contributors](#rtl960x-hacking-contributors)
+14. [Hack-Gpon.org - Worldwide wiki on how to access, change and edit ONTs](https://hack-gpon.org/) <sup>⚠️ Advanced user only, study how xPON work</sup>
 
 # Success Story
 List of users has successfully ditch stock ONU!
