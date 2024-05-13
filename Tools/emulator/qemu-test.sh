@@ -94,8 +94,8 @@ chroot "$CHDIR" qemu-mips-static "/bin/sh"
 # chroot "$CHDIR" qemu-aarch64-static "/bin/sh"
 echo "User End QEMU..."
 
-echo "Execute custom.sh from outside"
-/bin/bash "$DIR/custom.sh" "$CHDIR"
+echo "Execute custom.sh from outside CHROOT"
+/bin/bash "$DIR/custom.sh" "$DIR/${FILENAME%.*}/$CHDIR"
 
 echo "Clean-up"
 rm -f "$CHDIR/custom.sh"
