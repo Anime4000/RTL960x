@@ -94,6 +94,9 @@ chroot "$CHDIR" qemu-mips-static "/bin/sh"
 # chroot "$CHDIR" qemu-aarch64-static "/bin/sh"
 echo "User End QEMU..."
 
+echo "Execute custom.sh from outside"
+/bin/bash "$DIR/custom.sh" "$CHDIR"
+
 echo "Clean-up"
 rm -f "$CHDIR/custom.sh"
 rm -f "$CHDIR/home/httpd/web/.htaccess"
