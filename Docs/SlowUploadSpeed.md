@@ -5,11 +5,11 @@ The `slow upload speed` when ODI DFP-34X-2C2 in 2.5Gb mode, this is known issue 
 Many Mikrotik devices, like the RB5009, can flood GPON with 2.5Gb links, exceeding GPON's 1.25Gb upload capacity. This can result in packet flooding and late discards. To mitigate this issue, consider applying the tweak mentioned by [
 Luckygecko1 @ Reddit](https://www.reddit.com/r/mikrotik/comments/14ky6s1/rb5009_poor_25g_ethernet_performance/jq0gjer/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button)
 
-![image](https://github.com/Anime4000/RTL960x/assets/1908715/c5cedc9f-a80b-4fa4-a22a-44f79fd01554)
+![image](https://github.com/Anime4000/RTL960x/assets/1908715/251a6f1f-47b4-4095-aebc-b826511055a4)
 
 ### Terminal
 ```
-/interface/ethernet/switch/port/ set sfp-sfpplus1 egress-rate=1222M
+/interface/ethernet/switch/port/ set sfp-sfpplus1 egress-rate=1200M
 ```
 
 
