@@ -1087,7 +1087,7 @@ DSP 0 Software Ready!
 [   11.020957] nic_txhook_init: init nic TX Hook functions.
 [   11.026269] [nic_register_txfunc_default-3250] txfunc=(____ptrval____)
 [   11.033430] ca_ni_init_module: platform_driver_register() return ret=0
-rtkbosa: Don‚t care pon mode, use general file
+rtkbosa: Don√¢t care pon mode, use general file
 cat: can't open '/var/config/rtkbosa_k_checksum': No such file or directory
 rtkbosa: checksumold = 
 rtkbosa: Use general file [/var/config/rtkbosa_k.bin]
