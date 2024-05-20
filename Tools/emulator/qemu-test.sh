@@ -172,7 +172,7 @@ sed -i 's/<Value Name="LAN_SDS_MODE" Value="5"\/>/<Value Name="LAN_SDS_MODE" Val
 sed -i 's/<title>BroadBand Device Webserver<\/title>/<title>xPON ONU BRIDGE<\/title>/g' "$CHDIR/home/httpd/web/index.html"
 
 echo "Fix HTML Syntax"
-find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/<BODY/<body style="font-family: Verdana, sans-serif;" /g' {} +
+find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/<BODY/<body style="font-family: Arial,Tahoma,Helvetica,sans-serif;" /g' {} +
 find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/<! Copyright/<!-- Copyright/g' {} +
 find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/Reserved. ->/Reserved. -->/g' {} +
 
