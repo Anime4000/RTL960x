@@ -39,8 +39,6 @@ Below are essential OMCI ONU details required by Universal OLT. For a comprehens
 | PMG4506-T20B     | ZYXE12345678 | ZYXE           | PMG4506-T20B    | P4506R220712     | akw28888 | [Hinet](https://broadband.hinet.net/Broadband/internetManagement/internet/internet/internet_02.do) |
 | G040WQ           | NOKW12345678 | GMTK           | 3FE47772AAAA    | G040WQR201207    | pccr10001 | [Hinet](https://broadband.hinet.net/Broadband/internetManagement/internet/internet/internet_02.do) |
 | EDGG11000        | EDCR12345678 | EDCR           | GG-GAPL100v02   | GG-11000-C003    | Remooh    | [Vivo (Vivo 1/São Paulo region)](https://www.vivo.com.br/para-voce/produtos-e-servicos/para-casa/internet) |
-| G-0425G-P        | NOKG12345678 | 4899           | 3FE49342AAAA    | G0425GR220315    | akw28888 | [Hinet](https://broadband.hinet.net/Broadband/internetManagement/internet/internet/internet_02.do) |
-| XS-0525X-P       | NOKW12345678 | 4899           | 3FE49411AAAA    | XS0525R210706    | akw28888 | [Hinet](https://broadband.hinet.net/Broadband/internetManagement/internet/internet/internet_02.do) |
 | F670L            | ZTEGC457BB2F | ZTEG           | V9.0            | V9.0.11P1N13     | ombuncit | [Indihome](https://indihome.co.id/) |
 | F620             | ZTEGC44EF6FF | ZTEG           | V7.0            | V9.0.10P4N3      | erwin c   | [TM](https://www.unifi.com.my/) |
 | HG8245Q2         | HWTC12345678 | HWTC           | B99.A           | V3R019C10S375    | killme56k | [Claro Brazil](https://www.claro.com.br/internet/banda-larga) |
