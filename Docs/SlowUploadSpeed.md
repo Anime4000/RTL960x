@@ -12,6 +12,22 @@ Luckygecko1 @ Reddit](https://www.reddit.com/r/mikrotik/comments/14ky6s1/rb5009_
 /interface/ethernet/switch/port/ set sfp-sfpplus1 egress-rate=1200M
 ```
 
+```
+/interface/ethernet/ set sfp-sfpplus1 auto-negotiation=no speed=2.5G-baseX rx-flow-control=on tx-flow-control=on
+```
+
+```
+/queue interface set ether1 queue=multi-queue-ethernet-default
+/queue interface set ether2 queue=multi-queue-ethernet-default
+/queue interface set ether3 queue=multi-queue-ethernet-default
+/queue interface set ether4 queue=multi-queue-ethernet-default
+/queue interface set ether5 queue=multi-queue-ethernet-default
+/queue interface set ether6 queue=multi-queue-ethernet-default
+/queue interface set ether7 queue=multi-queue-ethernet-default
+/queue interface set ether8 queue=multi-queue-ethernet-default
+/queue interface set sfp-sfpplus1 queue=multi-queue-ethernet-default
+```
+
 
 ## Realtek ONU
 ISP bought cheap ONU or ONR (Optical Network Router) and it using Realtek SoC where share similar to RTL960x, for example `D-Link DPN-FX3060V`
