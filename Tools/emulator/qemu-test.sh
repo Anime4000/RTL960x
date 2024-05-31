@@ -127,25 +127,16 @@ rm "$CHDIR/home/httpd/web/admin/graphics/topbar.gif"
 cd "$CHDIR/home/httpd/web/admin/graphics"
 ln -s "../../graphics/topbar.gif" "topbar.gif"
 ln -s "../../graphics/router.gif" "router.gif"
-cd "$DIR/${FILENAME%.*}" 
+cd "$DIR/${FILENAME%.*}"
 
-if [ -d "$DIR/custom/etc" ]; then
-	echo "Injecting custom or fix scripts"
-	cp -rf "$DIR/custom/etc" "$CHDIR/"
-	chmod 755 "$CHDIR/etc"
-fi
+echo "Change Default LAN_SDS_MODE"
+sed -i 's/<Value Name="LAN_SDS_MODE" Value="5"\/>/<Value Name="LAN_SDS_MODE" Value="1"\/>/g' "$CHDIR/etc/config_default_hs.xml"
+sed -i 's/<title>BroadBand Device Webserver<\/title>/<title>xPON ONU BRIDGE<\/title>/g' "$CHDIR/home/httpd/web/index.html"
 
-if [ -f "$CHDIR/etc/scripts/fix_sw_ver.sh" ]; then
-	echo "Injecting software version fix scripts"
-	find "$CHDIR/etc/init.d" -type f -exec sed -i 's/\/etc\/insdrv.sh/\/etc\/insdrv.sh\n\/etc\/scripts\/fix_sw_ver.sh/g' {} +
-fi
-
-echo "chmod +x /bin folder, prevent stick become brick!"
-chmod +x "$CHDIR/bin" -R
-chmod +x "$CHDIR/etc/*.sh"
-chmod +x "$CHDIR/etc/init.d" -R
-chmod +x "$CHDIR/etc/scripts" -R
-chown 0:0 "$CHDIR/" -R
+echo "Fix HTML Syntax"
+find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/<BODY/<body style="font-family: Arial,Tahoma,Helvetica,sans-serif;" /g' {} +
+find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/<! Copyright/<!-- Copyright/g' {} +
+find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/Reserved. ->/Reserved. -->/g' {} +
 
 echo "Change Version..."
 if [ -z "$2" ]; then
@@ -167,14 +158,25 @@ else
 	echo "$2" > fwu_ver
 fi
 
-echo "Change Default LAN_SDS_MODE"
-sed -i 's/<Value Name="LAN_SDS_MODE" Value="5"\/>/<Value Name="LAN_SDS_MODE" Value="1"\/>/g' "$CHDIR/etc/config_default_hs.xml"
-sed -i 's/<title>BroadBand Device Webserver<\/title>/<title>xPON ONU BRIDGE<\/title>/g' "$CHDIR/home/httpd/web/index.html"
+date +'%y%m%d' > $CHDIR/home/httpd/web/get_rel.html
 
-echo "Fix HTML Syntax"
-find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/<BODY/<body style="font-family: Arial,Tahoma,Helvetica,sans-serif;" /g' {} +
-find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/<! Copyright/<!-- Copyright/g' {} +
-find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/Reserved. ->/Reserved. -->/g' {} +
+if [ -d "$DIR/custom" ]; then
+	echo "Injecting custom or fix scripts"
+    echo "--- From $DIR/custom -to- $CHDIR"
+	rsync -avhL --info=progress2 "$DIR/custom/" "$CHDIR"
+fi
+
+if [ -f "$CHDIR/etc/scripts/fix_sw_ver.sh" ]; then
+	echo "Injecting software version fix scripts"
+	find "$CHDIR/etc/init.d" -type f -exec sed -i 's/\/etc\/insdrv.sh/\/etc\/insdrv.sh\n\/etc\/scripts\/fix_sw_ver.sh/g' {} +
+fi
+
+echo "chmod +x /bin folder, prevent stick become brick!"
+chmod +x "$CHDIR/bin" -R
+chmod +x "$CHDIR/etc/*.sh"
+chmod +x "$CHDIR/etc/init.d" -R
+chmod +x "$CHDIR/etc/scripts" -R
+chown 0:0 "$CHDIR/" -R
 
 echo "Unmounting..."
 rm -rf "$CHDIR/usr/bin"
@@ -186,7 +188,7 @@ blocksize=$(binwalk rootfs.original | grep -oP "blocksize:\K[^,]+" | awk '{print
 echo "Repacking squashfs-root: rootfs"
 mksquashfs squashfs-root rootfs -comp $compression -b $blocksize
 
-echo "Regenerate firmware: rtl960x_modified.tar"
+echo "Regenerate firmware package!"
 > md5.txt
 
 for file in *; do
@@ -199,11 +201,11 @@ for file in *; do
 done
 
 echo "Repacking firmware: rtl960x_modified.tar"
-tar -cvf ../rtl960x_modified.tar --exclude='*.original' --exclude='squashfs-root' *
+tar -cvf ../${FILENAME%.*}_rel$(date +'%y%m%d').tar --exclude='*.original' --exclude='squashfs-root' *
 
 echo ""
 echo "Firmware Repacking Complete!"
-echo "Location: $(realpath ../rtl960x_modified.tar)"
+echo "Location: $(realpath ../${FILENAME%.*}_rel$(date +'%y%m%d').tar)"
 echo ""
 echo "Anime4000 firmware test script, https://github.com/Anime4000/RTL9601C1"
 echo ""
