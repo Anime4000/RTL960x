@@ -89,13 +89,10 @@ if [ ! -f "$CHDIR/usr/bin/qemu-mips-static" ]; then
 	cp $(which qemu-mips-static) "$CHDIR/usr/bin/"
 fi
 
-echo "RTL9601C1 Emulator is Running!"
+echo "RTL960x Emulator is Running!"
 chroot "$CHDIR" qemu-mips-static "/bin/sh"
 # chroot "$CHDIR" qemu-aarch64-static "/bin/sh"
 echo "User End QEMU..."
-
-echo "Execute custom.sh from outside CHROOT"
-/bin/bash "$DIR/custom.sh" "$DIR/${FILENAME%.*}/$CHDIR"
 
 echo "Clean-up"
 rm -f "$CHDIR/custom.sh"
@@ -159,6 +156,11 @@ else
 fi
 
 date +'%y%m%d' > $CHDIR/home/httpd/web/get_rel.html
+
+if [ -f "$DIR/custom.sh" ]; then
+    echo "Execute custom.sh from outside CHROOT"
+    /bin/bash "$DIR/custom.sh" "$DIR/${FILENAME%.*}/$CHDIR"
+fi
 
 if [ -d "$DIR/custom" ]; then
 	echo "Injecting custom or fix scripts"
