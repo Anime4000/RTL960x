@@ -207,7 +207,7 @@ tar -cvf ../${FILENAME%.*}_rel$(date +'%y%m%d').tar --exclude='*.original' --exc
 
 echo ""
 echo "Firmware Repacking Complete!"
-echo "Location: $(realpath ../${FILENAME%.*}_rel$(date +'%y%m%d').tar)"
+echo "Location: $(realpath ../${FILENAME%.*}-rel$(date +'%y%m%d').tar)"
 echo ""
 echo "Anime4000 firmware test script, https://github.com/Anime4000/RTL9601C1"
 echo ""
