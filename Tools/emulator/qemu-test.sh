@@ -163,7 +163,7 @@ if [ -d "$DIR/custom" ]; then
 	rsync -avhL --info=progress2 "$DIR/custom/" "$CHDIR"
 fi
 
-if [[ -d "$DIR/custom" ]] || [[ ! -d "$DIR/custom1" ]]; then
+if [[ ! -d "$DIR/custom" ]] || [[ ! -d "$DIR/custom1" ]]; then
     echo "Fix HTML Syntax"
     find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/<BODY/<body style="font-family: Arial,Tahoma,Helvetica,sans-serif;" /g' {} +
     find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/<! Copyright/<!-- Copyright/g' {} +
