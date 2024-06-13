@@ -130,11 +130,6 @@ echo "Change Default LAN_SDS_MODE"
 sed -i 's/<Value Name="LAN_SDS_MODE" Value="5"\/>/<Value Name="LAN_SDS_MODE" Value="1"\/>/g' "$CHDIR/etc/config_default_hs.xml"
 sed -i 's/<title>BroadBand Device Webserver<\/title>/<title>xPON ONU BRIDGE<\/title>/g' "$CHDIR/home/httpd/web/index.html"
 
-echo "Fix HTML Syntax"
-find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/<BODY/<body style="font-family: Arial,Tahoma,Helvetica,sans-serif;" /g' {} +
-find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/<! Copyright/<!-- Copyright/g' {} +
-find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/Reserved. ->/Reserved. -->/g' {} +
-
 echo "Change Version..."
 if [ -z "$2" ]; then
 	echo "No custom version string is set..."
@@ -164,8 +159,15 @@ fi
 
 if [ -d "$DIR/custom" ]; then
 	echo "Injecting custom or fix scripts"
-    echo "--- From $DIR/custom -to- $CHDIR"
+	echo "--- From $DIR/custom -to- $CHDIR"
 	rsync -avhL --info=progress2 "$DIR/custom/" "$CHDIR"
+fi
+
+if [[ -d "$DIR/custom" ]] || [[ ! -d "$DIR/custom1" ]]; then
+    echo "Fix HTML Syntax"
+    find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/<BODY/<body style="font-family: Arial,Tahoma,Helvetica,sans-serif;" /g' {} +
+    find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/<! Copyright/<!-- Copyright/g' {} +
+    find "$CHDIR/home/httpd/web" -type f -exec sed -i 's/Reserved. ->/Reserved. -->/g' {} +
 fi
 
 if [ -f "$CHDIR/etc/scripts/fix_sw_ver.sh" ]; then
