@@ -2,14 +2,14 @@
 
 | Firmware | Note |
 |----------|----- |
-| [`V2801F_V1.9.0-220425.tar`](https://github.com/Anime4000/RTL960x/raw/main/Firmware/V2801F/V2801F_V1.9.0-220425.tar) | Modern WebGUI, 2.5GbE, patched `runlansds.sh`, `tftpd`, ... |
+| [`V2801F_V1.9.0-240614.tar`](https://github.com/Anime4000/RTL960x/raw/main/Firmware/V2801F/V2801F_V1.9.0-240614.tar) | Modern WebGUI, 2.5GbE, patched `runlansds.sh`, `tftpd`, ... |
 
 # Upgrading
-* Before upgrade to `V1.9.0-220425` firmware, you need to this first via `telnet`
+* Before upgrade to `V1.9.0-240614` firmware, you need to this first via `telnet`
 	1. `flash set LAN_SDS_MODE 1`
 
 # 2.5GbE
-* `V1.9.0-220425` firmware have ability to run 2.5GbE
+* `V1.9.0-240614` firmware have ability to run 2.5GbE
 * WARNING: Incompatible `LAN_SDS_MODE` may lock you out from accessing! You need UART to change the value...
 
 # Change MAC Address
