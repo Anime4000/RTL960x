@@ -6,15 +6,6 @@
 > [!WARNING]
 > This guide is intended for advanced users who are willing to accept associated risks. If you are unsure, it is strongly advised not to proceed. Incorrect settings may result in your OLT (Optical Line Terminal) banning you from accessing their network and the internet.
 
-> [!NOTE]
-> Save yourself the hassle of tinkering with technical details by purchasing pre-configured xPON ONU SFP modules tailored to your country and ISP.
-
-| Country | Reseller | ISP Support |
-|---------|----------|-------------|
-| Malaysia | [Forum Post](https://forum.lowyat.net/topic/4925452) | TM-Unifi, TM-Maxis, TIME, Allo (Huawei) |
-
-*If your country isn't listed and you're a reseller confident in compatibility with your country and ISP, feel free to edit this information.*
-
 # xPON SFP ONU
 <a href="https://github.com/Anime4000/RTL960x/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Anime4000/RTL960x" />
@@ -29,15 +20,6 @@ Join us in enhancing this RTL960x documentation repository to support the xPON c
 | [Ubiquiti UFiber Instant](https://store.ui.com/collections/operator-ufiber/products/uf-instant) | `RTL9601CI` | 8MiB (64Mb) | VEIP, PPTP | NO | NO |
 | ODI DFP-34X-2C2 | `RTL9601D` | 8MiB (64Mb) | VEIP, PPTP | [`220304`](https://github.com/Anime4000/RTL960x/blob/main/Firmware/DFP-34X-2C2/M110_sfp_ODI_220304.tar) | YES |
 | [Nokia G-010S-Q](https://github.com/Anime4000/RTL960x/issues/52#issuecomment-1208424756) | `RTL9601CI` | 16MiB (128Mb) | ? | ? | ? ||
-
-### Non SFP
-| Stick | SoC | NAND | Mode | 4-port `EthUni` | 2.5Gb |
-|-------|-----|------|------|-----------------|-------|
-| [VSOL V2802RH](https://github.com/Anime4000/RTL960x/discussions/179) | `RTL9601D` | 4MiB (32Mb) | ? | NO | YES, 1 port |
-| [D-Link DPN-FX3060V](https://forum.lowyat.net/index.php?showtopic=4925452&view=findpost&p=107551516) | `RTL9607DQ` | 256MiB (2048Mb) | VEIP, PPTP | YES | NO |
-| [SkyWorth GN630E](https://cdn.discordapp.com/attachments/962438081397522452/1164384220123242527/2.5G_UONU_WORK_INSTRUCTIONS_2hsba.pdf) | `RTL960x` ? | ? | VEIP, PPTP | YES | YES, 1 port |
-> [!NOTE]
-> The WebGUI of SkyWorth GN630E look alot like V2801F and HGU ODI Firmware
 
 ## Other
 | Stick               | Mode     | SoC       | NAND | Mode       | 4-port `EthUni` |
@@ -225,20 +207,5 @@ Here list of xPON Stick on the market that support 4-port ONU Emulation:
         </tr>
     </tbody>
 </table>
-
-> [!TIP]
-> ✔️ Port Emulation Support
->
-> ❌ Not Supported
->
-> `Root` mean your ONU is All in One where PPPoE/DHCP ended inside ONU (not bridge/route mode)
->
-> **PVID** is VLAN untagging, at router side, WAN connected without VLAN, useful consumer router such as TL-XDR5480 without VLAN support
-
-## Multiple ISP
-![HG8240H5](Docs/Images/Ports%20Provisioning%20Multiple%20ISP.png)
-
-## Multiple Service
-![HG8240H5](Docs/Images/Ports%20Provisioning%20Multi%20Port%20Service.png)
 
 ## Good Luck!
