@@ -1,5 +1,6 @@
-# D-Link DPN-FX3060V
+# Cease and Desist
+Received complaint from ISP to remove any ONU Dump,
 
-All in one GPON Router AX3000
+Thus I no longer allow to share ISP ONU Dump/Blobs/etc...
 
-ISP Telekom Malaysia give for free for 1/2Gbps Customer
+All pending upload no longer valid, will be copied locally only
