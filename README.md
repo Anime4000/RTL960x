@@ -94,6 +94,7 @@ List of users has successfully ditch stock ONU!
 6. [MagtiCom Fiber in Georgia](https://telegra.ph/Georgia-DFP-34X-2C2-and-MagtiCom-04-23)
 7. [T-Mobile Netherlands replacing Huawei ONT](https://providerforum.nl/topics/vervangen-t-mobile-huawei-gpon.95394/page-3#post-1348257) <sup>[English version](https://providerforum-nl.translate.goog/topics/vervangen-t-mobile-huawei-gpon.95394/page-3?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp#post-1348257)</sup>
 8. [SilkNet Fiber in Georgia](https://telegra.ph/Georgia-DFP-34X-2C2-and-SilkNet-11-07)
+9. [Bangladesh: Dot-Internet Dhaka](https://github.com/Anime4000/RTL960x/issues/307)
 
 # xPON ONU SFP
 ## DFP-34X-2C2 <sup>Recommended!</sup>
