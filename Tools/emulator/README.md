@@ -43,10 +43,11 @@ You can customise the firmware by creating `custom` folder along side `qemu-test
 ```
 ─┐
  ├ [custom]
- │    ├ [etc]
+ │    ├ [bin]
  │    ├ [home]
  │    │    └ [httpd]
  │    │         ├ [web]
+ │    │         │    └ *.asp
  │    │         └ boa.conf
  │    └ [etc]
  │         ├ [init.d]
@@ -61,6 +62,7 @@ You can customise the firmware by creating `custom` folder along side `qemu-test
  │    └ md5.txt
  │
  ├ custom.sh
+ ├ V2801F_V1.9.0-200825.tar
  └ qemu-test.sh
 ```
 > [!TIP]
