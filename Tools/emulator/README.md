@@ -43,17 +43,30 @@ You can customise the firmware by creating `custom` folder along side `qemu-test
 ```
 ─┐
  ├ [custom]
- │    ├ router.png
- │    ├ topbar.png
+ │    ├ [etc]
+ │    ├ [home]
+ │    │    └ [httpd]
+ │    │         ├ [web]
+ │    │         └ boa.conf
  │    └ [etc]
  │         ├ [init.d]
  │         │    └ rc*
  │         └ [scripts]
  │              └ *.sh
+ │
+ ├ [V2801F_V1.9.0-200825]
+ │    ├ [squashfs-root]
+ │    ├ fwu.sh
+ │    ┊
+ │    └ md5.txt
+ │
+ ├ custom.sh
  └ qemu-test.sh
 ```
-
-File `/etc/scripts/fix_sw_ver.sh` is special, it will injected automatically after **LINE** `/etc/insdrv.sh`
+> [!TIP]
+> The `custom` folder is a mirror of `squashfs-root`. All file in `custom` will be copied and replace to `squashfs-root` folder when exit from chroot environment
+>
+> The `custom.sh` file will run outside of chroot when exit chroot environment, this a special script if you want do some housekeeping (remove unused file, inject new line, etc...)
 
 To add custom run script, please use `init.d/rc35` file
 
