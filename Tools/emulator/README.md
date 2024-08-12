@@ -1,5 +1,9 @@
 # RTL960x Emulator
-This script allow you to modify and reverse engineering RTL9601C1 based firmware.
+This script allow you to modify and reverse engineering RTL960x based firmware.
+
+# Architecture
+* MIPS (R3000 variant/PlayStation One)
+* ARMv8 (Cortex A55)
 
 # Prerequisite
 You need these program installed:
