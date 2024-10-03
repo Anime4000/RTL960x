@@ -6,6 +6,11 @@
 > [!WARNING]
 > This guide is intended for advanced users who are willing to accept associated risks. If you are unsure, it is strongly advised not to proceed. Incorrect settings may result in your OLT (Optical Line Terminal) banning you from accessing their network and the internet.
 
+> [!WARNING]
+> I'm just letting you know that even internally, we try not to use SFP onts as we have issues with them not connecting at all or it would connect, but then constantly lose connection. I have also **seen them go rogue and take down entire pons** back when I was a commercial tech. As an nft, I've only seen one customer try to use an sfp ont, but it was **causing collision issues which took down the pon.** The dude was super cool about it. If I remember correctly I think I just told the noc that the guys gpon ont went rogue and we need to swap it with an xgs model that way he could get at least have 10gig ports even if he couldn't get a direct connection. Just remember, it's not just you on that pon port. There are up to 32 customers per port, 64 customers if you live in West Lafayette, so please take that into consideration when you're experimenting.
+> 
+> Quote by [@03HemiNorthIL](https://www.reddit.com/r/Metronet/comments/1ftktrr/comment/lpsprs3/) at Reddit
+
 # xPON SFP ONU
 <a href="https://github.com/Anime4000/RTL960x/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Anime4000/RTL960x" />
