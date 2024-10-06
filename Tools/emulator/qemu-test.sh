@@ -55,6 +55,15 @@ echo "Checking Install: chroot"
 	exit 2
 }
 
+echo "Checking Install: binwalk"
+(binwalk --help) < /dev/null > /dev/null 2>&1 || {
+	echo "binwalk not installed on /usr/sbin"
+	echo ""
+	echo "To install, run:"
+	echo "apt install binwalk"
+	exit 2
+}
+
 echo "Creating folder: ${FILENAME%.*}"
 mkdir ${FILENAME%.*}
 
