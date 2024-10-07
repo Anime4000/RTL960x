@@ -185,11 +185,16 @@ if [ -f "$CHDIR/etc/scripts/fix_sw_ver.sh" ]; then
 fi
 
 echo "chmod +x /bin folder, prevent stick become brick!"
-chmod +x "$CHDIR/bin" -R
+chmod +x "$CHDIR/bin/" -R
 chmod +x "$CHDIR/etc/*.sh"
-chmod +x "$CHDIR/etc/init.d" -R
-chmod +x "$CHDIR/etc/scripts" -R
+chmod +x "$CHDIR/etc/init.d/" -R
+chmod +x "$CHDIR/etc/scripts/" -R
 chown 0:0 "$CHDIR/" -R
+
+echo "chmod +x /etc/scripts_mod folder, allow your own script to run!"
+if [[ -d "$CHDIR/etc/scripts_mod" ]]; then
+	chmod -R +x "$CHDIR/etc/scripts_mod/"
+fi
 
 echo "Unmounting..."
 rm -rf "$CHDIR/usr/bin"
