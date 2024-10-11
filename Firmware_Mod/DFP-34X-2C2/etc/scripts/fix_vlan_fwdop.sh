@@ -14,7 +14,7 @@
 set -e
 
 # Get the FwdOp fix from unused flash property: RTK_DEVINFO_SPECVER
-fix_vlan_fwdop=$(flash get RTK_DEVINFO_SPECVER | cut -d'=' -f2)
+fix_vlan_fwdop=$(flash get RTK_DEVINFO_SPECVER | awk -F'=' '{print $2}')
 
 # If fix_vlan_fwdop is not set, exit
 if [ -z "$fix_vlan_fwdop" ]; then
