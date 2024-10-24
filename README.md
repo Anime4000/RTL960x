@@ -3,17 +3,6 @@
 ## ⚠️ Important Considerations for Using Custom GPON Sticks (SFP ONTs)
 When using custom **GPON SFP ONTs** (Small Form-factor Pluggable Optical Network Terminals), it’s important to be aware of potential risks and how they can affect not only your connection but also others on the same network.
 
-### Intended Use
-GPON Sticks are primarily designed for use in authorized PON networks such as:
-
-* Business networks
-* Cell towers
-* Enterprise-grade fiber deployments
-* Data centers
-* Campus networks
-
-Modifying or using these devices in a home environment is not recommended, as they are optimized for more complex and controlled setups.
-
 ### Potential Issues with SFP ONTs
 - **Connection Instability**<br><sup>Some users have reported that SFP ONTs may fail to connect properly or might frequently disconnect.</sup>
 - **Network Disruptions**<br><sup>In some cases, faulty SFP ONTs can cause major problems, such as taking down the entire GPON (Gigabit Passive Optical Network) by creating signal collisions. This can affect all the users sharing the same network port.</sup>
