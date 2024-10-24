@@ -1,5 +1,5 @@
 # TP-Link Community Support
-This folder contains an EEPROM for a GPON Stick that has been modified to support HiSGMII/2500Base-X, based on the Linux Kernel modifications in [`drivers/net/phy/sfp-bus.c`](https://github.com/torvalds/linux/blob/cf1182944c7cc9f1c21a8a44e0d29abe12527412/drivers/net/phy/sfp-bus.c#L327).
+This folder contains an Debug Firmware & EEPROM for a GPON Stick that has been modified to support HiSGMII/2500Base-X, based on the Linux Kernel modifications in [`drivers/net/phy/sfp-bus.c`](https://github.com/torvalds/linux/blob/cf1182944c7cc9f1c21a8a44e0d29abe12527412/drivers/net/phy/sfp-bus.c#L327).
 
 ## TP-Link Archer GE800 - Enabling 2.5G Mode
 To enable 2.5G (HiSGMII PHY) on your TP-Link Archer GE800, follow these steps:
@@ -55,7 +55,7 @@ To confirm that the GPON Stick supports HiSGMII (SGMII+), refer to the following
 | Offset | Value | Description                                         |
 |--------|-------|-----------------------------------------------------|
 | 0x06   | 0x00  | Transceiver code undefined (not limited to 1G Ethernet) |
-| 0x0C   | 0x1F  | Nominal bit rate set to 2500 Mbps (supporting 2500Base-X) |
+| 0x0C   | 0x1F  | [Nominal bit rate set to 2500 Mbps](https://github.com/Anime4000/RTL960x/discussions/250#discussion-6288339) (supporting 2500Base-X) |
 
 These settings ensure compatibility with 2500Base-X and allow the GPON Stick to be detected and configured correctly in network environments using HiSGMII (SGMII+).
 
