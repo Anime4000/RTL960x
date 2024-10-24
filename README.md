@@ -1,6 +1,6 @@
 # Hacking [RTL960x](https://www.google.com/search?q=rtl9601ci+datasheet)
 * Hacking Realtek based xPON solution to suite your Universal OLT
-* GPON market is a mess, plus explicit OMCI cause ONU Stick did not work
+* GPON market is a mess with **proprietary** OMCI cause ONU Stick did not work
 * [4-port ONU Emulation](#4-port-onu-emulation) Table (ME UNI Point)
 
 > [!WARNING]
