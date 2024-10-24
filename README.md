@@ -1,10 +1,10 @@
 # Hacking [RTL960x](https://www.google.com/search?q=rtl9601ci+datasheet)
-* Hacking V2801F, TWCGPON657 & DFP-34X-2C2 to suite your ISP Fiber
+* Hacking Realtek based xPON solution to suite your Universal OLT
 * GPON market is a mess, plus explicit OMCI cause ONU Stick did not work
-* [4-port ONU Emulation](#4-port-onu-emulation) Table
+* [4-port ONU Emulation](#4-port-onu-emulation) Table (ME UNI Point)
 
 > [!WARNING]
-> This guide is intended for advanced users who are willing to accept associated risks. If you are unsure, it is strongly advised not to proceed. Incorrect settings may result in your OLT (Optical Line Terminal) banning you from accessing their network and the internet.
+> This guide is intended for advanced users who are willing to **accept associated risks.** If you are unsure, it is strongly advised not to proceed. **Incorrect settings may result in your OLT (Optical Line Terminal) banning you from accessing their network and the internet.**
 
 > [!WARNING]
 > I'm just letting you know that even internally, we try not to use SFP onts as we have issues with them not connecting at all or it would connect, but then constantly lose connection. I have also **seen them go rogue and take down entire pons** back when I was a commercial tech. As an nft, I've only seen one customer try to use an sfp ont, but it was **causing collision issues which took down the pon.** The dude was super cool about it. If I remember correctly I think I just told the noc that the guys gpon ont went rogue and we need to swap it with an xgs model that way he could get at least have 10gig ports even if he couldn't get a direct connection. Just remember, it's not just you on that pon port. There are up to 32 customers per port, 64 customers if you live in West Lafayette, so please take that into consideration when you're experimenting.
