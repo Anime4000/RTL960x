@@ -67,7 +67,7 @@ Join us in enhancing this RTL960x documentation repository to support the xPON c
 | PRX126 | XG/XGS PON | Maxlinear PRX126 | ? | VEIP & PPTP | Maybe |
 > [!NOTE]
 > For **XG/XGS/10GE PON RTL CA series Hacking**, checkout [@YuukiJapanTech](https://github.com/YuukiJapanTech) on [Hacking CA8271x XGS-PON Stick](https://github.com/YuukiJapanTech/CA8271x)<br>
-> For **XG/XGS PON MxL PRX series hacking**, cehckout [@up-n-atom](https://github.com/up-n-atom/) on [8311](https://github.com/up-n-atom/8311)
+> For **XG/XGS PON MxL PRX series hacking**, checkout [@up-n-atom](https://github.com/up-n-atom/) on [8311](https://github.com/up-n-atom/8311)
 
 # Guide, Links, Info
 1. [Backup `env`, `env2` & `config` partition](https://github.com/Anime4000/RTL960x/discussions/28) <sup>Guide by [@tdmadam](https://github.com/tdmadam)</sup>
@@ -120,17 +120,6 @@ List of users has successfully ditch stock ONU!
 8. [SilkNet Fiber in Georgia](https://telegra.ph/Georgia-DFP-34X-2C2-and-SilkNet-11-07)
 9. [Bangladesh: Dot-Internet Dhaka](https://github.com/Anime4000/RTL960x/issues/307)
 
-# Repository Scope and Legal Considerations
-Please note that this repository does not contain ISP-specific configurations or sensitive information, both for legal reasons and to ensure responsible use. We aim to provide general guidance without supporting any unauthorized activity.
-
-If you’re looking for a reliable GPON Stick solution that is ready to use with minimal setup, consider checking with resellers in your country. Many resellers offer modified PON Sticks pre-configured for local ISPs, including:
-
-* **Pre-configured serial numbers (S/N) and PLOAM passwords:** <sup>Some resellers can program these credentials before shipping, making installation seamless and avoiding configuration hassle.</sup>
-* **Enhanced compatibility:** <sup>In many cases, these units are plug-and-play, tailored for compatibility with specific ISPs.</sup>
-
-> [!NOTE]
-> By choosing a pre-configured unit from a reputable source, you can save time and ensure stability without needing to adjust settings manually.
-
 # VEIP vs PPTP
 | Code | Full name | Meaning |
 |------|-----------|---------|
@@ -168,6 +157,17 @@ To address an O2-O5 loop caused by low RX power:
 > Please remember to use these tools responsibly and respect the shared network environment.
 >
 > Thank you for your consideration and cooperation.
+
+# Repository Scope and Legal Considerations
+Please note that this repository does not contain ISP-specific configurations or sensitive information, both for legal reasons and to ensure responsible use. We aim to provide general guidance without supporting any unauthorized activity.
+
+If you’re looking for a reliable GPON Stick solution that is ready to use with minimal setup, consider checking with resellers in your country. Many resellers offer modified PON Sticks pre-configured for local ISPs, including:
+
+* **Pre-configured serial numbers (S/N) and PLOAM passwords:**<br><sup>Some resellers can program these credentials before shipping, making installation seamless and avoiding configuration hassle.</sup>
+* **Enhanced compatibility:**<br><sup>In many cases, these units are plug-and-play, tailored for compatibility with specific ISPs.</sup>
+
+> [!NOTE]
+> By choosing a pre-configured unit from a reputable source, you can save time and ensure stability without needing to adjust settings manually.
 
 # Community Support
 For community support and discussions, consider joining these groups. Please remember to be **respectful** and **mindful** that members are helping in their free time. PON settings can be very complex and difficult to understand, <ins>so avoid pressuring others for help</ins>:
