@@ -172,7 +172,9 @@ If you’re looking for a reliable GPON Stick solution that is ready to use with
 # Community Support
 For community support and discussions, consider joining these groups. Please remember to be **respectful** and **mindful** that members are helping in their free time. PON settings can be very complex and difficult to understand, <ins>so avoid pressuring others for help</ins>:
 
+* [RU-Board](http://forum.ru-board.com/topic.cgi?forum=8&topic=80480&start=0) — Forum (RU)
 * [XPON SFP ONU](https://t.me/xpon_sfp_onu) — Telegram (RU)
+* [Usage GPON module SFP in Spain](https://forum.mikrotik.com/viewtopic.php?t=116364) — Mikrotik Forum (EN)
 * [RTL960X Discuss](https://discord.gg/JWdAzj9m4F) — Discord (EN)
 
 
