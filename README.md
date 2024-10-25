@@ -143,7 +143,7 @@ Some OLTs from manufacturers like Calix and Nokia, which support Universal ONU, 
 To resolve this, double-check all configuration parameters, including the serial number and password. If the connection still doesn’t work after verification, the OLT may be requiring Vendor-Specific Managed Entities (ME) (IDs 350-399) which are sometimes mandated by ISPs for authentication or additional configuration.
 
 # O2-O5 Loop
-A device entering an O2-O5 loop (oscillating between states) could indicate a similar issue as the "Fake O5" scenario. Another common reason for this loop is low optical receive power (RX), where the power level drops below the acceptable threshold (e.g., <= -23 dBm). When this happens, the OLT may refuse to allow a stable O5 state to maintain PON performance.
+A device entering an O2-O5 loop (oscillating between states) could indicate a similar issue as the "Fake O5" scenario. Another common reason for this loop is low optical receive power (RX), where the power level drops below the acceptable threshold (e.g., `<= -23 dBm`). When this happens, the OLT may refuse to allow a stable O5 state to maintain PON performance.
 
 To address an O2-O5 loop caused by low RX power:
 
@@ -169,6 +169,11 @@ If you’re looking for a reliable GPON Stick solution that is ready to use with
 > [!NOTE]
 > By choosing a pre-configured unit from a reputable source, you can save time and ensure stability without needing to adjust settings manually.
 
+# Nijika Firmware
+Modern, [Bootstrap WebGUI](Firmware_Mod#webgui), community patches for RTL9601D based is W.I.P.
+![NIJIKA FW](Docs/111806936_p1.png)
+<sup>Pixiv Artwork by [@しみずけいたろう](https://www.pixiv.net/en/artworks/111806936)</sup>
+
 # Community Support
 For community support and discussions, consider joining these groups. Please remember to be **respectful** and **mindful** that members are helping in their free time. PON settings can be very complex and difficult to understand, <ins>so avoid pressuring others for help</ins>:
 
@@ -176,6 +181,3 @@ For community support and discussions, consider joining these groups. Please rem
 * [XPON SFP ONU](https://t.me/xpon_sfp_onu) — Telegram (RU)
 * [Usage GPON module SFP in Spain](https://forum.mikrotik.com/viewtopic.php?t=116364) — Mikrotik Forum (EN)
 * [RTL960X Discuss](https://discord.gg/JWdAzj9m4F) — Discord (EN)
-
-
-# Good Luck!
