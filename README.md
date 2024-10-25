@@ -24,13 +24,16 @@ If you’re experimenting with custom GPON sticks, keep the following in mind
 3. **Seek Alternatives**<br><sup>If problems persist, you may need to switch to a more stable, certified model, especially if you're sharing the network with many other users.</sup>
 
 ### Benefits and Limitations
-Using GPON Sticks can potentially improve throughput for plans offering 2 Gbps by bypassing the limitations of a typical Gigabit Ethernet ONT. However, this will not provide any speed boost or "hacking" beyond your subscribed plan.
+> [!NOTE]
+> Using GPON Sticks can potentially **improve throughput for plans offering 2 Gbps by bypassing the limitations of a typical Gigabit Ethernet ONT.** However, this will not provide any speed boost or "hacking" beyond your subscribed plan.
 
 ### Legal Considerations
-If your ISP detects the use of unauthorized commands or illegal activity, they have the right to ban your service and impose hefty fines for disrupting the PON network.
+> [!CAUTION]
+> If your ISP detects the use of unauthorized commands or illegal activity, <ins>they have the right to ban your service and impose hefty fines for disrupting the PON network.</ins>
 
 ### Disclaimer
-We are not responsible for any illegal activity that occurs from the use of this hardware. By proceeding, you agree to all the warnings and terms outlined above.
+> [!IMPORTANT]  
+> We are not responsible for any illegal activity that occurs from the use of this hardware. By proceeding, you agree to all the warnings and terms outlined above.
 
 # xPON SFP ONU
 <a href="https://github.com/Anime4000/RTL960x/graphs/contributors">
@@ -41,36 +44,42 @@ Join us in enhancing this RTL960x documentation repository to support the xPON c
 ## RTL960x Family
 | Stick | SoC | NAND | Mode | 4-port `EthUni` | 2.5Gb |
 |-------|-----|------|------|-----------------|-------|
-| [VSOL V2801F](https://www.amazon.com/Universal-Stick-Address-Supported-Attention/dp/B08C818JSQ) | `RTL9601CI` | 8MiB (64Mb) | VEIP, PPTP | YES | MOD |
-| T&W TWCGPON657 | `RTL9601CI` | 16MiB (128Mb) | VEIP, PPTP | [`V1.9.0-240204`](Firmware/TWCGPON657/TWCGPON657_V1.9.0-240204.tar) | MOD |
-| [Ubiquiti UFiber Instant](https://store.ui.com/collections/operator-ufiber/products/uf-instant) | `RTL9601CI` | 8MiB (64Mb) | VEIP, PPTP | NO | NO |
-| ODI DFP-34X-2C2 | `RTL9601D` | 8MiB (64Mb) | VEIP, PPTP | YES | YES |
-| ODI DFP-34X-2C3 (APC) | `RTL9601D` | 8MiB (64Mb) | VEIP, PPTP | YES | YES |
+| VSOL V2801F | `RTL9601CI` | 8MiB | VEIP & PPTP | Forced All | MOD |
+| T&W TWCGPON657 | `RTL9601CI` | 16MiB | VEIP & PPTP | [`V1.9.0-240204`](Firmware/TWCGPON657/TWCGPON657_V1.9.0-240204.tar) | MOD |
+| Ubiquiti UFiber Instant | `RTL9601CI` | 8MiB | PPTP | LAN 1 | NO |
+| ODI DFP-34X-2C2 (UPC) | `RTL9601D` | 8MiB | VEIP & PPTP | Selective All | YES |
+| ODI DFP-34X-2C3 (APC) | `RTL9601D` | 8MiB | VEIP & PPTP | Selective All | YES |
 | [Nokia G-010S-Q](https://github.com/Anime4000/RTL960x/issues/52#issuecomment-1208424756) | `RTL9601CI` | 16MiB (128Mb) | PPTP | NO | NO |
 
-## Other
-| Stick               | Mode     | SoC       | NAND | Mode       | 4-port `EthUni` |
-|---------------------|----------|-----------|------|------------|-----------------|
-| ODI DFP-34X-2C2     | E/GPON   | ZTE       | ?    | PPTP, VEIP | NO, NO OMCI EDIT |
-| Huawei MA5671a      | E/GPON   | Intel     | ?    | PPTP, VEIP | NO |
-| Nokia G-010S-P      | E/GPON   | Intel     | ?    | PPTP, VEIP | NO |
-| Nokia G-010S-A      | E/GPON   | Intel     | ?    | PPTP, VEIP | NO |
+## Non-RTL960x GPON
+| Device              | Mode     | SoC          | NAND | UNI        | 4-port `EthUni` |
+|---------------------|----------|--------------|------|------------|-----------------|
+| ODI DFP-34X-2C2     | GPON SFP | ZTE          | ?    | PPTP/VEIP | NO, NO OMCI EDIT |
+| Huawei MA5671a      | GPON SFP | Lantiq | 16MiB | PPTP/VEIP | LAN 1 |
+| Nokia G-010S-P      | GPON SFP | Lantiq | 16MiB | PPTP/VEIP | LAN 1 |
+| Nokia G-010S-A      | GPON SFP | Lantiq | 16MiB | PPTP/VEIP | LAN 1 |
 
-# 10G xPON ONU
+## 10G xPON ONU
 | Stick               | Mode     | SoC       | NAND | Mode | 4-port `EthUni` |
 |---------------------|----------|-----------|------|------|-----------------|
-| [Hisense LTF7263-BH+](https://item.taobao.com/item.htm?spm=a230r.1.14.1.5d1b2e4eUxyGfI&id=658650417501) | [10G](https://twitter.com/YuukiJapanTech/status/1581277608729116672)[-EPON](https://twitter.com/YuukiJapanTech/status/1581127940468678658)/[Multi Mode](https://twitter.com/YuukiJapanTech/status/1632025860999090178) | Realtek   | ?    | ?    | ? |
-| [Hisense LTF7267-BH+](https://item.taobao.com/item.htm?spm=a230r.1.14.1.5d1b2e4eUxyGfI&id=658650417501) | [XGSPON Multi Mode](https://twitter.com/YuukiJapanTech/status/1632025860999090178)   | Realtek   | ?    | ?    | ? |
-> [!TIP]
-> Hisense 10G xPON was checked by [@YuukiJapanTech](https://twitter.com/YuukiJapanTech), frimware 'might' that support multiple PON mode...
-> 
-> For **XG/XGS/10G-E PON Hacking**, checkout [@YuukiJapanTech](https://github.com/YuukiJapanTech) on [Hacking CA8271x XGS-PON Stick](https://github.com/YuukiJapanTech/CA8271x)
+| [Hisense LTF7263-BH+](https://item.taobao.com/item.htm?spm=a230r.1.14.1.5d1b2e4eUxyGfI&id=658650417501) | [10G](https://twitter.com/YuukiJapanTech/status/1581277608729116672)[E/](https://twitter.com/YuukiJapanTech/status/1581127940468678658)[XG/XGS](https://twitter.com/YuukiJapanTech/status/1632025860999090178)PON | Realtek   | ?    | ?    | ? |
+| [Hisense LTF7267-BH+](https://item.taobao.com/item.htm?spm=a230r.1.14.1.5d1b2e4eUxyGfI&id=658650417501) | [XG/XGSPON](https://twitter.com/YuukiJapanTech/status/1632025860999090178)   | Realtek   | ?    | ?    | ? |
+| PRX126 | XG/XGS PON | Maxlinear PRX126 | ? | VEIP & PPTP | Maybe |
+> [!NOTE]
+> For **XG/XGS/10GE PON Realtek CA series Hacking**, checkout [@YuukiJapanTech](https://github.com/YuukiJapanTech) on [Hacking CA8271x XGS-PON Stick](https://github.com/YuukiJapanTech/CA8271x)<br>
+> For **XG/XGS PON Maxlinear PRX series hacking**, cehckout [@up-n-atom](https://github.com/up-n-atom/) on [8311](https://github.com/up-n-atom/8311)
 
 # VEIP vs PPTP
 | Code | Full name | Meaning |
 |------|-----------|---------|
-| PPTP | Physical Path Termination Point | OLT is responsible to provision of VLAN and LAN Port |
-| VEIP | Virtual Ethernet Interface Point | Allows multiple Ethernet services to be carried over a single PON link |
+| PPTP | Physical Path Termination Point | Directly binds to a specific LAN port, with OLT managing VLANs and settings on the ONT. |
+| VEIP | Virtual Ethernet Interface Point | Acts like a virtual interface (e.g., `tap0`), allowing ONT firmware to assign to LAN ports, router mode, management, or VoIP. |
+> [!NOTE]
+> Since a PON SFP Stick has only one interface to the host, its firmware may struggle to manage VLANs from both PPTP and VEIP. Many firmware versions simply bridge all VLANs from both, regardless of configuration, which can lead to issues:
+> - If the same VLAN ID is used for different services on PPTP and VEIP, the stick’s firmware might bridge them together without distinction, potentially causing issues with DHCP/IPoE.
+> - Most firmware prioritizes PPTP first, using VEIP only if PPTP is unavailable. A few firmware versions allow manual VLAN selection for bridging, independent of PPTP/VEIP.
+> 
+> Also, note that if your ISP uses **ME 148** (which enforces PPPoE and routing on the ONT), you may not be able to bridge directly to your own router. For bridge mode, it's best to contact your ISP for assistance.
 
 # Guide, Links, Info
 1. [Backup `env`, `env2` & `config` partition](https://github.com/Anime4000/RTL960x/discussions/28) <sup>Guide by [@tdmadam](https://github.com/tdmadam)</sup>
@@ -123,117 +132,4 @@ List of users has successfully ditch stock ONU!
 8. [SilkNet Fiber in Georgia](https://telegra.ph/Georgia-DFP-34X-2C2-and-SilkNet-11-07)
 9. [Bangladesh: Dot-Internet Dhaka](https://github.com/Anime4000/RTL960x/issues/307)
 
-# xPON ONU SFP
-## DFP-34X-2C2 <sup>Recommended!</sup>
-### Feature
-* Much cheaper than **VSOL V2801F** & **CarlitoxxPro CPGOS03-0490 v2.0**!
-* Using latest SoC **RTL9601D**!
-* Support **HEX** PLOAM Password! *<sup>Using [`220304`](https://github.com/Anime4000/RTL9601C1/blob/main/Firmware/DFP-34X-2C2/M114_sfp_ODI_220304.tar) Firmware</sup>*
-* Support 2.5GbE via [**HiSGMII** or **2500Base-X**](Docs/FLASH_GETSET_INFO.md#lan_sds_mode-min-1-max-6)! *<sup>See [Compatibility](Docs/2.5Gb.md#device-list), [SpeedTest](https://github.com/Anime4000/RTL960x/issues/17#issuecomment-1100272965)</sup>*
-* Using newer SFP Body with intergrated heatsink *<sup>See [Picture](https://github.com/Anime4000/RTL9601C1/issues/17#issuecomment-1077681925)</sup>*
-* Very efficient, just **45°C** without fan!
-* Automatic/Transparent bridge like VSOL V2801F! *<sup>Using [`220304`](https://github.com/Anime4000/RTL9601C1/blob/main/Firmware/DFP-34X-2C2/M114_sfp_ODI_220304.tar) Firmware</sup>*
-* Support 4-port ONU Emulation
-
-## V2801F
-### Feature
-* Limited 2.5GbE Support *<sup>wrong `LAN_SDS_MODE` can lock you out, no auto switch</sup>*
-* **HEX** PLOAM Password require modification from [@zry98](https://github.com/zry98/SFP-GPON-ONU#modules-using-rtl8672--rtl9601c-chipset)
-* Automatic/Full Transparent
-* Support 4-port ONU Emulation
-* [Modern WebGUI](WebGui#example)
-
-# Triple Play Multiple ISP Problem, 4-port ONU Emulation
-* Majority fiber vendor support multiple ISP
-* ISP provide Triple Play service (Internet, VoIP & IPTV)
-* Vendor supply 4-port ONU for each service or ISP
-
-## 4-port ONU Emulation
-Based on [ru-board](http://forum.ru-board.com/topic.cgi?forum=8&topic=80480&start=1360#2), xPON Stick with **4-Port Emulation** support is limited!
-
-### ONU LAN Port Binding example
-If you using 4-port ONU like [Huawei HG8240H5](https://www.google.com/search?q=HG8240H5), [Nokia G-240G-E](https://www.google.com/search?q=G-240G-E) and Router connected to ONU LAN 2/3/4, you have limited option, I recommend [ODI DFP-34X-2C2](https://www.aliexpress.com/item/1005003515662920.html) with `220304` or newer firmware.
-
-### Table 4-port ONU Emulation
-Here list of xPON Stick on the market that support 4-port ONU Emulation:
-<table>
-    <thead>
-        <tr>
-            <th rowspan="2">xPON Stick</th>
-            <th colspan="6">Huawei HG8240H LAN Port</th>
-            <th rowspan="2">Firmware</th>
-        </tr>
-        <tr>
-            <th>Root</th>
-            <th>1️⃣</th>
-            <th>2️⃣</th>
-            <th>3️⃣</th>
-            <th>4️⃣</th>
-            <th>PVID</th>
-        </tr>
-    </thead>
-    <tbody>
-       <tr>
-            <td>Huawei MA5671a</td>
-            <td>✔️</td>
-            <td>✔️</td>
-            <td>❌</td>
-            <td>❌</td>
-            <td>❌</td>
-            <td>✔️</td>
-            <td>OpenWRT</td>
-        </tr>
-        <tr>
-            <td>Nokia G-010S-P</td>
-            <td>✔️</td>
-            <td>✔️</td>
-            <td>❌</td>
-            <td>❌</td>
-            <td>❌</td>
-            <td>✔️</td>
-            <td>OpenWRT</td>
-        </tr>
-        <tr>
-            <td>ODI DFP-34X-2C2</td>
-            <td>✔️</td>
-            <td>✔️</td>
-            <td>❌</td>
-            <td>❌</td>
-            <td>❌</td>
-            <td>❌</td>
-            <td><code>210702</code>, <code>220527</code></td>
-        </tr>
-        <tr>
-            <td>ODI DFP-34X-2C2</td>
-            <td>✔️</td>
-            <td>✔️</td>
-            <td>✔️</td>
-            <td>✔️</td>
-            <td>✔️</td>
-            <td>❓</td>
-            <td><code>220304</code>, <code>220414</code></td>
-        </tr>
-        <tr>
-            <td>TWCGPON657</td>
-            <td>✔️</td>
-            <td>✔️</td>
-            <td>✔️</td>
-            <td>✔️</td>
-            <td>✔️</td>
-            <td>❌</td>
-            <td><code>C00R657V2801F_V1.9.0-220404.tar</code></td>
-        </tr>
-        <tr>
-            <td>V-SOL V2801F</td>
-            <td>✔️</td>
-            <td>✔️</td>
-            <td>✔️</td>
-            <td>✔️</td>
-            <td>✔️</td>
-            <td>❌</td>
-            <td> Stock Firmware </td>
-        </tr>
-    </tbody>
-</table>
-
-## Good Luck!
+# Good Luck!
