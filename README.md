@@ -174,6 +174,9 @@ Modern, [Bootstrap WebGUI](Firmware_Mod#webgui), community patches for RTL9601D 
 ![NIJIKA FW](Docs/111806936_p1.png)
 <sup>Pixiv Artwork by [@しみずけいたろう](https://www.pixiv.net/en/artworks/111806936)</sup>
 
+## OLT Info
+![OLT-Info](Docs/Images/webgui-dfp/7-olt_info.png)
+
 # Community Support
 For community support and discussions, consider joining these groups. Please remember to be **respectful** and **mindful** that members are helping in their free time. PON settings can be very complex and difficult to understand, <ins>so avoid pressuring others for help</ins>:
 
