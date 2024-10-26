@@ -64,7 +64,7 @@ Join us in enhancing this RTL960x documentation repository to support the xPON c
 |---------------------|----------|-----------|------|------|-----------------|
 | [Hisense LTF7263-BH+](https://item.taobao.com/item.htm?spm=a230r.1.14.1.5d1b2e4eUxyGfI&id=658650417501) | [10G](https://twitter.com/YuukiJapanTech/status/1581277608729116672)[E/](https://twitter.com/YuukiJapanTech/status/1581127940468678658)[XG/XGS](https://twitter.com/YuukiJapanTech/status/1632025860999090178)PON | Realtek   | ?    | ?    | ? |
 | [Hisense LTF7267-BH+](https://item.taobao.com/item.htm?spm=a230r.1.14.1.5d1b2e4eUxyGfI&id=658650417501) | [XG/XGSPON](https://twitter.com/YuukiJapanTech/status/1632025860999090178)   | Realtek   | ?    | ?    | ? |
-| PRX126 | XG/XGS PON | Maxlinear PRX126 | ? | VEIP & PPTP | Maybe |
+| PRX126 | XG/XGSPON | Maxlinear PRX126 | ? | VEIP & PPTP | Maybe |
 > [!NOTE]
 > For **XG/XGS/10GE PON RTL CA series Hacking**, checkout [@YuukiJapanTech](https://github.com/YuukiJapanTech) on [Hacking CA8271x XGS-PON Stick](https://github.com/YuukiJapanTech/CA8271x)<br>
 > For **XG/XGS PON MxL PRX series hacking**, checkout [@up-n-atom](https://github.com/up-n-atom/) on [8311](https://github.com/up-n-atom/8311)
@@ -174,11 +174,13 @@ Modern, [Bootstrap WebGUI](Firmware_Mod#webgui), community patches for RTL9601D 
 ![NIJIKA FW](Docs/111806936_p1.png)
 <sup>Pixiv Artwork by [@しみずけいたろう](https://www.pixiv.net/en/artworks/111806936)</sup>
 
-## OLT Info
 ![OLT-Info](Docs/Images/webgui-dfp/7-olt_info.png)
+<sup>Preview of OLT Info on Nijika Firmware</sup>
 
 # Community Support
-For community support and discussions, consider joining these groups. Please remember to be **respectful** and **mindful** that members are helping in their free time. PON settings can be very complex and difficult to understand, <ins>so avoid pressuring others for help</ins>:
+For community support and discussions, consider joining these groups. Please remember to be **respectful** and **mindful** that members are helping in their free time. PON settings can be very complex and difficult to understand,
+
+<ins>so avoid pressuring others for help</ins>:
 
 * [RU-Board](http://forum.ru-board.com/topic.cgi?forum=8&topic=80480&start=0) — Forum (RU)
 * [XPON SFP ONU](https://t.me/xpon_sfp_onu) — Telegram (RU)
