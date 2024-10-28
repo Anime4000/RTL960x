@@ -1,4 +1,4 @@
-## TP-Link Debug/Beta Firmware Terms
+# TP-Link Debug/Beta Firmware Terms
 
 The TP-Link firmware included here unlocks advanced GPON Stick features like HiSGMII and 2.5G Base-X, allowing users on 2Gbps plans to experience improved performance. By using this firmware, you automatically accept TP-Link's [terms and conditions](https://community.tp-link.com/en/home/forum/topic/275506) for debug and beta releases.
 
