@@ -1,7 +1,6 @@
-```
-BusyBox v1.19.4 (2023-12-05 15:52:32 CST) built-in shell (ash)
-Enter 'help' for a list of built-in commands.
+# GPON ONT SFP 2.5G Compatibility Research
 
+```
      MM           NM                    MMMMMMM          M       M
    $MMMMM        MMMMM                MMMMMMMMMMM      MMM     MMM
   MMMMMMMM     MM MMMMM.              MMMMM:MMMMMM:   MMMM   MMMMM
@@ -22,22 +21,26 @@ MMMM$ ,MMMMM  MMMMM  MMMM    MMM       MMMM   MMMMM   MMMM    MMMM
  ---------------------------------------------------------------
 ```
 
-# TP-Link Firmware Modifications
+## TP-Link Debug/Beta Firmware Terms
 
-The majority of the firmware included in this section is enhanced with Debug Mode, a feature absent in standard firmware versions.
+The TP-Link firmware included here unlocks advanced GPON Stick features like HiSGMII and 2.5G Base-X, allowing users on 2Gbps plans to experience improved performance. By using this firmware, you automatically accept TP-Link's [terms and conditions](https://community.tp-link.com/en/home/forum/topic/275506) for debug and beta releases.
 
-## Debug Page Access
+## Router Firmware Repository
 
-The debug page is not readily accessible but can be reached by following these steps based on your router's LAN subnet:
+This repository hosts modified router firmware designed to enhance compatibility between GPON ONT SFP modules and 2.5G networks. Users with 2Gbps internet subscriptions can leverage these modifications for optimized speed and stability.
 
-- Navigate to `http://192.168.0.1/webpages/debug.html`
+### Disclaimer
+The firmware provided here is community-driven or vendor-modified to enable debug features. Some modifications may be persistent across reboots, while others may be session-limited. Users should proceed with caution, recognizing the risks involved.
 
-On the debug page, you have the ability to input commands that enable the 2.5G mode. It's important to note that this activation is temporary, and if the router is rebooted, the process will need to be repeated.
+## Usage Guidelines
+- Verify that your GPON ONT SFP module is compatible with 2.5G networks.
+- Always back up existing firmware and settings before applying modifications.
+- Be aware of the risks associated with non-standard firmware, including potential instability.
+- Community support may be available for troubleshooting and guidance.
 
-### Instructions for Debug Mode Activation
+## Contributions
+Contributions, including firmware updates or enhancements, are welcome! Please refer to the contributing guidelines for submission procedures.
 
-1. Access the debug page using the provided URL.
-2. Input the relevant command to enable 2.5G mode.
-3. Keep in mind that this activation is not persistent across reboots, necessitating a repeat of the process after each restart.
+### Note
+This research is ongoing, and findings will be updated regularly. Users are encouraged to check back for the latest insights and firmware releases.
 
-Please exercise caution when using debug features and refer to the user documentation for additional guidance on the commands and their implications.
