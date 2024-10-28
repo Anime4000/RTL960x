@@ -1,9 +1,9 @@
+# TP-Link Community Support
+This folder contains an Debug Firmware & EEPROM for a GPON Stick that has been modified to support HiSGMII/2500Base-X, based on the Linux Kernel modifications in [`drivers/net/phy/sfp-bus.c`](https://github.com/torvalds/linux/blob/cf1182944c7cc9f1c21a8a44e0d29abe12527412/drivers/net/phy/sfp-bus.c#L327).
+
 ## TP-Link Debug/Beta Firmware Terms
 
 The TP-Link firmware included here unlocks advanced GPON Stick features like HiSGMII and 2.5G Base-X, allowing users on 2Gbps plans to experience improved performance. By using this firmware, you automatically accept TP-Link's [terms and conditions](https://community.tp-link.com/en/home/forum/topic/275506) for debug and beta releases.
-
-# TP-Link Community Support
-This folder contains an Debug Firmware & EEPROM for a GPON Stick that has been modified to support HiSGMII/2500Base-X, based on the Linux Kernel modifications in [`drivers/net/phy/sfp-bus.c`](https://github.com/torvalds/linux/blob/cf1182944c7cc9f1c21a8a44e0d29abe12527412/drivers/net/phy/sfp-bus.c#L327).
 
 ## TP-Link Archer GE800 - Enabling 2.5G Mode
 To enable 2.5G (HiSGMII PHY) on your TP-Link Archer GE800, follow these steps:
