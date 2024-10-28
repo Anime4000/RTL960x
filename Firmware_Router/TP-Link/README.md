@@ -29,6 +29,8 @@ The TP-Link firmware included here unlocks advanced GPON Stick features like HiS
 
 This repository hosts modified router firmware designed to enhance compatibility between GPON ONT SFP modules and 2.5G networks. Users with 2Gbps internet subscriptions can leverage these modifications for optimized speed and stability.
 
+Refer to [official readme](https://community.tp-link.com/en/home/forum/topic/711638)
+
 ### Disclaimer
 The firmware provided here is community-driven or vendor-modified to enable debug features. Some modifications may be persistent across reboots, while others may be session-limited. Users should proceed with caution, recognizing the risks involved.
 
@@ -41,6 +43,6 @@ The firmware provided here is community-driven or vendor-modified to enable debu
 ## Contributions
 Contributions, including firmware updates or enhancements, are welcome! Please refer to the contributing guidelines for submission procedures.
 
-### Note
-This research is ongoing, and findings will be updated regularly. Users are encouraged to check back for the latest insights and firmware releases.
+> [!NOTE]
+> This research is ongoing, and findings will be updated regularly. Users are encouraged to check back for the latest insights and firmware releases.
 
