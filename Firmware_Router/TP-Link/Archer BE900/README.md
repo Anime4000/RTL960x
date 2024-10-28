@@ -1,4 +1,9 @@
-# TP-Link Archer BE900 - Enabling 2.5G Mode
+## TP-Link Debug/Beta Firmware Terms
+
+The TP-Link firmware included here unlocks advanced GPON Stick features like HiSGMII and 2.5G Base-X, allowing users on 2Gbps plans to experience improved performance. By using this firmware, you automatically accept TP-Link's [terms and conditions](https://community.tp-link.com/en/home/forum/topic/275506) for debug and beta releases.
+
+
+# TP-Link Archer BE900 (Ver: V1) - Enabling 2.5G Mode
 This firmware is provided by [@d5aqoep](https://github.com/d5aqoep) via TP-Link Support. 
 
 Link to original post issue [#235](https://github.com/Anime4000/RTL960x/issues/235)
