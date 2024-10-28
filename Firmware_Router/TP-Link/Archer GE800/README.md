@@ -1,3 +1,7 @@
+## TP-Link Debug/Beta Firmware Terms
+
+The TP-Link firmware included here unlocks advanced GPON Stick features like HiSGMII and 2.5G Base-X, allowing users on 2Gbps plans to experience improved performance. By using this firmware, you automatically accept TP-Link's [terms and conditions](https://community.tp-link.com/en/home/forum/topic/275506) for debug and beta releases.
+
 # TP-Link Community Support
 This folder contains an Debug Firmware & EEPROM for a GPON Stick that has been modified to support HiSGMII/2500Base-X, based on the Linux Kernel modifications in [`drivers/net/phy/sfp-bus.c`](https://github.com/torvalds/linux/blob/cf1182944c7cc9f1c21a8a44e0d29abe12527412/drivers/net/phy/sfp-bus.c#L327).
 
@@ -44,7 +48,7 @@ once you have internet, unplug the ONT Ethernet cable and plug GPON Stick then s
 once have internet via GPON Stick at 1000Mbps, proceed to debug command and enter the command above to set 2500Mbps HiSGMII
 
 ## EEPROM Configuration Overview
-Based on the SFF-8024, SFF-8431, and SFF-8472 standards, there is no officially defined transceiver code for 1310nm/1550nm 2500Base-X. Therefore, **Byte 6** is set to `0x00` to indicate that no specific transceiver type is defined, and **Byte 12** is set to `0x1F` to signal a nominal bit rate of 2500 Mbps, supporting 2500Base-X.
+Based on the SFF-8024, SFF-8431, and SFF-8472 standards, there is **no officially** defined transceiver code for 1310nm/1550nm 2500Base-X. Therefore, **Byte 6** is set to `0x00` to indicate that no specific transceiver type is defined, and **Byte 12** is set to `0x1F` to signal a nominal bit rate of 2500 Mbps, supporting 2500Base-X.
 
 The provided EEPROM binary example allows for the detection of a GPON Stick with HiSGMII (SGMII+), commonly used for GPON ONT applications.
 
@@ -83,20 +87,7 @@ These settings ensure compatibility with 2500Base-X and allow the GPON Stick to 
 ```
 
 ## Compatibility Testing
-This configuration has been tested and confirmed to work on various OpenWRT-supported devices and other networking hardware, including:
-
-- **OpenWRT Router Boards:**
-  - Banana Pi BPI-R3 with OpenWRT 23.05.2
-- **Mikrotik Devices:**
-  - RB5009UG+S+IN
-  - RB5009UPr+S+IN
-  - CCR2004-1G-12S+2XS
-  - CCR2116-12G-4S+
-  - CRS305-1G-4S+IN
-- **ASUS Routers:**
-  - ASUS RT-BE88U
-- **Managed Switches:**
-  - Devices using RTL8221B and RTL8372 chipsets
+This configuration has been tested and confirmed to work on various OpenWRT-supported devices and other networking hardware.
 
 ## Conclusion
 The modified EEPROM enhances compatibility with higher-speed networking interfaces, ensuring optimal performance across a wide range of devices.
