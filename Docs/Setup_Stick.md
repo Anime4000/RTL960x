@@ -205,7 +205,7 @@ Even Nokia OLT, Huawei is most common due to "Universal ONU" deployment.
 | Huawei | `1`  | Huawei info |
 | ZTE    | `2`  | ZTE info |
 | Custom | `3`  | Own info |
-| Custom | `21` | Force own info by trigger `segmention fault` on **DFP-34X-2C2** default value |
+| Custom | `21` | Force own info by trigger [`segmention fault`](https://github.com/Anime4000/RTL960x/issues/30#issuecomment-1146604684) on **DFP-34X-2C2** default value |
 
 ```
 flash set OMCI_OLT_MODE 0
