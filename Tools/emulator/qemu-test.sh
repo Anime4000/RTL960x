@@ -185,11 +185,10 @@ if [ -f "$CHDIR/etc/scripts/fix_sw_ver.sh" ]; then
 fi
 
 echo "chmod +x /bin folder, prevent stick become brick!"
-chmod +x "$CHDIR/bin/" -R
-chmod +x "$CHDIR/etc/*.sh"
-chmod +x "$CHDIR/etc/init.d/" -R
-chmod +x "$CHDIR/etc/scripts/" -R
 chown 0:0 "$CHDIR/" -R
+chmod +x "$CHDIR/bin/" -R
+chmod +x "$CHDIR/etc/init.d/" -R
+find "$CHDIR/etc/" -type f -name "*.sh" -exec chmod +x {} \;
 
 echo "chmod +x /etc/scripts_mod folder, allow your own script to run!"
 if [[ -d "$CHDIR/etc/scripts_mod" ]]; then
