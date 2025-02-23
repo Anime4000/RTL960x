@@ -190,11 +190,11 @@ chmod -R +x "$CHDIR/bin"
 chmod -R +x "$CHDIR/etc/init.d"
 chmod -R +x "$CHDIR/etc/scripts"
 
-if [[ ! -d "$CHDIR/etc" ]]; then
+if [ -d "$CHDIR/etc" ]; then
     find "$CHDIR/etc" -type f -name '*.sh' -exec chmod +x {} +
 fi
 
-if [[ ! -d "$CHDIR/opt" ]]; then
+if [ -d "$CHDIR/opt" ]; then
     find "$CHDIR/opt" -type f -name '*.sh' -exec chmod +x {} +
 fi
 
