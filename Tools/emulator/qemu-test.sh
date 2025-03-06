@@ -159,8 +159,6 @@ else
 	echo "$2" > fwu_ver
 fi
 
-date +'%y%m%d' > $CHDIR/home/httpd/web/get_rel.html
-
 if [ -d "$DIR/custom" ]; then
 	echo "Injecting custom or fix scripts"
 	echo "--- From $DIR/custom -to- $CHDIR"
@@ -171,6 +169,8 @@ if [ -f "$DIR/custom.sh" ]; then
     echo "Execute custom.sh from outside CHROOT"
     /bin/bash "$DIR/custom.sh" "$DIR/${FILENAME%.*}/$CHDIR"
 fi
+
+date +'%y%m%d' > $CHDIR/home/httpd/web/get_rel.html
 
 if [[ ! -d "$DIR/custom" ]] || [[ ! -d "$DIR/custom1" ]]; then
     echo "Fix HTML Syntax"
