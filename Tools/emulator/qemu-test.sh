@@ -159,15 +159,15 @@ else
 	echo "$2" > fwu_ver
 fi
 
+if [ -f "$DIR/custom.sh" ]; then
+    echo "Execute custom.sh from outside CHROOT"
+    /bin/bash "$DIR/custom.sh" "$DIR/${FILENAME%.*}/$CHDIR"
+fi
+
 if [ -d "$DIR/custom" ]; then
 	echo "Injecting custom or fix scripts"
 	echo "--- From $DIR/custom -to- $CHDIR"
 	rsync -avhL --info=progress2 "$DIR/custom/" "$CHDIR"
-fi
-
-if [ -f "$DIR/custom.sh" ]; then
-    echo "Execute custom.sh from outside CHROOT"
-    /bin/bash "$DIR/custom.sh" "$DIR/${FILENAME%.*}/$CHDIR"
 fi
 
 date +'%y%m%d' > $CHDIR/home/httpd/web/get_rel.html
@@ -221,7 +221,7 @@ for file in *; do
 done
 
 echo "Repacking firmware: rtl960x_modified.tar"
-tar -cvf ../${FILENAME%.*}_rel$(date +'%y%m%d').tar --exclude='*.original' --exclude='squashfs-root' *
+tar -cvf ../${FILENAME%.*}-rel$(date +'%y%m%d').tar --exclude='*.original' --exclude='squashfs-root' *
 
 echo ""
 echo "Firmware Repacking Complete!"
