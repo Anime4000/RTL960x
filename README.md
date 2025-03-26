@@ -80,6 +80,7 @@ Join us in enhancing this RTL960x documentation repository to support the xPON c
     * [xPON Model Id](Docs/FLASH_GETSET_INFO.md#pon_vendor_id-4-ascii-character-maximum)
     * [LAN SDS Mode](Docs/FLASH_GETSET_INFO.md#lan_sds_mode)
     * [2.5GbE Compatibility](Docs/2.5Gb.md)
+    * [Making the work on the Intel 82599es](https://omaera.org/wlog/tech/odi_sfp) <sup>Guide by [@z411](https://github.com/z411)</sup>
 4. Health Reporting
     * [Telegram](https://github.com/Anime4000/RTL960x/issues/99#issuecomment-1611726668) <sup>Mikrotik script by [@smnrock](https://github.com/smnrock), sending health report via Telegram Bot</sup>
     * [Telegram via #!/bin/bash](https://github.com/Anime4000/RTL960x/discussions/277) <sup>Linux Bash script by [@chiragkrishna](https://github.com/chiragkrishna), sending health report via Telegram Bot</sup>
