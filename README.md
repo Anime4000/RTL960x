@@ -1,39 +1,17 @@
 # Hacking [RTL960x](https://www.google.com/search?q=rtl9601ci+datasheet)
 
-## ⚠️ Important Considerations for Using Custom GPON Sticks (SFP ONTs)
+## ⚠️ WARNING: SERIOUS RISKS WITH CUSTOM GPON SFP ONTs
 When using custom **GPON SFP ONTs** (Small Form-factor Pluggable Optical Network Terminals), it’s important to be aware of potential risks and how they can affect not only your connection but also others on the same network.
 
-### Potential Issues with SFP ONTs
-- **Connection Instability**<br><sup>Some users have reported that SFP ONTs may fail to connect properly or might frequently disconnect.</sup>
-- **Network Disruptions**<br><sup>In some cases, faulty SFP ONTs can cause major problems, such as taking down the entire GPON (Gigabit Passive Optical Network) by creating signal collisions. This can affect all the users sharing the same network port.</sup>
-- **Going Rogue**<br><sup>There have been situations where an SFP ONT "went rogue," causing disruptions for other users on the network. This happens because a single GPON port can serve up to 32 users (or 64 users in certain areas), so one malfunctioning ONT can impact everyone.</sup>
+Using custom GPON SFP ONTs can cause severe network issues, not just for you but for everyone on the same GPON port. A single faulty or misconfigured ONT can take down an entire GPON network, affecting dozens of users.
 
-Always monitor for issues, and consider switching to certified models if problems persist to avoid affecting other users.
+### 🚨 Major Risks
+* **Network-wide Disruptions**<br><sup>A rogue ONT can cause signal collisions, disconnecting all users on the same fiber split.</sup>
+* **ISP Blacklisting & Fines**<br><sup>ISPs may ban your service or impose penalties for unauthorized modifications.</sup>
+* **Unstable Connection**<br><sup>Custom ONTs may fail to connect properly or frequently drop connections.</sup>
 
-### Real-World Example
-> [!WARNING]
-> A technician once encountered an SFP ONT that was causing collisions, which affected the entire network. They had to replace the device with a different model (XGS PON) to restore stability and avoid further issues. While experimenting with custom devices can be fun, it’s essential to understand that you share the network with other customers.
-> 
-> *tl;dr quote by [@03HemiNorthIL](https://www.reddit.com/r/Metronet/comments/1ftktrr/comment/lpsprs3/) at Reddit*
-
-### What This Means for You
-If you’re experimenting with custom GPON sticks, keep the following in mind
-
-1. **Monitor for Connection Issues**<br><sup>If your connection drops frequently or doesn’t work as expected, your SFP ONT might not be fully compatible.</sup>
-2. **Consider Network Impact**<br><sup>Be mindful that your actions can affect the other users on the same network port. If your ONT malfunctions, it could bring down the network for everyone.</sup>
-3. **Seek Alternatives**<br><sup>If problems persist, you may need to switch to a more stable, certified model, especially if you're sharing the network with many other users.</sup>
-
-### Benefits and Limitations
-> [!NOTE]
-> Using GPON Sticks can potentially **improve throughput for plans offering 2 Gbps by bypassing the limitations of a typical Gigabit Ethernet ONT.** However, this will not provide any speed boost or "hacking" beyond your subscribed plan.
-
-### Legal Considerations
-> [!CAUTION]
-> If your ISP detects the use of unauthorized commands or illegal activity, <ins>they have the right to ban your service and impose hefty fines for disrupting the PON network.</ins>
-
-### Disclaimer
-> [!IMPORTANT]  
-> We are not responsible for any illegal activity that occurs from the use of this hardware. By proceeding, you agree to all the warnings and terms outlined above.
+### ⚠ **DANGER**
+**A faulty SFP can take down an entire GPON network!**
 
 # xPON SFP ONU
 <a href="https://github.com/Anime4000/RTL960x/graphs/contributors">
