@@ -92,16 +92,32 @@ if [ ! -d "$CHDIR/usr/bin" ]; then
     mkdir "$CHDIR/usr/bin"
 fi
 
-echo "Checking: chroot QEMU MIPS"
-if [ ! -f "$CHDIR/usr/bin/qemu-mips-static" ]; then
+if file "$CHDIR/bin/busybox" | grep -q "aarch64"; then
+    echo "ARM64 firmware detected"
+    QEMU_ARCH="qemu-aarch64-static"
+elif file "$CHDIR/bin/busybox" | grep -q "ARM"; then
+    echo "ARM64 firmware detected"
+    QEMU_ARCH="qemu-arm-static"
+elif file "$CHDIR/bin/busybox" | grep -q "MIPS"; then
+    echo "MIPS firmware detected"
+    QEMU_ARCH="qemu-mips-static"
+else
+    echo "Unable to determine firmware CPU Arch!"
+    file $CHDIR/bin/busybox
+    exit 3
+fi
+
+
+echo "Checking: chroot QEMU"
+if [ ! -f "$CHDIR/usr/bin/$QEMU_ARCH" ]; then
 	echo "Installing: chroot QEMU MIPS"
-	cp $(which qemu-mips-static) "$CHDIR/usr/bin/"
+	cp $(which $QEMU_ARCH) "$CHDIR/usr/bin/"
 fi
 
 echo "RTL960x Emulator is Running!"
-chroot "$CHDIR" qemu-mips-static "/bin/sh"
-# chroot "$CHDIR" qemu-aarch64-static "/bin/sh"
+chroot "$CHDIR" $QEMU_ARCH "/bin/sh"
 echo "User End QEMU..."
+rm -f "$CHDIR/usr/bin/$QEMU_ARCH"
 
 echo "Clean-up"
 rm -f "$CHDIR/custom.sh"
