@@ -20,22 +20,26 @@ Using custom GPON SFP ONTs can cause severe network issues, not just for you but
 
 Join us in enhancing this RTL960x documentation repository to support the xPON community. Every piece of information, no matter how small, can make a significant impact on others. Got spare knowledge about ONU Box functionalities? Share it by dumping the [information here](Docs/Stock_ONU.md)! Together, let's make xPON more accessible and straightforward!
 ## RTL960x Family
-| Stick | SoC | NAND | Mode | 4-port `EthUni` | 2.5Gb |
-|-------|-----|------|------|-----------------|-------|
-| VSOL V2801F | `RTL9601CI` | 8MiB | VEIP & PPTP | Forced All | MOD |
-| T&W TWCGPON657 | `RTL9601CI` | 16MiB | VEIP & PPTP | [`V1.9.0-240204`](Firmware/TWCGPON657/TWCGPON657_V1.9.0-240204.tar) | MOD |
-| Ubiquiti UFiber Instant | `RTL9601CI` | 8MiB | PPTP | LAN 1 | NO |
-| ODI DFP-34X-2C2 (UPC) | `RTL9601D` | 8MiB | VEIP & PPTP | Selective All | YES |
-| ODI DFP-34X-2C3 (APC) | `RTL9601D` | 8MiB | VEIP & PPTP | Selective All | YES |
-| [Nokia G-010S-Q](https://github.com/Anime4000/RTL960x/issues/52#issuecomment-1208424756) | `RTL9601CI` | 16MiB | PPTP | NO | NO |
+| Stick | SoC | NAND | Mode | 4-port `EthUni` | 2.5Gb | EoL |
+|-------|-----|------|------|-----------------|-------|-----|
+| VSOL V2801F | `RTL9601CI` | 8MiB | VEIP & PPTP | Forced All | MOD | ✅ |
+| T&W TWCGPON657 | `RTL9601CI` | 16MiB | VEIP & PPTP | [`V1.9.0-240204`](Firmware/TWCGPON657/TWCGPON657_V1.9.0-240204.tar) | MOD | ✅ |
+| Ubiquiti UFiber Instant | `RTL9601CI` | 8MiB | PPTP | LAN 1 | NO | ✅ |
+| ODI DFP-34X-2C2 (UPC) | `RTL9601D` | 8MiB | VEIP & PPTP | Selective All | YES | ℹ️ |
+| ODI DFP-34X-2C3 (APC) | `RTL9601D` | 8MiB | VEIP & PPTP | Selective All | YES | ℹ️ |
+| [Nokia G-010S-Q](https://github.com/Anime4000/RTL960x/issues/52#issuecomment-1208424756) | `RTL9601CI` | 16MiB | PPTP | NO | NO | ❓ |
+> [!NOTE]
+> OEM has plan to ditch Realtek and using new SoC that are more clean and flexible
 
 ## Non-RTL960x GPON
-| Device              | Mode     | SoC          | NAND | UNI        | 4-port `EthUni` |
-|---------------------|----------|--------------|------|------------|-----------------|
-| ODI DFP-34X-2C2     | GPON SFP | ZTE          | ?    | PPTP/VEIP | NO, NO OMCI EDIT |
-| Huawei MA5671a      | GPON SFP | Lantiq | 16MiB | PPTP/VEIP | LAN 1 |
-| Nokia G-010S-P      | GPON SFP | Lantiq | 16MiB | PPTP/VEIP | LAN 1 |
-| Nokia G-010S-A      | GPON SFP | Lantiq | 16MiB | PPTP/VEIP | LAN 1 |
+| Device              | Mode     | SoC          | NAND | UNI        | 4-port `EthUni` | EoL |
+|---------------------|----------|--------------|------|------------|-----------------|-----|
+| ODI DFP-34X-2C2     | GPON SFP | ZTE          | ?    | PPTP/VEIP | NO, NO OMCI EDIT | ✅ |
+| Huawei MA5671a      | GPON SFP | Lantiq | 16MiB | PPTP/VEIP | LAN 1 | ✅ |
+| Nokia G-010S-P      | GPON SFP | Lantiq | 16MiB | PPTP/VEIP | LAN 1 | ✅ |
+| Nokia G-010S-A      | GPON SFP | Lantiq | 16MiB | PPTP/VEIP | LAN 1 | ✅ |
+> [!NOTE]
+> Lantiq SoC is no longer made, and not flexible as Realtek.
 
 ## 10G xPON ONU
 | Stick               | Mode     | SoC       | NAND | Mode | 4-port `EthUni` |
