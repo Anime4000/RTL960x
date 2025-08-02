@@ -33,9 +33,10 @@ nc 192.168.1.1 12345 < file
 # WebGUI
 | Model       | Login Screen | Status |
 |-------------|-----------------------------------------------|------------------------------------------------|
-| V2801F      | ![GUI](../Docs/Images/webgui/1-login.png)     | ![GUI](../Docs/Images/webgui/2-status.png)     |
-| DFP-34X-2C2 gui V2801F fork | ![GUI](../Docs/Images/webgui-dfp/1-login.png) | ![GUI](../Docs/Images/webgui-dfp/2-status.png) |
-| DFP-34X-2C2 dark by [imoize](https://github.com/imoize) | ![GUI](../Docs/Images/webgui-dfp/4-login.png) | ![GUI](../Docs/Images/webgui-dfp/5-status.png) |
+| RTL9601Ci      | ![GUI](../Docs/Images/webgui/1-login.png)     | ![GUI](../Docs/Images/webgui/2-status.png)     |
+| RTL9601D | ![GUI](../Docs/Images/webgui-dfp/1-login.png) | ![GUI](../Docs/Images/webgui-dfp/2-status.png) |
+| RTL9601D dark by [imoize](https://github.com/imoize) | ![GUI](../Docs/Images/webgui-dfp/4-login.png) | ![GUI](../Docs/Images/webgui-dfp/5-status.png) |
+| RTL9601D Current | ![GUI](../Docs/Images/webgui-dfp/Screenshot%202025-07-19%20225022.png) | ![GUI](../Docs/Images/webgui-dfp/Screenshot%202025-07-19%20225117.png) |
 
 # WebGUI Improvement
 ## DFP-34X-2C2
