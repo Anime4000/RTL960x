@@ -236,14 +236,19 @@ for file in *; do
     md5sum "$file" >> md5.txt
 done
 
+FILENAME_FW="${FILENAME%.*}-rel$(date +'%y%m%d').tar"
+if [ -f ../filename.txt ]; then
+	FILENAME_FW="$(<../filename.txt)-rel$(date +'%y%m%d').fd"
+fi
+
 echo "Repacking firmware: rtl960x_modified.tar"
-tar -cvf ../${FILENAME%.*}-rel$(date +'%y%m%d').tar --exclude='*.original' --exclude='squashfs-root' *
+tar -cvf ../${FILENAME_FW} --exclude='*.original' --exclude='squashfs-root' *
 
 echo ""
 echo "Firmware Repacking Complete!"
-echo "Location: $(realpath ../${FILENAME%.*}-rel$(date +'%y%m%d').tar)"
+echo "Filename: ${FILENAME_FW}"
 echo ""
-echo "Anime4000 firmware test script, https://github.com/Anime4000/RTL9601C1"
+echo "Anime4000 firmware test script, https://github.com/Anime4000/RTL960x"
 echo ""
 
 exit 0
