@@ -1,4 +1,4 @@
-# Hacking [RTL960x](https://www.google.com/search?q=rtl9601ci+datasheet)
+# Hacking RTL960x
 
 ## ⚠️ WARNING: SERIOUS RISKS WITH CUSTOM GPON SFP ONTs
 When using custom **GPON SFP ONTs** (Small Form-factor Pluggable Optical Network Terminals), it’s important to be aware of potential risks and how they can affect not only your connection but also others on the same network.
