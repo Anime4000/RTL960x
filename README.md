@@ -28,17 +28,17 @@ Join us in enhancing this RTL960x documentation repository to support the xPON c
 | DFP-34X-2C2 (A/UPC) | `RTL9601D` | 8MiB | VEIP & PPTP | Selective All | YES | ✅ |
 | [Nokia G-010S-Q](https://github.com/Anime4000/RTL960x/issues/52#issuecomment-1208424756) | `RTL9601CI` | 16MiB | PPTP | NO | NO | ❓ |
 > [!NOTE]
-> OEM no plan to release new firmware, up to the private community patches (which illegal to release publicly)
+> OEM no plan to release new firmware, up to the private community build's V2.0 (which illegal to release publicly)
 
 ## Non-RTL960x GPON
 | Device              | Mode     | SoC          | NAND | UNI        | 4-port `EthUni` | EoL |
 |---------------------|----------|--------------|------|------------|-----------------|-----|
-| ODI DFP-34X-2C2     | GPON SFP | ZTE          | ?    | PPTP/VEIP | NO, NO OMCI EDIT | ✅ |
+| DFP-34X-2C2         | GPON SFP | ZTE          | ?    | PPTP/VEIP | NO, NO OMCI EDIT | ✅ |
 | Huawei MA5671a      | GPON SFP | Lantiq | 16MiB | PPTP/VEIP | LAN 1 | ✅ |
 | Nokia G-010S-P      | GPON SFP | Lantiq | 16MiB | PPTP/VEIP | LAN 1 | ✅ |
 | Nokia G-010S-A      | GPON SFP | Lantiq | 16MiB | PPTP/VEIP | LAN 1 | ✅ |
 > [!NOTE]
-> Lantiq SoC is no longer made, and not flexible as Realtek.
+> Lantiq SFP are used/2nd hand, has limited OLT Support, even OLT Stick rejecting it
 
 ## 10G xPON ONU
 | Stick               | Mode     | SoC       | NAND | Mode | 4-port `EthUni` |
