@@ -24,12 +24,11 @@ Join us in enhancing this RTL960x documentation repository to support the xPON c
 |-------|-----|------|------|-----------------|-------|-----|
 | VSOL V2801F | `RTL9601CI` | 8MiB | VEIP & PPTP | Forced All | MOD | ✅ |
 | T&W TWCGPON657 | `RTL9601CI` | 16MiB | VEIP & PPTP | [`V1.9.0-240204`](Firmware/TWCGPON657/TWCGPON657_V1.9.0-240204.tar) | MOD | ✅ |
-| Ubiquiti UFiber Instant | `RTL9601CI` | 8MiB | PPTP | LAN 1 | NO | ✅ |
-| ODI DFP-34X-2C2 (UPC) | `RTL9601D` | 8MiB | VEIP & PPTP | Selective All | YES | ℹ️ |
-| ODI DFP-34X-2C3 (APC) | `RTL9601D` | 8MiB | VEIP & PPTP | Selective All | YES | ℹ️ |
+| UFiber Instant | `RTL9601CI` | 8MiB | PPTP | LAN 1 | NO | ✅ |
+| DFP-34X-2C2 (A/UPC) | `RTL9601D` | 8MiB | VEIP & PPTP | Selective All | YES | ✅ |
 | [Nokia G-010S-Q](https://github.com/Anime4000/RTL960x/issues/52#issuecomment-1208424756) | `RTL9601CI` | 16MiB | PPTP | NO | NO | ❓ |
 > [!NOTE]
-> OEM has plan to ditch Realtek and using new SoC that are more clean and flexible
+> OEM no plan to release new firmware, up to the private community patches (which illegal to release publicly)
 
 ## Non-RTL960x GPON
 | Device              | Mode     | SoC          | NAND | UNI        | 4-port `EthUni` | EoL |
