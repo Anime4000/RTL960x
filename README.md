@@ -19,7 +19,7 @@ Using custom GPON SFP ONTs can cause severe network issues, not just for you but
 </a>
 
 Join us in enhancing this RTL960x documentation repository to support the xPON community. Every piece of information, no matter how small, can make a significant impact on others. Got spare knowledge about ONU Box functionalities? Share it by dumping the [information here](Docs/Stock_ONU.md)! Together, let's make xPON more accessible and straightforward!
-## RTL960x Family
+## RTL9601x Device's
 | Stick | SoC | NAND | Mode | 4-port `EthUni` | 2.5Gb | EoL |
 |-------|-----|------|------|-----------------|-------|-----|
 | VSOL V2801F | `RTL9601CI` | 8MiB | VEIP & PPTP | Forced All | MOD | ✅ |
@@ -30,7 +30,18 @@ Join us in enhancing this RTL960x documentation repository to support the xPON c
 > [!NOTE]
 > OEM no plan to release new firmware, up to the private community build's V2.0 (which illegal to release publicly)
 
-## Non-RTL960x GPON
+## RTL960x Family
+| CPU       | Arch  | Type    | Info |
+|-----------|-------|---------|------|
+| RTL9601B  | MIPS  | SFU     | First generation GPON ONT on SFP, 1G only |
+| RTL9601C1 | MIPS  | SFU     | 2nd generation GPON ONT on SFP, 1G and partial 2.5G |
+| RTL9601D  | MIPS  | SFU/HGU | 3rd generation GPON ONT on SFP, Stable 2.5G |
+| RTL9602   | MIPS  | SFU/HGU | Only available on Box form factor |
+| RTL9607DQ | ARM64 | SFU/HGU | AIO unit, 4 Core & 1GHz CPU, optional 2.5GbE and POTS |
+
+*Here list known RTL960x PON based router/bridge*
+
+## Other GPON
 | Device              | Mode     | SoC          | NAND | UNI        | 4-port `EthUni` | EoL |
 |---------------------|----------|--------------|------|------------|-----------------|-----|
 | DFP-34X-2C2         | GPON SFP | ZTE          | ?    | PPTP/VEIP | NO, NO OMCI EDIT | ✅ |
