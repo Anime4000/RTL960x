@@ -33,11 +33,14 @@ Join us in enhancing this RTL960x documentation repository to support the xPON c
 ## RTL960x Family
 | CPU       | Arch  | Type    | Info |
 |-----------|-------|---------|------|
-| RTL9601B  | MIPS  | SFU     | First generation GPON ONT on SFP, 1G only |
-| RTL9601C1 | MIPS  | SFU     | 2nd generation GPON ONT on SFP, 1G and partial 2.5G |
-| RTL9601D  | MIPS  | SFU/HGU | 3rd generation GPON ONT on SFP, Stable 2.5G |
-| RTL9602   | MIPS  | SFU/HGU | Only available on Box form factor |
+| RTL9601B  | Lexra | SFU     | First generation GPON ONT on SFP, 1G only |
+| RTL9601C1 | Lexra | SFU     | 2nd generation GPON ONT on SFP, 1G and partial 2.5G |
+| RTL9601D  | Lexra | SFU/HGU | 3rd generation GPON ONT on SFP, Stable 2.5G |
+| RTL9602C  | Lexra | SFU/HGU | Only available on Box form factor |
+| RTL9603C  | MIPS  | SFU/HGU | AIO unit, 1 Core & 900MHz CPU |
+| RTL9607C  | MIPS  | SFU/HGU | AIO unit, 2 Core & 1.15Ghz CPU, USB and POTS included |
 | RTL9607DQ | ARM64 | SFU/HGU | AIO unit, 4 Core & 1GHz CPU, optional 2.5GbE and POTS |
+| RTL9607F  | ARM64 | SFU/HGU | AIO unit, 2 Core & 1Ghz CPU, optional USB and POTS |
 
 *Here list known RTL960x PON based router/bridge*
 
