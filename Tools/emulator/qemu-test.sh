@@ -55,7 +55,7 @@ fi
 
 if [ $# -eq 0 ]; then
 	echo "Usage"
-	echo "       $0<firmware> [<sw_ver>|-e]"
+	echo "       $0<firmware> [<sw_ver>|-d]"
 	echo ""
 	echo "Options:"
 	echo "  firmware           rtl960x firmware file in .tar format"
