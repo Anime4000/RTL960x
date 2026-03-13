@@ -229,6 +229,10 @@ if [ -d "$DIR/custom" ]; then
 	rsync -avhL --info=progress2 "$DIR/custom/" "$CHDIR"
 fi
 
+if [ ! -z "$BRAND" ]; then
+	/bin/bash "$DIR/branding.sh" "$DIR/${FILENAME%.*}/$CHDIR"
+fi
+
 date +'%y%m%d' > $CHDIR/home/httpd/web/get_rel.html
 
 if [[ ! -d "$DIR/custom" ]] || [[ ! -d "$DIR/custom1" ]]; then
