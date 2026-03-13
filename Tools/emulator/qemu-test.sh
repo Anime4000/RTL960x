@@ -231,6 +231,7 @@ fi
 
 if [ ! -z "$BRAND" ]; then
 	/bin/bash "$DIR/branding.sh" "$DIR/${FILENAME%.*}/$CHDIR"
+	BRAND="$BRAND-"
 fi
 
 date +'%y%m%d' > $CHDIR/home/httpd/web/get_rel.html
@@ -285,9 +286,9 @@ for file in *; do
 	md5sum "$file" >> md5.txt
 done
 
-FILENAME_FW="${FILENAME%.*}-rel$(date +'%y%m%d').tar"
+FILENAME_FW="$BRAND${FILENAME%.*}-rel$(date +'%y%m%d').tar"
 if [ -f ../filename.txt ]; then
-	FILENAME_FW="$(<../filename.txt)-rel$(date +'%y%m%d').image"
+	FILENAME_FW="$BRAND$(<../filename.txt)-rel$(date +'%y%m%d').image"
 fi
 
 echo "Repacking firmware: rtl960x_modified.tar"
