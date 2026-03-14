@@ -7,12 +7,8 @@ import time
 
 
 CACHE_TTL = 10
-cache_data = None
-cache_time = 0
+cache = {}
 
-
-TARGET_URL = "http://192.168.1.1/admin/login.asp"
-OMCI_URL = "http://192.168.1.1/admin/graphics/topbar.gif"
 
 app = Flask(__name__)
 
@@ -67,8 +63,9 @@ def uptime_parts(uptime):
 	return None, None
 
 
-def fetch_omci():
-	r = requests.get(OMCI_URL, timeout=5)
+def fetch_omci(target):
+	omci_url = f"http://{target}/admin/graphics/topbar.gif"
+	r = requests.get(omci_url, timeout=5)
 	r.raise_for_status()
 
 	soup = BeautifulSoup(r.text, "html.parser")
@@ -103,24 +100,24 @@ def fetch_omci():
 	return result
 
 
-def get_data():
-	global cache_data, cache_time
-
+def get_data(target):
 	now = time.time()
 
-	if cache_data and (now - cache_time) < CACHE_TTL:
-		return cache_data
+	if target in cache:
+		data, ts = cache[target]
+		if now - ts < CACHE_TTL:
+			return data
 
-	data = fetch_table()
+	data = fetch_table(target)
 
-	cache_data = data
-	cache_time = now
+	cache[target] = (data, now)
 
 	return data
 
 
-def fetch_table():
-	r = requests.get(TARGET_URL, timeout=5)
+def fetch_table(target):
+	login_url = f"http://{target}/admin/login.asp"
+	r = requests.get(login_url, timeout=5)
 	r.raise_for_status()
 
 	soup = BeautifulSoup(r.text, "html.parser")
@@ -146,7 +143,7 @@ def fetch_table():
 
 	# merge OMCI info
 	try:
-		omci = fetch_omci()
+		omci = fetch_omci(target)
 		data.update({k: v for k, v in omci.items() if v is not None})
 	except Exception:
 		pass
@@ -297,21 +294,23 @@ def banner():
 	print("========================================")
 	print("  Author : Anime4000")
 	print("  Port   : 4000")
-	print("  API    : /?prometheus")
+	print("  API    : /metrics?target=<ONU_IP>")
 	print("")
 	print("NOTE: This tool is designed for Nijika Firmware on compatible RTL960x ONUs.")
 	print("      Functionality on other models or firmware versions is not guaranteed.")
 	print("")
 
 
-@app.route("/")
-def api():
-	data = get_data()
+@app.route("/metrics")
+def metrics():
+	target = request.args.get("target")
 
-	if "prometheus" in request.args:
-		return Response(build_prometheus(data), mimetype="text/plain; version=0.0.4")
+	if not target:
+		return Response("# missing target\n", mimetype="text/plain")
 
-	return jsonify(build_raw(data))
+	data = get_data(target)
+
+	return Response(build_prometheus(data), mimetype="text/plain; version=0.0.4")
 
 
 if __name__ == "__main__":
