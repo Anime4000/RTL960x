@@ -38,8 +38,9 @@ def uptime_parts(uptime):
 	Convert uptime formats into (hour, minute)
 
 	Supported:
-	- 'h:mm'
 	- 'X min'
+	- 'h:mm'
+	- 'N day, h:mm'
 	"""
 
 	if not uptime:
@@ -60,7 +61,30 @@ def uptime_parts(uptime):
 		minute = int(m.group(2))
 		return hour, minute
 
+	# format: "1 day, 1:31"
+	m = re.match(r"(\d+)\s*day[s]?,\s*(\d+):(\d+)", uptime)
+	if m:
+		days = int(m.group(1))
+		hour = int(m.group(2))
+		minute = int(m.group(3))
+		return days * 24 + hour, minute
+
 	return None, None
+
+
+def get_data(target):
+	now = time.time()
+
+	if target in cache:
+		data, ts = cache[target]
+		if now - ts < CACHE_TTL:
+			return data
+
+	data = fetch_table(target)
+
+	cache[target] = (data, now)
+
+	return data
 
 
 def fetch_omci(target):
@@ -98,21 +122,6 @@ def fetch_omci(target):
 					break
 
 	return result
-
-
-def get_data(target):
-	now = time.time()
-
-	if target in cache:
-		data, ts = cache[target]
-		if now - ts < CACHE_TTL:
-			return data
-
-	data = fetch_table(target)
-
-	cache[target] = (data, now)
-
-	return data
 
 
 def fetch_table(target):
