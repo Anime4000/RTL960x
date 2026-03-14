@@ -3,6 +3,13 @@ import requests
 from bs4 import BeautifulSoup
 import re
 import math
+import time
+
+
+CACHE_TTL = 10
+cache_data = None
+cache_time = 0
+
 
 TARGET_URL = "http://192.168.1.1/admin/login.asp"
 OMCI_URL = "http://192.168.1.1/admin/graphics/topbar.gif"
@@ -96,6 +103,22 @@ def fetch_omci():
 	return result
 
 
+def get_data():
+	global cache_data, cache_time
+
+	now = time.time()
+
+	if cache_data and (now - cache_time) < CACHE_TTL:
+		return cache_data
+
+	data = fetch_table()
+
+	cache_data = data
+	cache_time = now
+
+	return data
+
+
 def fetch_table():
 	r = requests.get(TARGET_URL, timeout=5)
 	r.raise_for_status()
@@ -141,12 +164,14 @@ def calculate_los(data):
 	result = {
 		"code": None,
 		"status": "Unknown",
+		"description": "Unable to determine link status",
 		"rx_power_dbm": rx_power,
 		"onu_state": onu_state,
 		"omci": omci
 	}
 
 	if rx_power is None:
+		result["description"] = "RX power reading unavailable"
 		return result
 
 	# ---- Weak signal ----
@@ -154,18 +179,23 @@ def calculate_los(data):
 		if onu_state == "O3":
 			result["code"] = 6
 			result["status"] = "ONT_LOS_AUTH_FAIL"
+			result["description"] = "Signal too weak during authentication stage. Check fiber, connectors, or splitter loss."
 
 		elif onu_state != "O5":
 			result["code"] = 5
 			result["status"] = "ONT_LOS"
+			result["description"] = "Optical signal is too weak. ONU cannot establish link with OLT."
 
 		else:  # O5
 			if omci:
 				result["code"] = 1
 				result["status"] = "OLT_ALLOW_LOW_SIGNAL"
+				result["description"] = "Signal is below recommended level but OLT still allows service. Fiber quality may be degrading."
+
 			else:
 				result["code"] = 2
 				result["status"] = "OLT_REJECT_LOW_SIGNAL"
+				result["description"] = "OLT rejected ONU due to weak optical signal. Check fiber attenuation and splitter path."
 
 	# ---- Normal signal ----
 	else:
@@ -173,13 +203,17 @@ def calculate_los(data):
 			if omci:
 				result["code"] = 0
 				result["status"] = "OLT_AUTH_OK"
+				result["description"] = "ONU authenticated successfully and OMCI configuration is active."
+
 			else:
 				result["code"] = 3
 				result["status"] = "OLT_FAKE_O5"
+				result["description"] = "OLT is not providing OMCI/VLAN configuration. Check GPON serial number or PLOAM authentication."
 
 		else:
 			result["code"] = 4
 			result["status"] = "OLT_AUTH_FAIL"
+			result["description"] = "Optical signal is normal but authentication failed. Verify ONU serial number or PLOAM credentials."
 
 	return result
 
@@ -187,6 +221,7 @@ def calculate_los(data):
 def build_raw(data):
 	out = dict(data)
 	los = calculate_los(data)
+	out["LoS Description"] = los["description"]
 	out["LoS Indicator"] = los["status"]
 	out["LoS Code"] = los["code"]
 	return out
@@ -240,6 +275,7 @@ def build_prometheus(data):
 	if los["code"] is not None:
 		lines.append(f"onu_los_code {los['code']}")
 		status_labels["los_indicator"] = los["status"]
+		status_labels["los_description"] = los["description"]
 
 	info_labels = {**identity_labels, **status_labels}
 
@@ -263,12 +299,14 @@ def banner():
 	print("  Port   : 4000")
 	print("  API    : /?prometheus")
 	print("")
-
+	print("NOTE: This tool is designed for Nijika Firmware on compatible RTL960x ONUs.")
+	print("      Functionality on other models or firmware versions is not guaranteed.")
+	print("")
 
 
 @app.route("/")
 def api():
-	data = fetch_table()
+	data = get_data()
 
 	if "prometheus" in request.args:
 		return Response(build_prometheus(data), mimetype="text/plain; version=0.0.4")
