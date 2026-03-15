@@ -144,7 +144,7 @@ def fetch_table(target):
 		key = cols[0].get_text(" ", strip=True)
 		val = cols[1].get_text(" ", strip=True)
 
-		if key.lower() == "up time":          
+		if key.lower() == "up time":
 			val = f"{val}"
 
 		if key:
