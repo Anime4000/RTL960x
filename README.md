@@ -16,7 +16,7 @@ Every contribution no matter how small helps expand access and understanding.
 
 For discussions, troubleshooting, searchable issues, firmware experiments, tips, tricks, and networking-related topics:
 
-[Pururin Collective Forum](https://pururin.moe/viewtopic.php?t=7)
+[Pururin Collective Forum](https://www.pururin.moe/viewtopic.php?t=7)
 
 Main GitHub repositories will remain focused on vendor-neutral and structured development discussions.  
 Use the forum for non-neutral discussions, community experiments, ISP-specific tweaks, and informal sharing.
