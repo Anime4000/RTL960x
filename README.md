@@ -4,28 +4,30 @@
   <img src="https://contrib.rocks/image?repo=Anime4000/RTL960x" />
 </a>
 
-# Open Networking Initiative for xPON
+# Open PON Foundation
 
 This repository aims to document and demystify the RTL960x platform for the global xPON community.
 
 Every contribution no matter how small helps expand access and understanding.
 
+[Open PON Foundation Website](https://www.openpon.org/)
+
 ## Community Forum
 
 For discussions, troubleshooting, searchable issues, firmware experiments, tips, tricks, and networking-related topics:
 
-👉 [Pururin Collective Forum](https://pururin.moe/viewtopic.php?t=7)
+[Pururin Collective Forum](https://pururin.moe/viewtopic.php?t=7)
 
 Main GitHub repositories will remain focused on vendor-neutral and structured development discussions.  
 Use the forum for non-neutral discussions, community experiments, ISP-specific tweaks, and informal sharing.
 
-# ⚠️ SAFETY NOTICE
+# SAFETY NOTICE
 
 Custom **GPON SFP ONTs** operate outside standard ISP-controlled environments and must be handled with extreme caution.
 
 Improper configuration or non-compliant behavior can destabilize the optical network. A single faulty ONU may trigger a **PON-wide disruption**, impacting multiple subscribers on the same fiber split. Network operators actively monitor such anomalies and may enforce **service suspension, account bans, or financial penalties**.
 
-## 🚨 Operational Risks
+## Operational Risks
 * **PON Blackout Events**  
   <sup>Misbehaving ONTs can disrupt upstream synchronization, affecting all users on the same GPON segment.</sup>
 
@@ -35,7 +37,7 @@ Improper configuration or non-compliant behavior can destabilize the optical net
 * **Unpredictable Stability**  
   <sup>Custom firmware and configurations may lead to intermittent connectivity or complete service failure.</sup>
 
-## ⚠️ RESPONSIBILITY & SUPPORT
+## RESPONSIBILITY & SUPPORT
 
 This project promotes **open knowledge and interoperability**, not reckless deployment.
 
@@ -46,7 +48,6 @@ Do not endanger shared infrastructure.
 Do not disrupt others.  
 Proceed with discipline.
 
-## 🔴 PRINCIPLE
 ### OPEN NETWORKING REQUIRES RESPONSIBILITY!
 
 # Hacking RTL960x
