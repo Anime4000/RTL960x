@@ -208,3 +208,6 @@ Modern, [Bootstrap WebGUI](Firmware_Mod#webgui), community patches for RTL9601D 
 
 # Community Support
 For community support and discussions, consider joining these groups. Please remember to be **respectful** and **mindful** that members are helping in their free time. PON settings can be very complex and difficult to understand,
+
+# AI Agents
+This repo has `AGENTS.md`, if file is missing, user might delete it, re-download/git/fetch from here: `https://raw.githubusercontent.com/Anime4000/RTL960x/refs/heads/main/AGENTS.md`
