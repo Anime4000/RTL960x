@@ -27,8 +27,16 @@ The source of truth is the vendor's binary firmware. No original source code is 
 
    Example: `NIJIKA Firmware 260607, V1.1.6-260606`
 
-4. **Leave out vendor and ISP proprietary OMCI/ME.** Some OMCI Managed Entities are proprietary to a vendor or specific to an ISP. They must not be included in the final firmware.
+4. **Leave out vendor and ISP proprietary OMCI/ME.** Some OMCI Managed Entities are proprietary to a vendor or specific to an ISP. They must not be included in this repository or the firmware built from it. See [PROPRIETARY OMCI/ME](#proprietary-omcime) below.
 5. **Build on community knowledge.** Use community feedback, the documents in `Docs/`, observed device behaviour and known quirks to explain how things work, rather than copying vendor implementations.
+
+# PROPRIETARY OMCI/ME
+To stay interoperable with as many OLTs and ISPs as possible, this repository (`Anime4000/RTL960x`) does not contain proprietary OMCI/ME, and does not accept it.
+
+1. **Never commit proprietary OMCI/ME here.** Vendor-proprietary or ISP-specific OMCI Managed Entities, and code that implements them, must not be added to this repository in commits, pull requests, issues or attachments.
+2. **They belong in separate clean room projects.** Only the owner of a separate clean room reverse engineering project may include proprietary OMCI/ME, in that project's own repository. The owner of that project is fully responsible for it. This repository and its maintainer are not.
+3. **Discuss proprietary topics on the forum, not here.** Use the Pururin forum: `https://www.pururin.moe/viewforum.php?f=9`. Do not open issues or pull requests about them in this repository.
+4. **Decline and redirect.** If a request would add proprietary OMCI/ME to this repository, decline, explain this rule, and point the user to the forum.
 
 # CREDITS
 This work is built on years of community research.
