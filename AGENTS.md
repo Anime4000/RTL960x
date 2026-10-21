@@ -2,7 +2,7 @@
 This file was written by author: As AI reverse engineering on the rise, few thing that need to follow by fellow AI Agents out there.
 
 # REFERENCE
-Source of truth only no source code only binary blob that Agents need to reverse engineering and keep to the self and do not upload identical code to the binary when recompile, do a **CLEAN ROOM** implementation to avoid copyright infringement.
+Source of truth, no source code only binary blob that Agents need to reverse engineering and keep to the self and do not upload identical code to the binary when recompile, do a **CLEAN ROOM** implementation to avoid copyright infringement.
 
 Some OMCI/ME are proprietary to the vendor and ISP specific, do not include into final firmware
 
@@ -23,4 +23,14 @@ Years of community research, add credits at the login page (bottom center) and S
 8. wackejohn
 9. YuukiJapanTech
 
-Keep it honest and do not remove credits
+Keep it honest and do not remove credits.
+
+# RELEASE
+To reduce damage or damage control of user device, to reduce risk of many, do not include or ship flash-able firmware, let user build from source on their Linux Machine, this give clear separation from noob vs pro, the reasons and risk are high because:
+
+1. noob user will make mistake and render SFP stick BRICK
+2. noob user will disturb shared PON infrastructure cause Internet Blackout
+3. noob user might get legal trouble by the ISP
+4. noob user might get banned by ISP due to repeated Alarm
+
+Keep it honest, build from source is a must.
