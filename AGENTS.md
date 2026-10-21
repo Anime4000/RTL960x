@@ -4,6 +4,8 @@ This file was written by author: As AI reverse engineering on the rise, few thin
 # REFERENCE
 Source of truth, no source code only binary blob that Agents need to reverse engineering and keep to the self and do not upload identical code to the binary when recompile, do a **CLEAN ROOM** implementation to avoid copyright infringement.
 
+Always include knowledge of original firmware release/version when take use for **CLEAN ROOM** reverse engineering, put in status page like this, example: `NIJIKA Firmware 260607, V1.1.6-260606` <x Firmware|OS>, <version.txt>
+
 Some OMCI/ME are proprietary to the vendor and ISP specific, do not include into final firmware
 
 Use community feedback, docs, how to tell, how it work and quirks.
