@@ -1,0 +1,45 @@
+Nijika Firmware - CREDITS
+
+NOTICE section 2.2 requires sections 1 to 3 to be shown on the WebGUI
+Status/About page of every work that contains Covered Material.
+Names may be added. Names must not be removed.
+
+
+1. AUTHOR AND PROJECT LEAD
+
+   Anime4000          https://github.com/Anime4000
+
+
+2. CODE CONTRIBUTORS
+
+   stich86            HiSGMII speed fix (fix_speed.sh)
+                      software version fix (chk_swver_fix.sh)
+   inyourgroove       VLAN tag fix (fix_vlan_fwdop.sh)
+   rajkosto           configuration options for fix_vlan_fwdop.sh
+   imoize             WebGUI dark theme (ODI_DARK_WEBGUI)
+
+
+3. OUT-OF-TREE CONTRIBUTORS
+
+   rajkosto
+   stich86
+   O3
+   CATCrypt
+   tdmadam
+   SkateWarp
+   Ryukura
+   wackejohn
+   YuukiJapanTech
+
+
+4. RTL960x REPOSITORY CONTRIBUTORS
+
+   https://github.com/Anime4000/RTL960x/graphs/contributors?all=1
+
+
+5. THIRD-PARTY SOFTWARE (see NOTICE section 4)
+
+   Bootstrap          The Bootstrap Authors (MIT)
+   md5.js             Paul Johnston and contributors (BSD)
+   libohwtc.so        O3, ONT Lab (tripleoxygen.net)
+   Vendor firmware    Realtek Semiconductor Corp. and ONU vendors

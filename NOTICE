@@ -1,0 +1,149 @@
+Nijika Firmware
+Copyright (C) 2021-2026 Anime4000 and the contributors listed in
+CREDITS section 2
+SPDX-License-Identifier: GPL-3.0-only
+https://github.com/Anime4000/RTL960x
+
+
+1. LICENSE
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, version 3 of the License only
+(GPL-3.0-only), with the additional terms in section 2.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+General Public License for more details.
+
+The full license text is in the file LICENSE. If it is missing, see
+<https://www.gnu.org/licenses/>.
+
+"Covered Material" means the material licensed under this NOTICE, as
+defined in section 3.
+
+
+2. ADDITIONAL TERMS (GPL-3.0 SECTION 7)
+
+The copyright holders of the Covered Material add the following terms
+under GPL-3.0 section 7. They apply to the Covered Material and to
+every work that contains it, modified or not.
+
+2.1 Appropriate Legal Notices
+    The WebGUI login page footer and the WebGUI Status/About page are
+    the Appropriate Legal Notices of this program, as defined in
+    GPL-3.0 section 0. Under GPL-3.0 section 5(d), a modified version
+    must keep displaying them.
+
+2.2 Attribution (section 7(b))
+    A work that contains Covered Material must preserve:
+    a) on the WebGUI login page footer, this attribution line:
+
+       Nijika Firmware by Anime4000 and contributors - https://github.com/Anime4000/RTL960x
+
+       The line may be prefixed with "Powered by" or "Based on".
+    b) on the WebGUI Status/About page, the attribution line in (a)
+       and the names listed in CREDITS sections 1 to 3.
+    c) the files NOTICE, LICENSE and CREDITS, in every source and
+       binary distribution. Text may be added to NOTICE and CREDITS.
+       Existing text must not be removed.
+    If a work has no WebGUI, or the display is not reasonably feasible
+    for technical reasons, the text in (a) and (b) must be included in
+    its documentation and in the file CREDITS distributed with it.
+
+2.3 Origin and modified versions (section 7(c))
+    a) The origin of the Covered Material must not be misrepresented.
+       Removing, hiding or replacing the attribution in 2.2, or
+       presenting Covered Material as the work of another person or
+       organization, is misrepresentation.
+    b) A modified version must be marked as different from the
+       original. Next to the attribution line, its Appropriate Legal
+       Notices must state "Modified by <name>" and the date of the
+       modification.
+
+2.4 Names (section 7(e))
+    No rights are granted under trademark law to use the names
+    "Nijika Firmware" or "NIJIKA" as the name of a modified version.
+    These names may be used only in the attribution required by 2.2.
+
+
+3. SCOPE
+
+3.1 Covered Material:
+    a) the build scripts custom.sh and qemu-test.sh;
+    b) the overlay tree custom/: shell scripts, init scripts, WebGUI
+       pages, JavaScript, style sheets, icons and data files;
+    c) ODI_DARK_WEBGUI/ (WebGUI dark theme by imoize);
+    d) copies of the above inside the archives custom*.tar.gz,
+       custom*.7z, ODI_DARK_WEBGUI.zip and xPON_ONU_SFP_SDK*.tar.gz;
+    e) in files that originate from vendor firmware, the changes made
+       by Anime4000 and the contributors listed in CREDITS section 2.
+
+3.2 Material listed in section 4 is not Covered Material, including
+    where it is stored inside a path listed in 3.1.
+
+
+4. THIRD-PARTY MATERIAL (NOT COVERED)
+
+4.1 Bootstrap v5.3.2
+    Copyright 2011-2023 The Bootstrap Authors. MIT License.
+      custom/home/httpd/web/bootstrap.bundle.min.js
+      custom/home/httpd/web/style/bootstrap.min.css
+      ODI_DARK_WEBGUI/home/httpd/web/bootstrap.bundle.min.js
+      ODI_DARK_WEBGUI/home/httpd/web/style/bootstrap.min.css
+    The license header in each file must be kept.
+
+4.2 md5.js version 2.1
+    Copyright (C) Paul Johnston 1999 - 2002 and other contributors.
+    BSD License.
+      custom/home/httpd/web/admin/md5.js (SDK snapshots)
+
+4.3 libohwtc.so
+    Copyright 2024 Fausto "O3" Ribeiro, ONT Lab (tripleoxygen.net).
+    Subject to the author's terms.
+      custom/lib/features/libohwtc.so
+
+4.4 Vendor firmware material
+    Owned by Realtek Semiconductor Corp. and the respective ONU
+    vendors. This NOTICE grants no rights to this material.
+    a) vendor firmware images (*.tar), including the images inside
+       xPON_ONU_SFP_SDK*.tar.gz, and all rootfs content not provided
+       by custom/;
+    b) vendor binaries and other files copied from vendor firmware
+       into custom/, including custom/lib/libmib.so;
+    c) vendor-originated parts of files changed by this project,
+       wherever stored, including admin/login.asp ("Copyright (c)
+       Realtek Semiconductor Corp., 2003. All Rights Reserved."),
+       boa.conf, config_default*.xml and any other file that
+       originates from a vendor WebGUI page or configuration file;
+    d) the server-side ASP functions and language strings of the
+       vendor web server that the WebGUI pages call.
+    GPL components inside vendor firmware, such as the Linux kernel
+    and BusyBox, remain under their own licenses.
+
+4.5 Character artwork
+    The Nijika character illustration embedded as SVG in
+    custom/home/httpd/web/admin/login.asp, and any other depiction of
+    the character, belongs to its rights holders.
+
+
+5. CONTRIBUTIONS
+
+5.1 Contributions to this project are accepted under GPL-3.0-only with
+    the additional terms in section 2.
+
+5.2 Each contributor keeps the copyright in their contribution and
+    grants Anime4000 a perpetual, worldwide, non-exclusive,
+    royalty-free right to license that contribution under other terms,
+    including commercial terms.
+
+5.3 The contributors listed in CREDITS section 2 have agreed to
+    license their existing contributions under this section.
+
+
+6. PERMISSIONS
+
+Permissions beyond this NOTICE, such as distribution without source
+code or without the attribution in 2.2, require a separate written
+license from Anime4000. Contact: https://github.com/Anime4000
