@@ -62,17 +62,87 @@ Proceed with discipline.
 > [!NOTE]
 > OEM no plan to release new firmware, up to the private community build's V2.0 (which illegal to release publicly)
 
-## RTL960x Family
-| CPU       | Arch  | Type    | Info |
-|-----------|-------|---------|------|
-| RTL9601B  | Lexra | SFU     | First generation GPON ONT on SFP, 1G only |
-| RTL9601C1 | Lexra | SFU     | 2nd generation GPON ONT on SFP, 1G and partial 2.5G |
-| RTL9601D  | Lexra | SFU/HGU | 3rd generation GPON ONT on SFP, Stable 2.5G |
-| RTL9602C  | Lexra | SFU/HGU | Only available on Box form factor |
-| RTL9603C  | MIPS  | SFU/HGU | AIO unit, 1 Core & 900MHz CPU |
-| RTL9607C  | MIPS  | SFU/HGU | AIO unit, 2 Core & 1.15Ghz CPU, USB and POTS included |
-| RTL9607DQ | ARM64 | SFU/HGU | AIO unit, 4 Core & 1GHz CPU, optional 2.5GbE and POTS |
-| RTL9607F  | ARM64 | SFU/HGU | AIO unit, 2 Core & 1Ghz CPU, optional USB and POTS |
+# RTL960x Families and their subtypes
+
+## Apollomp family of chips (the very early stuff)
+| Chip     | Arch | Type       | Info |
+|----------|------|------------|------|
+| RTL9601 | Lexra? | SFU | [Public Datasheet](https://github.com/jameywine/realtek-doc/blob/main/datasheets/RTL9601-CG_Datasheet_Pre-1.0.pdf) |
+| RTL9602B | Lexra? | ??? |
+| RTL86906 | Lexra? | HGU | Router PON with 4 ports and wifi, [Public datasheet](https://github.com/jameywine/realtek-doc/blob/main/datasheets/RTL86907-CG_Datasheet_P0.9_20121106.pdf) |
+| RTL9606 | Lexra? |
+| RTL9607 | Lexra? | HGU | Router PON with 4 ports and wifi |
+| RTL9602 | Lexra? |
+| RTL9603 | Lexra? | HGU | Router PON with 100Mb ports and wifi |
+| RTL8696 | Lexra? |
+| RTL9607P | Lexra? |
+| RTL8198B | Lexra? | HGU? | Non PON variant? |
+
+## RTL9601B family of chips (still early stuff)
+| Chip     | Arch | Type       | Info |
+|----------|------|------------|------|
+| RTL9601B | Lexra | SFU | First generation GPON ONT on SFP, 1G only|
+
+## RTL9602C family of chips
+| Chip     | Arch | Type       | Info |
+|----------|------|------------|------|
+| RTL9601CI | Lexra | SFU | 2nd generation GPON ONT on SFP, 1G and partial 2.5G. Comes with 32/64MB RAM |
+| RTL9602CP | Lexra? | SFU?| Prototype variant? |
+| RTL9601C | Lexra? | SFU | The older version of RTL9601CI? |
+| RTL9602C-VA | Lexra? | HGU | Router ONT with 2 ports. Comes with 64/128MB RAM |
+| RTL9601D | Lexra | SFU | 3rd generation GPON ONT on SFP, Stable 2.5G. Comes with 32/64MB RAM |
+
+## RTL9603CVD family of chips
+| Chip     | Arch | Type       | Info |
+|----------|------|------------|------|
+| RTL9603C-VD | MIPS? | HGU? | Most likely router ONT. Comes with 64/128/256MB RAM |
+| RTL9602C-VD5 | Lexra? | HGU? | Revision of RTL9602C-VA? Comes with 128MB RAM |
+| RTL9603CE-VD | MIPS? | HGU? | Early revision?
+| RTL9601D-VD | Lexra? | SFU? | Revision of RTL9601D? Comes with 32/64/128MB RAM |
+| RTL9601DW-VD5 | Lexra | SFU? | What could "W" mean? Comes with 128MB RAM |
+
+## RTL9607C gen 1 family of chips (proper MIPS stuff, codename ApolloPro)
+| Chip     | Arch | Type       | Info |
+|----------|------|------------|------|
+| RTL9607CP / RTL9607EP | MIPS? | HGU | Early Prototypes? 950MHz CPU. |
+| RTL9603CT | MIPS? | HGU? | What could "T" mean? 600MHz CPU. |
+| RTL9607C-VA | MIPS | HGU | Gen 1 of RTL9607C with 900MHz CPU and comes with 128/256/512MB RAM |
+| RTL9607E-VA5 | MIPS? | HGU? | Early Prototype of gen 1 RTL9607C? 700 MHz and comes with 128 RAM |
+| RTL9603C-VA | MIPS? | HGU? | 950MHz CPU and comes with 64/128/256MB RAM | 
+| RTL9603CW-VA | MIPS | HGU? | Same mystery as RTL9601DW. 900MHz CPU and comes with 256/512MB RAM |
+| RTL9603CP / RTL9603CE | MIPS? | HGU? |Early Prototypes? 950Mhz CPU |
+| RTL8198D-VE | MIPS | HGU | RTL9607C but on Non PON routers. 900MHz CPU and comes with 128/256/512MB RAM |
+| RTL9606C-VA | MIPS? | HGU? | 900MHz CPU and comes with 128/256/512MB RAM |
+
+## RTL9607C gen 2 family of chips (codename ApolloPro Gen 2)
+| Chip     | Arch | Type       | Info |
+|----------|------|------------|------|
+| RTL9606C-VB | MIPS? | HGU? | 1150MHz CPU and comes with 128/256/512MB RAM |
+| RTL8198D-VG | MIPS | HGU | Non PON variant with 1150/1250MHz CPU and comes with 128/256/512MB RAM |
+| RTL9607C-VB | MIPS | HGU | Gen 2 of RTL9607C with 1150MHz CPU and comes with 128/256/512MB RAM |
+
+## RTL8277C family of chips (Realtek Stuff of Cortina variety, codename Taurus)
+| Chip     | Arch | Type       | Info |
+|----------|------|------------|------|
+| RTL9619 | ARM | HGU? |
+| RTL9619C | ARM | HGU? |
+| RTL9617C | ARM | HGU? |
+| RTL9615C | ARM | HGU? |
+| RTL9607DQ | ARM | SFU/HGU | AIO unit, 4 Core & 1GHz CPU, optional 2.5GbE and POTS |
+| RTL9617CM | ARM | HGU? |
+| RTL9607DM | ARM | HGU? |
+| RTL9607DS | ARM | HGU? |
+| RTL8198XB | ARM | HGU | Non PON variant, 4 core & 1.2GHz CPU |
+| RTL8198XBL | ARM | HGU | Lite version of RTL8198XB? |
+
+## RTL9607F family of chips (Realtek Stuff of Cortina variety, codename Elnath)
+| Chip     | Arch | Type       | Info |
+|----------|------|------------|------|
+| RTL9607FQ | ARM | HGU? |
+| RTL9607FK | ARM | HGU? |
+| RTL9607F | ARM | HGU | AIO unit, 2 Core & 1Ghz CPU, optional USB and POTS | 
+| RTL9607FS | ARM | HGU? |
+| RTL9607FD | ARM | HGU? |
 
 *Here list known RTL960x PON based router/bridge*
 
